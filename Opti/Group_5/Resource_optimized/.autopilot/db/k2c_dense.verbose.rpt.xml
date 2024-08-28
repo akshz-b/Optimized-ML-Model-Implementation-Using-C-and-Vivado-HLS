@@ -1,0 +1,196 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'k2c_dense'" level="0">
+<item name = "Date">Wed Apr 24 12:33:08 2024
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">Group_5</item>
+<item name = "Solution">Resource_optimized</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a200tfbg676-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 9.597, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_k2c_dot_3_fu_166">k2c_dot_3, ?, ?, ?, ?, none</column>
+<column name="grp_k2c_affine_matmul_3_fu_190">k2c_affine_matmul_3, 135, 2145, 135, 2145, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">28, 448, 28, -, -, 1 ~ 16, no</column>
+<column name="- Loop 2">?, ?, ?, -, -, ?, no</column>
+<column name=" + Loop 2.1">?, ?, 6, -, -, ?, no</column>
+<column name="- Loop 3">?, ?, 28, -, -, ?, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 468</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">4, 70, 12016, 11237</column>
+<column name="Memory">0, -, 64, 8</column>
+<column name="Multiplexer">-, -, -, 567</column>
+<column name="Register">-, -, 470, -</column>
+<specialColumn name="Available">730, 740, 269200, 129000</specialColumn>
+<specialColumn name="Utilization (%)">~0, 9, 4, 9</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="grp_k2c_affine_matmul_3_fu_190">k2c_affine_matmul_3, 0, 8, 1235, 1214</column>
+<column name="grp_k2c_dot_3_fu_166">k2c_dot_3, 4, 53, 9688, 8118</column>
+<column name="sample_fadd_32ns_hbi_U164">sample_fadd_32ns_hbi, 0, 2, 205, 203</column>
+<column name="sample_fdiv_32ns_PgM_U165">sample_fdiv_32ns_PgM, 0, 0, 564, 798</column>
+<column name="sample_fexp_32ns_QgW_U166">sample_fexp_32ns_QgW, 0, 7, 324, 904</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="dense_16_kernel_arra_U">k2c_dense_dense_1OgC, 0, 64, 8, 16, 32, 1, 512</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="i_35_fu_367_p2">+, 0, 0, 15, 5, 1</column>
+<column name="i_36_fu_321_p2">+, 0, 0, 71, 1, 64</column>
+<column name="j_fu_300_p2">+, 0, 0, 71, 1, 64</column>
+<column name="sum_i_fu_310_p2">+, 0, 0, 10, 2, 2</column>
+<column name="tmp_16_fu_245_p2">+, 0, 0, 71, 64, 2</column>
+<column name="exitcond3_fu_331_p2">icmp, 0, 0, 29, 64, 64</column>
+<column name="exitcond_fu_362_p2">icmp, 0, 0, 11, 5, 5</column>
+<column name="exitcond_i_fu_295_p2">icmp, 0, 0, 29, 64, 1</column>
+<column name="icmp_fu_267_p2">icmp, 0, 0, 29, 63, 1</column>
+<column name="tmp_fu_239_p2">icmp, 0, 0, 29, 64, 2</column>
+<column name="tmp_i_fu_286_p2">icmp, 0, 0, 29, 64, 64</column>
+<column name="p_s_fu_273_p3">select, 0, 0, 6, 1, 6</column>
+<column name="i_fu_336_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="tmp_24_neg_fu_346_p2">xor, 0, 0, 33, 32, 33</column>
+<column name="tmp_29_neg_fu_377_p2">xor, 0, 0, 33, 32, 33</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">301, 67, 1, 67</column>
+<column name="dense_15_output_arra_address0">15, 3, 4, 12</column>
+<column name="dense_15_output_arra_ce0">15, 3, 1, 3</column>
+<column name="dense_15_output_arra_ce1">9, 2, 1, 2</column>
+<column name="dense_16_kernel_arra_address0">15, 3, 4, 12</column>
+<column name="dense_16_kernel_arra_ce0">9, 2, 1, 2</column>
+<column name="dense_16_kernel_arra_ce1">9, 2, 1, 2</column>
+<column name="grp_fu_201_p0">15, 3, 32, 96</column>
+<column name="grp_fu_201_p1">15, 3, 32, 96</column>
+<column name="grp_fu_214_p1">15, 3, 32, 96</column>
+<column name="i_1_reg_155">9, 2, 5, 10</column>
+<column name="i_3_reg_144">9, 2, 1, 2</column>
+<column name="i_i_reg_121">9, 2, 64, 128</column>
+<column name="j_i_reg_133">9, 2, 64, 128</column>
+<column name="output_array_address0">44, 9, 1, 9</column>
+<column name="output_array_ce0">21, 4, 1, 4</column>
+<column name="output_array_d0">27, 5, 32, 160</column>
+<column name="output_array_we0">21, 4, 1, 4</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">66, 0, 66, 0</column>
+<column name="dense_16_bias_numel">0, 0, 64, 64</column>
+<column name="dense_16_kernel_nume">0, 0, 64, 64</column>
+<column name="grp_k2c_affine_matmul_3_fu_190_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_k2c_dot_3_fu_166_ap_start_reg">1, 0, 1, 0</column>
+<column name="i_1_reg_155">5, 0, 5, 0</column>
+<column name="i_35_reg_477">5, 0, 5, 0</column>
+<column name="i_3_reg_144">1, 0, 1, 0</column>
+<column name="i_i_reg_121">64, 0, 64, 0</column>
+<column name="i_reg_464">1, 0, 1, 0</column>
+<column name="j_i_reg_133">64, 0, 64, 0</column>
+<column name="j_reg_441">64, 0, 64, 0</column>
+<column name="output_array_addr_1_reg_482">1, 0, 1, 0</column>
+<column name="output_array_addr_2_reg_446">1, 0, 1, 0</column>
+<column name="output_array_addr_reg_459">1, 0, 1, 0</column>
+<column name="p_s_reg_423">2, 0, 5, 3</column>
+<column name="reg_219">32, 0, 32, 0</column>
+<column name="reg_224">32, 0, 32, 0</column>
+<column name="reg_229">32, 0, 32, 0</column>
+<column name="reg_234">32, 0, 32, 0</column>
+<column name="tmp_16_reg_413">64, 0, 64, 0</column>
+<column name="tmp_reg_409">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, k2c_dense, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, k2c_dense, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, k2c_dense, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, k2c_dense, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, k2c_dense, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, k2c_dense, return value</column>
+<column name="output_array_address0">out, 1, ap_memory, output_array, array</column>
+<column name="output_array_ce0">out, 1, ap_memory, output_array, array</column>
+<column name="output_array_we0">out, 1, ap_memory, output_array, array</column>
+<column name="output_array_d0">out, 32, ap_memory, output_array, array</column>
+<column name="output_array_q0">in, 32, ap_memory, output_array, array</column>
+<column name="output_numel_read">in, 64, ap_none, output_numel_read, scalar</column>
+<column name="input_dim">in, 64, ap_none, input_dim, scalar</column>
+<column name="input_numel_read">in, 64, ap_none, input_numel_read, scalar</column>
+<column name="kernel_dim">in, 64, ap_none, kernel_dim, scalar</column>
+<column name="fwork_address0">out, 5, ap_memory, fwork, array</column>
+<column name="fwork_ce0">out, 1, ap_memory, fwork, array</column>
+<column name="fwork_we0">out, 1, ap_memory, fwork, array</column>
+<column name="fwork_d0">out, 32, ap_memory, fwork, array</column>
+<column name="fwork_q0">in, 32, ap_memory, fwork, array</column>
+<column name="fwork_address1">out, 5, ap_memory, fwork, array</column>
+<column name="fwork_ce1">out, 1, ap_memory, fwork, array</column>
+<column name="fwork_q1">in, 32, ap_memory, fwork, array</column>
+<column name="dense_15_output_arra_address0">out, 4, ap_memory, dense_15_output_arra, array</column>
+<column name="dense_15_output_arra_ce0">out, 1, ap_memory, dense_15_output_arra, array</column>
+<column name="dense_15_output_arra_q0">in, 32, ap_memory, dense_15_output_arra, array</column>
+<column name="dense_15_output_arra_address1">out, 4, ap_memory, dense_15_output_arra, array</column>
+<column name="dense_15_output_arra_ce1">out, 1, ap_memory, dense_15_output_arra, array</column>
+<column name="dense_15_output_arra_q1">in, 32, ap_memory, dense_15_output_arra, array</column>
+</table>
+</item>
+</section>
+</profile>

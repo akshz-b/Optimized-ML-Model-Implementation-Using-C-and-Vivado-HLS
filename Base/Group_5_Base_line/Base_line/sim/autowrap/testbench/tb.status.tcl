@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName sample0.c_pre.c.tb.c

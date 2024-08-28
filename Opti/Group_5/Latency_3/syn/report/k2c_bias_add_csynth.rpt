@@ -1,0 +1,214 @@
+
+
+================================================================
+== Vivado HLS Report for 'k2c_bias_add'
+================================================================
+* Date:           Tue Apr 23 22:37:37 2024
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        Group_5
+* Solution:       Latency_3
+* Product family: artix7
+* Target device:  xc7a200tfbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     3.589|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |             |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1     |    ?|    ?|         ?|          -|          -|     ?|    no    |
+        | + Loop 1.1  |    ?|    ?|        12|          -|          -|     ?|    no    |
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
++-----------------+---------+-------+--------+--------+
+|DSP              |        -|      -|       -|       -|
+|Expression       |        -|      -|       0|     228|
+|FIFO             |        -|      -|       -|       -|
+|Instance         |        -|      2|     324|     277|
+|Memory           |        1|      -|       0|       0|
+|Multiplexer      |        -|      -|       -|     200|
+|Register         |        -|      -|     340|       -|
++-----------------+---------+-------+--------+--------+
+|Total            |        1|      2|     664|     705|
++-----------------+---------+-------+--------+--------+
+|Available        |      730|    740|  269200|  129000|
++-----------------+---------+-------+--------+--------+
+|Utilization (%)  |    ~0   |   ~0  |   ~0   |   ~0   |
++-----------------+---------+-------+--------+--------+
+
++ Detail: 
+    * Instance: 
+    +--------------------------+----------------------+---------+-------+-----+-----+
+    |         Instance         |        Module        | BRAM_18K| DSP48E|  FF | LUT |
+    +--------------------------+----------------------+---------+-------+-----+-----+
+    |sample_fadd_32ns_ocq_U68  |sample_fadd_32ns_ocq  |        0|      2|  324|  236|
+    |sample_mux_864_32rcU_U69  |sample_mux_864_32rcU  |        0|      0|    0|   41|
+    +--------------------------+----------------------+---------+-------+-----+-----+
+    |Total                     |                      |        0|      2|  324|  277|
+    +--------------------------+----------------------+---------+-------+-----+-----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    +-----------------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |         Memory        |        Module        | BRAM_18K| FF| LUT| Words| Bits| Banks| W*Bits*Banks|
+    +-----------------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |dense_13_bias_array_U  |k2c_bias_add_densvdy  |        1|  0|   0|   128|   32|     1|         4096|
+    +-----------------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |Total                  |                      |        1|  0|   0|   128|   32|     1|         4096|
+    +-----------------------+----------------------+---------+---+----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------+----------+-------+---+----+------------+------------+
+    |      Variable Name      | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------+----------+-------+---+----+------------+------------+
+    |arrayNo_trunc_fu_245_p2  |     +    |      0|  0|  12|           3|           3|
+    |i_36_fu_272_p2           |     +    |      0|  0|  71|          64|          64|
+    |j_3_fu_225_p2            |     +    |      0|  0|  71|           1|          64|
+    |sum_fu_239_p2            |     +    |      0|  0|  16|           9|           9|
+    |exitcond_fu_220_p2       |   icmp   |      0|  0|  29|          64|          64|
+    |tmp_fu_207_p2            |   icmp   |      0|  0|  29|          64|          64|
+    +-------------------------+----------+-------+---+----+------------+------------+
+    |Total                    |          |      0|  0| 228|         205|         268|
+    +-------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------+----+-----------+-----+-----------+
+    |        Name        | LUT| Input Size| Bits| Total Bits|
+    +--------------------+----+-----------+-----+-----------+
+    |A_array_0_address0  |  15|          3|    4|         12|
+    |A_array_1_address0  |  15|          3|    4|         12|
+    |A_array_2_address0  |  15|          3|    4|         12|
+    |A_array_3_address0  |  15|          3|    4|         12|
+    |A_array_4_address0  |  15|          3|    4|         12|
+    |A_array_5_address0  |  15|          3|    4|         12|
+    |A_array_6_address0  |  15|          3|    4|         12|
+    |A_array_7_address0  |  15|          3|    4|         12|
+    |ap_NS_fsm           |  62|         15|    1|         15|
+    |i_reg_179           |   9|          2|   64|        128|
+    |j_reg_191           |   9|          2|   64|        128|
+    +--------------------+----+-----------+-----+-----------+
+    |Total               | 200|         43|  161|        367|
+    +--------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------+----+----+-----+-----------+
+    |              Name             | FF | LUT| Bits| Const Bits|
+    +-------------------------------+----+----+-----+-----------+
+    |A_array_0_addr_reg_339         |   4|   0|    4|          0|
+    |A_array_1_addr_reg_344         |   4|   0|    4|          0|
+    |A_array_2_addr_reg_349         |   4|   0|    4|          0|
+    |A_array_3_addr_reg_354         |   4|   0|    4|          0|
+    |A_array_4_addr_reg_359         |   4|   0|    4|          0|
+    |A_array_5_addr_reg_364         |   4|   0|    4|          0|
+    |A_array_6_addr_reg_369         |   4|   0|    4|          0|
+    |A_array_7_addr_reg_374         |   4|   0|    4|          0|
+    |ap_CS_fsm                      |  14|   0|   14|          0|
+    |arrayNo_trunc_reg_334          |   3|   0|    3|          0|
+    |dense_13_bias_array_1_reg_384  |  32|   0|   32|          0|
+    |i_reg_179                      |  64|   0|   64|          0|
+    |j_3_reg_324                    |  64|   0|   64|          0|
+    |j_reg_191                      |  64|   0|   64|          0|
+    |tmp_53_reg_389                 |  32|   0|   32|          0|
+    |tmp_94_reg_316                 |   3|   0|    3|          0|
+    |tmp_s_reg_394                  |  32|   0|   32|          0|
+    +-------------------------------+----+----+-----+-----------+
+    |Total                          | 340|   0|  340|          0|
+    +-------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------+-----+-----+------------+--------------+--------------+
+|      RTL Ports     | Dir | Bits|  Protocol  | Source Object|    C Type    |
++--------------------+-----+-----+------------+--------------+--------------+
+|ap_clk              |  in |    1| ap_ctrl_hs | k2c_bias_add | return value |
+|ap_rst              |  in |    1| ap_ctrl_hs | k2c_bias_add | return value |
+|ap_start            |  in |    1| ap_ctrl_hs | k2c_bias_add | return value |
+|ap_done             | out |    1| ap_ctrl_hs | k2c_bias_add | return value |
+|ap_idle             | out |    1| ap_ctrl_hs | k2c_bias_add | return value |
+|ap_ready            | out |    1| ap_ctrl_hs | k2c_bias_add | return value |
+|A_array_0_address0  | out |    4|  ap_memory |   A_array_0  |     array    |
+|A_array_0_ce0       | out |    1|  ap_memory |   A_array_0  |     array    |
+|A_array_0_we0       | out |    1|  ap_memory |   A_array_0  |     array    |
+|A_array_0_d0        | out |   32|  ap_memory |   A_array_0  |     array    |
+|A_array_0_q0        |  in |   32|  ap_memory |   A_array_0  |     array    |
+|A_array_1_address0  | out |    4|  ap_memory |   A_array_1  |     array    |
+|A_array_1_ce0       | out |    1|  ap_memory |   A_array_1  |     array    |
+|A_array_1_we0       | out |    1|  ap_memory |   A_array_1  |     array    |
+|A_array_1_d0        | out |   32|  ap_memory |   A_array_1  |     array    |
+|A_array_1_q0        |  in |   32|  ap_memory |   A_array_1  |     array    |
+|A_array_2_address0  | out |    4|  ap_memory |   A_array_2  |     array    |
+|A_array_2_ce0       | out |    1|  ap_memory |   A_array_2  |     array    |
+|A_array_2_we0       | out |    1|  ap_memory |   A_array_2  |     array    |
+|A_array_2_d0        | out |   32|  ap_memory |   A_array_2  |     array    |
+|A_array_2_q0        |  in |   32|  ap_memory |   A_array_2  |     array    |
+|A_array_3_address0  | out |    4|  ap_memory |   A_array_3  |     array    |
+|A_array_3_ce0       | out |    1|  ap_memory |   A_array_3  |     array    |
+|A_array_3_we0       | out |    1|  ap_memory |   A_array_3  |     array    |
+|A_array_3_d0        | out |   32|  ap_memory |   A_array_3  |     array    |
+|A_array_3_q0        |  in |   32|  ap_memory |   A_array_3  |     array    |
+|A_array_4_address0  | out |    4|  ap_memory |   A_array_4  |     array    |
+|A_array_4_ce0       | out |    1|  ap_memory |   A_array_4  |     array    |
+|A_array_4_we0       | out |    1|  ap_memory |   A_array_4  |     array    |
+|A_array_4_d0        | out |   32|  ap_memory |   A_array_4  |     array    |
+|A_array_4_q0        |  in |   32|  ap_memory |   A_array_4  |     array    |
+|A_array_5_address0  | out |    4|  ap_memory |   A_array_5  |     array    |
+|A_array_5_ce0       | out |    1|  ap_memory |   A_array_5  |     array    |
+|A_array_5_we0       | out |    1|  ap_memory |   A_array_5  |     array    |
+|A_array_5_d0        | out |   32|  ap_memory |   A_array_5  |     array    |
+|A_array_5_q0        |  in |   32|  ap_memory |   A_array_5  |     array    |
+|A_array_6_address0  | out |    4|  ap_memory |   A_array_6  |     array    |
+|A_array_6_ce0       | out |    1|  ap_memory |   A_array_6  |     array    |
+|A_array_6_we0       | out |    1|  ap_memory |   A_array_6  |     array    |
+|A_array_6_d0        | out |   32|  ap_memory |   A_array_6  |     array    |
+|A_array_6_q0        |  in |   32|  ap_memory |   A_array_6  |     array    |
+|A_array_7_address0  | out |    4|  ap_memory |   A_array_7  |     array    |
+|A_array_7_ce0       | out |    1|  ap_memory |   A_array_7  |     array    |
+|A_array_7_we0       | out |    1|  ap_memory |   A_array_7  |     array    |
+|A_array_7_d0        | out |   32|  ap_memory |   A_array_7  |     array    |
+|A_array_7_q0        |  in |   32|  ap_memory |   A_array_7  |     array    |
+|A_numel_read        |  in |   64|   ap_none  | A_numel_read |    scalar    |
+|b_numel_read        |  in |   64|   ap_none  | b_numel_read |    scalar    |
++--------------------+-----+-----+------------+--------------+--------------+
+

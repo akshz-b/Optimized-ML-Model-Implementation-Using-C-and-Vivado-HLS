@@ -1,0 +1,372 @@
+
+
+================================================================
+== Vivado HLS Report for 'k2c_sub2idx'
+================================================================
+* Date:           Tue Apr 23 18:55:51 2024
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        Group_5
+* Solution:       Latency_final
+* Product family: artix7
+* Target device:  xc7a200tfbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     4.326|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |             |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1     |    ?|    ?|         ?|          -|          -|     ?|    no    |
+        | + Loop 1.1  |    ?|    ?|         9|          -|          -|     ?|    no    |
+        | + Loop 1.2  |    ?|    ?|         9|          -|          -|     ?|    no    |
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 23
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond)
+	23  / (exitcond)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / (tmp)
+	13  / (!tmp & !exitcond_1)
+	23  / (!tmp & exitcond_1)
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	4  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / (tmp_1)
+	2  / (!tmp_1)
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	14  / true
+23 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.35>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%ndim_read = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %ndim)"   --->   Operation 24 'read' 'ndim_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (1.35ns)   --->   "br label %1" [Group_5/sample.c:1574]   --->   Operation 25 'br' <Predicate = true> <Delay = 1.35>
+
+State 2 <SV = 1> <Delay = 3.69>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%idx = phi i64 [ 0, %0 ], [ %idx_1_1, %6 ]" [Group_5/sample.c:1580]   --->   Operation 26 'phi' 'idx' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%i = phi i64 [ 0, %0 ], [ %i_1_1, %6 ]" [Group_5/sample.c:1574]   --->   Operation 27 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (2.34ns)   --->   "%exitcond = icmp eq i64 %i, %ndim_read" [Group_5/sample.c:1574]   --->   Operation 28 'icmp' 'exitcond' <Predicate = true> <Delay = 2.34> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 29 [1/1] (1.35ns)   --->   "br i1 %exitcond, label %10, label %4" [Group_5/sample.c:1574]   --->   Operation 29 'br' <Predicate = true> <Delay = 1.35>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%sub_addr = getelementptr [5 x i64]* %sub, i64 0, i64 %i" [Group_5/sample.c:1576]   --->   Operation 30 'getelementptr' 'sub_addr' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_2 : Operation 31 [2/2] (1.75ns)   --->   "%sub_load = load i64* %sub_addr, align 8" [Group_5/sample.c:1576]   --->   Operation 31 'load' 'sub_load' <Predicate = (!exitcond)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 5> <RAM>
+
+State 3 <SV = 2> <Delay = 1.75>
+ST_3 : Operation 32 [1/2] (1.75ns)   --->   "%sub_load = load i64* %sub_addr, align 8" [Group_5/sample.c:1576]   --->   Operation 32 'load' 'sub_load' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 5> <RAM>
+ST_3 : Operation 33 [1/1] (1.35ns)   --->   "br label %3" [Group_5/sample.c:1577]   --->   Operation 33 'br' <Predicate = true> <Delay = 1.35>
+
+State 4 <SV = 3> <Delay = 2.99>
+ST_4 : Operation 34 [1/1] (0.00ns)   --->   "%j_0_in = phi i64 [ %ndim_read, %4 ], [ %j, %5 ]" [Group_5/sample.c:1577]   --->   Operation 34 'phi' 'j_0_in' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 35 [1/1] (2.99ns)   --->   "%j = add i64 %j_0_in, -1" [Group_5/sample.c:1577]   --->   Operation 35 'add' 'j' <Predicate = true> <Delay = 2.99> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 3.69>
+ST_5 : Operation 36 [1/1] (0.00ns)   --->   "%temp1 = phi i64 [ %sub_load, %4 ], [ %temp_1, %5 ]" [Group_5/sample.c:1576]   --->   Operation 36 'phi' 'temp1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 37 [1/1] (2.34ns)   --->   "%tmp = icmp ugt i64 %j, %i" [Group_5/sample.c:1577]   --->   Operation 37 'icmp' 'tmp' <Predicate = true> <Delay = 2.34> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 38 [1/1] (0.00ns)   --->   "br i1 %tmp, label %5, label %2" [Group_5/sample.c:1577]   --->   Operation 38 'br' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 39 [1/1] (0.00ns)   --->   "%shape_addr = getelementptr [5 x i64]* %shape, i64 0, i64 %j" [Group_5/sample.c:1578]   --->   Operation 39 'getelementptr' 'shape_addr' <Predicate = (tmp)> <Delay = 0.00>
+ST_5 : Operation 40 [2/2] (1.75ns)   --->   "%shape_load = load i64* %shape_addr, align 8" [Group_5/sample.c:1578]   --->   Operation 40 'load' 'shape_load' <Predicate = (tmp)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 5> <RAM>
+ST_5 : Operation 41 [1/1] (2.99ns)   --->   "%idx_1 = add i64 %temp1, %idx" [Group_5/sample.c:1580]   --->   Operation 41 'add' 'idx_1' <Predicate = (!tmp)> <Delay = 2.99> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 42 [1/1] (0.00ns)   --->   "%i_1_s = or i64 %i, 1" [Group_5/sample.c:1574]   --->   Operation 42 'or' 'i_1_s' <Predicate = (!tmp)> <Delay = 0.00>
+ST_5 : Operation 43 [1/1] (2.34ns)   --->   "%exitcond_1 = icmp eq i64 %i_1_s, %ndim_read" [Group_5/sample.c:1574]   --->   Operation 43 'icmp' 'exitcond_1' <Predicate = (!tmp)> <Delay = 2.34> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 44 [1/1] (1.35ns)   --->   "br i1 %exitcond_1, label %10, label %8" [Group_5/sample.c:1574]   --->   Operation 44 'br' <Predicate = (!tmp)> <Delay = 1.35>
+ST_5 : Operation 45 [1/1] (0.00ns)   --->   "%sub_addr_1 = getelementptr [5 x i64]* %sub, i64 0, i64 %i_1_s" [Group_5/sample.c:1576]   --->   Operation 45 'getelementptr' 'sub_addr_1' <Predicate = (!tmp & !exitcond_1)> <Delay = 0.00>
+ST_5 : Operation 46 [2/2] (1.75ns)   --->   "%sub_load_1 = load i64* %sub_addr_1, align 8" [Group_5/sample.c:1576]   --->   Operation 46 'load' 'sub_load_1' <Predicate = (!tmp & !exitcond_1)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 5> <RAM>
+
+State 6 <SV = 5> <Delay = 1.75>
+ST_6 : Operation 47 [1/2] (1.75ns)   --->   "%shape_load = load i64* %shape_addr, align 8" [Group_5/sample.c:1578]   --->   Operation 47 'load' 'shape_load' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 5> <RAM>
+
+State 7 <SV = 6> <Delay = 4.32>
+ST_7 : Operation 48 [6/6] (4.32ns)   --->   "%temp_1 = mul i64 %shape_load, %temp1" [Group_5/sample.c:1578]   --->   Operation 48 'mul' 'temp_1' <Predicate = true> <Delay = 4.32> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 4.32>
+ST_8 : Operation 49 [5/6] (4.32ns)   --->   "%temp_1 = mul i64 %shape_load, %temp1" [Group_5/sample.c:1578]   --->   Operation 49 'mul' 'temp_1' <Predicate = true> <Delay = 4.32> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 4.32>
+ST_9 : Operation 50 [4/6] (4.32ns)   --->   "%temp_1 = mul i64 %shape_load, %temp1" [Group_5/sample.c:1578]   --->   Operation 50 'mul' 'temp_1' <Predicate = true> <Delay = 4.32> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 4.32>
+ST_10 : Operation 51 [3/6] (4.32ns)   --->   "%temp_1 = mul i64 %shape_load, %temp1" [Group_5/sample.c:1578]   --->   Operation 51 'mul' 'temp_1' <Predicate = true> <Delay = 4.32> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 4.32>
+ST_11 : Operation 52 [2/6] (4.32ns)   --->   "%temp_1 = mul i64 %shape_load, %temp1" [Group_5/sample.c:1578]   --->   Operation 52 'mul' 'temp_1' <Predicate = true> <Delay = 4.32> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 4.32>
+ST_12 : Operation 53 [1/6] (4.32ns)   --->   "%temp_1 = mul i64 %shape_load, %temp1" [Group_5/sample.c:1578]   --->   Operation 53 'mul' 'temp_1' <Predicate = true> <Delay = 4.32> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 54 [1/1] (0.00ns)   --->   "br label %3" [Group_5/sample.c:1577]   --->   Operation 54 'br' <Predicate = true> <Delay = 0.00>
+
+State 13 <SV = 5> <Delay = 1.75>
+ST_13 : Operation 55 [1/2] (1.75ns)   --->   "%sub_load_1 = load i64* %sub_addr_1, align 8" [Group_5/sample.c:1576]   --->   Operation 55 'load' 'sub_load_1' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 5> <RAM>
+ST_13 : Operation 56 [1/1] (1.35ns)   --->   "br label %7" [Group_5/sample.c:1577]   --->   Operation 56 'br' <Predicate = true> <Delay = 1.35>
+
+State 14 <SV = 6> <Delay = 2.99>
+ST_14 : Operation 57 [1/1] (0.00ns)   --->   "%j_0_in_1 = phi i64 [ %ndim_read, %8 ], [ %j_1, %9 ]" [Group_5/sample.c:1577]   --->   Operation 57 'phi' 'j_0_in_1' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 58 [1/1] (2.99ns)   --->   "%j_1 = add i64 %j_0_in_1, -1" [Group_5/sample.c:1577]   --->   Operation 58 'add' 'j_1' <Predicate = true> <Delay = 2.99> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 7> <Delay = 2.99>
+ST_15 : Operation 59 [1/1] (0.00ns)   --->   "%temp1_1 = phi i64 [ %sub_load_1, %8 ], [ %temp_1_1, %9 ]" [Group_5/sample.c:1576]   --->   Operation 59 'phi' 'temp1_1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 60 [1/1] (2.34ns)   --->   "%tmp_1 = icmp ugt i64 %j_1, %i_1_s" [Group_5/sample.c:1577]   --->   Operation 60 'icmp' 'tmp_1' <Predicate = true> <Delay = 2.34> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 61 [1/1] (0.00ns)   --->   "br i1 %tmp_1, label %9, label %6" [Group_5/sample.c:1577]   --->   Operation 61 'br' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 62 [1/1] (0.00ns)   --->   "%shape_addr_1 = getelementptr [5 x i64]* %shape, i64 0, i64 %j_1" [Group_5/sample.c:1578]   --->   Operation 62 'getelementptr' 'shape_addr_1' <Predicate = (tmp_1)> <Delay = 0.00>
+ST_15 : Operation 63 [2/2] (1.75ns)   --->   "%shape_load_1 = load i64* %shape_addr_1, align 8" [Group_5/sample.c:1578]   --->   Operation 63 'load' 'shape_load_1' <Predicate = (tmp_1)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 5> <RAM>
+ST_15 : Operation 64 [1/1] (2.99ns)   --->   "%idx_1_1 = add i64 %temp1_1, %idx_1" [Group_5/sample.c:1580]   --->   Operation 64 'add' 'idx_1_1' <Predicate = (!tmp_1)> <Delay = 2.99> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 65 [1/1] (2.99ns)   --->   "%i_1_1 = add i64 %i, 2" [Group_5/sample.c:1574]   --->   Operation 65 'add' 'i_1_1' <Predicate = (!tmp_1)> <Delay = 2.99> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 66 [1/1] (0.00ns)   --->   "br label %1" [Group_5/sample.c:1574]   --->   Operation 66 'br' <Predicate = (!tmp_1)> <Delay = 0.00>
+
+State 16 <SV = 8> <Delay = 1.75>
+ST_16 : Operation 67 [1/2] (1.75ns)   --->   "%shape_load_1 = load i64* %shape_addr_1, align 8" [Group_5/sample.c:1578]   --->   Operation 67 'load' 'shape_load_1' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 5> <RAM>
+
+State 17 <SV = 9> <Delay = 4.32>
+ST_17 : Operation 68 [6/6] (4.32ns)   --->   "%temp_1_1 = mul i64 %shape_load_1, %temp1_1" [Group_5/sample.c:1578]   --->   Operation 68 'mul' 'temp_1_1' <Predicate = true> <Delay = 4.32> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 10> <Delay = 4.32>
+ST_18 : Operation 69 [5/6] (4.32ns)   --->   "%temp_1_1 = mul i64 %shape_load_1, %temp1_1" [Group_5/sample.c:1578]   --->   Operation 69 'mul' 'temp_1_1' <Predicate = true> <Delay = 4.32> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 11> <Delay = 4.32>
+ST_19 : Operation 70 [4/6] (4.32ns)   --->   "%temp_1_1 = mul i64 %shape_load_1, %temp1_1" [Group_5/sample.c:1578]   --->   Operation 70 'mul' 'temp_1_1' <Predicate = true> <Delay = 4.32> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 12> <Delay = 4.32>
+ST_20 : Operation 71 [3/6] (4.32ns)   --->   "%temp_1_1 = mul i64 %shape_load_1, %temp1_1" [Group_5/sample.c:1578]   --->   Operation 71 'mul' 'temp_1_1' <Predicate = true> <Delay = 4.32> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 13> <Delay = 4.32>
+ST_21 : Operation 72 [2/6] (4.32ns)   --->   "%temp_1_1 = mul i64 %shape_load_1, %temp1_1" [Group_5/sample.c:1578]   --->   Operation 72 'mul' 'temp_1_1' <Predicate = true> <Delay = 4.32> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 14> <Delay = 4.32>
+ST_22 : Operation 73 [1/6] (4.32ns)   --->   "%temp_1_1 = mul i64 %shape_load_1, %temp1_1" [Group_5/sample.c:1578]   --->   Operation 73 'mul' 'temp_1_1' <Predicate = true> <Delay = 4.32> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 74 [1/1] (0.00ns)   --->   "br label %7" [Group_5/sample.c:1577]   --->   Operation 74 'br' <Predicate = true> <Delay = 0.00>
+
+State 23 <SV = 5> <Delay = 0.00>
+ST_23 : Operation 75 [1/1] (0.00ns)   --->   "%idx_lcssa = phi i64 [ %idx, %1 ], [ %idx_1, %2 ]" [Group_5/sample.c:1580]   --->   Operation 75 'phi' 'idx_lcssa' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 76 [1/1] (0.00ns)   --->   "ret i64 %idx_lcssa" [Group_5/sample.c:1582]   --->   Operation 76 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 1.35ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('idx', Group_5/sample.c:1580) with incoming values : ('idx_1_1', Group_5/sample.c:1580) [7]  (1.35 ns)
+
+ <State 2>: 3.69ns
+The critical path consists of the following:
+	'phi' operation ('i', Group_5/sample.c:1574) with incoming values : ('i_1_1', Group_5/sample.c:1574) [8]  (0 ns)
+	'icmp' operation ('exitcond', Group_5/sample.c:1574) [9]  (2.34 ns)
+	multiplexor before 'phi' operation ('idx_lcssa', Group_5/sample.c:1580) with incoming values : ('idx_1', Group_5/sample.c:1580) ('idx_1_1', Group_5/sample.c:1580) [51]  (1.35 ns)
+
+ <State 3>: 1.75ns
+The critical path consists of the following:
+	'load' operation ('sub_load', Group_5/sample.c:1576) on array 'sub' [13]  (1.75 ns)
+
+ <State 4>: 3ns
+The critical path consists of the following:
+	'phi' operation ('j_0_in', Group_5/sample.c:1577) with incoming values : ('ndim') ('j', Group_5/sample.c:1577) [17]  (0 ns)
+	'add' operation ('j', Group_5/sample.c:1577) [18]  (3 ns)
+
+ <State 5>: 3.69ns
+The critical path consists of the following:
+	'or' operation ('i_1_s', Group_5/sample.c:1574) [28]  (0 ns)
+	'icmp' operation ('exitcond_1', Group_5/sample.c:1574) [29]  (2.34 ns)
+	multiplexor before 'phi' operation ('idx_lcssa', Group_5/sample.c:1580) with incoming values : ('idx_1', Group_5/sample.c:1580) ('idx_1_1', Group_5/sample.c:1580) [51]  (1.35 ns)
+
+ <State 6>: 1.75ns
+The critical path consists of the following:
+	'load' operation ('shape_load', Group_5/sample.c:1578) on array 'shape' [23]  (1.75 ns)
+
+ <State 7>: 4.33ns
+The critical path consists of the following:
+	'mul' operation ('temp_1', Group_5/sample.c:1578) [24]  (4.33 ns)
+
+ <State 8>: 4.33ns
+The critical path consists of the following:
+	'mul' operation ('temp_1', Group_5/sample.c:1578) [24]  (4.33 ns)
+
+ <State 9>: 4.33ns
+The critical path consists of the following:
+	'mul' operation ('temp_1', Group_5/sample.c:1578) [24]  (4.33 ns)
+
+ <State 10>: 4.33ns
+The critical path consists of the following:
+	'mul' operation ('temp_1', Group_5/sample.c:1578) [24]  (4.33 ns)
+
+ <State 11>: 4.33ns
+The critical path consists of the following:
+	'mul' operation ('temp_1', Group_5/sample.c:1578) [24]  (4.33 ns)
+
+ <State 12>: 4.33ns
+The critical path consists of the following:
+	'mul' operation ('temp_1', Group_5/sample.c:1578) [24]  (4.33 ns)
+
+ <State 13>: 1.75ns
+The critical path consists of the following:
+	'load' operation ('sub_load_1', Group_5/sample.c:1576) on array 'sub' [33]  (1.75 ns)
+
+ <State 14>: 3ns
+The critical path consists of the following:
+	'phi' operation ('j_0_in_1', Group_5/sample.c:1577) with incoming values : ('ndim') ('j_1', Group_5/sample.c:1577) [37]  (0 ns)
+	'add' operation ('j_1', Group_5/sample.c:1577) [38]  (3 ns)
+
+ <State 15>: 3ns
+The critical path consists of the following:
+	'phi' operation ('temp1_1', Group_5/sample.c:1576) with incoming values : ('sub_load_1', Group_5/sample.c:1576) ('temp_1_1', Group_5/sample.c:1578) [36]  (0 ns)
+	'add' operation ('idx_1_1', Group_5/sample.c:1580) [47]  (3 ns)
+
+ <State 16>: 1.75ns
+The critical path consists of the following:
+	'load' operation ('shape_load_1', Group_5/sample.c:1578) on array 'shape' [43]  (1.75 ns)
+
+ <State 17>: 4.33ns
+The critical path consists of the following:
+	'mul' operation ('temp_1_1', Group_5/sample.c:1578) [44]  (4.33 ns)
+
+ <State 18>: 4.33ns
+The critical path consists of the following:
+	'mul' operation ('temp_1_1', Group_5/sample.c:1578) [44]  (4.33 ns)
+
+ <State 19>: 4.33ns
+The critical path consists of the following:
+	'mul' operation ('temp_1_1', Group_5/sample.c:1578) [44]  (4.33 ns)
+
+ <State 20>: 4.33ns
+The critical path consists of the following:
+	'mul' operation ('temp_1_1', Group_5/sample.c:1578) [44]  (4.33 ns)
+
+ <State 21>: 4.33ns
+The critical path consists of the following:
+	'mul' operation ('temp_1_1', Group_5/sample.c:1578) [44]  (4.33 ns)
+
+ <State 22>: 4.33ns
+The critical path consists of the following:
+	'mul' operation ('temp_1_1', Group_5/sample.c:1578) [44]  (4.33 ns)
+
+ <State 23>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,234 @@
+
+
+================================================================
+== Vivado HLS Report for 'sample'
+================================================================
+* Date:           Tue Apr 23 22:37:26 2024
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        Group_5
+* Solution:       Latency_3
+* Product family: artix7
+* Target device:  xc7a200tfbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     4.442|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                         |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |        Loop Name        | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- memset_dense_16_fwork  |   31|   31|         1|          -|          -|    32|    no    |
+        +-------------------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 9
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	2  / (!tmp_1)
+	3  / (tmp_1)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.35>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([16 x float]* %dense_13_input_input_array_7), !map !372"   --->   Operation 10 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([16 x float]* %dense_13_input_input_array_6), !map !376"   --->   Operation 11 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([16 x float]* %dense_13_input_input_array_5), !map !380"   --->   Operation 12 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([16 x float]* %dense_13_input_input_array_4), !map !384"   --->   Operation 13 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([16 x float]* %dense_13_input_input_array_3), !map !388"   --->   Operation 14 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([16 x float]* %dense_13_input_input_array_2), !map !392"   --->   Operation 15 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([16 x float]* %dense_13_input_input_array_1), !map !396"   --->   Operation 16 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([16 x float]* %dense_13_input_input_array_0), !map !400"   --->   Operation 17 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64 %dense_13_input_input_dim) nounwind, !map !404"   --->   Operation 18 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64* %dense_13_input_input_numel) nounwind, !map !410"   --->   Operation 19 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([5 x i64]* %dense_13_input_input_shape) nounwind, !map !414"   --->   Operation 20 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1 x float]* %dense_16_output_arrray) nounwind, !map !420"   --->   Operation 21 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64 %dense_16_output_dim) nounwind, !map !424"   --->   Operation 22 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64* %dense_16_output_numel) nounwind, !map !428"   --->   Operation 23 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([5 x i64]* %dense_16_output_shape) nounwind, !map !432"   --->   Operation 24 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @sample_str) nounwind"   --->   Operation 25 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%dense_13_input_input = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %dense_13_input_input_dim)"   --->   Operation 26 'read' 'dense_13_input_input' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%dense_16_fwork = alloca [32 x float], align 16" [Group_5/sample.c:2049]   --->   Operation 27 'alloca' 'dense_16_fwork' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_1 : Operation 28 [1/1] (1.35ns)   --->   "br label %meminst"   --->   Operation 28 'br' <Predicate = true> <Delay = 1.35>
+
+State 2 <SV = 1> <Delay = 2.99>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%invdar = phi i5 [ 0, %0 ], [ %indvarinc, %meminst ]" [Group_5/sample.c:2049]   --->   Operation 29 'phi' 'invdar' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (1.54ns)   --->   "%indvarinc = add i5 %invdar, 1" [Group_5/sample.c:2049]   --->   Operation 30 'add' 'indvarinc' <Predicate = true> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%tmp = zext i5 %invdar to i64" [Group_5/sample.c:2049]   --->   Operation 31 'zext' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%dense_16_fwork_addr = getelementptr [32 x float]* %dense_16_fwork, i64 0, i64 %tmp" [Group_5/sample.c:2049]   --->   Operation 32 'getelementptr' 'dense_16_fwork_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (2.77ns)   --->   "store float 0.000000e+00, float* %dense_16_fwork_addr, align 4" [Group_5/sample.c:2049]   --->   Operation 33 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_2 : Operation 34 [1/1] (1.21ns)   --->   "%tmp_1 = icmp eq i5 %invdar, -1" [Group_5/sample.c:2049]   --->   Operation 34 'icmp' 'tmp_1' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopName([22 x i8]* @memset_dense_16_fwor) nounwind"   --->   Operation 35 'specloopname' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%empty_23 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 32, i64 32, i64 32) nounwind"   --->   Operation 36 'speclooptripcount' 'empty_23' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "br i1 %tmp_1, label %1, label %meminst" [Group_5/sample.c:2049]   --->   Operation 37 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%dense_13_kernel_dim_s = load i64* @dense_13_kernel_dim, align 8" [Group_5/sample.c:2053]   --->   Operation 38 'load' 'dense_13_kernel_dim_s' <Predicate = (tmp_1)> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%dense_13_output_nume_1 = load i64* @dense_13_output_nume, align 8" [Group_5/sample.c:2053]   --->   Operation 39 'load' 'dense_13_output_nume_1' <Predicate = (tmp_1)> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%dense_13_input_input_1 = call i64 @_ssdm_op_Read.ap_auto.i64P(i64* %dense_13_input_input_numel)" [Group_5/sample.c:2053]   --->   Operation 40 'read' 'dense_13_input_input_1' <Predicate = (tmp_1)> <Delay = 0.00>
+ST_2 : Operation 41 [2/2] (2.99ns)   --->   "call fastcc void @k2c_dense.3(i64 %dense_13_output_nume_1, [16 x float]* %dense_13_input_input_array_0, [16 x float]* %dense_13_input_input_array_1, [16 x float]* %dense_13_input_input_array_2, [16 x float]* %dense_13_input_input_array_3, [16 x float]* %dense_13_input_input_array_4, [16 x float]* %dense_13_input_input_array_5, [16 x float]* %dense_13_input_input_array_6, [16 x float]* %dense_13_input_input_array_7, i64 %dense_13_input_input, i64 %dense_13_input_input_1, [5 x i64]* %dense_13_input_input_shape, i64 %dense_13_kernel_dim_s)" [Group_5/sample.c:2053]   --->   Operation 41 'call' <Predicate = (tmp_1)> <Delay = 2.99> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 42 [1/2] (0.00ns)   --->   "call fastcc void @k2c_dense.3(i64 %dense_13_output_nume_1, [16 x float]* %dense_13_input_input_array_0, [16 x float]* %dense_13_input_input_array_1, [16 x float]* %dense_13_input_input_array_2, [16 x float]* %dense_13_input_input_array_3, [16 x float]* %dense_13_input_input_array_4, [16 x float]* %dense_13_input_input_array_5, [16 x float]* %dense_13_input_input_array_6, [16 x float]* %dense_13_input_input_array_7, i64 %dense_13_input_input, i64 %dense_13_input_input_1, [5 x i64]* %dense_13_input_input_shape, i64 %dense_13_kernel_dim_s)" [Group_5/sample.c:2053]   --->   Operation 42 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 3.41>
+ST_4 : Operation 43 [1/1] (0.00ns)   --->   "%dense_13_output_dim_s = load i64* @dense_13_output_dim, align 8" [Group_5/sample.c:2060]   --->   Operation 43 'load' 'dense_13_output_dim_s' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 44 [1/1] (0.00ns)   --->   "%dense_14_kernel_dim_s = load i64* @dense_14_kernel_dim, align 8" [Group_5/sample.c:2060]   --->   Operation 44 'load' 'dense_14_kernel_dim_s' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 45 [1/1] (0.00ns)   --->   "%dense_14_output_nume_1 = load i64* @dense_14_output_nume, align 8" [Group_5/sample.c:2060]   --->   Operation 45 'load' 'dense_14_output_nume_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 46 [1/1] (0.00ns)   --->   "%dense_13_output_nume_2 = load i64* @dense_13_output_nume, align 8" [Group_5/sample.c:2060]   --->   Operation 46 'load' 'dense_13_output_nume_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 47 [2/2] (3.41ns)   --->   "call fastcc void @k2c_dense.2(i64 %dense_14_output_nume_1, i64 %dense_13_output_dim_s, i64 %dense_13_output_nume_2, i64 %dense_14_kernel_dim_s)" [Group_5/sample.c:2060]   --->   Operation 47 'call' <Predicate = true> <Delay = 3.41> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 48 [1/2] (0.00ns)   --->   "call fastcc void @k2c_dense.2(i64 %dense_14_output_nume_1, i64 %dense_13_output_dim_s, i64 %dense_13_output_nume_2, i64 %dense_14_kernel_dim_s)" [Group_5/sample.c:2060]   --->   Operation 48 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 2.99>
+ST_6 : Operation 49 [1/1] (0.00ns)   --->   "%dense_14_output_dim_s = load i64* @dense_14_output_dim, align 8" [Group_5/sample.c:2066]   --->   Operation 49 'load' 'dense_14_output_dim_s' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 50 [1/1] (0.00ns)   --->   "%dense_15_kernel_dim_s = load i64* @dense_15_kernel_dim, align 8" [Group_5/sample.c:2066]   --->   Operation 50 'load' 'dense_15_kernel_dim_s' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 51 [1/1] (0.00ns)   --->   "%dense_15_output_nume_1 = load i64* @dense_15_output_nume, align 8" [Group_5/sample.c:2066]   --->   Operation 51 'load' 'dense_15_output_nume_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 52 [1/1] (0.00ns)   --->   "%dense_14_output_nume_2 = load i64* @dense_14_output_nume, align 8" [Group_5/sample.c:2066]   --->   Operation 52 'load' 'dense_14_output_nume_2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 53 [2/2] (2.99ns)   --->   "call fastcc void @k2c_dense.1(i64 %dense_15_output_nume_1, i64 %dense_14_output_dim_s, i64 %dense_14_output_nume_2, i64 %dense_15_kernel_dim_s)" [Group_5/sample.c:2066]   --->   Operation 53 'call' <Predicate = true> <Delay = 2.99> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 54 [1/2] (0.00ns)   --->   "call fastcc void @k2c_dense.1(i64 %dense_15_output_nume_1, i64 %dense_14_output_dim_s, i64 %dense_14_output_nume_2, i64 %dense_15_kernel_dim_s)" [Group_5/sample.c:2066]   --->   Operation 54 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 3.32>
+ST_8 : Operation 55 [1/1] (0.00ns)   --->   "%dense_15_output_dim_s = load i64* @dense_15_output_dim, align 8" [Group_5/sample.c:2072]   --->   Operation 55 'load' 'dense_15_output_dim_s' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 56 [1/1] (0.00ns)   --->   "%dense_16_kernel_dim_s = load i64* @dense_16_kernel_dim, align 8" [Group_5/sample.c:2072]   --->   Operation 56 'load' 'dense_16_kernel_dim_s' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 57 [1/1] (0.00ns)   --->   "%dense_16_output_nume = call i64 @_ssdm_op_Read.ap_auto.i64P(i64* %dense_16_output_numel)" [Group_5/sample.c:2072]   --->   Operation 57 'read' 'dense_16_output_nume' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 58 [1/1] (0.00ns)   --->   "%dense_15_output_nume_2 = load i64* @dense_15_output_nume, align 8" [Group_5/sample.c:2072]   --->   Operation 58 'load' 'dense_15_output_nume_2' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 59 [2/2] (3.32ns)   --->   "call fastcc void @k2c_dense([1 x float]* %dense_16_output_arrray, i64 %dense_16_output_nume, [2 x float]* @dense_15_output_arra_7, [2 x float]* @dense_15_output_arra_6, [2 x float]* @dense_15_output_arra_5, [2 x float]* @dense_15_output_arra_4, [2 x float]* @dense_15_output_arra_3, [2 x float]* @dense_15_output_arra_2, [2 x float]* @dense_15_output_arra_1, [2 x float]* @dense_15_output_arra, i64 %dense_15_output_dim_s, i64 %dense_15_output_nume_2, i64 %dense_16_kernel_dim_s, [32 x float]* %dense_16_fwork)" [Group_5/sample.c:2072]   --->   Operation 59 'call' <Predicate = true> <Delay = 3.32> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 60 [1/2] (0.00ns)   --->   "call fastcc void @k2c_dense([1 x float]* %dense_16_output_arrray, i64 %dense_16_output_nume, [2 x float]* @dense_15_output_arra_7, [2 x float]* @dense_15_output_arra_6, [2 x float]* @dense_15_output_arra_5, [2 x float]* @dense_15_output_arra_4, [2 x float]* @dense_15_output_arra_3, [2 x float]* @dense_15_output_arra_2, [2 x float]* @dense_15_output_arra_1, [2 x float]* @dense_15_output_arra, i64 %dense_15_output_dim_s, i64 %dense_15_output_nume_2, i64 %dense_16_kernel_dim_s, [32 x float]* %dense_16_fwork)" [Group_5/sample.c:2072]   --->   Operation 60 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 61 [1/1] (0.00ns)   --->   "ret void" [Group_5/sample.c:2076]   --->   Operation 61 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 1.35ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('invdar', Group_5/sample.c:2049) with incoming values : ('indvarinc', Group_5/sample.c:2049) [115]  (1.35 ns)
+
+ <State 2>: 3ns
+The critical path consists of the following:
+	'load' operation ('dense_13_kernel_dim_s', Group_5/sample.c:2053) on global variable 'dense_13_kernel_dim' [125]  (0 ns)
+	'call' operation (Group_5/sample.c:2053) to 'k2c_dense.3' [128]  (3 ns)
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 3.42ns
+The critical path consists of the following:
+	'load' operation ('dense_13_output_dim_s', Group_5/sample.c:2060) on global variable 'dense_13_output_dim' [129]  (0 ns)
+	'call' operation (Group_5/sample.c:2060) to 'k2c_dense.2' [133]  (3.42 ns)
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 3ns
+The critical path consists of the following:
+	'load' operation ('dense_14_output_dim_s', Group_5/sample.c:2066) on global variable 'dense_14_output_dim' [134]  (0 ns)
+	'call' operation (Group_5/sample.c:2066) to 'k2c_dense.1' [138]  (3 ns)
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+ <State 8>: 3.33ns
+The critical path consists of the following:
+	'load' operation ('dense_15_output_dim_s', Group_5/sample.c:2072) on global variable 'dense_15_output_dim' [139]  (0 ns)
+	'call' operation (Group_5/sample.c:2072) to 'k2c_dense' [143]  (3.33 ns)
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

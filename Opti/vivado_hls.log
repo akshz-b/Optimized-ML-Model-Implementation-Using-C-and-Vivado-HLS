@@ -1,0 +1,613 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'Ritik' on host 'ritik' (Windows NT_amd64 version 6.2) on Wed Apr 24 12:31:57 +0530 2024
+INFO: [HLS 200-10] In directory 'C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti'
+INFO: [HLS 200-10] Opening project 'C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5'.
+INFO: [HLS 200-10] Adding design file 'Group_5/sample.h' to the project
+INFO: [HLS 200-10] Adding design file 'Group_5/sample.c' to the project
+INFO: [HLS 200-10] Adding test bench file 'Group_5/sample_test_suite.c' to the project
+INFO: [HLS 200-10] Opening solution 'C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Resource_optimized'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a200tfbg676-2'
+INFO: [HLS 200-10] Analyzing design file 'Group_5/sample.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 101.852 ; gain = 45.727
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 101.852 ; gain = 45.727
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 104.652 ; gain = 48.527
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'k2c_idx2sub' into 'k2c_dot' (Group_5/sample.c:1688) automatically.
+INFO: [XFORM 203-602] Inlining function 'k2c_bias_add' into 'k2c_dense.3' (Group_5/sample.c:2025) automatically.
+INFO: [XFORM 203-602] Inlining function 'k2c_idx2sub' into 'k2c_dot.1' (Group_5/sample.c:1688) automatically.
+INFO: [XFORM 203-602] Inlining function 'k2c_bias_add.1' into 'k2c_dense.2' (Group_5/sample.c:2025) automatically.
+INFO: [XFORM 203-602] Inlining function 'k2c_idx2sub' into 'k2c_dot.2' (Group_5/sample.c:1688) automatically.
+INFO: [XFORM 203-602] Inlining function 'k2c_bias_add.2' into 'k2c_dense.1' (Group_5/sample.c:2025) automatically.
+INFO: [XFORM 203-602] Inlining function 'k2c_idx2sub' into 'k2c_dot.3' (Group_5/sample.c:1688) automatically.
+INFO: [XFORM 203-602] Inlining function 'k2c_bias_add.3' into 'k2c_dense' (Group_5/sample.c:2025) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 107.207 ; gain = 51.082
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-1.1' (Group_5/sample.c:1613) in function 'k2c_dot' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-2.1' (Group_5/sample.c:1629) in function 'k2c_dot' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-1.1' (Group_5/sample.c:1613) in function 'k2c_dot.1' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-2.1' (Group_5/sample.c:1629) in function 'k2c_dot.1' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-1.1' (Group_5/sample.c:1613) in function 'k2c_dot.2' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-2.1' (Group_5/sample.c:1629) in function 'k2c_dot.2' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-1.1' (Group_5/sample.c:1613) in function 'k2c_dot.3' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-2.1' (Group_5/sample.c:1629) in function 'k2c_dot.3' automatically.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3' (Group_5/sample.c:1642) in function 'k2c_dot': changing partial unrolling into complete unrolling since the unrolling factor (=2) is no less than the loop trip count (=1).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-4' (Group_5/sample.c:1647) in function 'k2c_dot': changing partial unrolling into complete unrolling since the unrolling factor (=2) is no less than the loop trip count (=1).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-7' (Group_5/sample.c:1666) in function 'k2c_dot': changing partial unrolling into complete unrolling since the unrolling factor (=2) is no less than the loop trip count (=1).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (Group_5/sample.c:1609) in function 'k2c_dot' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (Group_5/sample.c:1613) in function 'k2c_dot' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2' (Group_5/sample.c:1625) in function 'k2c_dot' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1' (Group_5/sample.c:1629) in function 'k2c_dot' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3' (Group_5/sample.c:1642) in function 'k2c_dot' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-4' (Group_5/sample.c:1647) in function 'k2c_dot' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-5' (Group_5/sample.c:1656) in function 'k2c_dot' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-6' (Group_5/sample.c:1661) in function 'k2c_dot' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-7' (Group_5/sample.c:1666) in function 'k2c_dot' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-8' (Group_5/sample.c:1671) in function 'k2c_dot' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-9' (Group_5/sample.c:1676) in function 'k2c_dot' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-10' (Group_5/sample.c:1681) in function 'k2c_dot' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-11.1' (Group_5/sample.c:1689) in function 'k2c_dot' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-12.1' (Group_5/sample.c:1700) in function 'k2c_dot' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3' (Group_5/sample.c:1642) in function 'k2c_dot.1': changing partial unrolling into complete unrolling since the unrolling factor (=2) is no less than the loop trip count (=1).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-4' (Group_5/sample.c:1647) in function 'k2c_dot.1': changing partial unrolling into complete unrolling since the unrolling factor (=2) is no less than the loop trip count (=1).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-7' (Group_5/sample.c:1666) in function 'k2c_dot.1': changing partial unrolling into complete unrolling since the unrolling factor (=2) is no less than the loop trip count (=1).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (Group_5/sample.c:1609) in function 'k2c_dot.1' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (Group_5/sample.c:1613) in function 'k2c_dot.1' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2' (Group_5/sample.c:1625) in function 'k2c_dot.1' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1' (Group_5/sample.c:1629) in function 'k2c_dot.1' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3' (Group_5/sample.c:1642) in function 'k2c_dot.1' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-4' (Group_5/sample.c:1647) in function 'k2c_dot.1' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-5' (Group_5/sample.c:1656) in function 'k2c_dot.1' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-6' (Group_5/sample.c:1661) in function 'k2c_dot.1' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-7' (Group_5/sample.c:1666) in function 'k2c_dot.1' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-8' (Group_5/sample.c:1671) in function 'k2c_dot.1' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-9' (Group_5/sample.c:1676) in function 'k2c_dot.1' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-10' (Group_5/sample.c:1681) in function 'k2c_dot.1' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-11.1' (Group_5/sample.c:1689) in function 'k2c_dot.1' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-12.1' (Group_5/sample.c:1700) in function 'k2c_dot.1' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3' (Group_5/sample.c:1642) in function 'k2c_dot.2': changing partial unrolling into complete unrolling since the unrolling factor (=2) is no less than the loop trip count (=1).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-4' (Group_5/sample.c:1647) in function 'k2c_dot.2': changing partial unrolling into complete unrolling since the unrolling factor (=2) is no less than the loop trip count (=1).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-7' (Group_5/sample.c:1666) in function 'k2c_dot.2': changing partial unrolling into complete unrolling since the unrolling factor (=2) is no less than the loop trip count (=1).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (Group_5/sample.c:1609) in function 'k2c_dot.2' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (Group_5/sample.c:1613) in function 'k2c_dot.2' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2' (Group_5/sample.c:1625) in function 'k2c_dot.2' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1' (Group_5/sample.c:1629) in function 'k2c_dot.2' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3' (Group_5/sample.c:1642) in function 'k2c_dot.2' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-4' (Group_5/sample.c:1647) in function 'k2c_dot.2' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-5' (Group_5/sample.c:1656) in function 'k2c_dot.2' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-6' (Group_5/sample.c:1661) in function 'k2c_dot.2' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-7' (Group_5/sample.c:1666) in function 'k2c_dot.2' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-8' (Group_5/sample.c:1671) in function 'k2c_dot.2' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-9' (Group_5/sample.c:1676) in function 'k2c_dot.2' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-10' (Group_5/sample.c:1681) in function 'k2c_dot.2' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-11.1' (Group_5/sample.c:1689) in function 'k2c_dot.2' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-12.1' (Group_5/sample.c:1700) in function 'k2c_dot.2' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3' (Group_5/sample.c:1642) in function 'k2c_dot.3': changing partial unrolling into complete unrolling since the unrolling factor (=2) is no less than the loop trip count (=1).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-4' (Group_5/sample.c:1647) in function 'k2c_dot.3': changing partial unrolling into complete unrolling since the unrolling factor (=2) is no less than the loop trip count (=1).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-7' (Group_5/sample.c:1666) in function 'k2c_dot.3': changing partial unrolling into complete unrolling since the unrolling factor (=2) is no less than the loop trip count (=1).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (Group_5/sample.c:1609) in function 'k2c_dot.3' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (Group_5/sample.c:1613) in function 'k2c_dot.3' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2' (Group_5/sample.c:1625) in function 'k2c_dot.3' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1' (Group_5/sample.c:1629) in function 'k2c_dot.3' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3' (Group_5/sample.c:1642) in function 'k2c_dot.3' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-4' (Group_5/sample.c:1647) in function 'k2c_dot.3' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-5' (Group_5/sample.c:1656) in function 'k2c_dot.3' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-6' (Group_5/sample.c:1661) in function 'k2c_dot.3' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-7' (Group_5/sample.c:1666) in function 'k2c_dot.3' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-8' (Group_5/sample.c:1671) in function 'k2c_dot.3' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-9' (Group_5/sample.c:1676) in function 'k2c_dot.3' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-10' (Group_5/sample.c:1681) in function 'k2c_dot.3' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-11.1' (Group_5/sample.c:1689) in function 'k2c_dot.3' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-12.1' (Group_5/sample.c:1700) in function 'k2c_dot.3' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (Group_5/sample.c:1574) in function 'k2c_sub2idx' partially with a factor of 2.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (Group_5/sample.c:1563) in function 'k2c_idx2sub' partially with a factor of 2.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.1.1' (Group_5/sample.c:1811) in function 'k2c_affine_matmul' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.1.2' (Group_5/sample.c:1837) in function 'k2c_affine_matmul' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.1.1' (Group_5/sample.c:1811) in function 'k2c_affine_matmul.1' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.1.2' (Group_5/sample.c:1837) in function 'k2c_affine_matmul.1' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.1.1' (Group_5/sample.c:1811) in function 'k2c_affine_matmul.2' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.1.2' (Group_5/sample.c:1837) in function 'k2c_affine_matmul.2' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.1.1' (Group_5/sample.c:1811) in function 'k2c_affine_matmul.3' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.1.2' (Group_5/sample.c:1837) in function 'k2c_affine_matmul.3' completely: variable loop bound.
+INFO: [XFORM 203-102] Partitioning array 'dense_16_bias_array' automatically.
+INFO: [XFORM 203-102] Partitioning array 'axesA' automatically.
+INFO: [XFORM 203-602] Inlining function 'k2c_bias_add' into 'k2c_dense.3' (Group_5/sample.c:2025) automatically.
+INFO: [XFORM 203-602] Inlining function 'k2c_bias_add.1' into 'k2c_dense.2' (Group_5/sample.c:2025) automatically.
+INFO: [XFORM 203-602] Inlining function 'k2c_bias_add.2' into 'k2c_dense.1' (Group_5/sample.c:2025) automatically.
+INFO: [XFORM 203-602] Inlining function 'k2c_bias_add.3' into 'k2c_dense' (Group_5/sample.c:2025) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (Group_5/sample.c:1987:9) to (Group_5/sample.c:1998:9) in function 'k2c_dense.3'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:19 . Memory (MB): peak = 129.758 ; gain = 73.633
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:22 . Memory (MB): peak = 267.762 ; gain = 211.637
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'sample' ...
+WARNING: [SYN 201-103] Legalizing function name 'k2c_dense.3' to 'k2c_dense_3'.
+WARNING: [SYN 201-103] Legalizing function name 'k2c_dot.1' to 'k2c_dot_1'.
+WARNING: [SYN 201-103] Legalizing function name 'k2c_affine_matmul.1' to 'k2c_affine_matmul_1'.
+WARNING: [SYN 201-103] Legalizing function name 'k2c_dense.2' to 'k2c_dense_2'.
+WARNING: [SYN 201-103] Legalizing function name 'k2c_dot.2' to 'k2c_dot_2'.
+WARNING: [SYN 201-103] Legalizing function name 'k2c_affine_matmul.2' to 'k2c_affine_matmul_2'.
+WARNING: [SYN 201-103] Legalizing function name 'k2c_dense.1' to 'k2c_dense_1'.
+WARNING: [SYN 201-103] Legalizing function name 'k2c_dot.3' to 'k2c_dot_3'.
+WARNING: [SYN 201-103] Legalizing function name 'k2c_affine_matmul.3' to 'k2c_affine_matmul_3'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'k2c_idx2sub' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 23.058 seconds; current allocated memory: 223.751 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.695 seconds; current allocated memory: 224.325 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'k2c_sub2idx' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.472 seconds; current allocated memory: 224.764 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.176 seconds; current allocated memory: 224.913 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'k2c_dot' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.6 seconds; current allocated memory: 226.373 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.613 seconds; current allocated memory: 227.492 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'k2c_affine_matmul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.035 seconds; current allocated memory: 228.266 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.47 seconds; current allocated memory: 228.822 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'k2c_dense_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.59 seconds; current allocated memory: 229.176 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.544 seconds; current allocated memory: 229.544 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'k2c_dot_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.915 seconds; current allocated memory: 230.990 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.689 seconds; current allocated memory: 232.079 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'k2c_affine_matmul_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.93 seconds; current allocated memory: 232.764 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.497 seconds; current allocated memory: 233.343 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'k2c_dense_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.632 seconds; current allocated memory: 233.646 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.533 seconds; current allocated memory: 234.002 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'k2c_dot_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.885 seconds; current allocated memory: 235.408 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.606 seconds; current allocated memory: 236.494 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'k2c_affine_matmul_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.948 seconds; current allocated memory: 237.215 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.426 seconds; current allocated memory: 237.747 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'k2c_dense_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.53 seconds; current allocated memory: 238.077 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.551 seconds; current allocated memory: 238.387 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'k2c_dot_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.846 seconds; current allocated memory: 239.829 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.651 seconds; current allocated memory: 240.913 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'k2c_affine_matmul_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.927 seconds; current allocated memory: 241.563 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.39 seconds; current allocated memory: 242.004 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'k2c_dense' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.556 seconds; current allocated memory: 242.563 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.78 seconds; current allocated memory: 242.996 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sample' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.616 seconds; current allocated memory: 243.235 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.6 seconds; current allocated memory: 243.918 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'k2c_idx2sub' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'sample_urem_64ns_64ns_64_68_seq_1' to 'sample_urem_64ns_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample_udiv_64ns_64ns_64_68_seq_1' to 'sample_udiv_64ns_cud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'sample_udiv_64ns_cud': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample_urem_64ns_bkb': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'k2c_idx2sub'.
+INFO: [HLS 200-111]  Elapsed time: 1.523 seconds; current allocated memory: 245.599 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'k2c_sub2idx' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'sample_mul_64s_64s_64_2_1' to 'sample_mul_64s_64dEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'sample_mul_64s_64dEe': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'k2c_sub2idx'.
+INFO: [HLS 200-111]  Elapsed time: 0.71 seconds; current allocated memory: 246.106 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'k2c_dot' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'k2c_dot_dense_13_kernel_shap' to 'k2c_dot_dense_13_eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'k2c_dot_dense_13_fwork' to 'k2c_dot_dense_13_fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'k2c_dot_dense_13_kernel_arra' to 'k2c_dot_dense_13_g8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample_fadd_32ns_32ns_32_5_full_dsp_1' to 'sample_fadd_32ns_hbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample_fmul_32ns_32ns_32_3_max_dsp_1' to 'sample_fmul_32ns_ibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample_mul_66ns_64ns_129_2_1' to 'sample_mul_66ns_6jbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample_mul_60ns_64s_64_2_1' to 'sample_mul_60ns_6kbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample_mul_mul_13s_13s_13_1_1' to 'sample_mul_mul_13lbW' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'sample_fadd_32ns_hbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample_fmul_32ns_ibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample_mul_60ns_6kbM': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample_mul_66ns_6jbC': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample_mul_mul_13lbW': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample_udiv_64ns_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'k2c_dot'.
+INFO: [HLS 200-111]  Elapsed time: 1.183 seconds; current allocated memory: 249.048 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'k2c_affine_matmul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'sample_mul_mul_8ns_13s_13_1_1' to 'sample_mul_mul_8nmb6' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'sample_fadd_32ns_hbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample_fmul_32ns_ibs': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample_mul_mul_8nmb6': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'k2c_affine_matmul'.
+INFO: [HLS 200-111]  Elapsed time: 2.893 seconds; current allocated memory: 250.591 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'k2c_dense_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'k2c_dense_3_dense_13_kernel_arra' to 'k2c_dense_3_densencg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'k2c_dense_3_dense_13_bias_array' to 'k2c_dense_3_denseocq' due to the length limit 20
+WARNING: [RTGEN 206-101] Register 'dense_13_kernel_nume' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'dense_13_bias_numel' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'sample_fcmp_32ns_32ns_1_1_1' to 'sample_fcmp_32ns_pcA' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'sample_fadd_32ns_hbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample_fcmp_32ns_pcA': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'k2c_dense_3'.
+INFO: [HLS 200-111]  Elapsed time: 1.879 seconds; current allocated memory: 251.613 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'k2c_dot_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'k2c_dot_1_dense_13_output_shap' to 'k2c_dot_1_dense_1qcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'k2c_dot_1_dense_14_kernel_shap' to 'k2c_dot_1_dense_1rcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'k2c_dot_1_dense_14_fwork' to 'k2c_dot_1_dense_1sc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'k2c_dot_1_dense_14_kernel_arra' to 'k2c_dot_1_dense_1tde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample_udiv_64ns_10ns_64_68_seq_1' to 'sample_udiv_64ns_udo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample_mul_57ns_64s_64_2_1' to 'sample_mul_57ns_6vdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample_mul_mul_14s_14s_14_1_1' to 'sample_mul_mul_14wdI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample_mul_mul_8ns_14s_14_1_1' to 'sample_mul_mul_8nxdS' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'sample_fadd_32ns_hbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample_fmul_32ns_ibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample_mul_57ns_6vdy': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample_mul_mul_14wdI': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample_mul_mul_8nxdS': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample_udiv_64ns_udo': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'k2c_dot_1'.
+INFO: [HLS 200-111]  Elapsed time: 1.895 seconds; current allocated memory: 255.001 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'k2c_affine_matmul_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'sample_fadd_32ns_hbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample_fmul_32ns_ibs': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'k2c_affine_matmul_1'.
+INFO: [HLS 200-111]  Elapsed time: 2.835 seconds; current allocated memory: 256.625 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'k2c_dense_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'k2c_dense_2_dense_14_kernel_arra' to 'k2c_dense_2_denseyd2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'k2c_dense_2_dense_14_bias_array' to 'k2c_dense_2_densezec' due to the length limit 20
+WARNING: [RTGEN 206-101] Register 'dense_14_kernel_nume' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'dense_14_bias_numel' is power-on initialization.
+INFO: [RTGEN 206-100] Generating core module 'sample_fadd_32ns_hbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample_fcmp_32ns_pcA': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'k2c_dense_2'.
+INFO: [HLS 200-111]  Elapsed time: 1.774 seconds; current allocated memory: 257.549 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'k2c_dot_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'k2c_dot_2_dense_14_output_shap' to 'k2c_dot_2_dense_1Aem' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'k2c_dot_2_dense_15_kernel_shap' to 'k2c_dot_2_dense_1Bew' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'k2c_dot_2_dense_15_fwork' to 'k2c_dot_2_dense_1CeG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'k2c_dot_2_dense_15_kernel_arra' to 'k2c_dot_2_dense_1DeQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample_udiv_64ns_8ns_64_68_seq_1' to 'sample_udiv_64ns_Ee0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample_mul_59ns_64s_64_2_1' to 'sample_mul_59ns_6Ffa' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample_mul_mul_11s_11s_11_1_1' to 'sample_mul_mul_11Gfk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample_mul_mul_6ns_11s_11_1_1' to 'sample_mul_mul_6nHfu' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'sample_fadd_32ns_hbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample_fmul_32ns_ibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample_mul_59ns_6Ffa': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample_mul_mul_11Gfk': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample_mul_mul_6nHfu': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample_udiv_64ns_Ee0': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'k2c_dot_2'.
+INFO: [HLS 200-111]  Elapsed time: 2.005 seconds; current allocated memory: 260.196 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'k2c_affine_matmul_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'sample_fadd_32ns_hbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample_fmul_32ns_ibs': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'k2c_affine_matmul_2'.
+INFO: [HLS 200-111]  Elapsed time: 2.858 seconds; current allocated memory: 261.690 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'k2c_dense_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'k2c_dense_1_dense_15_kernel_arra' to 'k2c_dense_1_denseIfE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'k2c_dense_1_dense_15_bias_array' to 'k2c_dense_1_denseJfO' due to the length limit 20
+WARNING: [RTGEN 206-101] Register 'dense_15_kernel_nume' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'dense_15_bias_numel' is power-on initialization.
+INFO: [RTGEN 206-100] Generating core module 'sample_fadd_32ns_hbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample_fcmp_32ns_pcA': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'k2c_dense_1'.
+INFO: [HLS 200-111]  Elapsed time: 1.853 seconds; current allocated memory: 262.821 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'k2c_dot_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'k2c_dot_3_dense_15_output_shap' to 'k2c_dot_3_dense_1KfY' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'k2c_dot_3_dense_16_kernel_shap' to 'k2c_dot_3_dense_1Lf8' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'k2c_dot_3_dense_16_kernel_arra' to 'k2c_dot_3_dense_1Mgi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample_udiv_64ns_7ns_64_68_seq_1' to 'sample_udiv_64ns_Ngs' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'sample_fadd_32ns_hbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample_fmul_32ns_ibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample_mul_60ns_6kbM': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample_udiv_64ns_Ngs': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'k2c_dot_3'.
+INFO: [HLS 200-111]  Elapsed time: 1.847 seconds; current allocated memory: 265.377 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'k2c_affine_matmul_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'sample_fadd_32ns_hbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample_fmul_32ns_ibs': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'k2c_affine_matmul_3'.
+INFO: [HLS 200-111]  Elapsed time: 2.93 seconds; current allocated memory: 266.734 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'k2c_dense' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'k2c_dense_dense_16_kernel_arra' to 'k2c_dense_dense_1OgC' due to the length limit 20
+WARNING: [RTGEN 206-101] Register 'dense_16_kernel_nume' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'dense_16_bias_numel' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'sample_fdiv_32ns_32ns_32_12_1' to 'sample_fdiv_32ns_PgM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample_fexp_32ns_32ns_32_8_full_dsp_1' to 'sample_fexp_32ns_QgW' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'sample_fadd_32ns_hbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample_fdiv_32ns_PgM': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample_fexp_32ns_QgW': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'k2c_dense'.
+INFO: [HLS 200-111]  Elapsed time: 1.808 seconds; current allocated memory: 267.891 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sample' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'sample/dense_13_input_input_array' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sample/dense_13_input_input_dim' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sample/dense_13_input_input_numel' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sample/dense_13_input_input_shape' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sample/dense_16_output_arrray' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sample/dense_16_output_dim' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sample/dense_16_output_numel' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sample/dense_16_output_shape' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'sample' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'dense_13_kernel_dim' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'dense_13_kernel_dim' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Register 'dense_13_output_nume' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'dense_13_output_nume' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'dense_13_output_arra' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'sample_dense_13_output_arra' to 'sample_dense_13_oRg6' due to the length limit 20
+WARNING: [RTGEN 206-101] Global array 'dense_13_kernel_arra' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'dense_13_bias_array' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global scalar 'dense_13_kernel_nume' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'dense_13_kernel_shap' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global scalar 'dense_13_bias_numel' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Register 'dense_13_output_dim' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'dense_13_output_dim' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Register 'dense_14_kernel_dim' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'dense_14_kernel_dim' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Register 'dense_14_output_nume' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'dense_14_output_nume' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'dense_14_output_arra' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'sample_dense_14_output_arra' to 'sample_dense_14_oShg' due to the length limit 20
+WARNING: [RTGEN 206-101] Global array 'dense_14_kernel_arra' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'dense_14_bias_array' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global scalar 'dense_14_kernel_nume' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'dense_13_output_shap' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'dense_14_kernel_shap' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global scalar 'dense_14_bias_numel' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Register 'dense_14_output_dim' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'dense_14_output_dim' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Register 'dense_15_kernel_dim' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'dense_15_kernel_dim' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Register 'dense_15_output_nume' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'dense_15_output_nume' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'dense_15_output_arra' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'sample_dense_15_output_arra' to 'sample_dense_15_oThq' due to the length limit 20
+WARNING: [RTGEN 206-101] Global array 'dense_15_kernel_arra' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'dense_15_bias_array' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global scalar 'dense_15_kernel_nume' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'dense_14_output_shap' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'dense_15_kernel_shap' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global scalar 'dense_15_bias_numel' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Register 'dense_15_output_dim' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'dense_15_output_dim' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Register 'dense_16_kernel_dim' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'dense_16_kernel_dim' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'dense_16_kernel_arra' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global scalar 'dense_16_kernel_nume' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'dense_15_output_shap' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'dense_16_kernel_shap' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global scalar 'dense_16_bias_numel' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'sample_dense_16_fwork' to 'sample_dense_16_fUhA' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'sample/dense_16_output_dim' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'sample/dense_16_output_shape_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sample/dense_16_output_shape_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'sample/dense_16_output_shape_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sample/dense_16_output_shape_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'sample/dense_16_output_shape_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sample/dense_16_output_shape_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'sample/dense_16_output_shape_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sample/dense_16_output_shape_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'sample/dense_16_output_shape_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'sample/dense_16_output_shape_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sample/dense_16_output_shape_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'sample/dense_16_output_shape_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sample/dense_16_output_shape_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'sample/dense_16_output_shape_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sample/dense_16_output_shape_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'sample/dense_16_output_shape_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sample/dense_16_output_shape_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'sample/dense_16_output_shape_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sample'.
+INFO: [HLS 200-111]  Elapsed time: 4.669 seconds; current allocated memory: 269.024 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'sample_urem_64ns_bkb_div'
+INFO: [RTMG 210-282] Generating pipelined core: 'sample_udiv_64ns_cud_div'
+INFO: [RTMG 210-282] Generating pipelined core: 'sample_mul_64s_64dEe_MulnS_0'
+INFO: [RTMG 210-282] Generating pipelined core: 'sample_mul_66ns_6jbC_MulnS_1'
+INFO: [RTMG 210-282] Generating pipelined core: 'sample_mul_60ns_6kbM_MulnS_2'
+INFO: [RTMG 210-279] Implementing memory 'k2c_dot_dense_13_eOg_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'k2c_dot_dense_13_fYi_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-279] Implementing memory 'k2c_dot_dense_13_g8j_rom' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'k2c_dot_permA_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'k2c_dot_permB_ram (RAM)' using distributed RAMs.
+WARNING: [RTMG 210-274] Memory 'k2c_dense_3_densencg' is read-only, switch it to a ROM.
+INFO: [RTMG 210-279] Implementing memory 'k2c_dense_3_densencg_rom' using block ROMs.
+INFO: [RTMG 210-279] Implementing memory 'k2c_dense_3_denseocq_rom' using auto ROMs.
+INFO: [RTMG 210-282] Generating pipelined core: 'sample_udiv_64ns_udo_div'
+INFO: [RTMG 210-282] Generating pipelined core: 'sample_mul_57ns_6vdy_MulnS_3'
+INFO: [RTMG 210-279] Implementing memory 'k2c_dot_1_dense_1qcK_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'k2c_dot_1_dense_1rcU_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'k2c_dot_1_dense_1sc4_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-279] Implementing memory 'k2c_dot_1_dense_1tde_rom' using auto ROMs.
+WARNING: [RTMG 210-274] Memory 'k2c_dense_2_denseyd2' is read-only, switch it to a ROM.
+INFO: [RTMG 210-279] Implementing memory 'k2c_dense_2_denseyd2_rom' using block ROMs.
+INFO: [RTMG 210-279] Implementing memory 'k2c_dense_2_densezec_rom' using auto ROMs.
+INFO: [RTMG 210-282] Generating pipelined core: 'sample_udiv_64ns_Ee0_div'
+INFO: [RTMG 210-282] Generating pipelined core: 'sample_mul_59ns_6Ffa_MulnS_4'
+INFO: [RTMG 210-279] Implementing memory 'k2c_dot_2_dense_1Aem_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'k2c_dot_2_dense_1Bew_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'k2c_dot_2_dense_1CeG_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-279] Implementing memory 'k2c_dot_2_dense_1DeQ_rom' using auto ROMs.
+WARNING: [RTMG 210-274] Memory 'k2c_dense_1_denseIfE' is read-only, switch it to a ROM.
+INFO: [RTMG 210-279] Implementing memory 'k2c_dense_1_denseIfE_rom' using block ROMs.
+INFO: [RTMG 210-279] Implementing memory 'k2c_dense_1_denseJfO_rom' using distributed ROMs.
+INFO: [RTMG 210-282] Generating pipelined core: 'sample_udiv_64ns_Ngs_div'
+INFO: [RTMG 210-279] Implementing memory 'k2c_dot_3_dense_1KfY_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'k2c_dot_3_dense_1Mgi_rom' using distributed ROMs.
+WARNING: [RTMG 210-274] Memory 'k2c_dense_dense_1OgC' is read-only, switch it to a ROM.
+INFO: [RTMG 210-279] Implementing memory 'k2c_dense_dense_1OgC_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'sample_dense_13_oRg6_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'sample_dense_14_oShg_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'sample_dense_15_oThq_ram (RAM)' using distributed RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'sample_dense_16_fUhA_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:35 ; elapsed = 00:01:45 . Memory (MB): peak = 365.082 ; gain = 308.957
+INFO: [SYSC 207-301] Generating SystemC RTL for sample.
+INFO: [VHDL 208-304] Generating VHDL RTL for sample.
+INFO: [VLOG 209-307] Generating Verilog RTL for sample.
+INFO: [HLS 200-112] Total elapsed time: 105.094 seconds; peak allocated memory: 269.024 MB.

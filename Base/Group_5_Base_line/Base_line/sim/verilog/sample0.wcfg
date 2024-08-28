@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="sample0.wdb" id="1">
+         <top_modules>
+            <top_module name="apatb_sample0_top" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+   </zoom_setting>
+   <column_width_setting>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject fp_name="group1" type="group">
+      <obj_property name="label">Design Top Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group2" type="group">
+         <obj_property name="label">C InOuts</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group3" type="group">
+            <obj_property name="label">dense_16_output(memory)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_sample0_top/AESL_inst_sample0/dense_16_output_array_q1" type="array">
+               <obj_property name="ElementShortName">dense_16_output_array_q1[31:0]</obj_property>
+               <obj_property name="ObjectShortName">dense_16_output_array_q1[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/AESL_inst_sample0/dense_16_output_array_d1" type="array">
+               <obj_property name="ElementShortName">dense_16_output_array_d1[31:0]</obj_property>
+               <obj_property name="ObjectShortName">dense_16_output_array_d1[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/AESL_inst_sample0/dense_16_output_array_we1" type="logic">
+               <obj_property name="ElementShortName">dense_16_output_array_we1</obj_property>
+               <obj_property name="ObjectShortName">dense_16_output_array_we1</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/AESL_inst_sample0/dense_16_output_array_ce1" type="logic">
+               <obj_property name="ElementShortName">dense_16_output_array_ce1</obj_property>
+               <obj_property name="ObjectShortName">dense_16_output_array_ce1</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/AESL_inst_sample0/dense_16_output_array_address1" type="array">
+               <obj_property name="ElementShortName">dense_16_output_array_address1[13:0]</obj_property>
+               <obj_property name="ObjectShortName">dense_16_output_array_address1[13:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/AESL_inst_sample0/dense_16_output_array_q0" type="array">
+               <obj_property name="ElementShortName">dense_16_output_array_q0[31:0]</obj_property>
+               <obj_property name="ObjectShortName">dense_16_output_array_q0[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/AESL_inst_sample0/dense_16_output_array_d0" type="array">
+               <obj_property name="ElementShortName">dense_16_output_array_d0[31:0]</obj_property>
+               <obj_property name="ObjectShortName">dense_16_output_array_d0[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/AESL_inst_sample0/dense_16_output_array_we0" type="logic">
+               <obj_property name="ElementShortName">dense_16_output_array_we0</obj_property>
+               <obj_property name="ObjectShortName">dense_16_output_array_we0</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/AESL_inst_sample0/dense_16_output_array_ce0" type="logic">
+               <obj_property name="ElementShortName">dense_16_output_array_ce0</obj_property>
+               <obj_property name="ObjectShortName">dense_16_output_array_ce0</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/AESL_inst_sample0/dense_16_output_array_address0" type="array">
+               <obj_property name="ElementShortName">dense_16_output_array_address0[13:0]</obj_property>
+               <obj_property name="ObjectShortName">dense_16_output_array_address0[13:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group14" type="group">
+         <obj_property name="label">C Inputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group15" type="group">
+            <obj_property name="label">dense_16_output(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_sample0_top/AESL_inst_sample0/dense_16_output_numel" type="array">
+               <obj_property name="ElementShortName">dense_16_output_numel[63:0]</obj_property>
+               <obj_property name="ObjectShortName">dense_16_output_numel[63:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/AESL_inst_sample0/dense_16_output_ndim" type="array">
+               <obj_property name="ElementShortName">dense_16_output_ndim[63:0]</obj_property>
+               <obj_property name="ObjectShortName">dense_16_output_ndim[63:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group18" type="group">
+            <obj_property name="label">dense_13_input_input(memory)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_sample0_top/AESL_inst_sample0/dense_13_input_input_shape_q0" type="array">
+               <obj_property name="ElementShortName">dense_13_input_input_shape_q0[63:0]</obj_property>
+               <obj_property name="ObjectShortName">dense_13_input_input_shape_q0[63:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/AESL_inst_sample0/dense_13_input_input_shape_ce0" type="logic">
+               <obj_property name="ElementShortName">dense_13_input_input_shape_ce0</obj_property>
+               <obj_property name="ObjectShortName">dense_13_input_input_shape_ce0</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/AESL_inst_sample0/dense_13_input_input_shape_address0" type="array">
+               <obj_property name="ElementShortName">dense_13_input_input_shape_address0[2:0]</obj_property>
+               <obj_property name="ObjectShortName">dense_13_input_input_shape_address0[2:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/AESL_inst_sample0/dense_13_input_input_numel" type="array">
+               <obj_property name="ElementShortName">dense_13_input_input_numel[63:0]</obj_property>
+               <obj_property name="ObjectShortName">dense_13_input_input_numel[63:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/AESL_inst_sample0/dense_13_input_input_ndim" type="array">
+               <obj_property name="ElementShortName">dense_13_input_input_ndim[63:0]</obj_property>
+               <obj_property name="ObjectShortName">dense_13_input_input_ndim[63:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/AESL_inst_sample0/dense_13_input_input_array_q0" type="array">
+               <obj_property name="ElementShortName">dense_13_input_input_array_q0[31:0]</obj_property>
+               <obj_property name="ObjectShortName">dense_13_input_input_array_q0[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/AESL_inst_sample0/dense_13_input_input_array_ce0" type="logic">
+               <obj_property name="ElementShortName">dense_13_input_input_array_ce0</obj_property>
+               <obj_property name="ObjectShortName">dense_13_input_input_array_ce0</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/AESL_inst_sample0/dense_13_input_input_array_address0" type="array">
+               <obj_property name="ElementShortName">dense_13_input_input_array_address0[13:0]</obj_property>
+               <obj_property name="ObjectShortName">dense_13_input_input_array_address0[13:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group27" type="group">
+         <obj_property name="label">Block-level IO Handshake</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/apatb_sample0_top/AESL_inst_sample0/ap_start" type="logic">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject fp_name="/apatb_sample0_top/AESL_inst_sample0/ap_done" type="logic">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+         <wvobject fp_name="/apatb_sample0_top/AESL_inst_sample0/ap_idle" type="logic">
+            <obj_property name="ElementShortName">ap_idle</obj_property>
+            <obj_property name="ObjectShortName">ap_idle</obj_property>
+         </wvobject>
+         <wvobject fp_name="/apatb_sample0_top/AESL_inst_sample0/ap_ready" type="logic">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group32" type="group">
+         <obj_property name="label">Reset</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/apatb_sample0_top/AESL_inst_sample0/ap_rst" type="logic">
+            <obj_property name="ElementShortName">ap_rst</obj_property>
+            <obj_property name="ObjectShortName">ap_rst</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group34" type="group">
+         <obj_property name="label">Clock</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/apatb_sample0_top/AESL_inst_sample0/ap_clk" type="logic">
+            <obj_property name="ElementShortName">ap_clk</obj_property>
+            <obj_property name="ObjectShortName">ap_clk</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group36" type="group">
+      <obj_property name="label">Test Bench Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group37" type="group">
+         <obj_property name="label">Internal Signals</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group38" type="group">
+            <obj_property name="label">Simulation Status</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_sample0_top/AUTOTB_TRANSACTION_NUM" type="array">
+               <obj_property name="ElementShortName">AUTOTB_TRANSACTION_NUM[31:0]</obj_property>
+               <obj_property name="ObjectShortName">AUTOTB_TRANSACTION_NUM[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/ready_cnt" type="array">
+               <obj_property name="ElementShortName">ready_cnt[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ready_cnt[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/done_cnt" type="array">
+               <obj_property name="ElementShortName">done_cnt[31:0]</obj_property>
+               <obj_property name="ObjectShortName">done_cnt[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group39" type="group">
+            <obj_property name="label">Port Depth</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_sample0_top/LENGTH_dense_13_input_input_array" type="array">
+               <obj_property name="ElementShortName">LENGTH_dense_13_input_input_array[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_dense_13_input_input_array[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/LENGTH_dense_13_input_input_ndim" type="array">
+               <obj_property name="ElementShortName">LENGTH_dense_13_input_input_ndim[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_dense_13_input_input_ndim[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/LENGTH_dense_13_input_input_numel" type="array">
+               <obj_property name="ElementShortName">LENGTH_dense_13_input_input_numel[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_dense_13_input_input_numel[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/LENGTH_dense_13_input_input_shape" type="array">
+               <obj_property name="ElementShortName">LENGTH_dense_13_input_input_shape[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_dense_13_input_input_shape[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/LENGTH_dense_16_output_array" type="array">
+               <obj_property name="ElementShortName">LENGTH_dense_16_output_array[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_dense_16_output_array[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/LENGTH_dense_16_output_numel" type="array">
+               <obj_property name="ElementShortName">LENGTH_dense_16_output_numel[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_dense_16_output_numel[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group49" type="group">
+         <obj_property name="label">C InOuts</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group50" type="group">
+            <obj_property name="label">dense_16_output(memory)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_sample0_top/dense_16_output_array_q1" type="array">
+               <obj_property name="ElementShortName">dense_16_output_array_q1[31:0]</obj_property>
+               <obj_property name="ObjectShortName">dense_16_output_array_q1[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/dense_16_output_array_d1" type="array">
+               <obj_property name="ElementShortName">dense_16_output_array_d1[31:0]</obj_property>
+               <obj_property name="ObjectShortName">dense_16_output_array_d1[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/dense_16_output_array_we1" type="logic">
+               <obj_property name="ElementShortName">dense_16_output_array_we1</obj_property>
+               <obj_property name="ObjectShortName">dense_16_output_array_we1</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/dense_16_output_array_ce1" type="logic">
+               <obj_property name="ElementShortName">dense_16_output_array_ce1</obj_property>
+               <obj_property name="ObjectShortName">dense_16_output_array_ce1</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/dense_16_output_array_address1" type="array">
+               <obj_property name="ElementShortName">dense_16_output_array_address1[13:0]</obj_property>
+               <obj_property name="ObjectShortName">dense_16_output_array_address1[13:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/dense_16_output_array_q0" type="array">
+               <obj_property name="ElementShortName">dense_16_output_array_q0[31:0]</obj_property>
+               <obj_property name="ObjectShortName">dense_16_output_array_q0[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/dense_16_output_array_d0" type="array">
+               <obj_property name="ElementShortName">dense_16_output_array_d0[31:0]</obj_property>
+               <obj_property name="ObjectShortName">dense_16_output_array_d0[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/dense_16_output_array_we0" type="logic">
+               <obj_property name="ElementShortName">dense_16_output_array_we0</obj_property>
+               <obj_property name="ObjectShortName">dense_16_output_array_we0</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/dense_16_output_array_ce0" type="logic">
+               <obj_property name="ElementShortName">dense_16_output_array_ce0</obj_property>
+               <obj_property name="ObjectShortName">dense_16_output_array_ce0</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/dense_16_output_array_address0" type="array">
+               <obj_property name="ElementShortName">dense_16_output_array_address0[13:0]</obj_property>
+               <obj_property name="ObjectShortName">dense_16_output_array_address0[13:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group61" type="group">
+         <obj_property name="label">C Inputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group62" type="group">
+            <obj_property name="label">dense_16_output(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_sample0_top/dense_16_output_numel" type="array">
+               <obj_property name="ElementShortName">dense_16_output_numel[63:0]</obj_property>
+               <obj_property name="ObjectShortName">dense_16_output_numel[63:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/dense_16_output_ndim" type="array">
+               <obj_property name="ElementShortName">dense_16_output_ndim[63:0]</obj_property>
+               <obj_property name="ObjectShortName">dense_16_output_ndim[63:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group65" type="group">
+            <obj_property name="label">dense_13_input_input(memory)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_sample0_top/dense_13_input_input_shape_q0" type="array">
+               <obj_property name="ElementShortName">dense_13_input_input_shape_q0[63:0]</obj_property>
+               <obj_property name="ObjectShortName">dense_13_input_input_shape_q0[63:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/dense_13_input_input_shape_ce0" type="logic">
+               <obj_property name="ElementShortName">dense_13_input_input_shape_ce0</obj_property>
+               <obj_property name="ObjectShortName">dense_13_input_input_shape_ce0</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/dense_13_input_input_shape_address0" type="array">
+               <obj_property name="ElementShortName">dense_13_input_input_shape_address0[2:0]</obj_property>
+               <obj_property name="ObjectShortName">dense_13_input_input_shape_address0[2:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/dense_13_input_input_numel" type="array">
+               <obj_property name="ElementShortName">dense_13_input_input_numel[63:0]</obj_property>
+               <obj_property name="ObjectShortName">dense_13_input_input_numel[63:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/dense_13_input_input_ndim" type="array">
+               <obj_property name="ElementShortName">dense_13_input_input_ndim[63:0]</obj_property>
+               <obj_property name="ObjectShortName">dense_13_input_input_ndim[63:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/dense_13_input_input_array_q0" type="array">
+               <obj_property name="ElementShortName">dense_13_input_input_array_q0[31:0]</obj_property>
+               <obj_property name="ObjectShortName">dense_13_input_input_array_q0[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/dense_13_input_input_array_ce0" type="logic">
+               <obj_property name="ElementShortName">dense_13_input_input_array_ce0</obj_property>
+               <obj_property name="ObjectShortName">dense_13_input_input_array_ce0</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_sample0_top/dense_13_input_input_array_address0" type="array">
+               <obj_property name="ElementShortName">dense_13_input_input_array_address0[13:0]</obj_property>
+               <obj_property name="ObjectShortName">dense_13_input_input_array_address0[13:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

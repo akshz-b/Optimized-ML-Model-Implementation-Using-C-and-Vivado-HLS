@@ -1,0 +1,400 @@
+
+
+================================================================
+== Vivado HLS Report for 'sample0'
+================================================================
+* Date:           Tue Apr 23 19:23:19 2024
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        Group_5_Base_line
+* Solution:       Base_line
+* Product family: artix7
+* Target device:  xc7a200tfbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     4.348|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +------------------------+-------------+-----+-----+-----+-----+---------+
+        |                        |             |  Latency  |  Interval | Pipeline|
+        |        Instance        |    Module   | min | max | min | max |   Type  |
+        +------------------------+-------------+-----+-----+-----+-----+---------+
+        |grp_k2c_dense_fu_863    |k2c_dense    |    ?|    ?|    ?|    ?|   none  |
+        |grp_k2c_dense_2_fu_887  |k2c_dense_2  |    ?|    ?|    ?|    ?|   none  |
+        |grp_k2c_dense_1_fu_910  |k2c_dense_1  |    ?|    ?|    ?|    ?|   none  |
+        |grp_k2c_dense_3_fu_933  |k2c_dense_3  |    ?|    ?|    ?|    ?|   none  |
+        +------------------------+-------------+-----+-----+-----+-----+---------+
+
+        * Loop: 
+        +-------------------------+-------+-------+----------+-----------+-----------+------+----------+
+        |                         |    Latency    | Iteration|  Initiation Interval  | Trip |          |
+        |        Loop Name        |  min  |  max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------------+-------+-------+----------+-----------+-----------+------+----------+
+        |- Loop 1                 |    128|    128|         1|          -|          -|   128|    no    |
+        |- Loop 2                 |   7680|   7680|         3|          -|          -|  2560|    no    |
+        |- Loop 3                 |    384|    384|         3|          -|          -|   128|    no    |
+        |- memset_dense_13_fwork  |   2579|   2579|         1|          -|          -|  2580|    no    |
+        |- Loop 5                 |     32|     32|         1|          -|          -|    32|    no    |
+        |- Loop 6                 |  12288|  12288|         3|          -|          -|  4096|    no    |
+        |- Loop 7                 |     96|     96|         3|          -|          -|    32|    no    |
+        |- memset_dense_14_fwork  |   4223|   4223|         1|          -|          -|  4224|    no    |
+        |- Loop 9                 |     16|     16|         1|          -|          -|    16|    no    |
+        |- Loop 10                |   1536|   1536|         3|          -|          -|   512|    no    |
+        |- Loop 11                |     48|     48|         3|          -|          -|    16|    no    |
+        |- memset_dense_15_fwork  |    543|    543|         1|          -|          -|   544|    no    |
+        |- Loop 13                |     48|     48|         3|          -|          -|    16|    no    |
+        |- memset_dense_16_fwork  |     31|     31|         1|          -|          -|    32|    no    |
+        +-------------------------+-------+-------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
++-----------------+---------+-------+--------+--------+
+|DSP              |        -|      -|       -|       -|
+|Expression       |        -|      -|       0|     402|
+|FIFO             |        -|      -|       -|       -|
+|Instance         |        0|    334|   57821|   42478|
+|Memory           |      427|      -|      64|      16|
+|Multiplexer      |        -|      -|       -|    1655|
+|Register         |        -|      -|     531|       -|
++-----------------+---------+-------+--------+--------+
+|Total            |      427|    334|   58416|   44551|
++-----------------+---------+-------+--------+--------+
+|Available        |      730|    740|  269200|  129000|
++-----------------+---------+-------+--------+--------+
+|Utilization (%)  |       58|     45|      21|      34|
++-----------------+---------+-------+--------+--------+
+
++ Detail: 
+    * Instance: 
+    +------------------------+-------------+---------+-------+-------+-------+
+    |        Instance        |    Module   | BRAM_18K| DSP48E|   FF  |  LUT  |
+    +------------------------+-------------+---------+-------+-------+-------+
+    |grp_k2c_dense_fu_863    |k2c_dense    |        0|     88|  16186|  12237|
+    |grp_k2c_dense_1_fu_910  |k2c_dense_1  |        0|     82|  14149|  10264|
+    |grp_k2c_dense_2_fu_887  |k2c_dense_2  |        0|     82|  14176|  10273|
+    |grp_k2c_dense_3_fu_933  |k2c_dense_3  |        0|     82|  13310|   9704|
+    +------------------------+-------------+---------+-------+-------+-------+
+    |Total                   |             |        0|    334|  57821|  42478|
+    +------------------------+-------------+---------+-------+-------+-------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    +--------------------------+----------------------+---------+----+----+-------+-----+------+-------------+
+    |          Memory          |        Module        | BRAM_18K| FF | LUT| Words | Bits| Banks| W*Bits*Banks|
+    +--------------------------+----------------------+---------+----+----+-------+-----+------+-------------+
+    |dense_13_kernel_shap_U    |sample0_dense_13_KfY  |        4|   0|   0|      5|   64|     1|          320|
+    |dense_13_output_shap_U    |sample0_dense_13_KfY  |        4|   0|   0|      5|   64|     1|          320|
+    |dense_14_kernel_shap_U    |sample0_dense_13_KfY  |        4|   0|   0|      5|   64|     1|          320|
+    |dense_14_output_shap_U    |sample0_dense_13_KfY  |        4|   0|   0|      5|   64|     1|          320|
+    |dense_15_kernel_shap_U    |sample0_dense_13_KfY  |        4|   0|   0|      5|   64|     1|          320|
+    |dense_15_output_shap_U    |sample0_dense_13_KfY  |        4|   0|   0|      5|   64|     1|          320|
+    |dense_16_kernel_shap_U    |sample0_dense_13_KfY  |        4|   0|   0|      5|   64|     1|          320|
+    |dense_13_fwork_U          |sample0_dense_13_Shg  |        8|   0|   0|   2580|   32|     1|        82560|
+    |dense_13_output_arra_U    |sample0_dense_13_tde  |       32|   0|   0|  10000|   32|     1|       320000|
+    |dense_14_output_arra_U    |sample0_dense_13_tde  |       32|   0|   0|  10000|   32|     1|       320000|
+    |dense_15_output_arra_U    |sample0_dense_13_tde  |       32|   0|   0|  10000|   32|     1|       320000|
+    |dense_13_kernel_arra_U    |sample0_dense_13_udo  |        8|   0|   0|   2560|   32|     1|        81920|
+    |dense_13_kernel_arra_4_U  |sample0_dense_13_vdy  |       32|   0|   0|  10000|   32|     1|       320000|
+    |dense_13_bias_array_5_U   |sample0_dense_13_vdy  |       32|   0|   0|  10000|   32|     1|       320000|
+    |dense_14_kernel_arra_2_U  |sample0_dense_13_vdy  |       32|   0|   0|  10000|   32|     1|       320000|
+    |dense_14_bias_array_3_U   |sample0_dense_13_vdy  |       32|   0|   0|  10000|   32|     1|       320000|
+    |dense_15_kernel_arra_1_U  |sample0_dense_13_vdy  |       32|   0|   0|  10000|   32|     1|       320000|
+    |dense_15_bias_array_U     |sample0_dense_13_vdy  |       32|   0|   0|  10000|   32|     1|       320000|
+    |dense_16_kernel_arra_0_U  |sample0_dense_13_vdy  |       32|   0|   0|  10000|   32|     1|       320000|
+    |dense_16_bias_array_U     |sample0_dense_13_vdy  |       32|   0|   0|  10000|   32|     1|       320000|
+    |dense_13_bias_array_U     |sample0_dense_13_wdI  |        1|   0|   0|    128|   32|     1|         4096|
+    |dense_14_bias_array_U     |sample0_dense_14_Bew  |        1|   0|   0|     32|   32|     1|         1024|
+    |dense_14_fwork_U          |sample0_dense_14_Thq  |       16|   0|   0|   4224|   32|     1|       135168|
+    |dense_14_kernel_arra_U    |sample0_dense_14_zec  |        8|   0|   0|   4096|   32|     1|       131072|
+    |dense_15_kernel_arra_U    |sample0_dense_15_Ee0  |        1|   0|   0|    512|   32|     1|        16384|
+    |dense_15_bias_array1_U    |sample0_dense_15_Gfk  |        0|  32|   8|     16|   32|     1|          512|
+    |dense_15_fwork_U          |sample0_dense_15_UhA  |        2|   0|   0|    544|   32|     1|        17408|
+    |dense_16_kernel_arra_U    |sample0_dense_16_IfE  |        0|  32|   8|     16|   32|     1|          512|
+    |dense_16_fwork_U          |sample0_dense_16_VhK  |        2|   0|   0|     32|   32|     1|         1024|
+    +--------------------------+----------------------+---------+----+----+-------+-----+------+-------------+
+    |Total                     |                      |      427|  64|  16| 124775| 1152|    29|      3993920|
+    +--------------------------+----------------------+---------+----+----+-------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------+----------+-------+---+----+------------+------------+
+    |     Variable Name     | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------+----------+-------+---+----+------------+------------+
+    |indvarinc1_fu_1139_p2  |     +    |      0|  0|  20|          13|           1|
+    |indvarinc2_fu_1237_p2  |     +    |      0|  0|  17|          10|           1|
+    |indvarinc3_fu_1289_p2  |     +    |      0|  0|  15|           5|           1|
+    |indvarinc_fu_1041_p2   |     +    |      0|  0|  19|          12|           1|
+    |tmp_10_fu_1196_p2      |     +    |      0|  0|  17|          10|           1|
+    |tmp_11_fu_1225_p2      |     +    |      0|  0|  15|           5|           1|
+    |tmp_14_fu_1265_p2      |     +    |      0|  0|  15|           5|           1|
+    |tmp_1_fu_1018_p2       |     +    |      0|  0|  19|          12|           1|
+    |tmp_2_fu_1035_p2       |     +    |      0|  0|  15|           8|           1|
+    |tmp_5_fu_1069_p2       |     +    |      0|  0|  15|           6|           1|
+    |tmp_6_fu_1098_p2       |     +    |      0|  0|  20|          13|           1|
+    |tmp_7_fu_1127_p2       |     +    |      0|  0|  15|           6|           1|
+    |tmp_fu_989_p2          |     +    |      0|  0|  15|           8|           1|
+    |tmp_s_fu_1167_p2       |     +    |      0|  0|  15|           5|           1|
+    |exitcond1_fu_983_p2    |   icmp   |      0|  0|  13|           8|           9|
+    |exitcond2_fu_1012_p2   |   icmp   |      0|  0|  13|          12|          12|
+    |exitcond3_fu_1029_p2   |   icmp   |      0|  0|  13|           8|           9|
+    |exitcond4_fu_1063_p2   |   icmp   |      0|  0|  11|           6|           7|
+    |exitcond5_fu_1092_p2   |   icmp   |      0|  0|  13|          13|          14|
+    |exitcond6_fu_1121_p2   |   icmp   |      0|  0|  11|           6|           7|
+    |exitcond7_fu_1161_p2   |   icmp   |      0|  0|  11|           5|           6|
+    |exitcond8_fu_1190_p2   |   icmp   |      0|  0|  13|          10|          11|
+    |exitcond9_fu_1219_p2   |   icmp   |      0|  0|  11|           5|           6|
+    |exitcond_fu_1259_p2    |   icmp   |      0|  0|  11|           5|           6|
+    |tmp_13_fu_1248_p2      |   icmp   |      0|  0|  13|          10|          10|
+    |tmp_16_fu_1300_p2      |   icmp   |      0|  0|  11|           5|           2|
+    |tmp_4_fu_1052_p2       |   icmp   |      0|  0|  13|          12|          12|
+    |tmp_9_fu_1150_p2       |   icmp   |      0|  0|  13|          13|          13|
+    +-----------------------+----------+-------+---+----+------------+------------+
+    |Total                  |          |      0|  0| 402|         236|         138|
+    +-----------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------+-----+-----------+-----+-----------+
+    |               Name              | LUT | Input Size| Bits| Total Bits|
+    +---------------------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm                        |  221|         51|    1|         51|
+    |dense_13_bias_array_5_address0   |   15|          3|   14|         42|
+    |dense_13_bias_array_5_ce0        |   15|          3|    1|          3|
+    |dense_13_fwork_address0          |   15|          3|   12|         36|
+    |dense_13_fwork_ce0               |   15|          3|    1|          3|
+    |dense_13_fwork_ce1               |    9|          2|    1|          2|
+    |dense_13_fwork_d0                |   15|          3|   32|         96|
+    |dense_13_fwork_we0               |   15|          3|    1|          3|
+    |dense_13_kernel_arra_4_address0  |   15|          3|   14|         42|
+    |dense_13_kernel_arra_4_ce0       |   15|          3|    1|          3|
+    |dense_13_kernel_shap_address0    |   27|          5|    3|         15|
+    |dense_13_kernel_shap_address1    |   15|          3|    3|          9|
+    |dense_13_kernel_shap_ce0         |   15|          3|    1|          3|
+    |dense_13_kernel_shap_d0          |   21|          4|   64|        256|
+    |dense_13_output_arra_address0    |   21|          4|   14|         56|
+    |dense_13_output_arra_ce0         |   21|          4|    1|          4|
+    |dense_13_output_arra_ce1         |    9|          2|    1|          2|
+    |dense_13_output_arra_d0          |   15|          3|   32|         96|
+    |dense_13_output_arra_we0         |   15|          3|    1|          3|
+    |dense_13_output_arra_we1         |    9|          2|    1|          2|
+    |dense_13_output_shap_address0    |   27|          5|    3|         15|
+    |dense_13_output_shap_address1    |   15|          3|    3|          9|
+    |dense_13_output_shap_ce0         |   15|          3|    1|          3|
+    |dense_13_output_shap_d0          |   15|          3|   64|        192|
+    |dense_14_bias_array_3_address0   |   15|          3|   14|         42|
+    |dense_14_bias_array_3_ce0        |   15|          3|    1|          3|
+    |dense_14_fwork_address0          |   15|          3|   13|         39|
+    |dense_14_fwork_ce0               |   15|          3|    1|          3|
+    |dense_14_fwork_ce1               |    9|          2|    1|          2|
+    |dense_14_fwork_d0                |   15|          3|   32|         96|
+    |dense_14_fwork_we0               |   15|          3|    1|          3|
+    |dense_14_kernel_arra_2_address0  |   15|          3|   14|         42|
+    |dense_14_kernel_arra_2_ce0       |   15|          3|    1|          3|
+    |dense_14_kernel_shap_address0    |   27|          5|    3|         15|
+    |dense_14_kernel_shap_address1    |   15|          3|    3|          9|
+    |dense_14_kernel_shap_ce0         |   15|          3|    1|          3|
+    |dense_14_kernel_shap_d0          |   21|          4|   64|        256|
+    |dense_14_output_arra_address0    |   21|          4|   14|         56|
+    |dense_14_output_arra_ce0         |   21|          4|    1|          4|
+    |dense_14_output_arra_ce1         |    9|          2|    1|          2|
+    |dense_14_output_arra_d0          |   15|          3|   32|         96|
+    |dense_14_output_arra_we0         |   15|          3|    1|          3|
+    |dense_14_output_arra_we1         |    9|          2|    1|          2|
+    |dense_14_output_shap_address0    |   27|          5|    3|         15|
+    |dense_14_output_shap_address1    |   15|          3|    3|          9|
+    |dense_14_output_shap_ce0         |   15|          3|    1|          3|
+    |dense_14_output_shap_d0          |   15|          3|   64|        192|
+    |dense_15_bias_array_address0     |   15|          3|   14|         42|
+    |dense_15_bias_array_ce0          |   15|          3|    1|          3|
+    |dense_15_fwork_address0          |   15|          3|   10|         30|
+    |dense_15_fwork_ce0               |   15|          3|    1|          3|
+    |dense_15_fwork_ce1               |    9|          2|    1|          2|
+    |dense_15_fwork_d0                |   15|          3|   32|         96|
+    |dense_15_fwork_we0               |   15|          3|    1|          3|
+    |dense_15_kernel_arra_1_address0  |   15|          3|   14|         42|
+    |dense_15_kernel_arra_1_ce0       |   15|          3|    1|          3|
+    |dense_15_kernel_shap_address0    |   27|          5|    3|         15|
+    |dense_15_kernel_shap_address1    |   15|          3|    3|          9|
+    |dense_15_kernel_shap_ce0         |   15|          3|    1|          3|
+    |dense_15_kernel_shap_d0          |   21|          4|   64|        256|
+    |dense_15_output_arra_address0    |   21|          4|   14|         56|
+    |dense_15_output_arra_ce0         |   21|          4|    1|          4|
+    |dense_15_output_arra_ce1         |    9|          2|    1|          2|
+    |dense_15_output_arra_d0          |   15|          3|   32|         96|
+    |dense_15_output_arra_we0         |   15|          3|    1|          3|
+    |dense_15_output_arra_we1         |    9|          2|    1|          2|
+    |dense_15_output_shap_address0    |   27|          5|    3|         15|
+    |dense_15_output_shap_address1    |   15|          3|    3|          9|
+    |dense_15_output_shap_ce0         |   15|          3|    1|          3|
+    |dense_15_output_shap_d0          |   15|          3|   64|        192|
+    |dense_16_bias_array_address0     |   15|          3|   14|         42|
+    |dense_16_bias_array_ce0          |   15|          3|    1|          3|
+    |dense_16_fwork_address0          |   15|          3|    5|         15|
+    |dense_16_fwork_ce0               |   15|          3|    1|          3|
+    |dense_16_fwork_ce1               |    9|          2|    1|          2|
+    |dense_16_fwork_d0                |   15|          3|   32|         96|
+    |dense_16_fwork_we0               |   15|          3|    1|          3|
+    |dense_16_kernel_arra_0_address0  |   15|          3|   14|         42|
+    |dense_16_kernel_arra_0_ce0       |   15|          3|    1|          3|
+    |dense_16_kernel_shap_address0    |   27|          5|    3|         15|
+    |dense_16_kernel_shap_address1    |   15|          3|    3|          9|
+    |dense_16_kernel_shap_ce0         |   15|          3|    1|          3|
+    |dense_16_kernel_shap_d0          |   15|          3|   64|        192|
+    |invdar1_reg_786                  |    9|          2|   13|         26|
+    |invdar2_reg_830                  |    9|          2|   10|         20|
+    |invdar3_reg_852                  |    9|          2|    5|         10|
+    |invdar_reg_742                   |    9|          2|   12|         24|
+    |storemerge1_reg_720              |    9|          2|   12|         24|
+    |storemerge2_reg_731              |    9|          2|    8|         16|
+    |storemerge3_reg_753              |    9|          2|    6|         12|
+    |storemerge4_reg_764              |    9|          2|   13|         26|
+    |storemerge5_reg_775              |    9|          2|    6|         12|
+    |storemerge6_reg_797              |    9|          2|    5|         10|
+    |storemerge7_reg_808              |    9|          2|   10|         20|
+    |storemerge8_reg_819              |    9|          2|    5|         10|
+    |storemerge9_reg_841              |    9|          2|    5|         10|
+    |storemerge_reg_709               |    9|          2|    8|         16|
+    +---------------------------------+-----+-----------+-----+-----------+
+    |Total                            | 1655|        338| 1066|       3397|
+    +---------------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------+----+----+-----+-----------+
+    |                 Name                | FF | LUT| Bits| Const Bits|
+    +-------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                            |  50|   0|   50|          0|
+    |dense_13_bias_array_1_reg_1420       |  32|   0|   32|          0|
+    |dense_13_kernel_arra_2_reg_1397      |  32|   0|   32|          0|
+    |dense_13_output_ndim                 |   1|   0|   64|         63|
+    |dense_13_output_nume                 |   1|   0|   64|         63|
+    |dense_14_bias_array_1_reg_1482       |  32|   0|   32|          0|
+    |dense_14_bias_numel                  |   1|   0|   64|         63|
+    |dense_14_kernel_arra_2_reg_1459      |  32|   0|   32|          0|
+    |dense_14_kernel_ndim                 |   1|   0|   64|         63|
+    |dense_14_kernel_nume                 |   1|   0|   64|         63|
+    |dense_14_output_ndim                 |   1|   0|   64|         63|
+    |dense_14_output_nume                 |   1|   0|   64|         63|
+    |dense_15_bias_array1_2_reg_1544      |  32|   0|   32|          0|
+    |dense_15_bias_numel                  |   1|   0|   64|         63|
+    |dense_15_kernel_arra_2_reg_1521      |  32|   0|   32|          0|
+    |dense_15_kernel_ndim                 |   1|   0|   64|         63|
+    |dense_15_kernel_nume                 |   1|   0|   64|         63|
+    |dense_15_output_ndim                 |   1|   0|   64|         63|
+    |dense_15_output_nume                 |   1|   0|   64|         63|
+    |dense_16_bias_numel                  |   1|   0|   64|         63|
+    |dense_16_kernel_arra_2_reg_1575      |  32|   0|   32|          0|
+    |dense_16_kernel_ndim                 |   1|   0|   64|         63|
+    |dense_16_kernel_nume                 |   1|   0|   64|         63|
+    |grp_k2c_dense_1_fu_910_ap_start_reg  |   1|   0|    1|          0|
+    |grp_k2c_dense_2_fu_887_ap_start_reg  |   1|   0|    1|          0|
+    |grp_k2c_dense_3_fu_933_ap_start_reg  |   1|   0|    1|          0|
+    |grp_k2c_dense_fu_863_ap_start_reg    |   1|   0|    1|          0|
+    |invdar1_reg_786                      |  13|   0|   13|          0|
+    |invdar2_reg_830                      |  10|   0|   10|          0|
+    |invdar3_reg_852                      |   5|   0|    5|          0|
+    |invdar_reg_742                       |  12|   0|   12|          0|
+    |reg_966                              |   1|   0|   64|         63|
+    |reg_972                              |   1|   0|   64|         63|
+    |storemerge1_cast_reg_1379            |  12|   0|   64|         52|
+    |storemerge1_reg_720                  |  12|   0|   12|          0|
+    |storemerge2_cast_reg_1402            |   8|   0|   64|         56|
+    |storemerge2_reg_731                  |   8|   0|    8|          0|
+    |storemerge3_reg_753                  |   6|   0|    6|          0|
+    |storemerge4_cast9_reg_1441           |  13|   0|   64|         51|
+    |storemerge4_reg_764                  |  13|   0|   13|          0|
+    |storemerge5_cast8_reg_1464           |   6|   0|   64|         58|
+    |storemerge5_reg_775                  |   6|   0|    6|          0|
+    |storemerge6_reg_797                  |   5|   0|    5|          0|
+    |storemerge7_cast5_reg_1503           |  10|   0|   64|         54|
+    |storemerge7_reg_808                  |  10|   0|   10|          0|
+    |storemerge8_cast4_reg_1526           |   5|   0|   64|         59|
+    |storemerge8_reg_819                  |   5|   0|    5|          0|
+    |storemerge9_cast2_reg_1557           |   5|   0|   64|         59|
+    |storemerge9_reg_841                  |   5|   0|    5|          0|
+    |storemerge_reg_709                   |   8|   0|    8|          0|
+    |tmp_10_reg_1511                      |  10|   0|   10|          0|
+    |tmp_11_reg_1534                      |   5|   0|    5|          0|
+    |tmp_14_reg_1565                      |   5|   0|    5|          0|
+    |tmp_1_reg_1387                       |  12|   0|   12|          0|
+    |tmp_2_reg_1410                       |   8|   0|    8|          0|
+    |tmp_6_reg_1449                       |  13|   0|   13|          0|
+    |tmp_7_reg_1472                       |   6|   0|    6|          0|
+    +-------------------------------------+----+----+-----+-----------+
+    |Total                                | 531|   0| 1991|       1460|
+    +-------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------------+-----+-----+------------+----------------------------+--------------+
+|              RTL Ports              | Dir | Bits|  Protocol  |        Source Object       |    C Type    |
++-------------------------------------+-----+-----+------------+----------------------------+--------------+
+|ap_clk                               |  in |    1| ap_ctrl_hs |           sample0          | return value |
+|ap_rst                               |  in |    1| ap_ctrl_hs |           sample0          | return value |
+|ap_start                             |  in |    1| ap_ctrl_hs |           sample0          | return value |
+|ap_done                              | out |    1| ap_ctrl_hs |           sample0          | return value |
+|ap_idle                              | out |    1| ap_ctrl_hs |           sample0          | return value |
+|ap_ready                             | out |    1| ap_ctrl_hs |           sample0          | return value |
+|dense_13_input_input_array_address0  | out |   14|  ap_memory | dense_13_input_input_array |     array    |
+|dense_13_input_input_array_ce0       | out |    1|  ap_memory | dense_13_input_input_array |     array    |
+|dense_13_input_input_array_q0        |  in |   32|  ap_memory | dense_13_input_input_array |     array    |
+|dense_13_input_input_ndim            |  in |   64|   ap_none  |  dense_13_input_input_ndim |    pointer   |
+|dense_13_input_input_numel           |  in |   64|   ap_none  | dense_13_input_input_numel |    pointer   |
+|dense_13_input_input_shape_address0  | out |    3|  ap_memory | dense_13_input_input_shape |     array    |
+|dense_13_input_input_shape_ce0       | out |    1|  ap_memory | dense_13_input_input_shape |     array    |
+|dense_13_input_input_shape_q0        |  in |   64|  ap_memory | dense_13_input_input_shape |     array    |
+|dense_16_output_array_address0       | out |   14|  ap_memory |    dense_16_output_array   |     array    |
+|dense_16_output_array_ce0            | out |    1|  ap_memory |    dense_16_output_array   |     array    |
+|dense_16_output_array_we0            | out |    1|  ap_memory |    dense_16_output_array   |     array    |
+|dense_16_output_array_d0             | out |   32|  ap_memory |    dense_16_output_array   |     array    |
+|dense_16_output_array_q0             |  in |   32|  ap_memory |    dense_16_output_array   |     array    |
+|dense_16_output_array_address1       | out |   14|  ap_memory |    dense_16_output_array   |     array    |
+|dense_16_output_array_ce1            | out |    1|  ap_memory |    dense_16_output_array   |     array    |
+|dense_16_output_array_we1            | out |    1|  ap_memory |    dense_16_output_array   |     array    |
+|dense_16_output_array_d1             | out |   32|  ap_memory |    dense_16_output_array   |     array    |
+|dense_16_output_array_q1             |  in |   32|  ap_memory |    dense_16_output_array   |     array    |
+|dense_16_output_ndim                 |  in |   64|   ap_none  |    dense_16_output_ndim    |    pointer   |
+|dense_16_output_numel                |  in |   64|   ap_none  |    dense_16_output_numel   |    pointer   |
+|dense_16_output_shape_address0       | out |    3|  ap_memory |    dense_16_output_shape   |     array    |
+|dense_16_output_shape_ce0            | out |    1|  ap_memory |    dense_16_output_shape   |     array    |
+|dense_16_output_shape_we0            | out |    1|  ap_memory |    dense_16_output_shape   |     array    |
+|dense_16_output_shape_d0             | out |   64|  ap_memory |    dense_16_output_shape   |     array    |
+|dense_16_output_shape_q0             |  in |   64|  ap_memory |    dense_16_output_shape   |     array    |
+|dense_16_output_shape_address1       | out |    3|  ap_memory |    dense_16_output_shape   |     array    |
+|dense_16_output_shape_ce1            | out |    1|  ap_memory |    dense_16_output_shape   |     array    |
+|dense_16_output_shape_we1            | out |    1|  ap_memory |    dense_16_output_shape   |     array    |
+|dense_16_output_shape_d1             | out |   64|  ap_memory |    dense_16_output_shape   |     array    |
+|dense_16_output_shape_q1             |  in |   64|  ap_memory |    dense_16_output_shape   |     array    |
++-------------------------------------+-----+-----+------------+----------------------------+--------------+
+

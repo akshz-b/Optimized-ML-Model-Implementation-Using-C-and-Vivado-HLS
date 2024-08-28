@@ -1,0 +1,1896 @@
+INFO-FLOW: Workspace C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line opened at Tue Apr 23 19:22:10 +0530 2024
+Execute     config_clock -quiet -name default -period 5 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7.gen 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.117 sec.
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.189 sec.
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.195 sec.
+Command     ap_source done; 0.195 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_hp.hlp 
+Execute     source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7a200tfbg676-2 
+Execute       add_library xilinx/artix7/artix7:xc7a200t:fbg676:-2 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7a200t 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 33650} {LUT 129000}    {FF 269200} {DSP48E 740}    {BRAM 730}  
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/artix7/artix7_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7a200tfbg676-2'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 33650} {LUT 129000}    {FF 269200} {DSP48E 740}    {BRAM 730}  
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 0.425 sec.
+Execute   set_part xc7a200tfbg676-2 -tool vivado 
+Execute     add_library xilinx/artix7/artix7:xc7a200t:fbg676:-2 
+Execute       get_default_platform 
+Execute       license_isbetapart xc7a200t 
+Command       license_isbetapart done; error code: 1; 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 33650} {LUT 129000}    {FF 269200} {DSP48E 740}    {BRAM 730}  
+Execute       config_chip_info -quiet -speed medium 
+Execute     add_library xilinx/artix7/artix7_fpv6 
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute   create_clock -period 5 -name default 
+Execute   csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -lm 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'Group_5_Base_line/sample0.c' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling Group_5_Base_line/sample0.c as C
+Execute       get_default_platform 
+Execute       is_encrypted Group_5_Base_line/sample0.c 
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "Group_5_Base_line/sample0.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  -o "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.pp.0.c" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E Group_5_Base_line/sample0.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.pp.0.c
+Command       clang done; 1.306 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.pp.0.c"  -o "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/useless.bc"  
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.pp.0.c -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/useless.bc
+Command       clang done; 1.159 sec.
+INFO-FLOW: GCC PP time: 2 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.pp.0.c std=gnu89 -directive=C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/.systemc_flag -quiet -fix-errors C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.199 sec.
+INFO-FLOW: CDT Preprocessing with tidy-3.1...
+Execute       tidy_31 xilinx-directive2pragma C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.pp.0.c std=gnu89 -directive=C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/Base_line.json 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/Base_line.json -quiet -fix-errors C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.102 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/xilinx-dataflow-lawyer.sample0.pp.0.c.diag.yml C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.pp.0.c -- -std=gnu99 -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/xilinx-dataflow-lawyer.sample0.pp.0.c.out.log 2> C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/xilinx-dataflow-lawyer.sample0.pp.0.c.err.log 
+Command       ap_eval done; 0.177 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.pp.0.c std=gnu89 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.384 sec.
+INFO-FLOW: tidy-3.1 time 0 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.pragma.1.c std=gnu89 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.pragma.1.c -- -std=gnu89 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.169 sec.
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.pragma.1.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl=  -o "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.pragma.2.c" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.pragma.1.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -D__cdecl= -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.pragma.2.c
+Command       clang done; 1.13 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.pragma.2.c  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.bc" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.bc
+Command       clang done; 1.133 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.g.bc -hls-opt -except-internalize sample0 -LC:/Xilinx/Vivado/2018.2/win64/lib -lhlsm -lhlsmc++ -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/a.g 
+Command       llvm-ld done; 4.606 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:00 ; elapsed = 00:00:12 . Memory (MB): peak = 101.781 ; gain = 45.566
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:00 ; elapsed = 00:00:12 . Memory (MB): peak = 101.781 ; gain = 45.566
+Execute       ::config_rtl 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/a.pp.bc -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/a.pp.0.bc -f 
+Command         transform done; 1.125 sec.
+Execute         llvm-ld C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/a.pp.0.bc -disable-opt -LC:/Xilinx/Vivado/2018.2/win64/lib -lfloatconversion -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/a.g.0 
+Command         llvm-ld done; 2.706 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top sample0 -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/a.g.0.bc -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform done; 9.075 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:09 ; elapsed = 00:00:25 . Memory (MB): peak = 584.246 ; gain = 528.031
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/a.g.1.bc -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'k2c_idx2sub' into 'k2c_dot.3' (Group_5_Base_line/./include/k2c_helper_functions.h:240) automatically.
+INFO: [XFORM 203-602] Inlining function 'k2c_bias_add' into 'k2c_dense' (Group_5_Base_line/./include/k2c_core_layers.h:98) automatically.
+INFO: [XFORM 203-602] Inlining function 'k2c_idx2sub' into 'k2c_dot.2' (Group_5_Base_line/./include/k2c_helper_functions.h:240) automatically.
+INFO: [XFORM 203-602] Inlining function 'k2c_bias_add' into 'k2c_dense.1' (Group_5_Base_line/./include/k2c_core_layers.h:98) automatically.
+INFO: [XFORM 203-602] Inlining function 'k2c_idx2sub' into 'k2c_dot.1' (Group_5_Base_line/./include/k2c_helper_functions.h:240) automatically.
+INFO: [XFORM 203-602] Inlining function 'k2c_bias_add' into 'k2c_dense.2' (Group_5_Base_line/./include/k2c_core_layers.h:98) automatically.
+INFO: [XFORM 203-602] Inlining function 'k2c_idx2sub' into 'k2c_dot' (Group_5_Base_line/./include/k2c_helper_functions.h:240) automatically.
+INFO: [XFORM 203-602] Inlining function 'k2c_bias_add' into 'k2c_dense.3' (Group_5_Base_line/./include/k2c_core_layers.h:98) automatically.
+Command         transform done; 1.606 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/a.g.2.prechk.bc -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/a.g.2.bc -f -phase syn-check 
+Command         transform done; 0.101 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:10 ; elapsed = 00:00:27 . Memory (MB): peak = 628.164 ; gain = 571.949
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/a.g.1.bc to C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/a.o.1.bc -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-1.1' (Group_5_Base_line/./include/k2c_helper_functions.h:171) in function 'k2c_dot' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-2.1' (Group_5_Base_line/./include/k2c_helper_functions.h:185) in function 'k2c_dot' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-3' (Group_5_Base_line/./include/k2c_helper_functions.h:198) in function 'k2c_dot' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-4' (Group_5_Base_line/./include/k2c_helper_functions.h:202) in function 'k2c_dot' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-7' (Group_5_Base_line/./include/k2c_helper_functions.h:218) in function 'k2c_dot' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-1.1' (Group_5_Base_line/./include/k2c_helper_functions.h:171) in function 'k2c_dot.1' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-2.1' (Group_5_Base_line/./include/k2c_helper_functions.h:185) in function 'k2c_dot.1' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-3' (Group_5_Base_line/./include/k2c_helper_functions.h:198) in function 'k2c_dot.1' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-4' (Group_5_Base_line/./include/k2c_helper_functions.h:202) in function 'k2c_dot.1' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-7' (Group_5_Base_line/./include/k2c_helper_functions.h:218) in function 'k2c_dot.1' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-1.1' (Group_5_Base_line/./include/k2c_helper_functions.h:171) in function 'k2c_dot.2' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-2.1' (Group_5_Base_line/./include/k2c_helper_functions.h:185) in function 'k2c_dot.2' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-3' (Group_5_Base_line/./include/k2c_helper_functions.h:198) in function 'k2c_dot.2' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-4' (Group_5_Base_line/./include/k2c_helper_functions.h:202) in function 'k2c_dot.2' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-7' (Group_5_Base_line/./include/k2c_helper_functions.h:218) in function 'k2c_dot.2' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-1.1' (Group_5_Base_line/./include/k2c_helper_functions.h:171) in function 'k2c_dot.3' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-2.1' (Group_5_Base_line/./include/k2c_helper_functions.h:185) in function 'k2c_dot.3' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-3' (Group_5_Base_line/./include/k2c_helper_functions.h:198) in function 'k2c_dot.3' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-4' (Group_5_Base_line/./include/k2c_helper_functions.h:202) in function 'k2c_dot.3' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-7' (Group_5_Base_line/./include/k2c_helper_functions.h:218) in function 'k2c_dot.3' automatically.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (Group_5_Base_line/./include/k2c_helper_functions.h:171) in function 'k2c_dot' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1' (Group_5_Base_line/./include/k2c_helper_functions.h:185) in function 'k2c_dot' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3' (Group_5_Base_line/./include/k2c_helper_functions.h:198) in function 'k2c_dot' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-4' (Group_5_Base_line/./include/k2c_helper_functions.h:202) in function 'k2c_dot' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-7' (Group_5_Base_line/./include/k2c_helper_functions.h:218) in function 'k2c_dot' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (Group_5_Base_line/./include/k2c_helper_functions.h:171) in function 'k2c_dot.1' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1' (Group_5_Base_line/./include/k2c_helper_functions.h:185) in function 'k2c_dot.1' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3' (Group_5_Base_line/./include/k2c_helper_functions.h:198) in function 'k2c_dot.1' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-4' (Group_5_Base_line/./include/k2c_helper_functions.h:202) in function 'k2c_dot.1' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-7' (Group_5_Base_line/./include/k2c_helper_functions.h:218) in function 'k2c_dot.1' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (Group_5_Base_line/./include/k2c_helper_functions.h:171) in function 'k2c_dot.2' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1' (Group_5_Base_line/./include/k2c_helper_functions.h:185) in function 'k2c_dot.2' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3' (Group_5_Base_line/./include/k2c_helper_functions.h:198) in function 'k2c_dot.2' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-4' (Group_5_Base_line/./include/k2c_helper_functions.h:202) in function 'k2c_dot.2' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-7' (Group_5_Base_line/./include/k2c_helper_functions.h:218) in function 'k2c_dot.2' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (Group_5_Base_line/./include/k2c_helper_functions.h:171) in function 'k2c_dot.3' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1' (Group_5_Base_line/./include/k2c_helper_functions.h:185) in function 'k2c_dot.3' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3' (Group_5_Base_line/./include/k2c_helper_functions.h:198) in function 'k2c_dot.3' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-4' (Group_5_Base_line/./include/k2c_helper_functions.h:202) in function 'k2c_dot.3' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-7' (Group_5_Base_line/./include/k2c_helper_functions.h:218) in function 'k2c_dot.3' completely.
+INFO: [XFORM 203-102] Partitioning array 'axesA' automatically.
+INFO: [XFORM 203-602] Inlining function 'k2c_idx2sub' into 'k2c_dot' (Group_5_Base_line/./include/k2c_helper_functions.h:240) automatically.
+INFO: [XFORM 203-602] Inlining function 'k2c_bias_add' into 'k2c_dense.3' (Group_5_Base_line/./include/k2c_core_layers.h:98) automatically.
+INFO: [XFORM 203-602] Inlining function 'k2c_idx2sub' into 'k2c_dot.1' (Group_5_Base_line/./include/k2c_helper_functions.h:240) automatically.
+INFO: [XFORM 203-602] Inlining function 'k2c_bias_add' into 'k2c_dense.2' (Group_5_Base_line/./include/k2c_core_layers.h:98) automatically.
+INFO: [XFORM 203-602] Inlining function 'k2c_idx2sub' into 'k2c_dot.2' (Group_5_Base_line/./include/k2c_helper_functions.h:240) automatically.
+INFO: [XFORM 203-602] Inlining function 'k2c_bias_add' into 'k2c_dense.1' (Group_5_Base_line/./include/k2c_core_layers.h:98) automatically.
+INFO: [XFORM 203-602] Inlining function 'k2c_idx2sub' into 'k2c_dot.3' (Group_5_Base_line/./include/k2c_helper_functions.h:240) automatically.
+INFO: [XFORM 203-602] Inlining function 'k2c_bias_add' into 'k2c_dense' (Group_5_Base_line/./include/k2c_core_layers.h:98) automatically.
+Command         transform done; 3.116 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/a.o.1.tmp.bc -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (Group_5_Base_line/./include/k2c_core_layers.h:61:9) to (Group_5_Base_line/./include/k2c_core_layers.h:73:9) in function 'k2c_dense.3'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (Group_5_Base_line/./include/k2c_core_layers.h:61:9) to (Group_5_Base_line/./include/k2c_core_layers.h:73:9) in function 'k2c_dense.2'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (Group_5_Base_line/./include/k2c_core_layers.h:61:9) to (Group_5_Base_line/./include/k2c_core_layers.h:73:9) in function 'k2c_dense.1'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (Group_5_Base_line/./include/k2c_core_layers.h:61:9) to (Group_5_Base_line/./include/k2c_core_layers.h:73:9) in function 'k2c_dense'... converting 3 basic blocks.
+Command         transform done; 0.721 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:12 ; elapsed = 00:00:31 . Memory (MB): peak = 628.164 ; gain = 571.949
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -dead-allocation-elimination -cdfg-build C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/a.o.2.bc -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+Command         transform done; 1.509 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 628.164 ; gain = 571.949
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 20.029 sec.
+Command     elaborate done; 30.685 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'sample0' ...
+Execute       ap_set_top_model sample0 
+WARNING: [SYN 201-103] Legalizing function name 'k2c_dense.3' to 'k2c_dense_3'.
+WARNING: [SYN 201-103] Legalizing function name 'k2c_matmul.1' to 'k2c_matmul_1'.
+WARNING: [SYN 201-103] Legalizing function name 'k2c_dot.1' to 'k2c_dot_1'.
+WARNING: [SYN 201-103] Legalizing function name 'k2c_dense.2' to 'k2c_dense_2'.
+WARNING: [SYN 201-103] Legalizing function name 'k2c_matmul.2' to 'k2c_matmul_2'.
+WARNING: [SYN 201-103] Legalizing function name 'k2c_dot.2' to 'k2c_dot_2'.
+WARNING: [SYN 201-103] Legalizing function name 'k2c_dense.1' to 'k2c_dense_1'.
+WARNING: [SYN 201-103] Legalizing function name 'k2c_matmul.3' to 'k2c_matmul_3'.
+WARNING: [SYN 201-103] Legalizing function name 'k2c_dot.3' to 'k2c_dot_3'.
+Command       ap_set_top_model done; 0.186 sec.
+Execute       get_model_list sample0 -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model sample0 
+Execute       preproc_iomode -model k2c_dense 
+Execute       preproc_iomode -model k2c_dot.3 
+Execute       preproc_iomode -model k2c_matmul.3 
+Execute       preproc_iomode -model k2c_dense.1 
+Execute       preproc_iomode -model k2c_dot.2 
+Execute       preproc_iomode -model k2c_matmul.2 
+Execute       preproc_iomode -model k2c_dense.2 
+Execute       preproc_iomode -model k2c_dot.1 
+Execute       preproc_iomode -model k2c_matmul.1 
+Execute       preproc_iomode -model k2c_dense.3 
+Execute       preproc_iomode -model k2c_affine_matmul 
+Execute       preproc_iomode -model k2c_dot 
+Execute       preproc_iomode -model k2c_matmul 
+Execute       preproc_iomode -model k2c_sub2idx 
+Execute       get_model_list sample0 -filter all-wo-channel 
+INFO-FLOW: Model list for configure: k2c_sub2idx k2c_matmul k2c_dot k2c_affine_matmul k2c_dense.3 k2c_matmul.1 k2c_dot.1 k2c_dense.2 k2c_matmul.2 k2c_dot.2 k2c_dense.1 k2c_matmul.3 k2c_dot.3 k2c_dense sample0
+INFO-FLOW: Configuring Module : k2c_sub2idx ...
+Execute       set_default_model k2c_sub2idx 
+Execute       apply_spec_resource_limit k2c_sub2idx 
+INFO-FLOW: Configuring Module : k2c_matmul ...
+Execute       set_default_model k2c_matmul 
+Execute       apply_spec_resource_limit k2c_matmul 
+INFO-FLOW: Configuring Module : k2c_dot ...
+Execute       set_default_model k2c_dot 
+Execute       apply_spec_resource_limit k2c_dot 
+INFO-FLOW: Configuring Module : k2c_affine_matmul ...
+Execute       set_default_model k2c_affine_matmul 
+Execute       apply_spec_resource_limit k2c_affine_matmul 
+INFO-FLOW: Configuring Module : k2c_dense.3 ...
+Execute       set_default_model k2c_dense.3 
+Execute       apply_spec_resource_limit k2c_dense.3 
+INFO-FLOW: Configuring Module : k2c_matmul.1 ...
+Execute       set_default_model k2c_matmul.1 
+Execute       apply_spec_resource_limit k2c_matmul.1 
+INFO-FLOW: Configuring Module : k2c_dot.1 ...
+Execute       set_default_model k2c_dot.1 
+Execute       apply_spec_resource_limit k2c_dot.1 
+INFO-FLOW: Configuring Module : k2c_dense.2 ...
+Execute       set_default_model k2c_dense.2 
+Execute       apply_spec_resource_limit k2c_dense.2 
+INFO-FLOW: Configuring Module : k2c_matmul.2 ...
+Execute       set_default_model k2c_matmul.2 
+Execute       apply_spec_resource_limit k2c_matmul.2 
+INFO-FLOW: Configuring Module : k2c_dot.2 ...
+Execute       set_default_model k2c_dot.2 
+Execute       apply_spec_resource_limit k2c_dot.2 
+INFO-FLOW: Configuring Module : k2c_dense.1 ...
+Execute       set_default_model k2c_dense.1 
+Execute       apply_spec_resource_limit k2c_dense.1 
+INFO-FLOW: Configuring Module : k2c_matmul.3 ...
+Execute       set_default_model k2c_matmul.3 
+Execute       apply_spec_resource_limit k2c_matmul.3 
+INFO-FLOW: Configuring Module : k2c_dot.3 ...
+Execute       set_default_model k2c_dot.3 
+Execute       apply_spec_resource_limit k2c_dot.3 
+INFO-FLOW: Configuring Module : k2c_dense ...
+Execute       set_default_model k2c_dense 
+Execute       apply_spec_resource_limit k2c_dense 
+INFO-FLOW: Configuring Module : sample0 ...
+Execute       set_default_model sample0 
+Execute       apply_spec_resource_limit sample0 
+INFO-FLOW: Model list for preprocess: k2c_sub2idx k2c_matmul k2c_dot k2c_affine_matmul k2c_dense.3 k2c_matmul.1 k2c_dot.1 k2c_dense.2 k2c_matmul.2 k2c_dot.2 k2c_dense.1 k2c_matmul.3 k2c_dot.3 k2c_dense sample0
+INFO-FLOW: Preprocessing Module: k2c_sub2idx ...
+Execute       set_default_model k2c_sub2idx 
+Execute       cdfg_preprocess -model k2c_sub2idx 
+Execute       rtl_gen_preprocess k2c_sub2idx 
+INFO-FLOW: Preprocessing Module: k2c_matmul ...
+Execute       set_default_model k2c_matmul 
+Execute       cdfg_preprocess -model k2c_matmul 
+Execute       rtl_gen_preprocess k2c_matmul 
+INFO-FLOW: Preprocessing Module: k2c_dot ...
+Execute       set_default_model k2c_dot 
+Execute       cdfg_preprocess -model k2c_dot 
+Execute       rtl_gen_preprocess k2c_dot 
+INFO-FLOW: Preprocessing Module: k2c_affine_matmul ...
+Execute       set_default_model k2c_affine_matmul 
+Execute       cdfg_preprocess -model k2c_affine_matmul 
+Execute       rtl_gen_preprocess k2c_affine_matmul 
+INFO-FLOW: Preprocessing Module: k2c_dense.3 ...
+Execute       set_default_model k2c_dense.3 
+Execute       cdfg_preprocess -model k2c_dense.3 
+Execute       rtl_gen_preprocess k2c_dense.3 
+INFO-FLOW: Preprocessing Module: k2c_matmul.1 ...
+Execute       set_default_model k2c_matmul.1 
+Execute       cdfg_preprocess -model k2c_matmul.1 
+Execute       rtl_gen_preprocess k2c_matmul.1 
+INFO-FLOW: Preprocessing Module: k2c_dot.1 ...
+Execute       set_default_model k2c_dot.1 
+Execute       cdfg_preprocess -model k2c_dot.1 
+Execute       rtl_gen_preprocess k2c_dot.1 
+INFO-FLOW: Preprocessing Module: k2c_dense.2 ...
+Execute       set_default_model k2c_dense.2 
+Execute       cdfg_preprocess -model k2c_dense.2 
+Execute       rtl_gen_preprocess k2c_dense.2 
+INFO-FLOW: Preprocessing Module: k2c_matmul.2 ...
+Execute       set_default_model k2c_matmul.2 
+Execute       cdfg_preprocess -model k2c_matmul.2 
+Execute       rtl_gen_preprocess k2c_matmul.2 
+INFO-FLOW: Preprocessing Module: k2c_dot.2 ...
+Execute       set_default_model k2c_dot.2 
+Execute       cdfg_preprocess -model k2c_dot.2 
+Execute       rtl_gen_preprocess k2c_dot.2 
+INFO-FLOW: Preprocessing Module: k2c_dense.1 ...
+Execute       set_default_model k2c_dense.1 
+Execute       cdfg_preprocess -model k2c_dense.1 
+Execute       rtl_gen_preprocess k2c_dense.1 
+INFO-FLOW: Preprocessing Module: k2c_matmul.3 ...
+Execute       set_default_model k2c_matmul.3 
+Execute       cdfg_preprocess -model k2c_matmul.3 
+Execute       rtl_gen_preprocess k2c_matmul.3 
+INFO-FLOW: Preprocessing Module: k2c_dot.3 ...
+Execute       set_default_model k2c_dot.3 
+Execute       cdfg_preprocess -model k2c_dot.3 
+Execute       rtl_gen_preprocess k2c_dot.3 
+INFO-FLOW: Preprocessing Module: k2c_dense ...
+Execute       set_default_model k2c_dense 
+Execute       cdfg_preprocess -model k2c_dense 
+Execute       rtl_gen_preprocess k2c_dense 
+INFO-FLOW: Preprocessing Module: sample0 ...
+Execute       set_default_model sample0 
+Execute       cdfg_preprocess -model sample0 
+Execute       rtl_gen_preprocess sample0 
+INFO-FLOW: Model list for synthesis: k2c_sub2idx k2c_matmul k2c_dot k2c_affine_matmul k2c_dense.3 k2c_matmul.1 k2c_dot.1 k2c_dense.2 k2c_matmul.2 k2c_dot.2 k2c_dense.1 k2c_matmul.3 k2c_dot.3 k2c_dense sample0
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'k2c_sub2idx' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model k2c_sub2idx 
+Execute       schedule -model k2c_sub2idx 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 32.606 seconds; current allocated memory: 544.468 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_sub2idx.verbose.sched.rpt -verbose -f 
+INFO: [HLS 200-434] Only 0 loops out of a total 2 loops have been pipelined in this design.
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_sub2idx.sched.adb -f 
+INFO-FLOW: Finish scheduling k2c_sub2idx.
+Execute       set_default_model k2c_sub2idx 
+Execute       bind -model k2c_sub2idx 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=k2c_sub2idx
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.185 seconds; current allocated memory: 544.600 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_sub2idx.verbose.bind.rpt -verbose -f 
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_sub2idx.bind.adb -f 
+INFO-FLOW: Finish binding k2c_sub2idx.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'k2c_matmul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model k2c_matmul 
+Execute       schedule -model k2c_matmul 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.113 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.26 seconds; current allocated memory: 545.103 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul.verbose.sched.rpt -verbose -f 
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul.sched.adb -f 
+INFO-FLOW: Finish scheduling k2c_matmul.
+Execute       set_default_model k2c_matmul 
+Execute       bind -model k2c_matmul 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=k2c_matmul
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.244 seconds; current allocated memory: 545.391 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul.verbose.bind.rpt -verbose -f 
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul.bind.adb -f 
+INFO-FLOW: Finish binding k2c_matmul.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'k2c_dot' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model k2c_dot 
+Execute       schedule -model k2c_dot 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.132 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.429 seconds; current allocated memory: 547.023 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot.verbose.sched.rpt -verbose -f 
+Command       report done; 0.255 sec.
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot.sched.adb -f 
+INFO-FLOW: Finish scheduling k2c_dot.
+Execute       set_default_model k2c_dot 
+Execute       bind -model k2c_dot 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=k2c_dot
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.111 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.59 seconds; current allocated memory: 548.403 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot.verbose.bind.rpt -verbose -f 
+Command       report done; 0.285 sec.
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot.bind.adb -f 
+Command       db_write done; 0.141 sec.
+INFO-FLOW: Finish binding k2c_dot.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'k2c_affine_matmul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model k2c_affine_matmul 
+Execute       schedule -model k2c_affine_matmul 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.104 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.647 seconds; current allocated memory: 548.969 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_affine_matmul.verbose.sched.rpt -verbose -f 
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_affine_matmul.sched.adb -f 
+INFO-FLOW: Finish scheduling k2c_affine_matmul.
+Execute       set_default_model k2c_affine_matmul 
+Execute       bind -model k2c_affine_matmul 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=k2c_affine_matmul
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.244 seconds; current allocated memory: 549.231 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_affine_matmul.verbose.bind.rpt -verbose -f 
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_affine_matmul.bind.adb -f 
+INFO-FLOW: Finish binding k2c_affine_matmul.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'k2c_dense_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model k2c_dense.3 
+Execute       schedule -model k2c_dense.3 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.178 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.45 seconds; current allocated memory: 549.708 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_3.verbose.sched.rpt -verbose -f 
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_3.sched.adb -f 
+INFO-FLOW: Finish scheduling k2c_dense.3.
+Execute       set_default_model k2c_dense.3 
+Execute       bind -model k2c_dense.3 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=k2c_dense.3
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.182 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.37 seconds; current allocated memory: 550.123 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_3.verbose.bind.rpt -verbose -f 
+Command       report done; 0.23 sec.
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_3.bind.adb -f 
+INFO-FLOW: Finish binding k2c_dense.3.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'k2c_matmul_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model k2c_matmul.1 
+Execute       schedule -model k2c_matmul.1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.468 seconds; current allocated memory: 550.569 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_1.verbose.sched.rpt -verbose -f 
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_1.sched.adb -f 
+INFO-FLOW: Finish scheduling k2c_matmul.1.
+Execute       set_default_model k2c_matmul.1 
+Execute       bind -model k2c_matmul.1 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=k2c_matmul.1
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.274 seconds; current allocated memory: 550.804 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_1.verbose.bind.rpt -verbose -f 
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_1.bind.adb -f 
+INFO-FLOW: Finish binding k2c_matmul.1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'k2c_dot_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model k2c_dot.1 
+Execute       schedule -model k2c_dot.1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.143 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.375 seconds; current allocated memory: 552.424 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_1.verbose.sched.rpt -verbose -f 
+Command       report done; 0.208 sec.
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_1.sched.adb -f 
+Command       db_write done; 0.13 sec.
+INFO-FLOW: Finish scheduling k2c_dot.1.
+Execute       set_default_model k2c_dot.1 
+Execute       bind -model k2c_dot.1 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=k2c_dot.1
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.132 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.566 seconds; current allocated memory: 553.890 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_1.verbose.bind.rpt -verbose -f 
+Command       report done; 0.289 sec.
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_1.bind.adb -f 
+Command       db_write done; 0.122 sec.
+INFO-FLOW: Finish binding k2c_dot.1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'k2c_dense_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model k2c_dense.2 
+Execute       schedule -model k2c_dense.2 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.168 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.727 seconds; current allocated memory: 554.490 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_2.verbose.sched.rpt -verbose -f 
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_2.sched.adb -f 
+INFO-FLOW: Finish scheduling k2c_dense.2.
+Execute       set_default_model k2c_dense.2 
+Execute       bind -model k2c_dense.2 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=k2c_dense.2
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.21 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.49 seconds; current allocated memory: 554.917 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_2.verbose.bind.rpt -verbose -f 
+Command       report done; 0.22 sec.
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_2.bind.adb -f 
+INFO-FLOW: Finish binding k2c_dense.2.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'k2c_matmul_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model k2c_matmul.2 
+Execute       schedule -model k2c_matmul.2 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.107 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.539 seconds; current allocated memory: 555.362 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_2.verbose.sched.rpt -verbose -f 
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_2.sched.adb -f 
+INFO-FLOW: Finish scheduling k2c_matmul.2.
+Execute       set_default_model k2c_matmul.2 
+Execute       bind -model k2c_matmul.2 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=k2c_matmul.2
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.104 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.274 seconds; current allocated memory: 555.634 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_2.verbose.bind.rpt -verbose -f 
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_2.bind.adb -f 
+INFO-FLOW: Finish binding k2c_matmul.2.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'k2c_dot_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model k2c_dot.2 
+Execute       schedule -model k2c_dot.2 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.146 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.373 seconds; current allocated memory: 557.254 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_2.verbose.sched.rpt -verbose -f 
+Command       report done; 0.238 sec.
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_2.sched.adb -f 
+Command       db_write done; 0.114 sec.
+INFO-FLOW: Finish scheduling k2c_dot.2.
+Execute       set_default_model k2c_dot.2 
+Execute       bind -model k2c_dot.2 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=k2c_dot.2
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.138 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.601 seconds; current allocated memory: 558.713 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_2.verbose.bind.rpt -verbose -f 
+Command       report done; 0.309 sec.
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_2.bind.adb -f 
+Command       db_write done; 0.119 sec.
+INFO-FLOW: Finish binding k2c_dot.2.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'k2c_dense_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model k2c_dense.1 
+Execute       schedule -model k2c_dense.1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.303 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.912 seconds; current allocated memory: 559.329 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_1.verbose.sched.rpt -verbose -f 
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_1.sched.adb -f 
+INFO-FLOW: Finish scheduling k2c_dense.1.
+Execute       set_default_model k2c_dense.1 
+Execute       bind -model k2c_dense.1 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=k2c_dense.1
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.195 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.443 seconds; current allocated memory: 559.755 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_1.verbose.bind.rpt -verbose -f 
+Command       report done; 0.187 sec.
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_1.bind.adb -f 
+INFO-FLOW: Finish binding k2c_dense.1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'k2c_matmul_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model k2c_matmul.3 
+Execute       schedule -model k2c_matmul.3 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.154 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.561 seconds; current allocated memory: 560.199 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_3.verbose.sched.rpt -verbose -f 
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_3.sched.adb -f 
+INFO-FLOW: Finish scheduling k2c_matmul.3.
+Execute       set_default_model k2c_matmul.3 
+Execute       bind -model k2c_matmul.3 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=k2c_matmul.3
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.223 seconds; current allocated memory: 560.429 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_3.verbose.bind.rpt -verbose -f 
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_3.bind.adb -f 
+INFO-FLOW: Finish binding k2c_matmul.3.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'k2c_dot_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model k2c_dot.3 
+Execute       schedule -model k2c_dot.3 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.14 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.379 seconds; current allocated memory: 562.086 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_3.verbose.sched.rpt -verbose -f 
+Command       report done; 0.217 sec.
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_3.sched.adb -f 
+Command       db_write done; 0.117 sec.
+INFO-FLOW: Finish scheduling k2c_dot.3.
+Execute       set_default_model k2c_dot.3 
+Execute       bind -model k2c_dot.3 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=k2c_dot.3
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.145 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.602 seconds; current allocated memory: 563.509 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_3.verbose.bind.rpt -verbose -f 
+Command       report done; 0.303 sec.
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_3.bind.adb -f 
+Command       db_write done; 0.145 sec.
+INFO-FLOW: Finish binding k2c_dot.3.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'k2c_dense' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model k2c_dense 
+Execute       schedule -model k2c_dense 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 60.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 60.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.294 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.919 seconds; current allocated memory: 564.702 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense.verbose.sched.rpt -verbose -f 
+Command       report done; 0.266 sec.
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense.sched.adb -f 
+INFO-FLOW: Finish scheduling k2c_dense.
+Execute       set_default_model k2c_dense 
+Execute       bind -model k2c_dense 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=k2c_dense
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.304 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.711 seconds; current allocated memory: 565.582 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense.verbose.bind.rpt -verbose -f 
+Command       report done; 0.287 sec.
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense.bind.adb -f 
+INFO-FLOW: Finish binding k2c_dense.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sample0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model sample0 
+Execute       schedule -model sample0 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.154 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.648 seconds; current allocated memory: 566.493 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.verbose.sched.rpt -verbose -f 
+Command       report done; 0.114 sec.
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.sched.adb -f 
+INFO-FLOW: Finish scheduling sample0.
+Execute       set_default_model sample0 
+Execute       bind -model sample0 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=sample0
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.809 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.115 seconds; current allocated memory: 567.615 MB.
+Execute       report -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.verbose.bind.rpt -verbose -f 
+Command       report done; 0.674 sec.
+Execute       db_write -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.bind.adb -f 
+INFO-FLOW: Finish binding sample0.
+Execute       get_model_list sample0 -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess k2c_sub2idx 
+Execute       rtl_gen_preprocess k2c_matmul 
+Execute       rtl_gen_preprocess k2c_dot 
+Execute       rtl_gen_preprocess k2c_affine_matmul 
+Execute       rtl_gen_preprocess k2c_dense.3 
+Execute       rtl_gen_preprocess k2c_matmul.1 
+Execute       rtl_gen_preprocess k2c_dot.1 
+Execute       rtl_gen_preprocess k2c_dense.2 
+Execute       rtl_gen_preprocess k2c_matmul.2 
+Execute       rtl_gen_preprocess k2c_dot.2 
+Execute       rtl_gen_preprocess k2c_dense.1 
+Execute       rtl_gen_preprocess k2c_matmul.3 
+Execute       rtl_gen_preprocess k2c_dot.3 
+Execute       rtl_gen_preprocess k2c_dense 
+Execute       rtl_gen_preprocess sample0 
+INFO-FLOW: Model list for RTL generation: k2c_sub2idx k2c_matmul k2c_dot k2c_affine_matmul k2c_dense.3 k2c_matmul.1 k2c_dot.1 k2c_dense.2 k2c_matmul.2 k2c_dot.2 k2c_dense.1 k2c_matmul.3 k2c_dot.3 k2c_dense sample0
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'k2c_sub2idx' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model k2c_sub2idx -vendor xilinx -mg_file C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_sub2idx.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'sample0_mul_64s_64s_64_6_1' to 'sample0_mul_64s_6bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'sample0_mul_64s_6bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'k2c_sub2idx'.
+INFO: [HLS 200-111]  Elapsed time: 1.058 seconds; current allocated memory: 568.262 MB.
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.rtl_wrap.cfg.tcl 
+Execute       gen_rtl k2c_sub2idx -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/systemc/k2c_sub2idx -synmodules k2c_sub2idx k2c_matmul k2c_dot k2c_affine_matmul k2c_dense.3 k2c_matmul.1 k2c_dot.1 k2c_dense.2 k2c_matmul.2 k2c_dot.2 k2c_dense.1 k2c_matmul.3 k2c_dot.3 k2c_dense sample0 
+Execute       gen_rtl k2c_sub2idx -style xilinx -f -lang vhdl -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/vhdl/k2c_sub2idx 
+Execute       gen_rtl k2c_sub2idx -style xilinx -f -lang vlog -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/verilog/k2c_sub2idx 
+Execute       gen_tb_info k2c_sub2idx -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_sub2idx -p C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db 
+Execute       report -model k2c_sub2idx -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/k2c_sub2idx_csynth.rpt -f 
+Execute       report -model k2c_sub2idx -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/k2c_sub2idx_csynth.xml -f -x 
+Execute       report -model k2c_sub2idx -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_sub2idx.verbose.rpt -verbose -f 
+Execute       db_write -model k2c_sub2idx -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_sub2idx.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'k2c_matmul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model k2c_matmul -vendor xilinx -mg_file C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'sample0_fadd_32ns_32ns_32_9_full_dsp_1' to 'sample0_fadd_32nscud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample0_fmul_32ns_32ns_32_5_max_dsp_1' to 'sample0_fmul_32nsdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample0_mul_mul_15s_15s_15_3_1' to 'sample0_mul_mul_1eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample0_mul_mul_13s_13s_13_3_1' to 'sample0_mul_mul_1fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample0_mac_muladd_13s_13s_13ns_13_3_1' to 'sample0_mac_muladg8j' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'sample0_fadd_32nscud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_fmul_32nsdEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_mac_muladg8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_mul_64s_6bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_mul_mul_1eOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_mul_mul_1fYi': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'k2c_matmul'.
+Command       create_rtl_model done; 0.216 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.54 seconds; current allocated memory: 569.091 MB.
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.rtl_wrap.cfg.tcl 
+Execute       gen_rtl k2c_matmul -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/systemc/k2c_matmul -synmodules k2c_sub2idx k2c_matmul k2c_dot k2c_affine_matmul k2c_dense.3 k2c_matmul.1 k2c_dot.1 k2c_dense.2 k2c_matmul.2 k2c_dot.2 k2c_dense.1 k2c_matmul.3 k2c_dot.3 k2c_dense sample0 
+Execute       gen_rtl k2c_matmul -style xilinx -f -lang vhdl -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/vhdl/k2c_matmul 
+Execute       gen_rtl k2c_matmul -style xilinx -f -lang vlog -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/verilog/k2c_matmul 
+Execute       gen_tb_info k2c_matmul -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul -p C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db 
+Execute       report -model k2c_matmul -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/k2c_matmul_csynth.rpt -f 
+Execute       report -model k2c_matmul -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/k2c_matmul_csynth.xml -f -x 
+Execute       report -model k2c_matmul -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul.verbose.rpt -verbose -f 
+Execute       db_write -model k2c_matmul -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'k2c_dot' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model k2c_dot -vendor xilinx -mg_file C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'sample0_udiv_64ns_64ns_64_68_seq_1' to 'sample0_udiv_64nshbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample0_udiv_15ns_64ns_64_19_seq_1' to 'sample0_udiv_15nsibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample0_urem_64ns_64ns_64_68_seq_1' to 'sample0_urem_64nsjbC' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'sample0_udiv_15nsibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_udiv_64nshbi': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_urem_64nsjbC': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'k2c_dot'.
+Command       create_rtl_model done; 0.284 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.836 seconds; current allocated memory: 572.085 MB.
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.rtl_wrap.cfg.tcl 
+Execute       gen_rtl k2c_dot -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/systemc/k2c_dot -synmodules k2c_sub2idx k2c_matmul k2c_dot k2c_affine_matmul k2c_dense.3 k2c_matmul.1 k2c_dot.1 k2c_dense.2 k2c_matmul.2 k2c_dot.2 k2c_dense.1 k2c_matmul.3 k2c_dot.3 k2c_dense sample0 
+Execute       gen_rtl k2c_dot -style xilinx -f -lang vhdl -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/vhdl/k2c_dot 
+Execute       gen_rtl k2c_dot -style xilinx -f -lang vlog -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/verilog/k2c_dot 
+Execute       gen_tb_info k2c_dot -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot -p C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db 
+Execute       report -model k2c_dot -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/k2c_dot_csynth.rpt -f 
+Execute       report -model k2c_dot -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/k2c_dot_csynth.xml -f -x 
+Execute       report -model k2c_dot -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot.verbose.rpt -verbose -f 
+Command       report done; 0.384 sec.
+Execute       db_write -model k2c_dot -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot.adb -f 
+Command       db_write done; 0.184 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'k2c_affine_matmul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model k2c_affine_matmul -vendor xilinx -mg_file C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_affine_matmul.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'sample0_mac_muladd_15s_15s_15ns_15_3_1' to 'sample0_mac_muladkbM' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'sample0_fadd_32nscud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_fmul_32nsdEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_mac_muladkbM': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_mul_64s_6bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_mul_mul_1eOg': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'k2c_affine_matmul'.
+Command       create_rtl_model done; 0.169 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.57 seconds; current allocated memory: 572.912 MB.
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.rtl_wrap.cfg.tcl 
+Execute       gen_rtl k2c_affine_matmul -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/systemc/k2c_affine_matmul -synmodules k2c_sub2idx k2c_matmul k2c_dot k2c_affine_matmul k2c_dense.3 k2c_matmul.1 k2c_dot.1 k2c_dense.2 k2c_matmul.2 k2c_dot.2 k2c_dense.1 k2c_matmul.3 k2c_dot.3 k2c_dense sample0 
+Execute       gen_rtl k2c_affine_matmul -style xilinx -f -lang vhdl -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/vhdl/k2c_affine_matmul 
+Execute       gen_rtl k2c_affine_matmul -style xilinx -f -lang vlog -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/verilog/k2c_affine_matmul 
+Execute       gen_tb_info k2c_affine_matmul -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_affine_matmul -p C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db 
+Execute       report -model k2c_affine_matmul -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/k2c_affine_matmul_csynth.rpt -f 
+Execute       report -model k2c_affine_matmul -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/k2c_affine_matmul_csynth.xml -f -x 
+Execute       report -model k2c_affine_matmul -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_affine_matmul.verbose.rpt -verbose -f 
+Execute       db_write -model k2c_affine_matmul -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_affine_matmul.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'k2c_dense_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model k2c_dense.3 -vendor xilinx -mg_file C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_3.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'sample0_fcmp_32ns_32ns_1_2_1' to 'sample0_fcmp_32nslbW' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'sample0_fadd_32nscud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_fcmp_32nslbW': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_mul_64s_6bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'k2c_dense_3'.
+Command       create_rtl_model done; 0.157 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.711 seconds; current allocated memory: 574.048 MB.
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.rtl_wrap.cfg.tcl 
+Execute       gen_rtl k2c_dense.3 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/systemc/k2c_dense_3 -synmodules k2c_sub2idx k2c_matmul k2c_dot k2c_affine_matmul k2c_dense.3 k2c_matmul.1 k2c_dot.1 k2c_dense.2 k2c_matmul.2 k2c_dot.2 k2c_dense.1 k2c_matmul.3 k2c_dot.3 k2c_dense sample0 
+Execute       gen_rtl k2c_dense.3 -style xilinx -f -lang vhdl -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/vhdl/k2c_dense_3 
+Execute       gen_rtl k2c_dense.3 -style xilinx -f -lang vlog -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/verilog/k2c_dense_3 
+Execute       gen_tb_info k2c_dense.3 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_3 -p C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db 
+Execute       report -model k2c_dense.3 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/k2c_dense_3_csynth.rpt -f 
+Execute       report -model k2c_dense.3 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/k2c_dense_3_csynth.xml -f -x 
+Execute       report -model k2c_dense.3 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_3.verbose.rpt -verbose -f 
+Command       report done; 0.194 sec.
+Execute       db_write -model k2c_dense.3 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_3.adb -f 
+Command       db_write done; 0.109 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'k2c_matmul_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model k2c_matmul.1 -vendor xilinx -mg_file C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_1.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'sample0_mul_mul_14s_14s_14_3_1' to 'sample0_mul_mul_1mb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample0_mac_muladd_14s_14s_14ns_14_3_1' to 'sample0_mac_muladncg' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'sample0_fadd_32nscud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_fmul_32nsdEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_mac_muladncg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_mul_64s_6bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_mul_mul_1eOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_mul_mul_1mb6': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'k2c_matmul_1'.
+Command       create_rtl_model done; 0.162 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.935 seconds; current allocated memory: 574.895 MB.
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.rtl_wrap.cfg.tcl 
+Execute       gen_rtl k2c_matmul.1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/systemc/k2c_matmul_1 -synmodules k2c_sub2idx k2c_matmul k2c_dot k2c_affine_matmul k2c_dense.3 k2c_matmul.1 k2c_dot.1 k2c_dense.2 k2c_matmul.2 k2c_dot.2 k2c_dense.1 k2c_matmul.3 k2c_dot.3 k2c_dense sample0 
+Execute       gen_rtl k2c_matmul.1 -style xilinx -f -lang vhdl -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/vhdl/k2c_matmul_1 
+Execute       gen_rtl k2c_matmul.1 -style xilinx -f -lang vlog -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/verilog/k2c_matmul_1 
+Execute       gen_tb_info k2c_matmul.1 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_1 -p C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db 
+Execute       report -model k2c_matmul.1 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/k2c_matmul_1_csynth.rpt -f 
+Execute       report -model k2c_matmul.1 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/k2c_matmul_1_csynth.xml -f -x 
+Execute       report -model k2c_matmul.1 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_1.verbose.rpt -verbose -f 
+Execute       db_write -model k2c_matmul.1 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_1.adb -f 
+Command       db_write done; 0.101 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'k2c_dot_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model k2c_dot.1 -vendor xilinx -mg_file C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_1.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'sample0_udiv_64nshbi': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_urem_64nsjbC': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'k2c_dot_1'.
+Command       create_rtl_model done; 0.18 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.783 seconds; current allocated memory: 577.933 MB.
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.rtl_wrap.cfg.tcl 
+Execute       gen_rtl k2c_dot.1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/systemc/k2c_dot_1 -synmodules k2c_sub2idx k2c_matmul k2c_dot k2c_affine_matmul k2c_dense.3 k2c_matmul.1 k2c_dot.1 k2c_dense.2 k2c_matmul.2 k2c_dot.2 k2c_dense.1 k2c_matmul.3 k2c_dot.3 k2c_dense sample0 
+Execute       gen_rtl k2c_dot.1 -style xilinx -f -lang vhdl -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/vhdl/k2c_dot_1 
+Execute       gen_rtl k2c_dot.1 -style xilinx -f -lang vlog -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/verilog/k2c_dot_1 
+Execute       gen_tb_info k2c_dot.1 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_1 -p C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db 
+Execute       report -model k2c_dot.1 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/k2c_dot_1_csynth.rpt -f 
+Execute       report -model k2c_dot.1 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/k2c_dot_1_csynth.xml -f -x 
+Execute       report -model k2c_dot.1 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_1.verbose.rpt -verbose -f 
+Command       report done; 0.327 sec.
+Execute       db_write -model k2c_dot.1 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_1.adb -f 
+Command       db_write done; 0.207 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'k2c_dense_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model k2c_dense.2 -vendor xilinx -mg_file C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_2.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'sample0_fadd_32nscud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_fcmp_32nslbW': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_mul_64s_6bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'k2c_dense_2'.
+Command       create_rtl_model done; 0.15 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.509 seconds; current allocated memory: 579.123 MB.
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.rtl_wrap.cfg.tcl 
+Execute       gen_rtl k2c_dense.2 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/systemc/k2c_dense_2 -synmodules k2c_sub2idx k2c_matmul k2c_dot k2c_affine_matmul k2c_dense.3 k2c_matmul.1 k2c_dot.1 k2c_dense.2 k2c_matmul.2 k2c_dot.2 k2c_dense.1 k2c_matmul.3 k2c_dot.3 k2c_dense sample0 
+Execute       gen_rtl k2c_dense.2 -style xilinx -f -lang vhdl -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/vhdl/k2c_dense_2 
+Execute       gen_rtl k2c_dense.2 -style xilinx -f -lang vlog -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/verilog/k2c_dense_2 
+Execute       gen_tb_info k2c_dense.2 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_2 -p C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db 
+Execute       report -model k2c_dense.2 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/k2c_dense_2_csynth.rpt -f 
+Execute       report -model k2c_dense.2 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/k2c_dense_2_csynth.xml -f -x 
+Execute       report -model k2c_dense.2 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_2.verbose.rpt -verbose -f 
+Command       report done; 0.21 sec.
+Execute       db_write -model k2c_dense.2 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_2.adb -f 
+Command       db_write done; 0.138 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'k2c_matmul_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model k2c_matmul.2 -vendor xilinx -mg_file C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_2.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'sample0_mul_mul_11s_11s_11_3_1' to 'sample0_mul_mul_1ocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample0_mac_muladd_11s_11s_11ns_11_3_1' to 'sample0_mac_muladpcA' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'sample0_fadd_32nscud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_fmul_32nsdEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_mac_muladpcA': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_mul_64s_6bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_mul_mul_1eOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_mul_mul_1ocq': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'k2c_matmul_2'.
+Command       create_rtl_model done; 0.214 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.05 seconds; current allocated memory: 580.005 MB.
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.rtl_wrap.cfg.tcl 
+Execute       gen_rtl k2c_matmul.2 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/systemc/k2c_matmul_2 -synmodules k2c_sub2idx k2c_matmul k2c_dot k2c_affine_matmul k2c_dense.3 k2c_matmul.1 k2c_dot.1 k2c_dense.2 k2c_matmul.2 k2c_dot.2 k2c_dense.1 k2c_matmul.3 k2c_dot.3 k2c_dense sample0 
+Execute       gen_rtl k2c_matmul.2 -style xilinx -f -lang vhdl -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/vhdl/k2c_matmul_2 
+Execute       gen_rtl k2c_matmul.2 -style xilinx -f -lang vlog -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/verilog/k2c_matmul_2 
+Execute       gen_tb_info k2c_matmul.2 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_2 -p C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db 
+Execute       report -model k2c_matmul.2 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/k2c_matmul_2_csynth.rpt -f 
+Execute       report -model k2c_matmul.2 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/k2c_matmul_2_csynth.xml -f -x 
+Execute       report -model k2c_matmul.2 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_2.verbose.rpt -verbose -f 
+Execute       db_write -model k2c_matmul.2 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_2.adb -f 
+Command       db_write done; 0.107 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'k2c_dot_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model k2c_dot.2 -vendor xilinx -mg_file C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_2.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'sample0_udiv_64nshbi': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_urem_64nsjbC': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'k2c_dot_2'.
+Command       create_rtl_model done; 0.373 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.433 seconds; current allocated memory: 583.120 MB.
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.rtl_wrap.cfg.tcl 
+Execute       gen_rtl k2c_dot.2 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/systemc/k2c_dot_2 -synmodules k2c_sub2idx k2c_matmul k2c_dot k2c_affine_matmul k2c_dense.3 k2c_matmul.1 k2c_dot.1 k2c_dense.2 k2c_matmul.2 k2c_dot.2 k2c_dense.1 k2c_matmul.3 k2c_dot.3 k2c_dense sample0 
+Execute       gen_rtl k2c_dot.2 -style xilinx -f -lang vhdl -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/vhdl/k2c_dot_2 
+Execute       gen_rtl k2c_dot.2 -style xilinx -f -lang vlog -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/verilog/k2c_dot_2 
+Execute       gen_tb_info k2c_dot.2 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_2 -p C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db 
+Command       gen_tb_info done; 0.126 sec.
+Execute       report -model k2c_dot.2 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/k2c_dot_2_csynth.rpt -f 
+Execute       report -model k2c_dot.2 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/k2c_dot_2_csynth.xml -f -x 
+Execute       report -model k2c_dot.2 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_2.verbose.rpt -verbose -f 
+Command       report done; 1.081 sec.
+Execute       db_write -model k2c_dot.2 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_2.adb -f 
+Command       db_write done; 0.703 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'k2c_dense_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model k2c_dense.1 -vendor xilinx -mg_file C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_1.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'sample0_fadd_32nscud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_fcmp_32nslbW': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_mul_64s_6bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'k2c_dense_1'.
+Command       create_rtl_model done; 0.36 sec.
+INFO: [HLS 200-111]  Elapsed time: 3.755 seconds; current allocated memory: 584.338 MB.
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.rtl_wrap.cfg.tcl 
+Execute       gen_rtl k2c_dense.1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/systemc/k2c_dense_1 -synmodules k2c_sub2idx k2c_matmul k2c_dot k2c_affine_matmul k2c_dense.3 k2c_matmul.1 k2c_dot.1 k2c_dense.2 k2c_matmul.2 k2c_dot.2 k2c_dense.1 k2c_matmul.3 k2c_dot.3 k2c_dense sample0 
+Execute       gen_rtl k2c_dense.1 -style xilinx -f -lang vhdl -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/vhdl/k2c_dense_1 
+Execute       gen_rtl k2c_dense.1 -style xilinx -f -lang vlog -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/verilog/k2c_dense_1 
+Execute       gen_tb_info k2c_dense.1 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_1 -p C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db 
+Execute       report -model k2c_dense.1 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/k2c_dense_1_csynth.rpt -f 
+Execute       report -model k2c_dense.1 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/k2c_dense_1_csynth.xml -f -x 
+Execute       report -model k2c_dense.1 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_1.verbose.rpt -verbose -f 
+Command       report done; 0.489 sec.
+Execute       db_write -model k2c_dense.1 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_1.adb -f 
+Command       db_write done; 0.28 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'k2c_matmul_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model k2c_matmul.3 -vendor xilinx -mg_file C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_3.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'sample0_mac_muladd_7s_7s_7ns_7_3_1' to 'sample0_mac_muladqcK' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'sample0_fadd_32nscud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_fmul_32nsdEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_mac_muladqcK': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_mul_64s_6bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_mul_mul_1eOg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'k2c_matmul_3'.
+Command       create_rtl_model done; 0.157 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.514 seconds; current allocated memory: 585.191 MB.
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.rtl_wrap.cfg.tcl 
+Execute       gen_rtl k2c_matmul.3 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/systemc/k2c_matmul_3 -synmodules k2c_sub2idx k2c_matmul k2c_dot k2c_affine_matmul k2c_dense.3 k2c_matmul.1 k2c_dot.1 k2c_dense.2 k2c_matmul.2 k2c_dot.2 k2c_dense.1 k2c_matmul.3 k2c_dot.3 k2c_dense sample0 
+Execute       gen_rtl k2c_matmul.3 -style xilinx -f -lang vhdl -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/vhdl/k2c_matmul_3 
+Execute       gen_rtl k2c_matmul.3 -style xilinx -f -lang vlog -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/verilog/k2c_matmul_3 
+Execute       gen_tb_info k2c_matmul.3 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_3 -p C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db 
+Execute       report -model k2c_matmul.3 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/k2c_matmul_3_csynth.rpt -f 
+Execute       report -model k2c_matmul.3 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/k2c_matmul_3_csynth.xml -f -x 
+Execute       report -model k2c_matmul.3 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_3.verbose.rpt -verbose -f 
+Execute       db_write -model k2c_matmul.3 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_3.adb -f 
+Command       db_write done; 0.117 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'k2c_dot_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model k2c_dot.3 -vendor xilinx -mg_file C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_3.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'sample0_udiv_64nshbi': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_urem_64nsjbC': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'k2c_dot_3'.
+Command       create_rtl_model done; 0.241 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.832 seconds; current allocated memory: 588.079 MB.
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.rtl_wrap.cfg.tcl 
+Execute       gen_rtl k2c_dot.3 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/systemc/k2c_dot_3 -synmodules k2c_sub2idx k2c_matmul k2c_dot k2c_affine_matmul k2c_dense.3 k2c_matmul.1 k2c_dot.1 k2c_dense.2 k2c_matmul.2 k2c_dot.2 k2c_dense.1 k2c_matmul.3 k2c_dot.3 k2c_dense sample0 
+Execute       gen_rtl k2c_dot.3 -style xilinx -f -lang vhdl -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/vhdl/k2c_dot_3 
+Execute       gen_rtl k2c_dot.3 -style xilinx -f -lang vlog -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/verilog/k2c_dot_3 
+Execute       gen_tb_info k2c_dot.3 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_3 -p C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db 
+Execute       report -model k2c_dot.3 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/k2c_dot_3_csynth.rpt -f 
+Execute       report -model k2c_dot.3 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/k2c_dot_3_csynth.xml -f -x 
+Execute       report -model k2c_dot.3 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_3.verbose.rpt -verbose -f 
+Command       report done; 0.35 sec.
+Execute       db_write -model k2c_dot.3 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_3.adb -f 
+Command       db_write done; 0.234 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'k2c_dense' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model k2c_dense -vendor xilinx -mg_file C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'sample0_fdiv_32ns_32ns_32_30_1' to 'sample0_fdiv_32nsrcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample0_fexp_32ns_32ns_32_18_full_dsp_1' to 'sample0_fexp_32nssc4' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'sample0_fadd_32nscud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_fdiv_32nsrcU': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_fexp_32nssc4': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sample0_mul_64s_6bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'k2c_dense'.
+Command       create_rtl_model done; 0.351 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.77 seconds; current allocated memory: 590.734 MB.
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.rtl_wrap.cfg.tcl 
+Execute       gen_rtl k2c_dense -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/systemc/k2c_dense -synmodules k2c_sub2idx k2c_matmul k2c_dot k2c_affine_matmul k2c_dense.3 k2c_matmul.1 k2c_dot.1 k2c_dense.2 k2c_matmul.2 k2c_dot.2 k2c_dense.1 k2c_matmul.3 k2c_dot.3 k2c_dense sample0 
+Execute       gen_rtl k2c_dense -style xilinx -f -lang vhdl -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/vhdl/k2c_dense 
+Execute       gen_rtl k2c_dense -style xilinx -f -lang vlog -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/verilog/k2c_dense 
+Execute       gen_tb_info k2c_dense -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense -p C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db 
+Execute       report -model k2c_dense -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/k2c_dense_csynth.rpt -f 
+Execute       report -model k2c_dense -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/k2c_dense_csynth.xml -f -x 
+Execute       report -model k2c_dense -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense.verbose.rpt -verbose -f 
+Command       report done; 0.434 sec.
+Execute       db_write -model k2c_dense -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense.adb -f 
+Command       db_write done; 0.164 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sample0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model sample0 -vendor xilinx -mg_file C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'sample0/dense_13_input_input_array' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sample0/dense_13_input_input_ndim' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sample0/dense_13_input_input_numel' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sample0/dense_13_input_input_shape' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sample0/dense_16_output_array' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sample0/dense_16_output_ndim' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sample0/dense_16_output_numel' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sample0/dense_16_output_shape' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'sample0' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Global array 'dense_13_output_arra' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'sample0_dense_13_output_arra' to 'sample0_dense_13_tde' due to the length limit 20
+WARNING: [RTGEN 206-101] Register 'dense_13_output_ndim' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'dense_13_output_ndim' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Register 'dense_13_output_nume' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'dense_13_output_nume' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'sample0_dense_13_kernel_arra' to 'sample0_dense_13_udo' due to the length limit 20
+WARNING: [RTGEN 206-101] Global array 'dense_13_kernel_arra_4' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'sample0_dense_13_kernel_arra_4' to 'sample0_dense_13_vdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample0_dense_13_bias_array' to 'sample0_dense_13_wdI' due to the length limit 20
+WARNING: [RTGEN 206-101] Global array 'dense_13_bias_array_5' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'sample0_dense_13_bias_array_5' to 'sample0_dense_13_xdS' due to the length limit 20
+WARNING: [RTGEN 206-101] Global array 'dense_14_output_arra' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'sample0_dense_14_output_arra' to 'sample0_dense_14_yd2' due to the length limit 20
+WARNING: [RTGEN 206-101] Register 'dense_14_output_ndim' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'dense_14_output_ndim' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Register 'dense_14_output_nume' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'dense_14_output_nume' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'sample0_dense_14_kernel_arra' to 'sample0_dense_14_zec' due to the length limit 20
+WARNING: [RTGEN 206-101] Global array 'dense_14_kernel_arra_2' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'sample0_dense_14_kernel_arra_2' to 'sample0_dense_14_Aem' due to the length limit 20
+WARNING: [RTGEN 206-101] Register 'dense_14_kernel_ndim' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'dense_14_kernel_ndim' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Register 'dense_14_kernel_nume' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'dense_14_kernel_nume' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'sample0_dense_14_bias_array' to 'sample0_dense_14_Bew' due to the length limit 20
+WARNING: [RTGEN 206-101] Global array 'dense_14_bias_array_3' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'sample0_dense_14_bias_array_3' to 'sample0_dense_14_CeG' due to the length limit 20
+WARNING: [RTGEN 206-101] Register 'dense_14_bias_numel' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'dense_14_bias_numel' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'dense_15_output_arra' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'sample0_dense_15_output_arra' to 'sample0_dense_15_DeQ' due to the length limit 20
+WARNING: [RTGEN 206-101] Register 'dense_15_output_ndim' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'dense_15_output_ndim' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Register 'dense_15_output_nume' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'dense_15_output_nume' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'sample0_dense_15_kernel_arra' to 'sample0_dense_15_Ee0' due to the length limit 20
+WARNING: [RTGEN 206-101] Global array 'dense_15_kernel_arra_1' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'sample0_dense_15_kernel_arra_1' to 'sample0_dense_15_Ffa' due to the length limit 20
+WARNING: [RTGEN 206-101] Register 'dense_15_kernel_ndim' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'dense_15_kernel_ndim' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Register 'dense_15_kernel_nume' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'dense_15_kernel_nume' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'sample0_dense_15_bias_array1' to 'sample0_dense_15_Gfk' due to the length limit 20
+WARNING: [RTGEN 206-101] Global array 'dense_15_bias_array' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'sample0_dense_15_bias_array' to 'sample0_dense_15_Hfu' due to the length limit 20
+WARNING: [RTGEN 206-101] Register 'dense_15_bias_numel' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'dense_15_bias_numel' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'sample0_dense_16_kernel_arra' to 'sample0_dense_16_IfE' due to the length limit 20
+WARNING: [RTGEN 206-101] Global array 'dense_16_kernel_arra_0' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'sample0_dense_16_kernel_arra_0' to 'sample0_dense_16_JfO' due to the length limit 20
+WARNING: [RTGEN 206-101] Register 'dense_16_kernel_ndim' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'dense_16_kernel_ndim' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Register 'dense_16_kernel_nume' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'dense_16_kernel_nume' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Register 'dense_16_bias_numel' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'dense_16_bias_numel' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'dense_13_kernel_shap' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'sample0_dense_13_kernel_shap' to 'sample0_dense_13_KfY' due to the length limit 20
+WARNING: [RTGEN 206-101] Global array 'dense_13_output_shap' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'sample0_dense_13_output_shap' to 'sample0_dense_13_Lf8' due to the length limit 20
+WARNING: [RTGEN 206-101] Global array 'dense_14_kernel_shap' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'sample0_dense_14_kernel_shap' to 'sample0_dense_14_Mgi' due to the length limit 20
+WARNING: [RTGEN 206-101] Global array 'dense_14_output_shap' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'sample0_dense_14_output_shap' to 'sample0_dense_14_Ngs' due to the length limit 20
+WARNING: [RTGEN 206-101] Global array 'dense_15_kernel_shap' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'sample0_dense_15_kernel_shap' to 'sample0_dense_15_OgC' due to the length limit 20
+WARNING: [RTGEN 206-101] Global array 'dense_15_output_shap' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'sample0_dense_15_output_shap' to 'sample0_dense_15_PgM' due to the length limit 20
+WARNING: [RTGEN 206-101] Global array 'dense_16_kernel_shap' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'sample0_dense_16_kernel_shap' to 'sample0_dense_16_QgW' due to the length limit 20
+WARNING: [RTGEN 206-101] Global array 'dense_16_bias_array' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'sample0_dense_16_bias_array' to 'sample0_dense_16_Rg6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample0_dense_13_fwork' to 'sample0_dense_13_Shg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample0_dense_14_fwork' to 'sample0_dense_14_Thq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample0_dense_15_fwork' to 'sample0_dense_15_UhA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sample0_dense_16_fwork' to 'sample0_dense_16_VhK' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'sample0/dense_16_output_ndim' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'sample0/dense_16_output_shape_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sample0/dense_16_output_shape_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'sample0/dense_16_output_shape_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sample0/dense_16_output_shape_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'sample0/dense_16_output_shape_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sample0/dense_16_output_shape_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'sample0/dense_16_output_shape_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sample0/dense_16_output_shape_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'sample0/dense_16_output_shape_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'sample0/dense_16_output_shape_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sample0/dense_16_output_shape_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'sample0/dense_16_output_shape_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sample0/dense_16_output_shape_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'sample0/dense_16_output_shape_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sample0/dense_16_output_shape_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'sample0/dense_16_output_shape_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sample0/dense_16_output_shape_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'sample0/dense_16_output_shape_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sample0'.
+Command       create_rtl_model done; 3.057 sec.
+INFO: [HLS 200-111]  Elapsed time: 4.207 seconds; current allocated memory: 593.323 MB.
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.rtl_wrap.cfg.tcl 
+Execute       gen_rtl sample0 -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/systemc/sample0 -synmodules k2c_sub2idx k2c_matmul k2c_dot k2c_affine_matmul k2c_dense.3 k2c_matmul.1 k2c_dot.1 k2c_dense.2 k2c_matmul.2 k2c_dot.2 k2c_dense.1 k2c_matmul.3 k2c_dot.3 k2c_dense sample0 
+Execute       gen_rtl sample0 -istop -style xilinx -f -lang vhdl -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/vhdl/sample0 
+Command       gen_rtl done; 0.103 sec.
+Execute       gen_rtl sample0 -istop -style xilinx -f -lang vlog -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/verilog/sample0 
+Execute       export_constraint_db -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.constraint.tcl -f -tool general 
+Execute       report -model sample0 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.design.xml -verbose -f -dv 
+Command       report done; 0.513 sec.
+Execute       report -model sample0 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.sdaccel.xml -verbose -f -sdaccel 
+Command       report done; 0.156 sec.
+Execute       gen_tb_info sample0 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0 -p C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db 
+Execute       report -model sample0 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/sample0_csynth.rpt -f 
+Execute       report -model sample0 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/syn/report/sample0_csynth.xml -f -x 
+Execute       report -model sample0 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.verbose.rpt -verbose -f 
+Command       report done; 0.763 sec.
+Execute       db_write -model sample0 -o C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.adb -f 
+Command       db_write done; 0.293 sec.
+Execute       sc_get_clocks sample0 
+Execute       sc_get_portdomain sample0 
+INFO-FLOW: Model list for RTL component generation: k2c_sub2idx k2c_matmul k2c_dot k2c_affine_matmul k2c_dense.3 k2c_matmul.1 k2c_dot.1 k2c_dense.2 k2c_matmul.2 k2c_dot.2 k2c_dense.1 k2c_matmul.3 k2c_dot.3 k2c_dense sample0
+INFO-FLOW: Handling components in module [k2c_sub2idx] ... 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_sub2idx.compgen.tcl 
+INFO-FLOW: Found component sample0_mul_64s_6bkb.
+INFO-FLOW: Append model sample0_mul_64s_6bkb
+INFO-FLOW: Handling components in module [k2c_matmul] ... 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul.compgen.tcl 
+INFO-FLOW: Found component sample0_fadd_32nscud.
+INFO-FLOW: Append model sample0_fadd_32nscud
+INFO-FLOW: Found component sample0_fmul_32nsdEe.
+INFO-FLOW: Append model sample0_fmul_32nsdEe
+INFO-FLOW: Found component sample0_mul_mul_1eOg.
+INFO-FLOW: Append model sample0_mul_mul_1eOg
+INFO-FLOW: Found component sample0_mul_mul_1fYi.
+INFO-FLOW: Append model sample0_mul_mul_1fYi
+INFO-FLOW: Found component sample0_mac_muladg8j.
+INFO-FLOW: Append model sample0_mac_muladg8j
+INFO-FLOW: Handling components in module [k2c_dot] ... 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot.compgen.tcl 
+INFO-FLOW: Found component sample0_udiv_64nshbi.
+INFO-FLOW: Append model sample0_udiv_64nshbi
+INFO-FLOW: Found component sample0_udiv_15nsibs.
+INFO-FLOW: Append model sample0_udiv_15nsibs
+INFO-FLOW: Found component sample0_urem_64nsjbC.
+INFO-FLOW: Append model sample0_urem_64nsjbC
+INFO-FLOW: Found component k2c_dot_permA.
+INFO-FLOW: Append model k2c_dot_permA
+INFO-FLOW: Found component k2c_dot_permB.
+INFO-FLOW: Append model k2c_dot_permB
+INFO-FLOW: Handling components in module [k2c_affine_matmul] ... 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_affine_matmul.compgen.tcl 
+INFO-FLOW: Found component sample0_mac_muladkbM.
+INFO-FLOW: Append model sample0_mac_muladkbM
+INFO-FLOW: Handling components in module [k2c_dense_3] ... 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_3.compgen.tcl 
+INFO-FLOW: Found component sample0_fcmp_32nslbW.
+INFO-FLOW: Append model sample0_fcmp_32nslbW
+INFO-FLOW: Handling components in module [k2c_matmul_1] ... 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_1.compgen.tcl 
+INFO-FLOW: Found component sample0_mul_mul_1mb6.
+INFO-FLOW: Append model sample0_mul_mul_1mb6
+INFO-FLOW: Found component sample0_mac_muladncg.
+INFO-FLOW: Append model sample0_mac_muladncg
+INFO-FLOW: Handling components in module [k2c_dot_1] ... 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_1.compgen.tcl 
+INFO-FLOW: Handling components in module [k2c_dense_2] ... 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_2.compgen.tcl 
+INFO-FLOW: Handling components in module [k2c_matmul_2] ... 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_2.compgen.tcl 
+INFO-FLOW: Found component sample0_mul_mul_1ocq.
+INFO-FLOW: Append model sample0_mul_mul_1ocq
+INFO-FLOW: Found component sample0_mac_muladpcA.
+INFO-FLOW: Append model sample0_mac_muladpcA
+INFO-FLOW: Handling components in module [k2c_dot_2] ... 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_2.compgen.tcl 
+INFO-FLOW: Handling components in module [k2c_dense_1] ... 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_1.compgen.tcl 
+INFO-FLOW: Handling components in module [k2c_matmul_3] ... 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_3.compgen.tcl 
+INFO-FLOW: Found component sample0_mac_muladqcK.
+INFO-FLOW: Append model sample0_mac_muladqcK
+INFO-FLOW: Handling components in module [k2c_dot_3] ... 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_3.compgen.tcl 
+INFO-FLOW: Handling components in module [k2c_dense] ... 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense.compgen.tcl 
+INFO-FLOW: Found component sample0_fdiv_32nsrcU.
+INFO-FLOW: Append model sample0_fdiv_32nsrcU
+INFO-FLOW: Found component sample0_fexp_32nssc4.
+INFO-FLOW: Append model sample0_fexp_32nssc4
+INFO-FLOW: Handling components in module [sample0] ... 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.compgen.tcl 
+INFO-FLOW: Found component sample0_dense_13_tde.
+INFO-FLOW: Append model sample0_dense_13_tde
+INFO-FLOW: Found component sample0_dense_13_udo.
+INFO-FLOW: Append model sample0_dense_13_udo
+INFO-FLOW: Found component sample0_dense_13_vdy.
+INFO-FLOW: Append model sample0_dense_13_vdy
+INFO-FLOW: Found component sample0_dense_13_wdI.
+INFO-FLOW: Append model sample0_dense_13_wdI
+INFO-FLOW: Found component sample0_dense_14_zec.
+INFO-FLOW: Append model sample0_dense_14_zec
+INFO-FLOW: Found component sample0_dense_14_Bew.
+INFO-FLOW: Append model sample0_dense_14_Bew
+INFO-FLOW: Found component sample0_dense_15_Ee0.
+INFO-FLOW: Append model sample0_dense_15_Ee0
+INFO-FLOW: Found component sample0_dense_15_Gfk.
+INFO-FLOW: Append model sample0_dense_15_Gfk
+INFO-FLOW: Found component sample0_dense_16_IfE.
+INFO-FLOW: Append model sample0_dense_16_IfE
+INFO-FLOW: Found component sample0_dense_13_KfY.
+INFO-FLOW: Append model sample0_dense_13_KfY
+INFO-FLOW: Found component sample0_dense_13_Shg.
+INFO-FLOW: Append model sample0_dense_13_Shg
+INFO-FLOW: Found component sample0_dense_14_Thq.
+INFO-FLOW: Append model sample0_dense_14_Thq
+INFO-FLOW: Found component sample0_dense_15_UhA.
+INFO-FLOW: Append model sample0_dense_15_UhA
+INFO-FLOW: Found component sample0_dense_16_VhK.
+INFO-FLOW: Append model sample0_dense_16_VhK
+INFO-FLOW: Append model k2c_sub2idx
+INFO-FLOW: Append model k2c_matmul
+INFO-FLOW: Append model k2c_dot
+INFO-FLOW: Append model k2c_affine_matmul
+INFO-FLOW: Append model k2c_dense_3
+INFO-FLOW: Append model k2c_matmul_1
+INFO-FLOW: Append model k2c_dot_1
+INFO-FLOW: Append model k2c_dense_2
+INFO-FLOW: Append model k2c_matmul_2
+INFO-FLOW: Append model k2c_dot_2
+INFO-FLOW: Append model k2c_dense_1
+INFO-FLOW: Append model k2c_matmul_3
+INFO-FLOW: Append model k2c_dot_3
+INFO-FLOW: Append model k2c_dense
+INFO-FLOW: Append model sample0
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: sample0_mul_64s_6bkb sample0_fadd_32nscud sample0_fmul_32nsdEe sample0_mul_mul_1eOg sample0_mul_mul_1fYi sample0_mac_muladg8j sample0_udiv_64nshbi sample0_udiv_15nsibs sample0_urem_64nsjbC k2c_dot_permA k2c_dot_permB sample0_mac_muladkbM sample0_fcmp_32nslbW sample0_mul_mul_1mb6 sample0_mac_muladncg sample0_mul_mul_1ocq sample0_mac_muladpcA sample0_mac_muladqcK sample0_fdiv_32nsrcU sample0_fexp_32nssc4 sample0_dense_13_tde sample0_dense_13_udo sample0_dense_13_vdy sample0_dense_13_wdI sample0_dense_14_zec sample0_dense_14_Bew sample0_dense_15_Ee0 sample0_dense_15_Gfk sample0_dense_16_IfE sample0_dense_13_KfY sample0_dense_13_Shg sample0_dense_14_Thq sample0_dense_15_UhA sample0_dense_16_VhK k2c_sub2idx k2c_matmul k2c_dot k2c_affine_matmul k2c_dense_3 k2c_matmul_1 k2c_dot_1 k2c_dense_2 k2c_matmul_2 k2c_dot_2 k2c_dense_1 k2c_matmul_3 k2c_dot_3 k2c_dense sample0
+INFO-FLOW: To file: write model sample0_mul_64s_6bkb
+INFO-FLOW: To file: write model sample0_fadd_32nscud
+INFO-FLOW: To file: write model sample0_fmul_32nsdEe
+INFO-FLOW: To file: write model sample0_mul_mul_1eOg
+INFO-FLOW: To file: write model sample0_mul_mul_1fYi
+INFO-FLOW: To file: write model sample0_mac_muladg8j
+INFO-FLOW: To file: write model sample0_udiv_64nshbi
+INFO-FLOW: To file: write model sample0_udiv_15nsibs
+INFO-FLOW: To file: write model sample0_urem_64nsjbC
+INFO-FLOW: To file: write model k2c_dot_permA
+INFO-FLOW: To file: write model k2c_dot_permB
+INFO-FLOW: To file: write model sample0_mac_muladkbM
+INFO-FLOW: To file: write model sample0_fcmp_32nslbW
+INFO-FLOW: To file: write model sample0_mul_mul_1mb6
+INFO-FLOW: To file: write model sample0_mac_muladncg
+INFO-FLOW: To file: write model sample0_mul_mul_1ocq
+INFO-FLOW: To file: write model sample0_mac_muladpcA
+INFO-FLOW: To file: write model sample0_mac_muladqcK
+INFO-FLOW: To file: write model sample0_fdiv_32nsrcU
+INFO-FLOW: To file: write model sample0_fexp_32nssc4
+INFO-FLOW: To file: write model sample0_dense_13_tde
+INFO-FLOW: To file: write model sample0_dense_13_udo
+INFO-FLOW: To file: write model sample0_dense_13_vdy
+INFO-FLOW: To file: write model sample0_dense_13_wdI
+INFO-FLOW: To file: write model sample0_dense_14_zec
+INFO-FLOW: To file: write model sample0_dense_14_Bew
+INFO-FLOW: To file: write model sample0_dense_15_Ee0
+INFO-FLOW: To file: write model sample0_dense_15_Gfk
+INFO-FLOW: To file: write model sample0_dense_16_IfE
+INFO-FLOW: To file: write model sample0_dense_13_KfY
+INFO-FLOW: To file: write model sample0_dense_13_Shg
+INFO-FLOW: To file: write model sample0_dense_14_Thq
+INFO-FLOW: To file: write model sample0_dense_15_UhA
+INFO-FLOW: To file: write model sample0_dense_16_VhK
+INFO-FLOW: To file: write model k2c_sub2idx
+INFO-FLOW: To file: write model k2c_matmul
+INFO-FLOW: To file: write model k2c_dot
+INFO-FLOW: To file: write model k2c_affine_matmul
+INFO-FLOW: To file: write model k2c_dense_3
+INFO-FLOW: To file: write model k2c_matmul_1
+INFO-FLOW: To file: write model k2c_dot_1
+INFO-FLOW: To file: write model k2c_dense_2
+INFO-FLOW: To file: write model k2c_matmul_2
+INFO-FLOW: To file: write model k2c_dot_2
+INFO-FLOW: To file: write model k2c_dense_1
+INFO-FLOW: To file: write model k2c_matmul_3
+INFO-FLOW: To file: write model k2c_dot_3
+INFO-FLOW: To file: write model k2c_dense
+INFO-FLOW: To file: write model sample0
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute       get_config_sdx -target 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/global.setting.tcl 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/global.setting.tcl 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7.gen 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source done; 0.112 sec.
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.173 sec.
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.177 sec.
+Command       ap_source done; 0.178 sec.
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_sub2idx.compgen.tcl 
+INFO: [RTMG 210-282] Generating pipelined core: 'sample0_mul_64s_6bkb_MulnS_0'
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul.compgen.tcl 
+Command       ap_source done; 0.316 sec.
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot.compgen.tcl 
+INFO: [RTMG 210-282] Generating pipelined core: 'sample0_udiv_64nshbi_div'
+INFO: [RTMG 210-282] Generating pipelined core: 'sample0_udiv_15nsibs_div'
+INFO: [RTMG 210-282] Generating pipelined core: 'sample0_urem_64nsjbC_div'
+INFO: [RTMG 210-278] Implementing memory 'k2c_dot_permA_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'k2c_dot_permB_ram (RAM)' using distributed RAMs.
+Command       ap_source done; 0.375 sec.
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_affine_matmul.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_3.compgen.tcl 
+Command       ap_source done; 0.102 sec.
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_1.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_1.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_2.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_2.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_2.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_1.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_3.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_3.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense.compgen.tcl 
+Command       ap_source done; 0.158 sec.
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'sample0_dense_13_tde_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-279] Implementing memory 'sample0_dense_13_udo_rom' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'sample0_dense_13_vdy_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-279] Implementing memory 'sample0_dense_13_wdI_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'sample0_dense_14_zec_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'sample0_dense_14_Bew_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'sample0_dense_15_Ee0_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'sample0_dense_15_Gfk_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'sample0_dense_16_IfE_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'sample0_dense_13_KfY_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'sample0_dense_13_Shg_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'sample0_dense_14_Thq_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'sample0_dense_15_UhA_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'sample0_dense_16_VhK_ram (RAM)' using block RAMs.
+Command       ap_source done; 1.946 sec.
+Execute       get_config_sdx -target 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/global.setting.tcl 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/global.setting.tcl 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7.gen 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source done; 0.185 sec.
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.249 sec.
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.254 sec.
+Command       ap_source done; 0.255 sec.
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_sub2idx.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_affine_matmul.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_3.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_1.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_1.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_2.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_2.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_2.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_1.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_3.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_3.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_sub2idx.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_affine_matmul.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_3.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_1.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_1.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_2.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_2.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_2.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_1.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_3.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_3.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.compgen.tcl 
+Execute         source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute         source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute         source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_sub2idx.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_affine_matmul.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_3.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_1.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_1.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_2.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_2.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_2.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense_1.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_matmul_3.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dot_3.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/k2c_dense.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.compgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.constraint.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.constraint.tcl 
+Execute       sc_get_clocks sample0 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/impl/misc/sample0_ap_fadd_7_full_dsp_32_ip.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/impl/misc/sample0_ap_fcmp_0_no_dsp_32_ip.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/impl/misc/sample0_ap_fdiv_28_no_dsp_32_ip.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/impl/misc/sample0_ap_fexp_16_full_dsp_32_ip.tcl 
+Execute       source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/impl/misc/sample0_ap_fmul_3_max_dsp_32_ip.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       ::config_rtl 
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:35 ; elapsed = 00:01:24 . Memory (MB): peak = 704.797 ; gain = 648.582
+INFO: [SYSC 207-301] Generating SystemC RTL for sample0.
+INFO: [VHDL 208-304] Generating VHDL RTL for sample0.
+INFO: [VLOG 209-307] Generating Verilog RTL for sample0.
+Command     autosyn done; 51.639 sec.
+Command   csynth_design done; 82.34 sec.
+Command ap_source done; 82.879 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line opened at Tue Apr 23 19:23:56 +0530 2024
+Execute     config_clock -quiet -name default -period 5 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7.gen 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.124 sec.
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.172 sec.
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.176 sec.
+Command     ap_source done; 0.176 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_hp.hlp 
+Execute     source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7a200tfbg676-2 
+Execute       add_library xilinx/artix7/artix7:xc7a200t:fbg676:-2 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7a200t 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 33650} {LUT 129000}    {FF 269200} {DSP48E 740}    {BRAM 730}  
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/artix7/artix7_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7a200tfbg676-2'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 33650} {LUT 129000}    {FF 269200} {DSP48E 740}    {BRAM 730}  
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 0.339 sec.
+Execute   cosim_design -trace_level all 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/global.setting.tcl 
+Execute     source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/global.setting.tcl 
+Execute     source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7.gen 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.116 sec.
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.166 sec.
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.168 sec.
+Command     ap_source done; 0.169 sec.
+Execute     source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     is_encrypted C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/sample0_test_suite.c 
+Execute     is_encrypted C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/sample0.h 
+Execute     is_encrypted C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/sample0.c 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+Execute     get_default_platform 
+INFO-FLOW: TB processing: C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/sample0_test_suite.c C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/./sim/autowrap/testbench/sample0_test_suite.c_pre.c
+INFO-FLOW: Marker-Pragma convertor: C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/./sim/autowrap/testbench/sample0_test_suite.c_pre.c C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/./sim/autowrap/testbench/sample0_test_suite.c_pre.c.line.c ./sim/autowrap/testbench/line.tmp 1
+INFO-FLOW: Converting Markers to Pragmas...
+INFO-FLOW: Marker-Pragma convertor: ./sim/autowrap/testbench/sample0_test_suite.c_pre.c.tb.c.line ./sim/autowrap/testbench/sample0_test_suite.c_pre.c.tb.c ./sim/autowrap/testbench/line.tmp 0
+INFO-FLOW: Converting Pragmas to Markers...
+Execute     get_default_platform 
+INFO-FLOW: TB processing: C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/sample0.c C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/./sim/autowrap/testbench/sample0.c_pre.c
+INFO-FLOW: Marker-Pragma convertor: C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/./sim/autowrap/testbench/sample0.c_pre.c C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/./sim/autowrap/testbench/sample0.c_pre.c.line.c ./sim/autowrap/testbench/line.tmp 1
+INFO-FLOW: Converting Markers to Pragmas...
+INFO-FLOW: Marker-Pragma convertor: ./sim/autowrap/testbench/sample0.c_pre.c.tb.c.line ./sim/autowrap/testbench/sample0.c_pre.c.tb.c ./sim/autowrap/testbench/line.tmp 0
+INFO-FLOW: Converting Pragmas to Markers...
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/./sim/autowrap/testbench/tb.status.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     get_default_platform 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.rtl_wrap.cfg.tcl 
+Execute     source .run_sim.tcl 
+INFO: [COSIM 212-302] Starting C TB testing ... 
+Command     ap_source done; 0.87 sec.
+INFO: [COSIM 212-333] Generating C post check test bench ...
+Execute     get_default_platform 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.rtl_wrap.cfg.tcl 
+INFO: [COSIM 212-12] Generating RTL test bench ...
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source ../tv/cdatafile/ref.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source ../tv/cdatafile/ref.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Base/Group_5_Base_line/Base_line/.autopilot/db/sample0.tbgen.tcl 
+Execute     source .run_sim.tcl 
+Execute       source check_sim.tcl 
+Execute       source .sim.status.tcl 
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+Command     ap_source done; 1411.18 sec.
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+Command   cosim_design done; 1466.84 sec.
+Command ap_source done; 1467.19 sec.
+Execute cleanup_all 

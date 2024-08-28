@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="sample.h" path="C:\Users\Ritik\OneDrive\Desktop\Group_5_final\Opti\Group_5\sample.h"/>
+    <originFiles name="sample.c" path="C:\Users\Ritik\OneDrive\Desktop\Group_5_final\Opti\Group_5\sample.c"/>
+  </source>
+  <testbench>
+    <originFiles name="sample_test_suite.c" path="C:\Users\Ritik\OneDrive\Desktop\Group_5_final\Opti\Group_5\sample_test_suite.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

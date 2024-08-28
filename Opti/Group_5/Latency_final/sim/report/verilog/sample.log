@@ -1,0 +1,1125 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "C:/Xilinx/Vivado/2018.2/msys64/mingw64/bin/g++"
+   Compiling apatb_sample.cpp
+   Compiling (apcc) sample.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Ritik' on host 'ritik' (Windows NT_amd64 version 6.2) on Tue Apr 23 18:58:21 +0530 2024
+INFO: [HLS 200-10] In directory 'C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) sample_test_suite.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Ritik' on host 'ritik' (Windows NT_amd64 version 6.2) on Tue Apr 23 18:58:27 +0530 2024
+INFO: [HLS 200-10] In directory 'C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+INFO: [COSIM-12] Generating RTL test bench ...
+INFO: [COSIM-323] Starting verilog simulation. 
+INFO: [COSIM-15] Starting XSIM ...
+INFO: [COSIM-316] Starting C post checking ...
+Average time over 10 tests: 3.200000e-003 s 
+Max absolute error for 10 tests: 4.516800e-001 
+
+C:\Users\Ritik\OneDrive\Desktop\Group_5_final\Opti\Group_5\Latency_final\sim\verilog>set PATH= 
+
+C:\Users\Ritik\OneDrive\Desktop\Group_5_final\Opti\Group_5\Latency_final\sim\verilog>call C:/Xilinx/Vivado/2018.2/bin/xelab xil_defaultlib.apatb_sample_top glbl -prj sample.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile "C:/Xilinx/Vivado/2018.2/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s sample -debug wave 
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "C:/Xilinx/Vivado/2018.2/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_sample_top glbl -prj sample.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile C:/Xilinx/Vivado/2018.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s sample -debug wave 
+Multi-threading is on. Using 6 slave threads.
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/AESL_automem_dense_13_input_input_array_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_dense_13_input_input_array_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/AESL_automem_dense_13_input_input_array_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_dense_13_input_input_array_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/AESL_automem_dense_13_input_input_array_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_dense_13_input_input_array_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/AESL_automem_dense_13_input_input_array_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_dense_13_input_input_array_3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/AESL_automem_dense_13_input_input_array_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_dense_13_input_input_array_4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/AESL_automem_dense_13_input_input_array_5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_dense_13_input_input_array_5
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/AESL_automem_dense_13_input_input_array_6.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_dense_13_input_input_array_6
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/AESL_automem_dense_13_input_input_array_7.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_dense_13_input_input_array_7
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/AESL_automem_dense_13_input_input_shape.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_dense_13_input_input_shape
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/AESL_automem_dense_16_output_arrray.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_dense_16_output_arrray
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_affine_matmul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_affine_matmul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_affine_matmul_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_affine_matmul_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_affine_matmul_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_affine_matmul_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_bias_add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_bias_add
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_bias_add_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_bias_add_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_bias_add_1_dePgM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_bias_add_1_dePgM_rom
+INFO: [VRFC 10-311] analyzing module k2c_bias_add_1_dePgM
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_bias_add_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_bias_add_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_bias_add_2_de7jG.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_bias_add_2_de7jG_rom
+INFO: [VRFC 10-311] analyzing module k2c_bias_add_2_de7jG
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_bias_add_densvdy.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_bias_add_densvdy_rom
+INFO: [VRFC 10-311] analyzing module k2c_bias_add_densvdy
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dense.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dense
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dense_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dense_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dense_1_dense8jQ.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dense_1_dense8jQ_rom
+INFO: [VRFC 10-311] analyzing module k2c_dense_1_dense8jQ
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dense_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dense_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dense_2_denseQgW.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dense_2_denseQgW_rom
+INFO: [VRFC 10-311] analyzing module k2c_dense_2_denseQgW
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dense_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dense_3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dense_3_densexdS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dense_3_densexdS_rom
+INFO: [VRFC 10-311] analyzing module k2c_dense_3_densexdS
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_1_dense_1Aem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_1_dense_1Aem_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_1_dense_1Aem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_1_dense_1Bew.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_1_dense_1Bew_ram
+INFO: [VRFC 10-311] analyzing module k2c_dot_1_dense_1Bew
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_1_dense_1CeG.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_1_dense_1CeG_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_1_dense_1CeG
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_1_dense_1DeQ.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_1_dense_1DeQ_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_1_dense_1DeQ
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_1_dense_1Ee0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_1_dense_1Ee0_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_1_dense_1Ee0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_1_dense_1Ffa.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_1_dense_1Ffa_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_1_dense_1Ffa
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_1_dense_1Gfk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_1_dense_1Gfk_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_1_dense_1Gfk
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_1_dense_1Hfu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_1_dense_1Hfu_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_1_dense_1Hfu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_1_dense_1IfE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_1_dense_1IfE_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_1_dense_1IfE
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_1_dense_1JfO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_1_dense_1JfO_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_1_dense_1JfO
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_1_dense_1zec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_1_dense_1zec_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_1_dense_1zec
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_2_dense_10iy.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_2_dense_10iy_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_2_dense_10iy
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_2_dense_11iI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_2_dense_11iI_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_2_dense_11iI
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_2_dense_1Rg6.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_2_dense_1Rg6_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_2_dense_1Rg6
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_2_dense_1Shg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_2_dense_1Shg_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_2_dense_1Shg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_2_dense_1Thq.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_2_dense_1Thq_ram
+INFO: [VRFC 10-311] analyzing module k2c_dot_2_dense_1Thq
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_2_dense_1UhA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_2_dense_1UhA_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_2_dense_1UhA
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_2_dense_1VhK.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_2_dense_1VhK_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_2_dense_1VhK
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_2_dense_1WhU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_2_dense_1WhU_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_2_dense_1WhU
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_2_dense_1Xh4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_2_dense_1Xh4_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_2_dense_1Xh4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_2_dense_1Yie.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_2_dense_1Yie_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_2_dense_1Yie
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_2_dense_1Zio.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_2_dense_1Zio_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_2_dense_1Zio
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_3_dense_19j0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_3_dense_19j0_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_3_dense_19j0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_dense_13_eOg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_dense_13_eOg_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_dense_13_eOg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_dense_13_fYi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_dense_13_fYi_ram
+INFO: [VRFC 10-311] analyzing module k2c_dot_dense_13_fYi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_dense_13_g8j.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_dense_13_g8j_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_dense_13_g8j
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_dense_13_hbi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_dense_13_hbi_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_dense_13_hbi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_dense_13_ibs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_dense_13_ibs_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_dense_13_ibs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_dense_13_jbC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_dense_13_jbC_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_dense_13_jbC
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_dense_13_kbM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_dense_13_kbM_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_dense_13_kbM
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_dense_13_lbW.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_dense_13_lbW_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_dense_13_lbW
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_dense_13_mb6.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_dense_13_mb6_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_dense_13_mb6
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_dense_13_ncg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_dense_13_ncg_rom
+INFO: [VRFC 10-311] analyzing module k2c_dot_dense_13_ncg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_permA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_permA_ram
+INFO: [VRFC 10-311] analyzing module k2c_dot_permA
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_dot_permB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_dot_permB_ram
+INFO: [VRFC 10-311] analyzing module k2c_dot_permB
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_idx2sub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_idx2sub
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/k2c_sub2idx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module k2c_sub2idx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_sample_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample_dense_13_obek.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_dense_13_obek_ram
+INFO: [VRFC 10-311] analyzing module sample_dense_13_obek
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample_dense_14_obml.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_dense_14_obml_ram
+INFO: [VRFC 10-311] analyzing module sample_dense_14_obml
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample_dense_15_obun.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_dense_15_obun_ram
+INFO: [VRFC 10-311] analyzing module sample_dense_15_obun
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample_dense_16_fbCo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_dense_16_fbCo_ram
+INFO: [VRFC 10-311] analyzing module sample_dense_16_fbCo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample_fadd_32ns_ocq.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_fadd_32ns_ocq
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample_fcmp_32ns_yd2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_fcmp_32ns_yd2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample_fdiv_32ns_bck.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_fdiv_32ns_bck
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample_fexp_32ns_bdk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_fexp_32ns_bdk
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample_fmul_32ns_pcA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_fmul_32ns_pcA
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample_mul_57ns_6Lf8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_mul_57ns_6Lf8_MulnS_5
+INFO: [VRFC 10-311] analyzing module sample_mul_57ns_6Lf8
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample_mul_59ns_63i2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_mul_59ns_63i2_MulnS_7
+INFO: [VRFC 10-311] analyzing module sample_mul_59ns_63i2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample_mul_60ns_6sc4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_mul_60ns_6sc4_MulnS_2
+INFO: [VRFC 10-311] analyzing module sample_mul_60ns_6sc4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample_mul_63ns_1wdI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_mul_63ns_1wdI_MulnS_4
+INFO: [VRFC 10-311] analyzing module sample_mul_63ns_1wdI
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample_mul_64s_57Mgi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_mul_64s_57Mgi_MulnS_6
+INFO: [VRFC 10-311] analyzing module sample_mul_64s_57Mgi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample_mul_64s_594jc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_mul_64s_594jc_MulnS_8
+INFO: [VRFC 10-311] analyzing module sample_mul_64s_594jc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample_mul_64s_60tde.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_mul_64s_60tde_MulnS_3
+INFO: [VRFC 10-311] analyzing module sample_mul_64s_60tde
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample_mul_64s_64dEe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_mul_64s_64dEe_MulnS_0
+INFO: [VRFC 10-311] analyzing module sample_mul_64s_64dEe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample_mul_66ns_6qcK.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_mul_66ns_6qcK_MulnS_1
+INFO: [VRFC 10-311] analyzing module sample_mul_66ns_6qcK
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample_mul_mul_115jm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_mul_mul_115jm_DSP48_3
+INFO: [VRFC 10-311] analyzing module sample_mul_mul_115jm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample_mul_mul_13udo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_mul_mul_13udo_DSP48_0
+INFO: [VRFC 10-311] analyzing module sample_mul_mul_13udo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample_mul_mul_14Ngs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_mul_mul_14Ngs_DSP48_1
+INFO: [VRFC 10-311] analyzing module sample_mul_mul_14Ngs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample_mul_mul_6n6jw.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_mul_mul_6n6jw_DSP48_4
+INFO: [VRFC 10-311] analyzing module sample_mul_mul_6n6jw
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample_mul_mul_8nOgC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_mul_mul_8nOgC_DSP48_2
+INFO: [VRFC 10-311] analyzing module sample_mul_mul_8nOgC
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample_mux_864_32rcU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_mux_864_32rcU
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample_udiv_64ns_2iS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_udiv_64ns_2iS_div_u
+INFO: [VRFC 10-311] analyzing module sample_udiv_64ns_2iS_div
+INFO: [VRFC 10-311] analyzing module sample_udiv_64ns_2iS
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample_udiv_64ns_bbk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_udiv_64ns_bbk_div_u
+INFO: [VRFC 10-311] analyzing module sample_udiv_64ns_bbk_div
+INFO: [VRFC 10-311] analyzing module sample_udiv_64ns_bbk
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample_udiv_64ns_cud.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_udiv_64ns_cud_div_u
+INFO: [VRFC 10-311] analyzing module sample_udiv_64ns_cud_div
+INFO: [VRFC 10-311] analyzing module sample_udiv_64ns_cud
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample_udiv_64ns_KfY.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_udiv_64ns_KfY_div_u
+INFO: [VRFC 10-311] analyzing module sample_udiv_64ns_KfY_div
+INFO: [VRFC 10-311] analyzing module sample_udiv_64ns_KfY
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample_urem_64ns_bkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_urem_64ns_bkb_div_u
+INFO: [VRFC 10-311] analyzing module sample_urem_64ns_bkb_div
+INFO: [VRFC 10-311] analyzing module sample_urem_64ns_bkb
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/ip/xil_defaultlib/sample_ap_fadd_7_full_dsp_32.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sample_ap_fadd_7_full_dsp_32
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/ip/xil_defaultlib/sample_ap_fcmp_0_no_dsp_32.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sample_ap_fcmp_0_no_dsp_32
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/ip/xil_defaultlib/sample_ap_fdiv_28_no_dsp_32.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sample_ap_fdiv_28_no_dsp_32
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/ip/xil_defaultlib/sample_ap_fexp_16_full_dsp_32.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sample_ap_fexp_16_full_dsp_32
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/ip/xil_defaultlib/sample_ap_fmul_3_max_dsp_32.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sample_ap_fmul_3_max_dsp_32
+Starting static elaboration
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:2255]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:2240]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:90362]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:13629]
+WARNING: [VRFC 10-982] library name floating_point_v7_1_6 of instantiated unit conflicts with visible identifier [C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/ip/xil_defaultlib/sample_ap_fadd_7_full_dsp_32.vhd:195]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:90362]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:13629]
+WARNING: [VRFC 10-982] library name floating_point_v7_1_6 of instantiated unit conflicts with visible identifier [C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/ip/xil_defaultlib/sample_ap_fmul_3_max_dsp_32.vhd:195]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:90362]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:13629]
+WARNING: [VRFC 10-982] library name floating_point_v7_1_6 of instantiated unit conflicts with visible identifier [C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/ip/xil_defaultlib/sample_ap_fcmp_0_no_dsp_32.vhd:194]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:90362]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:13629]
+WARNING: [VRFC 10-982] library name floating_point_v7_1_6 of instantiated unit conflicts with visible identifier [C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/ip/xil_defaultlib/sample_ap_fdiv_28_no_dsp_32.vhd:195]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:90362]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:14216]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:30530]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:76921]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:77053]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:76921]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:77053]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:79206]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:77294]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:78210]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:14403]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:375]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:13629]
+WARNING: [VRFC 10-982] library name floating_point_v7_1_6 of instantiated unit conflicts with visible identifier [C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/ip/xil_defaultlib/sample_ap_fexp_16_full_dsp_32.vhd:190]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package floating_point_v7_1_6.floating_point_v7_1_6_viv_comp
+Compiling package xbip_utils_v3_0_9.xbip_utils_v3_0_9_pkg
+Compiling package axi_utils_v2_0_5.axi_utils_v2_0_5_pkg
+Compiling package floating_point_v7_1_6.floating_point_v7_1_6_consts
+Compiling package ieee.math_real
+Compiling package floating_point_v7_1_6.floating_point_v7_1_6_exp_table_...
+Compiling package mult_gen_v12_0_14.mult_gen_v12_0_14_pkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package floating_point_v7_1_6.floating_point_v7_1_6_pkg
+Compiling package floating_point_v7_1_6.flt_utils
+Compiling package xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv_comp
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling module xil_defaultlib.sample_dense_13_obek_ram
+Compiling module xil_defaultlib.sample_dense_13_obek(DataWidth=3...
+Compiling module xil_defaultlib.sample_dense_14_obml_ram
+Compiling module xil_defaultlib.sample_dense_14_obml(DataWidth=3...
+Compiling module xil_defaultlib.sample_dense_15_obun_ram
+Compiling module xil_defaultlib.sample_dense_15_obun(DataWidth=3...
+Compiling module xil_defaultlib.sample_dense_16_fbCo_ram
+Compiling module xil_defaultlib.sample_dense_16_fbCo(DataWidth=3...
+Compiling module xil_defaultlib.k2c_dense_3_densexdS_rom
+Compiling module xil_defaultlib.k2c_dense_3_densexdS(DataWidth=3...
+Compiling module xil_defaultlib.k2c_dot_dense_13_eOg_rom
+Compiling module xil_defaultlib.k2c_dot_dense_13_eOg(DataWidth=6...
+Compiling module xil_defaultlib.k2c_dot_dense_13_fYi_ram
+Compiling module xil_defaultlib.k2c_dot_dense_13_fYi(DataWidth=3...
+Compiling module xil_defaultlib.k2c_dot_dense_13_g8j_rom
+Compiling module xil_defaultlib.k2c_dot_dense_13_g8j(DataWidth=3...
+Compiling module xil_defaultlib.k2c_dot_dense_13_hbi_rom
+Compiling module xil_defaultlib.k2c_dot_dense_13_hbi(DataWidth=3...
+Compiling module xil_defaultlib.k2c_dot_dense_13_ibs_rom
+Compiling module xil_defaultlib.k2c_dot_dense_13_ibs(DataWidth=3...
+Compiling module xil_defaultlib.k2c_dot_dense_13_jbC_rom
+Compiling module xil_defaultlib.k2c_dot_dense_13_jbC(DataWidth=3...
+Compiling module xil_defaultlib.k2c_dot_dense_13_kbM_rom
+Compiling module xil_defaultlib.k2c_dot_dense_13_kbM(DataWidth=3...
+Compiling module xil_defaultlib.k2c_dot_dense_13_lbW_rom
+Compiling module xil_defaultlib.k2c_dot_dense_13_lbW(DataWidth=3...
+Compiling module xil_defaultlib.k2c_dot_dense_13_mb6_rom
+Compiling module xil_defaultlib.k2c_dot_dense_13_mb6(DataWidth=3...
+Compiling module xil_defaultlib.k2c_dot_dense_13_ncg_rom
+Compiling module xil_defaultlib.k2c_dot_dense_13_ncg(DataWidth=3...
+Compiling module xil_defaultlib.k2c_dot_permA_ram
+Compiling module xil_defaultlib.k2c_dot_permA(DataWidth=64,Addre...
+Compiling module xil_defaultlib.k2c_dot_permB_ram
+Compiling module xil_defaultlib.k2c_dot_permB(DataWidth=64,Addre...
+Compiling module xil_defaultlib.sample_urem_64ns_bkb_div_u(in0_W...
+Compiling module xil_defaultlib.sample_urem_64ns_bkb_div(in0_WID...
+Compiling module xil_defaultlib.sample_urem_64ns_bkb(ID=1,NUM_ST...
+Compiling module xil_defaultlib.sample_udiv_64ns_cud_div_u(in0_W...
+Compiling module xil_defaultlib.sample_udiv_64ns_cud_div(in0_WID...
+Compiling module xil_defaultlib.sample_udiv_64ns_cud(ID=1,NUM_ST...
+Compiling module xil_defaultlib.k2c_idx2sub
+Compiling module xil_defaultlib.sample_mul_64s_64dEe_MulnS_0
+Compiling module xil_defaultlib.sample_mul_64s_64dEe(ID=1,NUM_ST...
+Compiling module xil_defaultlib.k2c_sub2idx
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=7,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_6.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture synth of entity floating_point_v7_1_6.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture struct of entity floating_point_v7_1_6.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=24,fast_input=true)...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=16,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [delay_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=4,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=48,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=24,length=0)\]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,areg=0,dreg=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=24,c_wi...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(length=3)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=13)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=27)\]
+Compiling architecture synth of entity floating_point_v7_1_6.align_add_dsp48e1_sgl [\align_add_dsp48e1_sgl(c_xdevice...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000000001111...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000000000000...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=27,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=16)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=5)\]
+Compiling architecture rtl of entity floating_point_v7_1_6.lead_zero_encode_shift [\lead_zero_encode_shift(ab_fw=24...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=3,length=0)\]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111110010101001011...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00010001010111110000...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="11101110101000001111...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=2)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=25,length=0)\]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(adreg=0,bcascreg=0,breg...]
+Compiling architecture rtl of entity floating_point_v7_1_6.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=24,c_wi...]
+Compiling architecture rtl of entity floating_point_v7_1_6.norm_and_round_dsp48e1_sgl [\norm_and_round_dsp48e1_sgl(c_mu...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="10011001100110011001...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="11111111000000001111...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=9,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_6.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=8,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=9,length=4)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=10,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=4,fast_input=true)\]
+Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
+Compiling architecture fde_v of entity unisim.FDE [fde_default]
+Compiling architecture struct of entity floating_point_v7_1_6.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture synth of entity floating_point_v7_1_6.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(fast_input=true)\]
+Compiling architecture rtl of entity floating_point_v7_1_6.special_detect [\special_detect(c_xdevicefamily=...]
+Compiling architecture struct of entity floating_point_v7_1_6.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture synth of entity floating_point_v7_1_6.compare_gt [\compare_gt(c_xdevicefamily="art...]
+Compiling architecture synth of entity floating_point_v7_1_6.compare [\compare(c_xdevicefamily="artix7...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=8)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=9)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=2,length=5,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(length=5,fast_input=true)...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(length=2,fast_input=true)...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=4,length=0,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(length=0,fast_input=true)...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=2,length=0,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=12,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_6.flt_add_exp_sp [\flt_add_exp_sp(c_xdevicefamily=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=23)\]
+Compiling architecture synth of entity floating_point_v7_1_6.flt_dec_op [\flt_dec_op(c_xdevicefamily="art...]
+Compiling architecture rtl of entity floating_point_v7_1_6.flt_add_dsp [\flt_add_dsp(c_xdevicefamily="ar...]
+Compiling architecture rtl of entity floating_point_v7_1_6.flt_add [\flt_add(c_xdevicefamily="artix7...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=32,length=0)\]
+Compiling architecture xilinx of entity floating_point_v7_1_6.floating_point_v7_1_6_viv [\floating_point_v7_1_6_viv(c_xde...]
+Compiling architecture xilinx of entity floating_point_v7_1_6.floating_point_v7_1_6 [\floating_point_v7_1_6(c_xdevice...]
+Compiling architecture sample_ap_fadd_7_full_dsp_32_arch of entity xil_defaultlib.sample_ap_fadd_7_full_dsp_32 [sample_ap_fadd_7_full_dsp_32_def...]
+Compiling module xil_defaultlib.sample_fadd_32ns_ocq(ID=1)
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=17,length=0)\]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture rtl of entity floating_point_v7_1_6.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=24,b_wi...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(adreg=0,alumodereg=0,a_...]
+Compiling architecture rtl of entity floating_point_v7_1_6.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=24,b_wi...]
+Compiling architecture struct of entity floating_point_v7_1_6.fix_mult_dsp48e1_sgl [\fix_mult_dsp48e1_sgl(registers=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.fix_mult [\fix_mult(c_xdevicefamily="artix...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=7)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=8,fast_input=true)\]
+Compiling architecture struct of entity floating_point_v7_1_6.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture struct of entity floating_point_v7_1_6.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture synth of entity floating_point_v7_1_6.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_6.special_detect [\special_detect(c_xdevicefamily=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=2,fast_input=true)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=3,length=0,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=14,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_6.flt_mult_exp [\flt_mult_exp(c_xdevicefamily="a...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=30,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=18,length=0)\]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture rtl of entity floating_point_v7_1_6.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=30,b_wi...]
+Compiling architecture struct of entity floating_point_v7_1_6.flt_round_dsp_opt_full [\flt_round_dsp_opt_full(c_xdevic...]
+Compiling architecture rtl of entity floating_point_v7_1_6.flt_mult_round [\flt_mult_round(c_xdevicefamily=...]
+Compiling architecture synth of entity floating_point_v7_1_6.flt_dec_op_lat [\flt_dec_op_lat(c_xdevicefamily=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.flt_mult [\flt_mult(c_xdevicefamily="artix...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture xilinx of entity floating_point_v7_1_6.floating_point_v7_1_6_viv [\floating_point_v7_1_6_viv(c_xde...]
+Compiling architecture xilinx of entity floating_point_v7_1_6.floating_point_v7_1_6 [\floating_point_v7_1_6(c_xdevice...]
+Compiling architecture sample_ap_fmul_3_max_dsp_32_arch of entity xil_defaultlib.sample_ap_fmul_3_max_dsp_32 [sample_ap_fmul_3_max_dsp_32_defa...]
+Compiling module xil_defaultlib.sample_fmul_32ns_pcA(ID=1)
+Compiling module xil_defaultlib.sample_mul_66ns_6qcK_MulnS_1
+Compiling module xil_defaultlib.sample_mul_66ns_6qcK(ID=1,NUM_ST...
+Compiling module xil_defaultlib.sample_mux_864_32rcU(ID=1,din8_W...
+Compiling module xil_defaultlib.sample_mul_60ns_6sc4_MulnS_2
+Compiling module xil_defaultlib.sample_mul_60ns_6sc4(ID=1,NUM_ST...
+Compiling module xil_defaultlib.sample_mul_64s_60tde_MulnS_3
+Compiling module xil_defaultlib.sample_mul_64s_60tde(ID=1,NUM_ST...
+Compiling module xil_defaultlib.sample_mul_mul_13udo_DSP48_0
+Compiling module xil_defaultlib.sample_mul_mul_13udo(ID=1,NUM_ST...
+Compiling module xil_defaultlib.k2c_dot
+Compiling module xil_defaultlib.sample_mul_63ns_1wdI_MulnS_4
+Compiling module xil_defaultlib.sample_mul_63ns_1wdI(ID=1,NUM_ST...
+Compiling module xil_defaultlib.k2c_affine_matmul
+Compiling module xil_defaultlib.k2c_bias_add_densvdy_rom
+Compiling module xil_defaultlib.k2c_bias_add_densvdy(DataWidth=3...
+Compiling module xil_defaultlib.k2c_bias_add
+Compiling architecture struct of entity floating_point_v7_1_6.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture synth of entity floating_point_v7_1_6.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture synth of entity floating_point_v7_1_6.compare_ne_im [\compare_ne_im(c_xdevicefamily="...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=2,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_6.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture synth of entity floating_point_v7_1_6.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=11,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_6.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture synth of entity floating_point_v7_1_6.compare_eq [\compare_eq(c_xdevicefamily="art...]
+Compiling architecture struct of entity floating_point_v7_1_6.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture synth of entity floating_point_v7_1_6.compare_gt [\compare_gt(c_xdevicefamily="art...]
+Compiling architecture rtl of entity floating_point_v7_1_6.fp_cmp [\fp_cmp(c_xdevicefamily="artix7"...]
+Compiling architecture xilinx of entity floating_point_v7_1_6.floating_point_v7_1_6_viv [\floating_point_v7_1_6_viv(c_xde...]
+Compiling architecture xilinx of entity floating_point_v7_1_6.floating_point_v7_1_6 [\floating_point_v7_1_6(c_xdevice...]
+Compiling architecture sample_ap_fcmp_0_no_dsp_32_arch of entity xil_defaultlib.sample_ap_fcmp_0_no_dsp_32 [sample_ap_fcmp_0_no_dsp_32_defau...]
+Compiling module xil_defaultlib.sample_fcmp_32ns_yd2(ID=1)
+Compiling module xil_defaultlib.k2c_dense_3
+Compiling module xil_defaultlib.k2c_dense_2_denseQgW_rom
+Compiling module xil_defaultlib.k2c_dense_2_denseQgW(DataWidth=3...
+Compiling module xil_defaultlib.k2c_dot_1_dense_1zec_rom
+Compiling module xil_defaultlib.k2c_dot_1_dense_1zec(DataWidth=6...
+Compiling module xil_defaultlib.k2c_dot_1_dense_1Aem_rom
+Compiling module xil_defaultlib.k2c_dot_1_dense_1Aem(DataWidth=6...
+Compiling module xil_defaultlib.k2c_dot_1_dense_1Bew_ram
+Compiling module xil_defaultlib.k2c_dot_1_dense_1Bew(DataWidth=3...
+Compiling module xil_defaultlib.k2c_dot_1_dense_1CeG_rom
+Compiling module xil_defaultlib.k2c_dot_1_dense_1CeG(DataWidth=3...
+Compiling module xil_defaultlib.k2c_dot_1_dense_1DeQ_rom
+Compiling module xil_defaultlib.k2c_dot_1_dense_1DeQ(DataWidth=3...
+Compiling module xil_defaultlib.k2c_dot_1_dense_1Ee0_rom
+Compiling module xil_defaultlib.k2c_dot_1_dense_1Ee0(DataWidth=3...
+Compiling module xil_defaultlib.k2c_dot_1_dense_1Ffa_rom
+Compiling module xil_defaultlib.k2c_dot_1_dense_1Ffa(DataWidth=3...
+Compiling module xil_defaultlib.k2c_dot_1_dense_1Gfk_rom
+Compiling module xil_defaultlib.k2c_dot_1_dense_1Gfk(DataWidth=3...
+Compiling module xil_defaultlib.k2c_dot_1_dense_1Hfu_rom
+Compiling module xil_defaultlib.k2c_dot_1_dense_1Hfu(DataWidth=3...
+Compiling module xil_defaultlib.k2c_dot_1_dense_1IfE_rom
+Compiling module xil_defaultlib.k2c_dot_1_dense_1IfE(DataWidth=3...
+Compiling module xil_defaultlib.k2c_dot_1_dense_1JfO_rom
+Compiling module xil_defaultlib.k2c_dot_1_dense_1JfO(DataWidth=3...
+Compiling module xil_defaultlib.sample_udiv_64ns_KfY_div_u(in0_W...
+Compiling module xil_defaultlib.sample_udiv_64ns_KfY_div(in0_WID...
+Compiling module xil_defaultlib.sample_udiv_64ns_KfY(ID=1,NUM_ST...
+Compiling module xil_defaultlib.sample_mul_57ns_6Lf8_MulnS_5
+Compiling module xil_defaultlib.sample_mul_57ns_6Lf8(ID=1,NUM_ST...
+Compiling module xil_defaultlib.sample_mul_64s_57Mgi_MulnS_6
+Compiling module xil_defaultlib.sample_mul_64s_57Mgi(ID=1,NUM_ST...
+Compiling module xil_defaultlib.sample_mul_mul_14Ngs_DSP48_1
+Compiling module xil_defaultlib.sample_mul_mul_14Ngs(ID=1,NUM_ST...
+Compiling module xil_defaultlib.sample_mul_mul_8nOgC_DSP48_2
+Compiling module xil_defaultlib.sample_mul_mul_8nOgC(ID=1,NUM_ST...
+Compiling module xil_defaultlib.k2c_dot_1
+Compiling module xil_defaultlib.k2c_affine_matmul_1
+Compiling module xil_defaultlib.k2c_bias_add_1_dePgM_rom
+Compiling module xil_defaultlib.k2c_bias_add_1_dePgM(DataWidth=3...
+Compiling module xil_defaultlib.k2c_bias_add_1
+Compiling module xil_defaultlib.k2c_dense_2
+Compiling module xil_defaultlib.k2c_dense_1_dense8jQ_rom
+Compiling module xil_defaultlib.k2c_dense_1_dense8jQ(DataWidth=3...
+Compiling module xil_defaultlib.k2c_dot_2_dense_1Rg6_rom
+Compiling module xil_defaultlib.k2c_dot_2_dense_1Rg6(DataWidth=6...
+Compiling module xil_defaultlib.k2c_dot_2_dense_1Shg_rom
+Compiling module xil_defaultlib.k2c_dot_2_dense_1Shg(DataWidth=6...
+Compiling module xil_defaultlib.k2c_dot_2_dense_1Thq_ram
+Compiling module xil_defaultlib.k2c_dot_2_dense_1Thq(DataWidth=3...
+Compiling module xil_defaultlib.k2c_dot_2_dense_1UhA_rom
+Compiling module xil_defaultlib.k2c_dot_2_dense_1UhA(DataWidth=3...
+Compiling module xil_defaultlib.k2c_dot_2_dense_1VhK_rom
+Compiling module xil_defaultlib.k2c_dot_2_dense_1VhK(DataWidth=3...
+Compiling module xil_defaultlib.k2c_dot_2_dense_1WhU_rom
+Compiling module xil_defaultlib.k2c_dot_2_dense_1WhU(DataWidth=3...
+Compiling module xil_defaultlib.k2c_dot_2_dense_1Xh4_rom
+Compiling module xil_defaultlib.k2c_dot_2_dense_1Xh4(DataWidth=3...
+Compiling module xil_defaultlib.k2c_dot_2_dense_1Yie_rom
+Compiling module xil_defaultlib.k2c_dot_2_dense_1Yie(DataWidth=3...
+Compiling module xil_defaultlib.k2c_dot_2_dense_1Zio_rom
+Compiling module xil_defaultlib.k2c_dot_2_dense_1Zio(DataWidth=3...
+Compiling module xil_defaultlib.k2c_dot_2_dense_10iy_rom
+Compiling module xil_defaultlib.k2c_dot_2_dense_10iy(DataWidth=3...
+Compiling module xil_defaultlib.k2c_dot_2_dense_11iI_rom
+Compiling module xil_defaultlib.k2c_dot_2_dense_11iI(DataWidth=3...
+Compiling module xil_defaultlib.sample_udiv_64ns_2iS_div_u(in0_W...
+Compiling module xil_defaultlib.sample_udiv_64ns_2iS_div(in0_WID...
+Compiling module xil_defaultlib.sample_udiv_64ns_2iS(ID=1,NUM_ST...
+Compiling module xil_defaultlib.sample_mul_59ns_63i2_MulnS_7
+Compiling module xil_defaultlib.sample_mul_59ns_63i2(ID=1,NUM_ST...
+Compiling module xil_defaultlib.sample_mul_64s_594jc_MulnS_8
+Compiling module xil_defaultlib.sample_mul_64s_594jc(ID=1,NUM_ST...
+Compiling module xil_defaultlib.sample_mul_mul_115jm_DSP48_3
+Compiling module xil_defaultlib.sample_mul_mul_115jm(ID=1,NUM_ST...
+Compiling module xil_defaultlib.sample_mul_mul_6n6jw_DSP48_4
+Compiling module xil_defaultlib.sample_mul_mul_6n6jw(ID=1,NUM_ST...
+Compiling module xil_defaultlib.k2c_dot_2
+Compiling module xil_defaultlib.k2c_affine_matmul_2
+Compiling module xil_defaultlib.k2c_bias_add_2_de7jG_rom
+Compiling module xil_defaultlib.k2c_bias_add_2_de7jG(DataWidth=3...
+Compiling module xil_defaultlib.k2c_bias_add_2
+Compiling module xil_defaultlib.k2c_dense_1
+Compiling module xil_defaultlib.k2c_dot_3_dense_19j0_rom
+Compiling module xil_defaultlib.k2c_dot_3_dense_19j0(DataWidth=6...
+Compiling module xil_defaultlib.sample_udiv_64ns_bbk_div_u(in0_W...
+Compiling module xil_defaultlib.sample_udiv_64ns_bbk_div(in0_WID...
+Compiling module xil_defaultlib.sample_udiv_64ns_bbk(ID=1,NUM_ST...
+Compiling module xil_defaultlib.k2c_dot_3
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=25,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_6.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture synth of entity floating_point_v7_1_6.flt_div_mant_addsub [\flt_div_mant_addsub(c_xdevicefa...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=26)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=26,length=0)\]
+Compiling architecture virtex of entity floating_point_v7_1_6.flt_div_mant [\flt_div_mant(c_xdevicefamily="a...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=10,length=2,fast_in...]
+Compiling architecture rtl of entity floating_point_v7_1_6.special_detect [\special_detect(c_xdevicefamily=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(length=25,fast_input=true...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=2,length=2,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(length=26,fast_input=true...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=8,length=24)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(length=24,fast_input=true...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=3,length=23,fast_in...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=4,length=24,fast_in...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(length=23,fast_input=true...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=14)\]
+Compiling architecture rtl of entity floating_point_v7_1_6.flt_div_exp [\flt_div_exp(c_xdevicefamily="no...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=12,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_6.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=11)\]
+Compiling architecture struct of entity floating_point_v7_1_6.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture struct of entity floating_point_v7_1_6.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=25,length=0,fast_in...]
+Compiling architecture rtl of entity floating_point_v7_1_6.flt_round_bit [\flt_round_bit(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_6.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
+Compiling architecture synth of entity floating_point_v7_1_6.flt_dec_op_lat [\flt_dec_op_lat(c_xdevicefamily=...]
+Compiling architecture virtex of entity floating_point_v7_1_6.flt_div [\flt_div(c_xdevicefamily="artix7...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture xilinx of entity floating_point_v7_1_6.floating_point_v7_1_6_viv [\floating_point_v7_1_6_viv(c_xde...]
+Compiling architecture xilinx of entity floating_point_v7_1_6.floating_point_v7_1_6 [\floating_point_v7_1_6(c_xdevice...]
+Compiling architecture sample_ap_fdiv_28_no_dsp_32_arch of entity xil_defaultlib.sample_ap_fdiv_28_no_dsp_32 [sample_ap_fdiv_28_no_dsp_32_defa...]
+Compiling module xil_defaultlib.sample_fdiv_32ns_bck(ID=1)
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=43)\]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,alumodereg=0...]
+Compiling architecture rtl of entity floating_point_v7_1_6.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=17,b_wi...]
+Compiling architecture rtl of entity floating_point_v7_1_6.special_detect [\special_detect(c_xdevicefamily=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(length=14)\]
+Compiling architecture struct of entity floating_point_v7_1_6.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture synth of entity floating_point_v7_1_6.compare_gt [\compare_gt(c_xdevicefamily="art...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=2,length=14,fast_in...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(length=15)\]
+Compiling architecture synth of entity floating_point_v7_1_6.flt_exp_specialcase [\flt_exp_specialcase(c_xdevicefa...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=23,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_6.carry_chain [\carry_chain(c_xdevicefamily="ki...]
+Compiling architecture synth of entity floating_point_v7_1_6.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_6.special_detect [\special_detect(a_fw=24,op_delay...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay_s [\delay_s(width=10,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay_s [\delay_s(width=9,length=0)\]
+Compiling architecture muxf7_v of entity unisim.MUXF7 [muxf7_default]
+Compiling architecture muxf8_v of entity unisim.MUXF8 [muxf8_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=6,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_6.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture synth of entity floating_point_v7_1_6.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_6.zero_det_sel [\zero_det_sel(c_xdevicefamily="a...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=34)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=34,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_6.shift_msb_first [\shift_msb_first(a_width=24,resu...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(length=2)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=36,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_6.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture synth of entity floating_point_v7_1_6.flt_to_fix_conv [\flt_to_fix_conv(c_xdevicefamily...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=5,length=0)\]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture rtl of entity floating_point_v7_1_6.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=30,b_wi...]
+Compiling architecture synth of entity floating_point_v7_1_6.flt_log_addsub [\flt_log_addsub(c_xdevicefamily=...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(adreg=0,dreg=0,inmodere...]
+Compiling architecture rtl of entity floating_point_v7_1_6.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=30,b_wi...]
+Compiling architecture synth of entity floating_point_v7_1_6.flt_log_addsub [\flt_log_addsub(c_xdevicefamily=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.flt_exp_ccm [\flt_exp_ccm(c_xdevicefamily="ar...]
+Compiling architecture synth of entity floating_point_v7_1_6.flt_log_addsub [\flt_log_addsub(c_xdevicefamily=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=4)\]
+Compiling architecture synth of entity floating_point_v7_1_6.flt_log_addsub [\flt_log_addsub(c_xdevicefamily=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.flt_exp_ccm [\flt_exp_ccm(c_xdevicefamily="ar...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=33,length=6)\]
+Compiling architecture synth of entity floating_point_v7_1_6.flt_log_addsub [\flt_log_addsub(c_xdevicefamily=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.flt_exp_e2A [\flt_exp_e2A(c_xdevicefamily="ar...]
+Compiling architecture rtl of entity floating_point_v7_1_6.flt_exp_e2zmzm1 [\flt_exp_e2zmzm1(c_xdevicefamily...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=8,length=9)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(length=6)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=8,length=2)\]
+Compiling architecture rtl of entity floating_point_v7_1_6.dsp48e1_wrapper [\dsp48e1_wrapper(b_width=18,c_wi...]
+Compiling architecture rtl of entity floating_point_v7_1_6.flt_round_bit [\flt_round_bit(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_6.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="1100110010010110")(0...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="1100110000111100")(0...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=9,length=0,fast_inp...]
+Compiling architecture synth of entity floating_point_v7_1_6.flt_log_addsub [\flt_log_addsub(c_xdevicefamily=...]
+Compiling architecture synth of entity floating_point_v7_1_6.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture synth of entity floating_point_v7_1_6.compare_ne_im [\compare_ne_im(c_xdevicefamily="...]
+Compiling architecture struct of entity floating_point_v7_1_6.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture synth of entity floating_point_v7_1_6.compare_gt [\compare_gt(c_xdevicefamily="art...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=32)\]
+Compiling architecture synth of entity floating_point_v7_1_6.flt_exp_recomb [\flt_exp_recomb(c_xdevicefamily=...]
+Compiling architecture synth of entity floating_point_v7_1_6.flt_exp [\flt_exp(c_xdevicefamily="artix7...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture xilinx of entity floating_point_v7_1_6.floating_point_v7_1_6_viv [\floating_point_v7_1_6_viv(c_xde...]
+Compiling architecture xilinx of entity floating_point_v7_1_6.floating_point_v7_1_6 [\floating_point_v7_1_6(c_xdevice...]
+Compiling architecture sample_ap_fexp_16_full_dsp_32_arch of entity xil_defaultlib.sample_ap_fexp_16_full_dsp_32 [sample_ap_fexp_16_full_dsp_32_de...]
+Compiling module xil_defaultlib.sample_fexp_32ns_bdk(ID=1)
+Compiling module xil_defaultlib.k2c_dense
+Compiling module xil_defaultlib.sample
+Compiling module xil_defaultlib.AESL_automem_dense_13_input_inpu...
+Compiling module xil_defaultlib.AESL_automem_dense_13_input_inpu...
+Compiling module xil_defaultlib.AESL_automem_dense_13_input_inpu...
+Compiling module xil_defaultlib.AESL_automem_dense_13_input_inpu...
+Compiling module xil_defaultlib.AESL_automem_dense_13_input_inpu...
+Compiling module xil_defaultlib.AESL_automem_dense_13_input_inpu...
+Compiling module xil_defaultlib.AESL_automem_dense_13_input_inpu...
+Compiling module xil_defaultlib.AESL_automem_dense_13_input_inpu...
+Compiling module xil_defaultlib.AESL_automem_dense_13_input_inpu...
+Compiling module xil_defaultlib.AESL_automem_dense_16_output_arr...
+Compiling module xil_defaultlib.apatb_sample_top
+Compiling module work.glbl
+Built simulation snapshot sample
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/xsim.dir/sample/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Apr 23 18:59:54 2024...
+
+****** xsim v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/sample/xsim_script.tcl
+# xsim {sample} -autoloadwcfg -tclbatch {sample.tcl}
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source sample.tcl
+## log_wave -r /
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set cinoutgroup [add_wave_group "C InOuts" -into $designtopgroup]
+## set dense_16_output_arrray_group [add_wave_group dense_16_output_arrray(memory) -into $cinoutgroup]
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_16_output_arrray_q0 -into $dense_16_output_arrray_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_16_output_arrray_d0 -into $dense_16_output_arrray_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_16_output_arrray_we0 -into $dense_16_output_arrray_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_16_output_arrray_ce0 -into $dense_16_output_arrray_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_16_output_arrray_address0 -into $dense_16_output_arrray_group -radix hex
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set dense_16_output_numel_group [add_wave_group dense_16_output_numel(wire) -into $cinputgroup]
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_16_output_numel -into $dense_16_output_numel_group -radix hex
+## set dense_16_output_dim_group [add_wave_group dense_16_output_dim(wire) -into $cinputgroup]
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_16_output_dim -into $dense_16_output_dim_group -radix hex
+## set dense_13_input_input_shape_group [add_wave_group dense_13_input_input_shape(memory) -into $cinputgroup]
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_shape_q0 -into $dense_13_input_input_shape_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_shape_ce0 -into $dense_13_input_input_shape_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_shape_address0 -into $dense_13_input_input_shape_group -radix hex
+## set dense_13_input_input_numel_group [add_wave_group dense_13_input_input_numel(wire) -into $cinputgroup]
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_numel -into $dense_13_input_input_numel_group -radix hex
+## set dense_13_input_input_dim_group [add_wave_group dense_13_input_input_dim(wire) -into $cinputgroup]
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_dim -into $dense_13_input_input_dim_group -radix hex
+## set dense_13_input_input_array_group [add_wave_group dense_13_input_input_array(memory) -into $cinputgroup]
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_7_q0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_7_ce0 -into $dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_7_address0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_6_q0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_6_ce0 -into $dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_6_address0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_5_q0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_5_ce0 -into $dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_5_address0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_4_q0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_4_ce0 -into $dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_4_address0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_3_q0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_3_ce0 -into $dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_3_address0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_2_q0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_2_ce0 -into $dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_2_address0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_1_q0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_1_ce0 -into $dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_1_address0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_0_q0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_0_ce0 -into $dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_0_address0 -into $dense_13_input_input_array_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
+## add_wave /apatb_sample_top/AESL_inst_sample/ap_start -into $blocksiggroup
+## add_wave /apatb_sample_top/AESL_inst_sample/ap_done -into $blocksiggroup
+## add_wave /apatb_sample_top/AESL_inst_sample/ap_idle -into $blocksiggroup
+## add_wave /apatb_sample_top/AESL_inst_sample/ap_ready -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_sample_top/AESL_inst_sample/ap_rst -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_sample_top/AESL_inst_sample/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_sample_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_sample_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_sample_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_sample_top/LENGTH_dense_13_input_input_array_0 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_sample_top/LENGTH_dense_13_input_input_array_1 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_sample_top/LENGTH_dense_13_input_input_array_2 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_sample_top/LENGTH_dense_13_input_input_array_3 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_sample_top/LENGTH_dense_13_input_input_array_4 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_sample_top/LENGTH_dense_13_input_input_array_5 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_sample_top/LENGTH_dense_13_input_input_array_6 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_sample_top/LENGTH_dense_13_input_input_array_7 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_sample_top/LENGTH_dense_13_input_input_dim -into $tb_portdepth_group -radix hex
+## add_wave /apatb_sample_top/LENGTH_dense_13_input_input_numel -into $tb_portdepth_group -radix hex
+## add_wave /apatb_sample_top/LENGTH_dense_13_input_input_shape -into $tb_portdepth_group -radix hex
+## add_wave /apatb_sample_top/LENGTH_dense_16_output_arrray -into $tb_portdepth_group -radix hex
+## add_wave /apatb_sample_top/LENGTH_dense_16_output_numel -into $tb_portdepth_group -radix hex
+## set tbcinoutgroup [add_wave_group "C InOuts" -into $testbenchgroup]
+## set tb_dense_16_output_arrray_group [add_wave_group dense_16_output_arrray(memory) -into $tbcinoutgroup]
+## add_wave /apatb_sample_top/dense_16_output_arrray_q0 -into $tb_dense_16_output_arrray_group -radix hex
+## add_wave /apatb_sample_top/dense_16_output_arrray_d0 -into $tb_dense_16_output_arrray_group -radix hex
+## add_wave /apatb_sample_top/dense_16_output_arrray_we0 -into $tb_dense_16_output_arrray_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/dense_16_output_arrray_ce0 -into $tb_dense_16_output_arrray_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/dense_16_output_arrray_address0 -into $tb_dense_16_output_arrray_group -radix hex
+## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
+## set tb_dense_16_output_numel_group [add_wave_group dense_16_output_numel(wire) -into $tbcinputgroup]
+## add_wave /apatb_sample_top/dense_16_output_numel -into $tb_dense_16_output_numel_group -radix hex
+## set tb_dense_16_output_dim_group [add_wave_group dense_16_output_dim(wire) -into $tbcinputgroup]
+## add_wave /apatb_sample_top/dense_16_output_dim -into $tb_dense_16_output_dim_group -radix hex
+## set tb_dense_13_input_input_shape_group [add_wave_group dense_13_input_input_shape(memory) -into $tbcinputgroup]
+## add_wave /apatb_sample_top/dense_13_input_input_shape_q0 -into $tb_dense_13_input_input_shape_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_shape_ce0 -into $tb_dense_13_input_input_shape_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_shape_address0 -into $tb_dense_13_input_input_shape_group -radix hex
+## set tb_dense_13_input_input_numel_group [add_wave_group dense_13_input_input_numel(wire) -into $tbcinputgroup]
+## add_wave /apatb_sample_top/dense_13_input_input_numel -into $tb_dense_13_input_input_numel_group -radix hex
+## set tb_dense_13_input_input_dim_group [add_wave_group dense_13_input_input_dim(wire) -into $tbcinputgroup]
+## add_wave /apatb_sample_top/dense_13_input_input_dim -into $tb_dense_13_input_input_dim_group -radix hex
+## set tb_dense_13_input_input_array_group [add_wave_group dense_13_input_input_array(memory) -into $tbcinputgroup]
+## add_wave /apatb_sample_top/dense_13_input_input_array_7_q0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_7_ce0 -into $tb_dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_7_address0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_6_q0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_6_ce0 -into $tb_dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_6_address0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_5_q0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_5_ce0 -into $tb_dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_5_address0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_4_q0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_4_ce0 -into $tb_dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_4_address0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_3_q0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_3_ce0 -into $tb_dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_3_address0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_2_q0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_2_ce0 -into $tb_dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_2_address0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_1_q0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_1_ce0 -into $tb_dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_1_address0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_0_q0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_0_ce0 -into $tb_dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_0_address0 -into $tb_dense_13_input_input_array_group -radix hex
+## save_wave_config sample.wcfg
+## run all
+Note: 
+******************************************************
+  renorm_and_round_logic.vhd :
+    FULL_MANT_RND1_DEL is using fast_input
+    which will be faster, but create more FFs.
+******************************************************
+Time: 0 ps  Iteration: 0
+Note: 
+******************************************************
+  renorm_and_round_logic.vhd :
+    FULL_MANT_RND1_DEL is using fast_input
+    which will be faster, but create more FFs.
+******************************************************
+Time: 0 ps  Iteration: 0
+Warning: OPMODE Input Warning : The OPMODE 011XX11 with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_fu_477/sample_fexp_32ns_bdk_U340/sample_ap_fexp_16_full_dsp_32_u/U0/i_synth/exp_op/i_sp_or_dp/OP/i_renorm_and_round/dsp48_e1/dsp48e1_add/DSP48E1_ADD/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_fu_477/sample_fadd_32ns_ocq_U338/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_fu_477/grp_k2c_dot_3_fu_178/sample_fadd_32ns_ocq_U316/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_1_fu_409/grp_k2c_bias_add_2_fu_451/sample_fadd_32ns_ocq_U268/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_1_fu_409/grp_k2c_affine_matmul_2_fu_434/sample_fadd_32ns_ocq_U282/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_1_fu_409/grp_k2c_affine_matmul_2_fu_434/sample_fadd_32ns_ocq_U281/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_1_fu_409/grp_k2c_dot_2_fu_368/sample_fadd_32ns_ocq_U222/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_2_fu_341/grp_k2c_bias_add_1_fu_451/sample_fadd_32ns_ocq_U174/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_2_fu_341/grp_k2c_affine_matmul_1_fu_434/sample_fadd_32ns_ocq_U188/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_2_fu_341/grp_k2c_affine_matmul_1_fu_434/sample_fadd_32ns_ocq_U187/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_2_fu_341/grp_k2c_dot_1_fu_368/sample_fadd_32ns_ocq_U128/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_3_fu_272/grp_k2c_bias_add_fu_459/sample_fadd_32ns_ocq_U68/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_3_fu_272/grp_k2c_affine_matmul_fu_430/sample_fadd_32ns_ocq_U82/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_3_fu_272/grp_k2c_affine_matmul_fu_430/sample_fadd_32ns_ocq_U81/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_3_fu_272/grp_k2c_dot_fu_364/sample_fadd_32ns_ocq_U17/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 10 [n/a] @ "113000"
+Warning: OPMODE Input Warning : The OPMODE 011XX11 with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 5837500 ps  Iteration: 8  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_fu_477/sample_fexp_32ns_bdk_U340/sample_ap_fexp_16_full_dsp_32_u/U0/i_synth/exp_op/i_sp_or_dp/OP/i_renorm_and_round/dsp48_e1/dsp48e1_add/DSP48E1_ADD/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 5872500 ps  Iteration: 4  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_fu_477/sample_fadd_32ns_ocq_U338/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+// RTL Simulation : 1 / 10 [n/a] @ "6058000"
+Warning: OPMODE Input Warning : The OPMODE 011XX11 with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 11777500 ps  Iteration: 8  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_fu_477/sample_fexp_32ns_bdk_U340/sample_ap_fexp_16_full_dsp_32_u/U0/i_synth/exp_op/i_sp_or_dp/OP/i_renorm_and_round/dsp48_e1/dsp48e1_add/DSP48E1_ADD/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 11812500 ps  Iteration: 4  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_fu_477/sample_fadd_32ns_ocq_U338/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+// RTL Simulation : 2 / 10 [n/a] @ "11998000"
+Warning: OPMODE Input Warning : The OPMODE 011XX11 with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 17717500 ps  Iteration: 8  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_fu_477/sample_fexp_32ns_bdk_U340/sample_ap_fexp_16_full_dsp_32_u/U0/i_synth/exp_op/i_sp_or_dp/OP/i_renorm_and_round/dsp48_e1/dsp48e1_add/DSP48E1_ADD/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 17752500 ps  Iteration: 4  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_fu_477/sample_fadd_32ns_ocq_U338/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+// RTL Simulation : 3 / 10 [n/a] @ "17938000"
+Warning: OPMODE Input Warning : The OPMODE 011XX11 with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 23657500 ps  Iteration: 8  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_fu_477/sample_fexp_32ns_bdk_U340/sample_ap_fexp_16_full_dsp_32_u/U0/i_synth/exp_op/i_sp_or_dp/OP/i_renorm_and_round/dsp48_e1/dsp48e1_add/DSP48E1_ADD/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 23692500 ps  Iteration: 4  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_fu_477/sample_fadd_32ns_ocq_U338/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+// RTL Simulation : 4 / 10 [n/a] @ "23878000"
+Warning: OPMODE Input Warning : The OPMODE 011XX11 with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 29597500 ps  Iteration: 8  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_fu_477/sample_fexp_32ns_bdk_U340/sample_ap_fexp_16_full_dsp_32_u/U0/i_synth/exp_op/i_sp_or_dp/OP/i_renorm_and_round/dsp48_e1/dsp48e1_add/DSP48E1_ADD/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 29632500 ps  Iteration: 4  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_fu_477/sample_fadd_32ns_ocq_U338/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+// RTL Simulation : 5 / 10 [n/a] @ "29818000"
+Warning: OPMODE Input Warning : The OPMODE 011XX11 with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 35537500 ps  Iteration: 8  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_fu_477/sample_fexp_32ns_bdk_U340/sample_ap_fexp_16_full_dsp_32_u/U0/i_synth/exp_op/i_sp_or_dp/OP/i_renorm_and_round/dsp48_e1/dsp48e1_add/DSP48E1_ADD/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 35572500 ps  Iteration: 4  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_fu_477/sample_fadd_32ns_ocq_U338/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+// RTL Simulation : 6 / 10 [n/a] @ "35758000"
+Warning: OPMODE Input Warning : The OPMODE 011XX11 with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 41477500 ps  Iteration: 8  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_fu_477/sample_fexp_32ns_bdk_U340/sample_ap_fexp_16_full_dsp_32_u/U0/i_synth/exp_op/i_sp_or_dp/OP/i_renorm_and_round/dsp48_e1/dsp48e1_add/DSP48E1_ADD/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 41512500 ps  Iteration: 4  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_fu_477/sample_fadd_32ns_ocq_U338/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+// RTL Simulation : 7 / 10 [n/a] @ "41698000"
+Warning: OPMODE Input Warning : The OPMODE 011XX11 with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 47417500 ps  Iteration: 8  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_fu_477/sample_fexp_32ns_bdk_U340/sample_ap_fexp_16_full_dsp_32_u/U0/i_synth/exp_op/i_sp_or_dp/OP/i_renorm_and_round/dsp48_e1/dsp48e1_add/DSP48E1_ADD/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 47452500 ps  Iteration: 4  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_fu_477/sample_fadd_32ns_ocq_U338/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+// RTL Simulation : 8 / 10 [n/a] @ "47638000"
+Warning: OPMODE Input Warning : The OPMODE 011XX11 with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 53357500 ps  Iteration: 8  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_fu_477/sample_fexp_32ns_bdk_U340/sample_ap_fexp_16_full_dsp_32_u/U0/i_synth/exp_op/i_sp_or_dp/OP/i_renorm_and_round/dsp48_e1/dsp48e1_add/DSP48E1_ADD/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 53392500 ps  Iteration: 4  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_fu_477/sample_fadd_32ns_ocq_U338/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+// RTL Simulation : 9 / 10 [n/a] @ "53578000"
+Warning: OPMODE Input Warning : The OPMODE 011XX11 with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 59297500 ps  Iteration: 8  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_fu_477/sample_fexp_32ns_bdk_U340/sample_ap_fexp_16_full_dsp_32_u/U0/i_synth/exp_op/i_sp_or_dp/OP/i_renorm_and_round/dsp48_e1/dsp48e1_add/DSP48E1_ADD/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 59332500 ps  Iteration: 4  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_fu_477/sample_fadd_32ns_ocq_U338/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+// RTL Simulation : 10 / 10 [n/a] @ "59518000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 59537500 ps : File "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_final/sim/verilog/sample.autotb.v" Line 903
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:19 . Memory (MB): peak = 211.895 ; gain = 0.000
+## quit
+INFO: [Common 17-206] Exiting xsim at Tue Apr 23 19:00:22 2024...
+Average time over 10 tests: 0.000000e+000 s 
+Max absolute error for 10 tests: 4.516800e-001 
+INFO: [COSIM-1000] *** C/RTL co-simulation finished: PASS ***

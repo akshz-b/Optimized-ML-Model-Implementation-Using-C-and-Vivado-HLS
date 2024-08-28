@@ -1,0 +1,1949 @@
+
+
+================================================================
+== Vivado HLS Report for 'sample'
+================================================================
+* Date:           Wed Apr 24 12:33:14 2024
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        Group_5
+* Solution:       Resource_optimized
+* Product family: artix7
+* Target device:  xc7a200tfbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     9.597|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +------------------------+-------------+-----+-----+-----+-----+---------+
+        |                        |             |  Latency  |  Interval | Pipeline|
+        |        Instance        |    Module   | min | max | min | max |   Type  |
+        +------------------------+-------------+-----+-----+-----+-----+---------+
+        |grp_k2c_dense_fu_176    |k2c_dense    |    ?|    ?|    ?|    ?|   none  |
+        |grp_k2c_dense_3_fu_200  |k2c_dense_3  |    ?|    ?|    ?|    ?|   none  |
+        |grp_k2c_dense_2_fu_227  |k2c_dense_2  |    ?|    ?|    ?|    ?|   none  |
+        |grp_k2c_dense_1_fu_253  |k2c_dense_1  |    ?|    ?|    ?|    ?|   none  |
+        +------------------------+-------------+-----+-----+-----+-----+---------+
+
+        * Loop: 
+        +-------------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                         |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |        Loop Name        | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- memset_dense_16_fwork  |   31|   31|         1|          -|          -|    32|    no    |
+        +-------------------------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
++-----------------+---------+-------+--------+--------+
+|DSP              |        -|      -|       -|       -|
+|Expression       |        -|      -|       0|      26|
+|FIFO             |        -|      -|       -|       -|
+|Instance         |       78|    282|   47810|   44793|
+|Memory           |        6|      -|      64|       8|
+|Multiplexer      |        -|      -|       -|     269|
+|Register         |        -|      -|      18|       -|
++-----------------+---------+-------+--------+--------+
+|Total            |       84|    282|   47892|   45096|
++-----------------+---------+-------+--------+--------+
+|Available        |      730|    740|  269200|  129000|
++-----------------+---------+-------+--------+--------+
+|Utilization (%)  |       11|     38|      17|      34|
++-----------------+---------+-------+--------+--------+
+
++ Detail: 
+    * Instance: 
+    +------------------------+-------------+---------+-------+-------+-------+
+    |        Instance        |    Module   | BRAM_18K| DSP48E|   FF  |  LUT  |
+    +------------------------+-------------+---------+-------+-------+-------+
+    |grp_k2c_dense_fu_176    |k2c_dense    |        4|     70|  12550|  12280|
+    |grp_k2c_dense_1_fu_253  |k2c_dense_1  |        8|     65|  11404|  10577|
+    |grp_k2c_dense_2_fu_227  |k2c_dense_2  |       37|     65|  11535|  10686|
+    |grp_k2c_dense_3_fu_200  |k2c_dense_3  |       29|     82|  12321|  11250|
+    +------------------------+-------------+---------+-------+-------+-------+
+    |Total                   |             |       78|    282|  47810|  44793|
+    +------------------------+-------------+---------+-------+-------+-------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    +------------------------+----------------------+---------+----+----+------+-----+------+-------------+
+    |         Memory         |        Module        | BRAM_18K| FF | LUT| Words| Bits| Banks| W*Bits*Banks|
+    +------------------------+----------------------+---------+----+----+------+-----+------+-------------+
+    |dense_13_output_arra_U  |sample_dense_13_oRg6  |        2|   0|   0|   128|   32|     1|         4096|
+    |dense_14_output_arra_U  |sample_dense_14_oShg  |        2|   0|   0|    32|   32|     1|         1024|
+    |dense_15_output_arra_U  |sample_dense_15_oThq  |        0|  64|   8|    16|   32|     1|          512|
+    |dense_16_fwork_U        |sample_dense_16_fUhA  |        2|   0|   0|    32|   32|     1|         1024|
+    +------------------------+----------------------+---------+----+----+------+-----+------+-------------+
+    |Total                   |                      |        6|  64|   8|   208|  128|     4|         6656|
+    +------------------------+----------------------+---------+----+----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+-------+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+-------+---+----+------------+------------+
+    |indvarinc_fu_315_p2  |     +    |      0|  0|  15|           5|           1|
+    |tmp_1_fu_326_p2      |   icmp   |      0|  0|  11|           5|           2|
+    +---------------------+----------+-------+---+----+------------+------------+
+    |Total                |          |      0|  0|  26|          10|           3|
+    +---------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------+----+-----------+-----+-----------+
+    |              Name             | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                      |  47|         10|    1|         10|
+    |dense_13_output_arra_address0  |  15|          3|    7|         21|
+    |dense_13_output_arra_ce0       |  15|          3|    1|          3|
+    |dense_13_output_arra_ce1       |   9|          2|    1|          2|
+    |dense_13_output_arra_we0       |   9|          2|    1|          2|
+    |dense_14_output_arra_address0  |  15|          3|    5|         15|
+    |dense_14_output_arra_ce0       |  15|          3|    1|          3|
+    |dense_14_output_arra_ce1       |   9|          2|    1|          2|
+    |dense_14_output_arra_we0       |   9|          2|    1|          2|
+    |dense_15_output_arra_address0  |  15|          3|    4|         12|
+    |dense_15_output_arra_ce0       |  15|          3|    1|          3|
+    |dense_15_output_arra_ce1       |   9|          2|    1|          2|
+    |dense_15_output_arra_we0       |   9|          2|    1|          2|
+    |dense_16_fwork_address0        |  15|          3|    5|         15|
+    |dense_16_fwork_ce0             |  15|          3|    1|          3|
+    |dense_16_fwork_ce1             |   9|          2|    1|          2|
+    |dense_16_fwork_d0              |  15|          3|   32|         96|
+    |dense_16_fwork_we0             |  15|          3|    1|          3|
+    |invdar_reg_165                 |   9|          2|    5|         10|
+    +-------------------------------+----+-----------+-----+-----------+
+    |Total                          | 269|         56|   71|        208|
+    +-------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------+---+----+-----+-----------+
+    |                 Name                | FF| LUT| Bits| Const Bits|
+    +-------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                            |  9|   0|    9|          0|
+    |dense_13_kernel_dim                  |  0|   0|   64|         64|
+    |dense_13_output_dim                  |  0|   0|   64|         64|
+    |dense_13_output_nume                 |  0|   0|   64|         64|
+    |dense_14_kernel_dim                  |  0|   0|   64|         64|
+    |dense_14_output_dim                  |  0|   0|   64|         64|
+    |dense_14_output_nume                 |  0|   0|   64|         64|
+    |dense_15_kernel_dim                  |  0|   0|   64|         64|
+    |dense_15_output_dim                  |  0|   0|   64|         64|
+    |dense_15_output_nume                 |  0|   0|   64|         64|
+    |dense_16_kernel_dim                  |  0|   0|   64|         64|
+    |grp_k2c_dense_1_fu_253_ap_start_reg  |  1|   0|    1|          0|
+    |grp_k2c_dense_2_fu_227_ap_start_reg  |  1|   0|    1|          0|
+    |grp_k2c_dense_3_fu_200_ap_start_reg  |  1|   0|    1|          0|
+    |grp_k2c_dense_fu_176_ap_start_reg    |  1|   0|    1|          0|
+    |invdar_reg_165                       |  5|   0|    5|          0|
+    |reg_297                              |  0|   0|   64|         64|
+    |reg_303                              |  0|   0|   64|         64|
+    |reg_309                              |  0|   0|   64|         64|
+    +-------------------------------------+---+----+-----+-----------+
+    |Total                                | 18|   0|  850|        832|
+    +-------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------------+-----+-----+------------+----------------------------+--------------+
+|              RTL Ports              | Dir | Bits|  Protocol  |        Source Object       |    C Type    |
++-------------------------------------+-----+-----+------------+----------------------------+--------------+
+|ap_clk                               |  in |    1| ap_ctrl_hs |           sample           | return value |
+|ap_rst                               |  in |    1| ap_ctrl_hs |           sample           | return value |
+|ap_start                             |  in |    1| ap_ctrl_hs |           sample           | return value |
+|ap_done                              | out |    1| ap_ctrl_hs |           sample           | return value |
+|ap_idle                              | out |    1| ap_ctrl_hs |           sample           | return value |
+|ap_ready                             | out |    1| ap_ctrl_hs |           sample           | return value |
+|dense_13_input_input_array_address0  | out |    7|  ap_memory | dense_13_input_input_array |     array    |
+|dense_13_input_input_array_ce0       | out |    1|  ap_memory | dense_13_input_input_array |     array    |
+|dense_13_input_input_array_q0        |  in |   32|  ap_memory | dense_13_input_input_array |     array    |
+|dense_13_input_input_array_address1  | out |    7|  ap_memory | dense_13_input_input_array |     array    |
+|dense_13_input_input_array_ce1       | out |    1|  ap_memory | dense_13_input_input_array |     array    |
+|dense_13_input_input_array_q1        |  in |   32|  ap_memory | dense_13_input_input_array |     array    |
+|dense_13_input_input_dim             |  in |   64|   ap_none  |  dense_13_input_input_dim  |    scalar    |
+|dense_13_input_input_numel           |  in |   64|   ap_none  | dense_13_input_input_numel |    pointer   |
+|dense_13_input_input_shape_address0  | out |    3|  ap_memory | dense_13_input_input_shape |     array    |
+|dense_13_input_input_shape_ce0       | out |    1|  ap_memory | dense_13_input_input_shape |     array    |
+|dense_13_input_input_shape_q0        |  in |   64|  ap_memory | dense_13_input_input_shape |     array    |
+|dense_16_output_arrray_address0      | out |    1|  ap_memory |   dense_16_output_arrray   |     array    |
+|dense_16_output_arrray_ce0           | out |    1|  ap_memory |   dense_16_output_arrray   |     array    |
+|dense_16_output_arrray_we0           | out |    1|  ap_memory |   dense_16_output_arrray   |     array    |
+|dense_16_output_arrray_d0            | out |   32|  ap_memory |   dense_16_output_arrray   |     array    |
+|dense_16_output_arrray_q0            |  in |   32|  ap_memory |   dense_16_output_arrray   |     array    |
+|dense_16_output_dim                  |  in |   64|   ap_none  |     dense_16_output_dim    |    scalar    |
+|dense_16_output_numel                |  in |   64|   ap_none  |    dense_16_output_numel   |    pointer   |
+|dense_16_output_shape_address0       | out |    3|  ap_memory |    dense_16_output_shape   |     array    |
+|dense_16_output_shape_ce0            | out |    1|  ap_memory |    dense_16_output_shape   |     array    |
+|dense_16_output_shape_we0            | out |    1|  ap_memory |    dense_16_output_shape   |     array    |
+|dense_16_output_shape_d0             | out |   64|  ap_memory |    dense_16_output_shape   |     array    |
+|dense_16_output_shape_q0             |  in |   64|  ap_memory |    dense_16_output_shape   |     array    |
+|dense_16_output_shape_address1       | out |    3|  ap_memory |    dense_16_output_shape   |     array    |
+|dense_16_output_shape_ce1            | out |    1|  ap_memory |    dense_16_output_shape   |     array    |
+|dense_16_output_shape_we1            | out |    1|  ap_memory |    dense_16_output_shape   |     array    |
+|dense_16_output_shape_d1             | out |   64|  ap_memory |    dense_16_output_shape   |     array    |
+|dense_16_output_shape_q1             |  in |   64|  ap_memory |    dense_16_output_shape   |     array    |
++-------------------------------------+-----+-----+------------+----------------------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 2
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 9
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	2  / (!tmp_1)
+	3  / (tmp_1)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.77>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([128 x float]* %dense_13_input_input_array) nounwind, !map !204"   --->   Operation 10 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64 %dense_13_input_input_dim) nounwind, !map !208"   --->   Operation 11 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64* %dense_13_input_input_numel) nounwind, !map !214"   --->   Operation 12 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([5 x i64]* %dense_13_input_input_shape) nounwind, !map !218"   --->   Operation 13 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1 x float]* %dense_16_output_arrray) nounwind, !map !224"   --->   Operation 14 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64 %dense_16_output_dim) nounwind, !map !228"   --->   Operation 15 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64* %dense_16_output_numel) nounwind, !map !232"   --->   Operation 16 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([5 x i64]* %dense_16_output_shape) nounwind, !map !236"   --->   Operation 17 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @sample_str) nounwind"   --->   Operation 18 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%dense_13_input_input = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %dense_13_input_input_dim) nounwind"   --->   Operation 19 'read' 'dense_13_input_input' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (2.77ns)   --->   "%dense_16_fwork = alloca [32 x float], align 16" [Group_5/sample.c:2049]   --->   Operation 20 'alloca' 'dense_16_fwork' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_1 : Operation 21 [1/1] (1.35ns)   --->   "br label %meminst"   --->   Operation 21 'br' <Predicate = true> <Delay = 1.35>
+
+State 2 <SV = 1> <Delay = 2.99>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%invdar = phi i5 [ 0, %0 ], [ %indvarinc, %meminst ]" [Group_5/sample.c:2049]   --->   Operation 22 'phi' 'invdar' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (1.54ns)   --->   "%indvarinc = add i5 %invdar, 1" [Group_5/sample.c:2049]   --->   Operation 23 'add' 'indvarinc' <Predicate = true> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%tmp = zext i5 %invdar to i64" [Group_5/sample.c:2049]   --->   Operation 24 'zext' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%dense_16_fwork_addr = getelementptr [32 x float]* %dense_16_fwork, i64 0, i64 %tmp" [Group_5/sample.c:2049]   --->   Operation 25 'getelementptr' 'dense_16_fwork_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (2.77ns)   --->   "store float 0.000000e+00, float* %dense_16_fwork_addr, align 4" [Group_5/sample.c:2049]   --->   Operation 26 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_2 : Operation 27 [1/1] (1.21ns)   --->   "%tmp_1 = icmp eq i5 %invdar, -1" [Group_5/sample.c:2049]   --->   Operation 27 'icmp' 'tmp_1' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopName([22 x i8]* @memset_dense_16_fwor) nounwind"   --->   Operation 28 'specloopname' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 32, i64 32, i64 32) nounwind"   --->   Operation 29 'speclooptripcount' 'empty_9' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "br i1 %tmp_1, label %1, label %meminst" [Group_5/sample.c:2049]   --->   Operation 30 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%dense_13_kernel_dim_s = load i64* @dense_13_kernel_dim, align 8" [Group_5/sample.c:2053]   --->   Operation 31 'load' 'dense_13_kernel_dim_s' <Predicate = (tmp_1)> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%dense_13_output_nume_1 = load i64* @dense_13_output_nume, align 8" [Group_5/sample.c:2053]   --->   Operation 32 'load' 'dense_13_output_nume_1' <Predicate = (tmp_1)> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%dense_13_input_input_1 = call i64 @_ssdm_op_Read.ap_auto.i64P(i64* %dense_13_input_input_numel) nounwind" [Group_5/sample.c:2053]   --->   Operation 33 'read' 'dense_13_input_input_1' <Predicate = (tmp_1)> <Delay = 0.00>
+ST_2 : Operation 34 [2/2] (2.99ns)   --->   "call fastcc void @k2c_dense.3(i64 %dense_13_output_nume_1, [128 x float]* %dense_13_input_input_array, i64 %dense_13_input_input, i64 %dense_13_input_input_1, [5 x i64]* %dense_13_input_input_shape, i64 %dense_13_kernel_dim_s) nounwind" [Group_5/sample.c:2053]   --->   Operation 34 'call' <Predicate = (tmp_1)> <Delay = 2.99> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 35 [1/2] (0.00ns)   --->   "call fastcc void @k2c_dense.3(i64 %dense_13_output_nume_1, [128 x float]* %dense_13_input_input_array, i64 %dense_13_input_input, i64 %dense_13_input_input_1, [5 x i64]* %dense_13_input_input_shape, i64 %dense_13_kernel_dim_s) nounwind" [Group_5/sample.c:2053]   --->   Operation 35 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 3.41>
+ST_4 : Operation 36 [1/1] (0.00ns)   --->   "%dense_13_output_dim_s = load i64* @dense_13_output_dim, align 8" [Group_5/sample.c:2060]   --->   Operation 36 'load' 'dense_13_output_dim_s' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 37 [1/1] (0.00ns)   --->   "%dense_14_kernel_dim_s = load i64* @dense_14_kernel_dim, align 8" [Group_5/sample.c:2060]   --->   Operation 37 'load' 'dense_14_kernel_dim_s' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 38 [1/1] (0.00ns)   --->   "%dense_14_output_nume_1 = load i64* @dense_14_output_nume, align 8" [Group_5/sample.c:2060]   --->   Operation 38 'load' 'dense_14_output_nume_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 39 [1/1] (0.00ns)   --->   "%dense_13_output_nume_2 = load i64* @dense_13_output_nume, align 8" [Group_5/sample.c:2060]   --->   Operation 39 'load' 'dense_13_output_nume_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 40 [2/2] (3.41ns)   --->   "call fastcc void @k2c_dense.2(i64 %dense_14_output_nume_1, i64 %dense_13_output_dim_s, i64 %dense_13_output_nume_2, i64 %dense_14_kernel_dim_s) nounwind" [Group_5/sample.c:2060]   --->   Operation 40 'call' <Predicate = true> <Delay = 3.41> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 41 [1/2] (0.00ns)   --->   "call fastcc void @k2c_dense.2(i64 %dense_14_output_nume_1, i64 %dense_13_output_dim_s, i64 %dense_13_output_nume_2, i64 %dense_14_kernel_dim_s) nounwind" [Group_5/sample.c:2060]   --->   Operation 41 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 2.99>
+ST_6 : Operation 42 [1/1] (0.00ns)   --->   "%dense_14_output_dim_s = load i64* @dense_14_output_dim, align 8" [Group_5/sample.c:2066]   --->   Operation 42 'load' 'dense_14_output_dim_s' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 43 [1/1] (0.00ns)   --->   "%dense_15_kernel_dim_s = load i64* @dense_15_kernel_dim, align 8" [Group_5/sample.c:2066]   --->   Operation 43 'load' 'dense_15_kernel_dim_s' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 44 [1/1] (0.00ns)   --->   "%dense_15_output_nume_1 = load i64* @dense_15_output_nume, align 8" [Group_5/sample.c:2066]   --->   Operation 44 'load' 'dense_15_output_nume_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 45 [1/1] (0.00ns)   --->   "%dense_14_output_nume_2 = load i64* @dense_14_output_nume, align 8" [Group_5/sample.c:2066]   --->   Operation 45 'load' 'dense_14_output_nume_2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 46 [2/2] (2.99ns)   --->   "call fastcc void @k2c_dense.1(i64 %dense_15_output_nume_1, i64 %dense_14_output_dim_s, i64 %dense_14_output_nume_2, i64 %dense_15_kernel_dim_s) nounwind" [Group_5/sample.c:2066]   --->   Operation 46 'call' <Predicate = true> <Delay = 2.99> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 47 [1/2] (0.00ns)   --->   "call fastcc void @k2c_dense.1(i64 %dense_15_output_nume_1, i64 %dense_14_output_dim_s, i64 %dense_14_output_nume_2, i64 %dense_15_kernel_dim_s) nounwind" [Group_5/sample.c:2066]   --->   Operation 47 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 3.32>
+ST_8 : Operation 48 [1/1] (0.00ns)   --->   "%dense_15_output_dim_s = load i64* @dense_15_output_dim, align 8" [Group_5/sample.c:2072]   --->   Operation 48 'load' 'dense_15_output_dim_s' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 49 [1/1] (0.00ns)   --->   "%dense_16_kernel_dim_s = load i64* @dense_16_kernel_dim, align 8" [Group_5/sample.c:2072]   --->   Operation 49 'load' 'dense_16_kernel_dim_s' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 50 [1/1] (0.00ns)   --->   "%dense_16_output_nume = call i64 @_ssdm_op_Read.ap_auto.i64P(i64* %dense_16_output_numel) nounwind" [Group_5/sample.c:2072]   --->   Operation 50 'read' 'dense_16_output_nume' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 51 [1/1] (0.00ns)   --->   "%dense_15_output_nume_2 = load i64* @dense_15_output_nume, align 8" [Group_5/sample.c:2072]   --->   Operation 51 'load' 'dense_15_output_nume_2' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 52 [2/2] (3.32ns)   --->   "call fastcc void @k2c_dense([1 x float]* %dense_16_output_arrray, i64 %dense_16_output_nume, i64 %dense_15_output_dim_s, i64 %dense_15_output_nume_2, i64 %dense_16_kernel_dim_s, [32 x float]* %dense_16_fwork) nounwind" [Group_5/sample.c:2072]   --->   Operation 52 'call' <Predicate = true> <Delay = 3.32> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 53 [1/2] (0.00ns)   --->   "call fastcc void @k2c_dense([1 x float]* %dense_16_output_arrray, i64 %dense_16_output_nume, i64 %dense_15_output_dim_s, i64 %dense_15_output_nume_2, i64 %dense_16_kernel_dim_s, [32 x float]* %dense_16_fwork) nounwind" [Group_5/sample.c:2072]   --->   Operation 53 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 54 [1/1] (0.00ns)   --->   "ret void" [Group_5/sample.c:2076]   --->   Operation 54 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 1
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ dense_13_input_input_array]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
+Port [ dense_13_input_input_dim]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ dense_13_input_input_numel]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ dense_13_input_input_shape]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ dense_16_output_arrray]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ dense_16_output_dim]:  wired=1; compound=0; hidden=0; nouse=1; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ dense_16_output_numel]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ dense_16_output_shape]:  wired=1; compound=1; hidden=0; nouse=1; global=0; static=0; extern=0; dir=3; type=1; pingpong=0; private_global=0; MemPort=[]; IO mode=ap_memory:ce=0
+Port [ dense_13_kernel_dim]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=1; linkage=0; visibility=0; IO mode=ap_none:ce=0
+Port [ dense_13_output_nume]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=1; linkage=0; visibility=0; IO mode=ap_none:ce=0
+Port [ dense_13_output_arra]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=0; extern=0; dir=2; type=1; pingpong=0; private_global=1; linkage=0; visibility=0; MemPort=[21]; IO mode=ap_memory:ce=0
+Port [ dense_13_kernel_arra]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=0; visibility=0; MemPort=[11]; IO mode=ap_memory:ce=0
+Port [ dense_13_bias_array]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=0; visibility=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ dense_13_kernel_nume]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; linkage=0; visibility=0; IO mode=ap_none:ce=0
+Port [ dense_13_kernel_shap]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=0; visibility=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ dense_13_fwork]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[21]; IO mode=ap_memory:ce=0
+Port [ dense_13_bias_numel]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; linkage=0; visibility=0; IO mode=ap_none:ce=0
+Port [ dense_13_output_dim]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=1; linkage=0; visibility=0; IO mode=ap_none:ce=0
+Port [ dense_14_kernel_dim]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=1; linkage=0; visibility=0; IO mode=ap_none:ce=0
+Port [ dense_14_output_nume]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=1; linkage=0; visibility=0; IO mode=ap_none:ce=0
+Port [ dense_14_output_arra]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=0; extern=0; dir=2; type=1; pingpong=0; private_global=1; linkage=0; visibility=0; MemPort=[21]; IO mode=ap_memory:ce=0
+Port [ dense_14_kernel_arra]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=0; visibility=0; MemPort=[11]; IO mode=ap_memory:ce=0
+Port [ dense_14_bias_array]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=0; visibility=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ dense_14_kernel_nume]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; linkage=0; visibility=0; IO mode=ap_none:ce=0
+Port [ dense_13_output_shap]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=0; visibility=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ dense_14_kernel_shap]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=0; visibility=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ dense_14_fwork]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[21]; IO mode=ap_memory:ce=0
+Port [ dense_14_bias_numel]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; linkage=0; visibility=0; IO mode=ap_none:ce=0
+Port [ dense_14_output_dim]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=1; linkage=0; visibility=0; IO mode=ap_none:ce=0
+Port [ dense_15_kernel_dim]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=1; linkage=0; visibility=0; IO mode=ap_none:ce=0
+Port [ dense_15_output_nume]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=1; linkage=0; visibility=0; IO mode=ap_none:ce=0
+Port [ dense_15_output_arra]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=0; extern=0; dir=2; type=1; pingpong=0; private_global=1; linkage=0; visibility=0; MemPort=[21]; IO mode=ap_memory:ce=0
+Port [ dense_15_kernel_arra]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=0; visibility=0; MemPort=[11]; IO mode=ap_memory:ce=0
+Port [ dense_15_bias_array]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=0; visibility=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ dense_15_kernel_nume]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; linkage=0; visibility=0; IO mode=ap_none:ce=0
+Port [ dense_14_output_shap]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=0; visibility=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ dense_15_kernel_shap]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=0; visibility=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ dense_15_fwork]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[21]; IO mode=ap_memory:ce=0
+Port [ dense_15_bias_numel]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; linkage=0; visibility=0; IO mode=ap_none:ce=0
+Port [ dense_15_output_dim]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=1; linkage=0; visibility=0; IO mode=ap_none:ce=0
+Port [ dense_16_kernel_dim]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=1; linkage=0; visibility=0; IO mode=ap_none:ce=0
+Port [ dense_16_kernel_arra]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=0; visibility=0; MemPort=[11]; IO mode=ap_memory:ce=0
+Port [ dense_16_kernel_nume]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; linkage=0; visibility=0; IO mode=ap_none:ce=0
+Port [ dense_15_output_shap]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=0; visibility=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ dense_16_kernel_shap]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=0; visibility=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ dense_16_bias_numel]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; linkage=0; visibility=0; IO mode=ap_none:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+StgValue_10            (specbitsmap      ) [ 0000000000]
+StgValue_11            (specbitsmap      ) [ 0000000000]
+StgValue_12            (specbitsmap      ) [ 0000000000]
+StgValue_13            (specbitsmap      ) [ 0000000000]
+StgValue_14            (specbitsmap      ) [ 0000000000]
+StgValue_15            (specbitsmap      ) [ 0000000000]
+StgValue_16            (specbitsmap      ) [ 0000000000]
+StgValue_17            (specbitsmap      ) [ 0000000000]
+StgValue_18            (spectopmodule    ) [ 0000000000]
+dense_13_input_input   (read             ) [ 0011000000]
+dense_16_fwork         (alloca           ) [ 0011111111]
+StgValue_21            (br               ) [ 0110000000]
+invdar                 (phi              ) [ 0010000000]
+indvarinc              (add              ) [ 0110000000]
+tmp                    (zext             ) [ 0000000000]
+dense_16_fwork_addr    (getelementptr    ) [ 0000000000]
+StgValue_26            (store            ) [ 0000000000]
+tmp_1                  (icmp             ) [ 0010000000]
+empty                  (specloopname     ) [ 0000000000]
+empty_9                (speclooptripcount) [ 0000000000]
+StgValue_30            (br               ) [ 0110000000]
+dense_13_kernel_dim_s  (load             ) [ 0001000000]
+dense_13_output_nume_1 (load             ) [ 0001000000]
+dense_13_input_input_1 (read             ) [ 0001000000]
+StgValue_35            (call             ) [ 0000000000]
+dense_13_output_dim_s  (load             ) [ 0000010000]
+dense_14_kernel_dim_s  (load             ) [ 0000010000]
+dense_14_output_nume_1 (load             ) [ 0000010000]
+dense_13_output_nume_2 (load             ) [ 0000010000]
+StgValue_41            (call             ) [ 0000000000]
+dense_14_output_dim_s  (load             ) [ 0000000100]
+dense_15_kernel_dim_s  (load             ) [ 0000000100]
+dense_15_output_nume_1 (load             ) [ 0000000100]
+dense_14_output_nume_2 (load             ) [ 0000000100]
+StgValue_47            (call             ) [ 0000000000]
+dense_15_output_dim_s  (load             ) [ 0000000001]
+dense_16_kernel_dim_s  (load             ) [ 0000000001]
+dense_16_output_nume   (read             ) [ 0000000001]
+dense_15_output_nume_2 (load             ) [ 0000000001]
+StgValue_53            (call             ) [ 0000000000]
+StgValue_54            (ret              ) [ 0000000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="dense_13_input_input_array">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_13_input_input_array"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="dense_13_input_input_dim">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_13_input_input_dim"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="dense_13_input_input_numel">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_13_input_input_numel"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="dense_13_input_input_shape">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_13_input_input_shape"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="dense_16_output_arrray">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_16_output_arrray"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="dense_16_output_dim">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_16_output_dim"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="dense_16_output_numel">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_16_output_numel"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1000" name="dense_16_output_shape">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_16_output_shape"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1000" name="dense_13_kernel_dim">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_13_kernel_dim"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1000" name="dense_13_output_nume">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_13_output_nume"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1000" name="dense_13_output_arra">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_13_output_arra"/><MemPortTyVec>2 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1000" name="dense_13_kernel_arra">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_13_kernel_arra"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1000" name="dense_13_bias_array">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_13_bias_array"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1000" name="dense_13_kernel_nume">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_13_kernel_nume"/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1000" name="dense_13_kernel_shap">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_13_kernel_shap"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1000" name="dense_13_fwork">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_13_fwork"/><MemPortTyVec>2 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1000" name="dense_13_bias_numel">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_13_bias_numel"/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1000" name="dense_13_output_dim">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_13_output_dim"/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1000" name="dense_14_kernel_dim">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_14_kernel_dim"/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1000" name="dense_14_output_nume">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_14_output_nume"/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1000" name="dense_14_output_arra">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_14_output_arra"/><MemPortTyVec>2 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1000" name="dense_14_kernel_arra">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_14_kernel_arra"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1000" name="dense_14_bias_array">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_14_bias_array"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1000" name="dense_14_kernel_nume">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_14_kernel_nume"/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1000" name="dense_13_output_shap">
+<pin_list>
+<pin id="49" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_13_output_shap"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="50" class="1000" name="dense_14_kernel_shap">
+<pin_list>
+<pin id="51" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_14_kernel_shap"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="52" class="1000" name="dense_14_fwork">
+<pin_list>
+<pin id="53" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_14_fwork"/><MemPortTyVec>2 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="54" class="1000" name="dense_14_bias_numel">
+<pin_list>
+<pin id="55" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_14_bias_numel"/></StgValue>
+</bind>
+</comp>
+
+<comp id="56" class="1000" name="dense_14_output_dim">
+<pin_list>
+<pin id="57" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_14_output_dim"/></StgValue>
+</bind>
+</comp>
+
+<comp id="58" class="1000" name="dense_15_kernel_dim">
+<pin_list>
+<pin id="59" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_15_kernel_dim"/></StgValue>
+</bind>
+</comp>
+
+<comp id="60" class="1000" name="dense_15_output_nume">
+<pin_list>
+<pin id="61" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_15_output_nume"/></StgValue>
+</bind>
+</comp>
+
+<comp id="62" class="1000" name="dense_15_output_arra">
+<pin_list>
+<pin id="63" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_15_output_arra"/><MemPortTyVec>2 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="64" class="1000" name="dense_15_kernel_arra">
+<pin_list>
+<pin id="65" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_15_kernel_arra"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="66" class="1000" name="dense_15_bias_array">
+<pin_list>
+<pin id="67" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_15_bias_array"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="68" class="1000" name="dense_15_kernel_nume">
+<pin_list>
+<pin id="69" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_15_kernel_nume"/></StgValue>
+</bind>
+</comp>
+
+<comp id="70" class="1000" name="dense_14_output_shap">
+<pin_list>
+<pin id="71" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_14_output_shap"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="72" class="1000" name="dense_15_kernel_shap">
+<pin_list>
+<pin id="73" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_15_kernel_shap"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="74" class="1000" name="dense_15_fwork">
+<pin_list>
+<pin id="75" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_15_fwork"/><MemPortTyVec>2 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="76" class="1000" name="dense_15_bias_numel">
+<pin_list>
+<pin id="77" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_15_bias_numel"/></StgValue>
+</bind>
+</comp>
+
+<comp id="78" class="1000" name="dense_15_output_dim">
+<pin_list>
+<pin id="79" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_15_output_dim"/></StgValue>
+</bind>
+</comp>
+
+<comp id="80" class="1000" name="dense_16_kernel_dim">
+<pin_list>
+<pin id="81" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_16_kernel_dim"/></StgValue>
+</bind>
+</comp>
+
+<comp id="82" class="1000" name="dense_16_kernel_arra">
+<pin_list>
+<pin id="83" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_16_kernel_arra"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="84" class="1000" name="dense_16_kernel_nume">
+<pin_list>
+<pin id="85" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_16_kernel_nume"/></StgValue>
+</bind>
+</comp>
+
+<comp id="86" class="1000" name="dense_15_output_shap">
+<pin_list>
+<pin id="87" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_15_output_shap"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="88" class="1000" name="dense_16_kernel_shap">
+<pin_list>
+<pin id="89" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_16_kernel_shap"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="90" class="1000" name="dense_16_bias_numel">
+<pin_list>
+<pin id="91" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_16_bias_numel"/></StgValue>
+</bind>
+</comp>
+
+<comp id="92" class="1001" name="const_92">
+<pin_list>
+<pin id="93" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
+</bind>
+</comp>
+
+<comp id="94" class="1001" name="const_94">
+<pin_list>
+<pin id="95" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecTopModule"/></StgValue>
+</bind>
+</comp>
+
+<comp id="96" class="1001" name="const_96">
+<pin_list>
+<pin id="97" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="sample_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="98" class="1001" name="const_98">
+<pin_list>
+<pin id="99" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i64"/></StgValue>
+</bind>
+</comp>
+
+<comp id="100" class="1001" name="const_100">
+<pin_list>
+<pin id="101" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="102" class="1001" name="const_102">
+<pin_list>
+<pin id="103" dir="1" index="0" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="104" class="1001" name="const_104">
+<pin_list>
+<pin id="105" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="106" class="1001" name="const_106">
+<pin_list>
+<pin id="107" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="108" class="1001" name="const_108">
+<pin_list>
+<pin id="109" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="110" class="1001" name="const_110">
+<pin_list>
+<pin id="111" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="112" class="1001" name="const_112">
+<pin_list>
+<pin id="113" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecLoopName"/></StgValue>
+</bind>
+</comp>
+
+<comp id="114" class="1001" name="const_114">
+<pin_list>
+<pin id="115" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="memset_dense_16_fwor"/></StgValue>
+</bind>
+</comp>
+
+<comp id="116" class="1001" name="const_116">
+<pin_list>
+<pin id="117" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecLoopTripCount"/></StgValue>
+</bind>
+</comp>
+
+<comp id="118" class="1001" name="const_118">
+<pin_list>
+<pin id="119" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="120" class="1001" name="const_120">
+<pin_list>
+<pin id="121" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i64P"/></StgValue>
+</bind>
+</comp>
+
+<comp id="122" class="1001" name="const_122">
+<pin_list>
+<pin id="123" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="k2c_dense.3"/></StgValue>
+</bind>
+</comp>
+
+<comp id="124" class="1001" name="const_124">
+<pin_list>
+<pin id="125" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="k2c_dense.2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="126" class="1001" name="const_126">
+<pin_list>
+<pin id="127" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="k2c_dense.1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="128" class="1001" name="const_128">
+<pin_list>
+<pin id="129" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="k2c_dense"/></StgValue>
+</bind>
+</comp>
+
+<comp id="130" class="1004" name="dense_16_fwork_alloca_fu_130">
+<pin_list>
+<pin id="131" dir="0" index="0" bw="1" slack="0"/>
+<pin id="132" dir="1" index="1" bw="32" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="dense_16_fwork/1 "/>
+</bind>
+</comp>
+
+<comp id="134" class="1004" name="dense_13_input_input_read_fu_134">
+<pin_list>
+<pin id="135" dir="0" index="0" bw="64" slack="0"/>
+<pin id="136" dir="0" index="1" bw="64" slack="0"/>
+<pin id="137" dir="1" index="2" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="dense_13_input_input/1 "/>
+</bind>
+</comp>
+
+<comp id="140" class="1004" name="dense_13_input_input_1_read_fu_140">
+<pin_list>
+<pin id="141" dir="0" index="0" bw="64" slack="0"/>
+<pin id="142" dir="0" index="1" bw="64" slack="0"/>
+<pin id="143" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="dense_13_input_input_1/2 "/>
+</bind>
+</comp>
+
+<comp id="146" class="1004" name="dense_16_output_nume_read_fu_146">
+<pin_list>
+<pin id="147" dir="0" index="0" bw="64" slack="0"/>
+<pin id="148" dir="0" index="1" bw="64" slack="0"/>
+<pin id="149" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="dense_16_output_nume/8 "/>
+</bind>
+</comp>
+
+<comp id="152" class="1004" name="dense_16_fwork_addr_gep_fu_152">
+<pin_list>
+<pin id="153" dir="0" index="0" bw="32" slack="2147483647"/>
+<pin id="154" dir="0" index="1" bw="1" slack="0"/>
+<pin id="155" dir="0" index="2" bw="5" slack="0"/>
+<pin id="156" dir="1" index="3" bw="5" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="dense_16_fwork_addr/2 "/>
+</bind>
+</comp>
+
+<comp id="158" class="1004" name="StgValue_26_access_fu_158">
+<pin_list>
+<pin id="159" dir="0" index="0" bw="5" slack="0"/>
+<pin id="160" dir="0" index="1" bw="32" slack="0"/>
+<pin id="161" dir="0" index="2" bw="0" slack="2147483647"/>
+<pin id="162" dir="1" index="3" bw="32" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="StgValue_26/2 "/>
+</bind>
+</comp>
+
+<comp id="165" class="1005" name="invdar_reg_165">
+<pin_list>
+<pin id="166" dir="0" index="0" bw="5" slack="1"/>
+<pin id="167" dir="1" index="1" bw="5" slack="1"/>
+</pin_list>
+<bind>
+<opset="invdar (phireg) "/>
+</bind>
+</comp>
+
+<comp id="169" class="1004" name="invdar_phi_fu_169">
+<pin_list>
+<pin id="170" dir="0" index="0" bw="1" slack="1"/>
+<pin id="171" dir="0" index="1" bw="0" slack="2147483647"/>
+<pin id="172" dir="0" index="2" bw="5" slack="0"/>
+<pin id="173" dir="0" index="3" bw="0" slack="2147483647"/>
+<pin id="174" dir="1" index="4" bw="5" slack="0"/>
+</pin_list>
+<bind>
+<opcode="phi(47) " fcode="phi"/>
+<opset="invdar/2 "/>
+</bind>
+</comp>
+
+<comp id="176" class="1004" name="grp_k2c_dense_fu_176">
+<pin_list>
+<pin id="177" dir="0" index="0" bw="0" slack="0"/>
+<pin id="178" dir="0" index="1" bw="32" slack="0"/>
+<pin id="179" dir="0" index="2" bw="64" slack="0"/>
+<pin id="180" dir="0" index="3" bw="64" slack="0"/>
+<pin id="181" dir="0" index="4" bw="64" slack="0"/>
+<pin id="182" dir="0" index="5" bw="64" slack="0"/>
+<pin id="183" dir="0" index="6" bw="32" slack="2147483647"/>
+<pin id="184" dir="0" index="7" bw="32" slack="0"/>
+<pin id="185" dir="0" index="8" bw="32" slack="0"/>
+<pin id="186" dir="0" index="9" bw="64" slack="0"/>
+<pin id="187" dir="0" index="10" bw="64" slack="0"/>
+<pin id="188" dir="0" index="11" bw="64" slack="0"/>
+<pin id="189" dir="0" index="12" bw="64" slack="0"/>
+<pin id="190" dir="1" index="13" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="StgValue_52/8 "/>
+</bind>
+</comp>
+
+<comp id="200" class="1004" name="grp_k2c_dense_3_fu_200">
+<pin_list>
+<pin id="201" dir="0" index="0" bw="0" slack="0"/>
+<pin id="202" dir="0" index="1" bw="64" slack="0"/>
+<pin id="203" dir="0" index="2" bw="32" slack="0"/>
+<pin id="204" dir="0" index="3" bw="64" slack="1"/>
+<pin id="205" dir="0" index="4" bw="64" slack="0"/>
+<pin id="206" dir="0" index="5" bw="64" slack="0"/>
+<pin id="207" dir="0" index="6" bw="64" slack="0"/>
+<pin id="208" dir="0" index="7" bw="32" slack="0"/>
+<pin id="209" dir="0" index="8" bw="32" slack="0"/>
+<pin id="210" dir="0" index="9" bw="32" slack="0"/>
+<pin id="211" dir="0" index="10" bw="64" slack="0"/>
+<pin id="212" dir="0" index="11" bw="64" slack="0"/>
+<pin id="213" dir="0" index="12" bw="32" slack="0"/>
+<pin id="214" dir="0" index="13" bw="64" slack="0"/>
+<pin id="215" dir="1" index="14" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="StgValue_34/2 "/>
+</bind>
+</comp>
+
+<comp id="227" class="1004" name="grp_k2c_dense_2_fu_227">
+<pin_list>
+<pin id="228" dir="0" index="0" bw="0" slack="0"/>
+<pin id="229" dir="0" index="1" bw="64" slack="0"/>
+<pin id="230" dir="0" index="2" bw="64" slack="0"/>
+<pin id="231" dir="0" index="3" bw="64" slack="0"/>
+<pin id="232" dir="0" index="4" bw="64" slack="0"/>
+<pin id="233" dir="0" index="5" bw="32" slack="0"/>
+<pin id="234" dir="0" index="6" bw="32" slack="0"/>
+<pin id="235" dir="0" index="7" bw="32" slack="0"/>
+<pin id="236" dir="0" index="8" bw="32" slack="0"/>
+<pin id="237" dir="0" index="9" bw="64" slack="0"/>
+<pin id="238" dir="0" index="10" bw="64" slack="0"/>
+<pin id="239" dir="0" index="11" bw="64" slack="0"/>
+<pin id="240" dir="0" index="12" bw="32" slack="0"/>
+<pin id="241" dir="0" index="13" bw="64" slack="0"/>
+<pin id="242" dir="1" index="14" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="StgValue_40/4 "/>
+</bind>
+</comp>
+
+<comp id="253" class="1004" name="grp_k2c_dense_1_fu_253">
+<pin_list>
+<pin id="254" dir="0" index="0" bw="0" slack="0"/>
+<pin id="255" dir="0" index="1" bw="64" slack="0"/>
+<pin id="256" dir="0" index="2" bw="64" slack="0"/>
+<pin id="257" dir="0" index="3" bw="64" slack="0"/>
+<pin id="258" dir="0" index="4" bw="64" slack="0"/>
+<pin id="259" dir="0" index="5" bw="32" slack="0"/>
+<pin id="260" dir="0" index="6" bw="32" slack="0"/>
+<pin id="261" dir="0" index="7" bw="32" slack="0"/>
+<pin id="262" dir="0" index="8" bw="32" slack="0"/>
+<pin id="263" dir="0" index="9" bw="64" slack="0"/>
+<pin id="264" dir="0" index="10" bw="64" slack="0"/>
+<pin id="265" dir="0" index="11" bw="64" slack="0"/>
+<pin id="266" dir="0" index="12" bw="32" slack="0"/>
+<pin id="267" dir="0" index="13" bw="64" slack="0"/>
+<pin id="268" dir="1" index="14" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="StgValue_46/6 "/>
+</bind>
+</comp>
+
+<comp id="279" class="1004" name="grp_load_fu_279">
+<pin_list>
+<pin id="280" dir="0" index="0" bw="64" slack="0"/>
+<pin id="281" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="dense_13_output_nume_1/2 dense_13_output_nume_2/4 "/>
+</bind>
+</comp>
+
+<comp id="285" class="1004" name="grp_load_fu_285">
+<pin_list>
+<pin id="286" dir="0" index="0" bw="64" slack="0"/>
+<pin id="287" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="dense_14_output_nume_1/4 dense_14_output_nume_2/6 "/>
+</bind>
+</comp>
+
+<comp id="291" class="1004" name="grp_load_fu_291">
+<pin_list>
+<pin id="292" dir="0" index="0" bw="64" slack="0"/>
+<pin id="293" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="dense_15_output_nume_1/6 dense_15_output_nume_2/8 "/>
+</bind>
+</comp>
+
+<comp id="297" class="1005" name="reg_297">
+<pin_list>
+<pin id="298" dir="0" index="0" bw="64" slack="1"/>
+<pin id="299" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="dense_13_output_nume_1 dense_13_output_nume_2 "/>
+</bind>
+</comp>
+
+<comp id="303" class="1005" name="reg_303">
+<pin_list>
+<pin id="304" dir="0" index="0" bw="64" slack="1"/>
+<pin id="305" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="dense_14_output_nume_1 dense_14_output_nume_2 "/>
+</bind>
+</comp>
+
+<comp id="309" class="1005" name="reg_309">
+<pin_list>
+<pin id="310" dir="0" index="0" bw="64" slack="1"/>
+<pin id="311" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="dense_15_output_nume_1 dense_15_output_nume_2 "/>
+</bind>
+</comp>
+
+<comp id="315" class="1004" name="indvarinc_fu_315">
+<pin_list>
+<pin id="316" dir="0" index="0" bw="5" slack="0"/>
+<pin id="317" dir="0" index="1" bw="1" slack="0"/>
+<pin id="318" dir="1" index="2" bw="5" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="indvarinc/2 "/>
+</bind>
+</comp>
+
+<comp id="321" class="1004" name="tmp_fu_321">
+<pin_list>
+<pin id="322" dir="0" index="0" bw="5" slack="0"/>
+<pin id="323" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="tmp/2 "/>
+</bind>
+</comp>
+
+<comp id="326" class="1004" name="tmp_1_fu_326">
+<pin_list>
+<pin id="327" dir="0" index="0" bw="5" slack="0"/>
+<pin id="328" dir="0" index="1" bw="5" slack="0"/>
+<pin id="329" dir="1" index="2" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="icmp(45) " fcode="icmp"/>
+<opset="tmp_1/2 "/>
+</bind>
+</comp>
+
+<comp id="332" class="1004" name="dense_13_kernel_dim_s_load_fu_332">
+<pin_list>
+<pin id="333" dir="0" index="0" bw="64" slack="0"/>
+<pin id="334" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="dense_13_kernel_dim_s/2 "/>
+</bind>
+</comp>
+
+<comp id="337" class="1004" name="dense_13_output_dim_s_load_fu_337">
+<pin_list>
+<pin id="338" dir="0" index="0" bw="64" slack="0"/>
+<pin id="339" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="dense_13_output_dim_s/4 "/>
+</bind>
+</comp>
+
+<comp id="342" class="1004" name="dense_14_kernel_dim_s_load_fu_342">
+<pin_list>
+<pin id="343" dir="0" index="0" bw="64" slack="0"/>
+<pin id="344" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="dense_14_kernel_dim_s/4 "/>
+</bind>
+</comp>
+
+<comp id="347" class="1004" name="dense_14_output_dim_s_load_fu_347">
+<pin_list>
+<pin id="348" dir="0" index="0" bw="64" slack="0"/>
+<pin id="349" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="dense_14_output_dim_s/6 "/>
+</bind>
+</comp>
+
+<comp id="352" class="1004" name="dense_15_kernel_dim_s_load_fu_352">
+<pin_list>
+<pin id="353" dir="0" index="0" bw="64" slack="0"/>
+<pin id="354" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="dense_15_kernel_dim_s/6 "/>
+</bind>
+</comp>
+
+<comp id="357" class="1004" name="dense_15_output_dim_s_load_fu_357">
+<pin_list>
+<pin id="358" dir="0" index="0" bw="64" slack="0"/>
+<pin id="359" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="dense_15_output_dim_s/8 "/>
+</bind>
+</comp>
+
+<comp id="362" class="1004" name="dense_16_kernel_dim_s_load_fu_362">
+<pin_list>
+<pin id="363" dir="0" index="0" bw="64" slack="0"/>
+<pin id="364" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="dense_16_kernel_dim_s/8 "/>
+</bind>
+</comp>
+
+<comp id="367" class="1005" name="dense_13_input_input_reg_367">
+<pin_list>
+<pin id="368" dir="0" index="0" bw="64" slack="1"/>
+<pin id="369" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="dense_13_input_input "/>
+</bind>
+</comp>
+
+<comp id="372" class="1005" name="indvarinc_reg_372">
+<pin_list>
+<pin id="373" dir="0" index="0" bw="5" slack="0"/>
+<pin id="374" dir="1" index="1" bw="5" slack="0"/>
+</pin_list>
+<bind>
+<opset="indvarinc "/>
+</bind>
+</comp>
+
+<comp id="380" class="1005" name="dense_13_kernel_dim_s_reg_380">
+<pin_list>
+<pin id="381" dir="0" index="0" bw="64" slack="1"/>
+<pin id="382" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="dense_13_kernel_dim_s "/>
+</bind>
+</comp>
+
+<comp id="385" class="1005" name="dense_13_input_input_1_reg_385">
+<pin_list>
+<pin id="386" dir="0" index="0" bw="64" slack="1"/>
+<pin id="387" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="dense_13_input_input_1 "/>
+</bind>
+</comp>
+
+<comp id="390" class="1005" name="dense_13_output_dim_s_reg_390">
+<pin_list>
+<pin id="391" dir="0" index="0" bw="64" slack="1"/>
+<pin id="392" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="dense_13_output_dim_s "/>
+</bind>
+</comp>
+
+<comp id="395" class="1005" name="dense_14_kernel_dim_s_reg_395">
+<pin_list>
+<pin id="396" dir="0" index="0" bw="64" slack="1"/>
+<pin id="397" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="dense_14_kernel_dim_s "/>
+</bind>
+</comp>
+
+<comp id="400" class="1005" name="dense_14_output_dim_s_reg_400">
+<pin_list>
+<pin id="401" dir="0" index="0" bw="64" slack="1"/>
+<pin id="402" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="dense_14_output_dim_s "/>
+</bind>
+</comp>
+
+<comp id="405" class="1005" name="dense_15_kernel_dim_s_reg_405">
+<pin_list>
+<pin id="406" dir="0" index="0" bw="64" slack="1"/>
+<pin id="407" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="dense_15_kernel_dim_s "/>
+</bind>
+</comp>
+
+<comp id="410" class="1005" name="dense_15_output_dim_s_reg_410">
+<pin_list>
+<pin id="411" dir="0" index="0" bw="64" slack="1"/>
+<pin id="412" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="dense_15_output_dim_s "/>
+</bind>
+</comp>
+
+<comp id="415" class="1005" name="dense_16_kernel_dim_s_reg_415">
+<pin_list>
+<pin id="416" dir="0" index="0" bw="64" slack="1"/>
+<pin id="417" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="dense_16_kernel_dim_s "/>
+</bind>
+</comp>
+
+<comp id="420" class="1005" name="dense_16_output_nume_reg_420">
+<pin_list>
+<pin id="421" dir="0" index="0" bw="64" slack="1"/>
+<pin id="422" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="dense_16_output_nume "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="133"><net_src comp="100" pin="0"/><net_sink comp="130" pin=0"/></net>
+
+<net id="138"><net_src comp="98" pin="0"/><net_sink comp="134" pin=0"/></net>
+
+<net id="139"><net_src comp="2" pin="0"/><net_sink comp="134" pin=1"/></net>
+
+<net id="144"><net_src comp="120" pin="0"/><net_sink comp="140" pin=0"/></net>
+
+<net id="145"><net_src comp="4" pin="0"/><net_sink comp="140" pin=1"/></net>
+
+<net id="150"><net_src comp="120" pin="0"/><net_sink comp="146" pin=0"/></net>
+
+<net id="151"><net_src comp="12" pin="0"/><net_sink comp="146" pin=1"/></net>
+
+<net id="157"><net_src comp="106" pin="0"/><net_sink comp="152" pin=1"/></net>
+
+<net id="163"><net_src comp="108" pin="0"/><net_sink comp="158" pin=1"/></net>
+
+<net id="164"><net_src comp="152" pin="3"/><net_sink comp="158" pin=0"/></net>
+
+<net id="168"><net_src comp="102" pin="0"/><net_sink comp="165" pin=0"/></net>
+
+<net id="175"><net_src comp="165" pin="1"/><net_sink comp="169" pin=0"/></net>
+
+<net id="191"><net_src comp="128" pin="0"/><net_sink comp="176" pin=0"/></net>
+
+<net id="192"><net_src comp="8" pin="0"/><net_sink comp="176" pin=1"/></net>
+
+<net id="193"><net_src comp="146" pin="2"/><net_sink comp="176" pin=2"/></net>
+
+<net id="194"><net_src comp="62" pin="0"/><net_sink comp="176" pin=7"/></net>
+
+<net id="195"><net_src comp="82" pin="0"/><net_sink comp="176" pin=8"/></net>
+
+<net id="196"><net_src comp="84" pin="0"/><net_sink comp="176" pin=9"/></net>
+
+<net id="197"><net_src comp="86" pin="0"/><net_sink comp="176" pin=10"/></net>
+
+<net id="198"><net_src comp="88" pin="0"/><net_sink comp="176" pin=11"/></net>
+
+<net id="199"><net_src comp="90" pin="0"/><net_sink comp="176" pin=12"/></net>
+
+<net id="216"><net_src comp="122" pin="0"/><net_sink comp="200" pin=0"/></net>
+
+<net id="217"><net_src comp="0" pin="0"/><net_sink comp="200" pin=2"/></net>
+
+<net id="218"><net_src comp="140" pin="2"/><net_sink comp="200" pin=4"/></net>
+
+<net id="219"><net_src comp="6" pin="0"/><net_sink comp="200" pin=5"/></net>
+
+<net id="220"><net_src comp="20" pin="0"/><net_sink comp="200" pin=7"/></net>
+
+<net id="221"><net_src comp="22" pin="0"/><net_sink comp="200" pin=8"/></net>
+
+<net id="222"><net_src comp="24" pin="0"/><net_sink comp="200" pin=9"/></net>
+
+<net id="223"><net_src comp="26" pin="0"/><net_sink comp="200" pin=10"/></net>
+
+<net id="224"><net_src comp="28" pin="0"/><net_sink comp="200" pin=11"/></net>
+
+<net id="225"><net_src comp="30" pin="0"/><net_sink comp="200" pin=12"/></net>
+
+<net id="226"><net_src comp="32" pin="0"/><net_sink comp="200" pin=13"/></net>
+
+<net id="243"><net_src comp="124" pin="0"/><net_sink comp="227" pin=0"/></net>
+
+<net id="244"><net_src comp="40" pin="0"/><net_sink comp="227" pin=5"/></net>
+
+<net id="245"><net_src comp="20" pin="0"/><net_sink comp="227" pin=6"/></net>
+
+<net id="246"><net_src comp="42" pin="0"/><net_sink comp="227" pin=7"/></net>
+
+<net id="247"><net_src comp="44" pin="0"/><net_sink comp="227" pin=8"/></net>
+
+<net id="248"><net_src comp="46" pin="0"/><net_sink comp="227" pin=9"/></net>
+
+<net id="249"><net_src comp="48" pin="0"/><net_sink comp="227" pin=10"/></net>
+
+<net id="250"><net_src comp="50" pin="0"/><net_sink comp="227" pin=11"/></net>
+
+<net id="251"><net_src comp="52" pin="0"/><net_sink comp="227" pin=12"/></net>
+
+<net id="252"><net_src comp="54" pin="0"/><net_sink comp="227" pin=13"/></net>
+
+<net id="269"><net_src comp="126" pin="0"/><net_sink comp="253" pin=0"/></net>
+
+<net id="270"><net_src comp="62" pin="0"/><net_sink comp="253" pin=5"/></net>
+
+<net id="271"><net_src comp="40" pin="0"/><net_sink comp="253" pin=6"/></net>
+
+<net id="272"><net_src comp="64" pin="0"/><net_sink comp="253" pin=7"/></net>
+
+<net id="273"><net_src comp="66" pin="0"/><net_sink comp="253" pin=8"/></net>
+
+<net id="274"><net_src comp="68" pin="0"/><net_sink comp="253" pin=9"/></net>
+
+<net id="275"><net_src comp="70" pin="0"/><net_sink comp="253" pin=10"/></net>
+
+<net id="276"><net_src comp="72" pin="0"/><net_sink comp="253" pin=11"/></net>
+
+<net id="277"><net_src comp="74" pin="0"/><net_sink comp="253" pin=12"/></net>
+
+<net id="278"><net_src comp="76" pin="0"/><net_sink comp="253" pin=13"/></net>
+
+<net id="282"><net_src comp="18" pin="0"/><net_sink comp="279" pin=0"/></net>
+
+<net id="283"><net_src comp="279" pin="1"/><net_sink comp="200" pin=1"/></net>
+
+<net id="284"><net_src comp="279" pin="1"/><net_sink comp="227" pin=3"/></net>
+
+<net id="288"><net_src comp="38" pin="0"/><net_sink comp="285" pin=0"/></net>
+
+<net id="289"><net_src comp="285" pin="1"/><net_sink comp="227" pin=1"/></net>
+
+<net id="290"><net_src comp="285" pin="1"/><net_sink comp="253" pin=3"/></net>
+
+<net id="294"><net_src comp="60" pin="0"/><net_sink comp="291" pin=0"/></net>
+
+<net id="295"><net_src comp="291" pin="1"/><net_sink comp="253" pin=1"/></net>
+
+<net id="296"><net_src comp="291" pin="1"/><net_sink comp="176" pin=4"/></net>
+
+<net id="300"><net_src comp="279" pin="1"/><net_sink comp="297" pin=0"/></net>
+
+<net id="301"><net_src comp="297" pin="1"/><net_sink comp="200" pin=1"/></net>
+
+<net id="302"><net_src comp="297" pin="1"/><net_sink comp="227" pin=3"/></net>
+
+<net id="306"><net_src comp="285" pin="1"/><net_sink comp="303" pin=0"/></net>
+
+<net id="307"><net_src comp="303" pin="1"/><net_sink comp="227" pin=1"/></net>
+
+<net id="308"><net_src comp="303" pin="1"/><net_sink comp="253" pin=3"/></net>
+
+<net id="312"><net_src comp="291" pin="1"/><net_sink comp="309" pin=0"/></net>
+
+<net id="313"><net_src comp="309" pin="1"/><net_sink comp="253" pin=1"/></net>
+
+<net id="314"><net_src comp="309" pin="1"/><net_sink comp="176" pin=4"/></net>
+
+<net id="319"><net_src comp="169" pin="4"/><net_sink comp="315" pin=0"/></net>
+
+<net id="320"><net_src comp="104" pin="0"/><net_sink comp="315" pin=1"/></net>
+
+<net id="324"><net_src comp="169" pin="4"/><net_sink comp="321" pin=0"/></net>
+
+<net id="325"><net_src comp="321" pin="1"/><net_sink comp="152" pin=2"/></net>
+
+<net id="330"><net_src comp="169" pin="4"/><net_sink comp="326" pin=0"/></net>
+
+<net id="331"><net_src comp="110" pin="0"/><net_sink comp="326" pin=1"/></net>
+
+<net id="335"><net_src comp="16" pin="0"/><net_sink comp="332" pin=0"/></net>
+
+<net id="336"><net_src comp="332" pin="1"/><net_sink comp="200" pin=6"/></net>
+
+<net id="340"><net_src comp="34" pin="0"/><net_sink comp="337" pin=0"/></net>
+
+<net id="341"><net_src comp="337" pin="1"/><net_sink comp="227" pin=2"/></net>
+
+<net id="345"><net_src comp="36" pin="0"/><net_sink comp="342" pin=0"/></net>
+
+<net id="346"><net_src comp="342" pin="1"/><net_sink comp="227" pin=4"/></net>
+
+<net id="350"><net_src comp="56" pin="0"/><net_sink comp="347" pin=0"/></net>
+
+<net id="351"><net_src comp="347" pin="1"/><net_sink comp="253" pin=2"/></net>
+
+<net id="355"><net_src comp="58" pin="0"/><net_sink comp="352" pin=0"/></net>
+
+<net id="356"><net_src comp="352" pin="1"/><net_sink comp="253" pin=4"/></net>
+
+<net id="360"><net_src comp="78" pin="0"/><net_sink comp="357" pin=0"/></net>
+
+<net id="361"><net_src comp="357" pin="1"/><net_sink comp="176" pin=3"/></net>
+
+<net id="365"><net_src comp="80" pin="0"/><net_sink comp="362" pin=0"/></net>
+
+<net id="366"><net_src comp="362" pin="1"/><net_sink comp="176" pin=5"/></net>
+
+<net id="370"><net_src comp="134" pin="2"/><net_sink comp="367" pin=0"/></net>
+
+<net id="371"><net_src comp="367" pin="1"/><net_sink comp="200" pin=3"/></net>
+
+<net id="375"><net_src comp="315" pin="2"/><net_sink comp="372" pin=0"/></net>
+
+<net id="376"><net_src comp="372" pin="1"/><net_sink comp="169" pin=2"/></net>
+
+<net id="383"><net_src comp="332" pin="1"/><net_sink comp="380" pin=0"/></net>
+
+<net id="384"><net_src comp="380" pin="1"/><net_sink comp="200" pin=6"/></net>
+
+<net id="388"><net_src comp="140" pin="2"/><net_sink comp="385" pin=0"/></net>
+
+<net id="389"><net_src comp="385" pin="1"/><net_sink comp="200" pin=4"/></net>
+
+<net id="393"><net_src comp="337" pin="1"/><net_sink comp="390" pin=0"/></net>
+
+<net id="394"><net_src comp="390" pin="1"/><net_sink comp="227" pin=2"/></net>
+
+<net id="398"><net_src comp="342" pin="1"/><net_sink comp="395" pin=0"/></net>
+
+<net id="399"><net_src comp="395" pin="1"/><net_sink comp="227" pin=4"/></net>
+
+<net id="403"><net_src comp="347" pin="1"/><net_sink comp="400" pin=0"/></net>
+
+<net id="404"><net_src comp="400" pin="1"/><net_sink comp="253" pin=2"/></net>
+
+<net id="408"><net_src comp="352" pin="1"/><net_sink comp="405" pin=0"/></net>
+
+<net id="409"><net_src comp="405" pin="1"/><net_sink comp="253" pin=4"/></net>
+
+<net id="413"><net_src comp="357" pin="1"/><net_sink comp="410" pin=0"/></net>
+
+<net id="414"><net_src comp="410" pin="1"/><net_sink comp="176" pin=3"/></net>
+
+<net id="418"><net_src comp="362" pin="1"/><net_sink comp="415" pin=0"/></net>
+
+<net id="419"><net_src comp="415" pin="1"/><net_sink comp="176" pin=5"/></net>
+
+<net id="423"><net_src comp="146" pin="2"/><net_sink comp="420" pin=0"/></net>
+
+<net id="424"><net_src comp="420" pin="1"/><net_sink comp="176" pin=2"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: dense_16_output_arrray | {8 9 }
+	Port: dense_13_output_arra | {2 3 }
+	Port: dense_13_fwork | {2 3 }
+	Port: dense_14_output_arra | {4 5 }
+	Port: dense_14_fwork | {4 5 }
+	Port: dense_15_output_arra | {6 7 }
+	Port: dense_15_fwork | {6 7 }
+ - Input state : 
+	Port: sample : dense_13_input_input_array | {2 3 }
+	Port: sample : dense_13_input_input_dim | {1 }
+	Port: sample : dense_13_input_input_numel | {2 }
+	Port: sample : dense_13_input_input_shape | {2 3 }
+	Port: sample : dense_16_output_arrray | {8 9 }
+	Port: sample : dense_16_output_numel | {8 }
+	Port: sample : dense_13_kernel_dim | {2 }
+	Port: sample : dense_13_output_nume | {2 4 }
+	Port: sample : dense_13_output_arra | {2 3 4 5 }
+	Port: sample : dense_13_kernel_arra | {2 3 }
+	Port: sample : dense_13_bias_array | {2 3 }
+	Port: sample : dense_13_kernel_nume | {2 3 }
+	Port: sample : dense_13_kernel_shap | {2 3 }
+	Port: sample : dense_13_fwork | {2 3 }
+	Port: sample : dense_13_bias_numel | {2 3 }
+	Port: sample : dense_13_output_dim | {4 }
+	Port: sample : dense_14_kernel_dim | {4 }
+	Port: sample : dense_14_output_nume | {4 6 }
+	Port: sample : dense_14_output_arra | {4 5 6 7 }
+	Port: sample : dense_14_kernel_arra | {4 5 }
+	Port: sample : dense_14_bias_array | {4 5 }
+	Port: sample : dense_14_kernel_nume | {4 5 }
+	Port: sample : dense_13_output_shap | {4 5 }
+	Port: sample : dense_14_kernel_shap | {4 5 }
+	Port: sample : dense_14_fwork | {4 5 }
+	Port: sample : dense_14_bias_numel | {4 5 }
+	Port: sample : dense_14_output_dim | {6 }
+	Port: sample : dense_15_kernel_dim | {6 }
+	Port: sample : dense_15_output_nume | {6 8 }
+	Port: sample : dense_15_output_arra | {6 7 8 9 }
+	Port: sample : dense_15_kernel_arra | {6 7 }
+	Port: sample : dense_15_bias_array | {6 7 }
+	Port: sample : dense_15_kernel_nume | {6 7 }
+	Port: sample : dense_14_output_shap | {6 7 }
+	Port: sample : dense_15_kernel_shap | {6 7 }
+	Port: sample : dense_15_fwork | {6 7 }
+	Port: sample : dense_15_bias_numel | {6 7 }
+	Port: sample : dense_15_output_dim | {8 }
+	Port: sample : dense_16_kernel_dim | {8 }
+	Port: sample : dense_16_kernel_arra | {8 9 }
+	Port: sample : dense_16_kernel_nume | {8 9 }
+	Port: sample : dense_15_output_shap | {8 9 }
+	Port: sample : dense_16_kernel_shap | {8 9 }
+	Port: sample : dense_16_bias_numel | {8 9 }
+  - Chain level:
+	State 1
+	State 2
+		indvarinc : 1
+		tmp : 1
+		dense_16_fwork_addr : 2
+		StgValue_26 : 3
+		tmp_1 : 1
+		StgValue_30 : 2
+	State 3
+	State 4
+		StgValue_40 : 1
+	State 5
+	State 6
+		StgValue_46 : 1
+	State 7
+	State 8
+		StgValue_52 : 1
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|------------------------------------|---------|---------|---------|---------|---------|
+| Operation|           Functional Unit          |   BRAM  |  DSP48E |  Delay  |    FF   |   LUT   |
+|----------|------------------------------------|---------|---------|---------|---------|---------|
+|          |        grp_k2c_dense_fu_176        |    4    |    70   | 109.142 |  14575  |   9680  |
+|   call   |       grp_k2c_dense_3_fu_200       |    4    |    82   | 99.9508 |  14838  |   8887  |
+|          |       grp_k2c_dense_2_fu_227       |    4    |    65   | 99.9508 |  13808  |   8282  |
+|          |       grp_k2c_dense_1_fu_253       |    4    |    65   | 102.549 |  13612  |   8241  |
+|----------|------------------------------------|---------|---------|---------|---------|---------|
+|    add   |          indvarinc_fu_315          |    0    |    0    |    0    |    0    |    15   |
+|----------|------------------------------------|---------|---------|---------|---------|---------|
+|   icmp   |            tmp_1_fu_326            |    0    |    0    |    0    |    0    |    11   |
+|----------|------------------------------------|---------|---------|---------|---------|---------|
+|          |  dense_13_input_input_read_fu_134  |    0    |    0    |    0    |    0    |    0    |
+|   read   | dense_13_input_input_1_read_fu_140 |    0    |    0    |    0    |    0    |    0    |
+|          |  dense_16_output_nume_read_fu_146  |    0    |    0    |    0    |    0    |    0    |
+|----------|------------------------------------|---------|---------|---------|---------|---------|
+|   zext   |             tmp_fu_321             |    0    |    0    |    0    |    0    |    0    |
+|----------|------------------------------------|---------|---------|---------|---------|---------|
+|   Total  |                                    |    16   |   282   | 411.592 |  56833  |  35116  |
+|----------|------------------------------------|---------|---------|---------|---------|---------|
+
+Memories:
++--------------------+--------+--------+--------+
+|                    |  BRAM  |   FF   |   LUT  |
++--------------------+--------+--------+--------+
+| dense_13_bias_array|    1   |    0   |    0   |
+|   dense_13_fwork   |    8   |    0   |    0   |
+|dense_13_kernel_arra|    8   |    0   |    0   |
+|dense_13_kernel_shap|    0   |   128  |    5   |
+|dense_13_output_arra|    2   |    0   |    0   |
+|dense_13_output_shap|    0   |   128  |    5   |
+| dense_14_bias_array|    1   |    0   |    0   |
+|   dense_14_fwork   |   16   |    0   |    0   |
+|dense_14_kernel_arra|    8   |    0   |    0   |
+|dense_14_kernel_shap|    0   |   128  |    5   |
+|dense_14_output_arra|    2   |    0   |    0   |
+|dense_14_output_shap|    0   |   128  |    5   |
+| dense_15_bias_array|    0   |   64   |    8   |
+|   dense_15_fwork   |    2   |    0   |    0   |
+|dense_15_kernel_arra|    1   |    0   |    0   |
+|dense_15_kernel_shap|    0   |   128  |    5   |
+|dense_15_output_arra|    0   |   64   |    8   |
+|dense_15_output_shap|    0   |   128  |    5   |
+|   dense_16_fwork   |    2   |    0   |    0   |
+|dense_16_kernel_arra|    0   |   64   |    8   |
+|dense_16_kernel_shap|    0   |   128  |    5   |
++--------------------+--------+--------+--------+
+|        Total       |   51   |  1088  |   59   |
++--------------------+--------+--------+--------+
+
+* Register list:
++------------------------------+--------+
+|                              |   FF   |
++------------------------------+--------+
+|dense_13_input_input_1_reg_385|   64   |
+| dense_13_input_input_reg_367 |   64   |
+| dense_13_kernel_dim_s_reg_380|   64   |
+| dense_13_output_dim_s_reg_390|   64   |
+| dense_14_kernel_dim_s_reg_395|   64   |
+| dense_14_output_dim_s_reg_400|   64   |
+| dense_15_kernel_dim_s_reg_405|   64   |
+| dense_15_output_dim_s_reg_410|   64   |
+| dense_16_kernel_dim_s_reg_415|   64   |
+| dense_16_output_nume_reg_420 |   64   |
+|       indvarinc_reg_372      |    5   |
+|        invdar_reg_165        |    5   |
+|            reg_297           |   64   |
+|            reg_303           |   64   |
+|            reg_309           |   64   |
++------------------------------+--------+
+|             Total            |   842  |
++------------------------------+--------+
+
+* Multiplexer (MUX) list: 
+|------------------------|------|------|------|--------||---------||---------|
+|          Comp          |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|------------------------|------|------|------|--------||---------||---------|
+|  grp_k2c_dense_fu_176  |  p2  |   2  |  64  |   128  ||    9    |
+|  grp_k2c_dense_fu_176  |  p3  |   2  |  64  |   128  ||    9    |
+|  grp_k2c_dense_fu_176  |  p4  |   2  |  64  |   128  ||    9    |
+|  grp_k2c_dense_fu_176  |  p5  |   2  |  64  |   128  ||    9    |
+| grp_k2c_dense_3_fu_200 |  p1  |   2  |  64  |   128  ||    9    |
+| grp_k2c_dense_3_fu_200 |  p4  |   2  |  64  |   128  ||    9    |
+| grp_k2c_dense_3_fu_200 |  p6  |   2  |  64  |   128  ||    9    |
+| grp_k2c_dense_2_fu_227 |  p1  |   2  |  64  |   128  ||    9    |
+| grp_k2c_dense_2_fu_227 |  p2  |   2  |  64  |   128  ||    9    |
+| grp_k2c_dense_2_fu_227 |  p3  |   2  |  64  |   128  ||    9    |
+| grp_k2c_dense_2_fu_227 |  p4  |   2  |  64  |   128  ||    9    |
+| grp_k2c_dense_1_fu_253 |  p1  |   2  |  64  |   128  ||    9    |
+| grp_k2c_dense_1_fu_253 |  p2  |   2  |  64  |   128  ||    9    |
+| grp_k2c_dense_1_fu_253 |  p3  |   2  |  64  |   128  ||    9    |
+| grp_k2c_dense_1_fu_253 |  p4  |   2  |  64  |   128  ||    9    |
+|------------------------|------|------|------|--------||---------||---------|
+|          Total         |      |      |      |  1920  ||  20.25  ||   135   |
+|------------------------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+--------+
+|           |  BRAM  | DSP48E |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+--------+
+|  Function |   16   |   282  |   411  |  56833 |  35116 |
+|   Memory  |   51   |    -   |    -   |  1088  |   59   |
+|Multiplexer|    -   |    -   |   20   |    -   |   135  |
+|  Register |    -   |    -   |    -   |   842  |    -   |
++-----------+--------+--------+--------+--------+--------+
+|   Total   |   67   |   282  |   431  |  58763 |  35310 |
++-----------+--------+--------+--------+--------+--------+

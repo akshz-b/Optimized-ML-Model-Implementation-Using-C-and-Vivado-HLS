@@ -1,0 +1,855 @@
+
+
+================================================================
+== Vivado HLS Report for 'k2c_affine_matmul_3'
+================================================================
+* Date:           Wed Apr 24 12:32:36 2024
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        Group_5
+* Solution:       Resource_optimized
+* Product family: artix7
+* Target device:  xc7a200tfbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.543|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+------+-----+------+---------+
+    |   Latency  |  Interval  | Pipeline|
+    | min |  max | min |  max |   Type  |
+    +-----+------+-----+------+---------+
+    |  135|  2145|  135|  2145|   none  |
+    +-----+------+-----+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------+-----+------+----------+-----------+-----------+--------+----------+
+        |                 |   Latency  | Iteration|  Initiation Interval  |  Trip  |          |
+        |    Loop Name    | min |  max |  Latency |  achieved |   target  |  Count | Pipelined|
+        +-----------------+-----+------+----------+-----------+-----------+--------+----------+
+        |- Loop 1         |  134|  2144|       134|          -|          -| 1 ~ 16 |    no    |
+        | + Loop 1.1      |  132|   132|       132|          -|          -|       1|    no    |
+        |  ++ Loop 1.1.1  |   45|    45|        45|          -|          -|       1|    no    |
+        |  ++ Loop 1.1.2  |   80|    80|        10|          -|          -|       8|    no    |
+        +-----------------+-----+------+----------+-----------+-----------+--------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 62
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond1)
+3 --> 
+	4  / (!j)
+	2  / (j)
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / (!tmp_s)
+	53  / (tmp_s)
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / true
+41 --> 
+	42  / true
+42 --> 
+	43  / true
+43 --> 
+	44  / true
+44 --> 
+	45  / true
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+	50  / true
+50 --> 
+	51  / true
+51 --> 
+	52  / true
+52 --> 
+	8  / true
+53 --> 
+	54  / (!exitcond8)
+	3  / (exitcond8)
+54 --> 
+	55  / true
+55 --> 
+	56  / true
+56 --> 
+	57  / true
+57 --> 
+	58  / true
+58 --> 
+	59  / true
+59 --> 
+	60  / true
+60 --> 
+	61  / true
+61 --> 
+	62  / true
+62 --> 
+	53  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.35>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%outrows_read = call i5 @_ssdm_op_Read.ap_auto.i5(i5 %outrows)"   --->   Operation 63 'read' 'outrows_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%B_addr_1 = getelementptr [16 x float]* %B, i64 0, i64 1" [Group_5/sample.c:1817]   --->   Operation 64 'getelementptr' 'B_addr_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%B_addr_2 = getelementptr [16 x float]* %B, i64 0, i64 2" [Group_5/sample.c:1819]   --->   Operation 65 'getelementptr' 'B_addr_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%B_addr_3 = getelementptr [16 x float]* %B, i64 0, i64 3" [Group_5/sample.c:1821]   --->   Operation 66 'getelementptr' 'B_addr_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%B_addr_4 = getelementptr [16 x float]* %B, i64 0, i64 4" [Group_5/sample.c:1823]   --->   Operation 67 'getelementptr' 'B_addr_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%B_addr_5 = getelementptr [16 x float]* %B, i64 0, i64 5" [Group_5/sample.c:1825]   --->   Operation 68 'getelementptr' 'B_addr_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%B_addr_6 = getelementptr [16 x float]* %B, i64 0, i64 6" [Group_5/sample.c:1827]   --->   Operation 69 'getelementptr' 'B_addr_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%B_addr_7 = getelementptr [16 x float]* %B, i64 0, i64 7" [Group_5/sample.c:1829]   --->   Operation 70 'getelementptr' 'B_addr_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (1.35ns)   --->   "br label %.loopexit" [Group_5/sample.c:1800]   --->   Operation 71 'br' <Predicate = true> <Delay = 1.35>
+
+State 2 <SV = 1> <Delay = 1.54>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%outrowidx = phi i5 [ 0, %0 ], [ %i, %.loopexit.loopexit ]"   --->   Operation 72 'phi' 'outrowidx' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 73 [1/1] (0.00ns)   --->   "%tmp = trunc i5 %outrowidx to i2" [Group_5/sample.c:1800]   --->   Operation 73 'trunc' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 74 [1/1] (1.21ns)   --->   "%exitcond1 = icmp eq i5 %outrowidx, %outrows_read" [Group_5/sample.c:1800]   --->   Operation 74 'icmp' 'exitcond1' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1, i64 16, i64 0)"   --->   Operation 75 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 76 [1/1] (1.54ns)   --->   "%i = add i5 1, %outrowidx" [Group_5/sample.c:1800]   --->   Operation 76 'add' 'i' <Predicate = true> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.20> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 77 [1/1] (0.00ns)   --->   "br i1 %exitcond1, label %8, label %1" [Group_5/sample.c:1800]   --->   Operation 77 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 78 [1/1] (0.00ns)   --->   "%inneridx = call i6 @_ssdm_op_BitConcatenate.i6.i2.i4(i2 %tmp, i4 0)" [Group_5/sample.c:1802]   --->   Operation 78 'bitconcatenate' 'inneridx' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 79 [1/1] (1.35ns)   --->   "br label %2" [Group_5/sample.c:1805]   --->   Operation 79 'br' <Predicate = (!exitcond1)> <Delay = 1.35>
+ST_2 : Operation 80 [1/1] (0.00ns)   --->   "ret void" [Group_5/sample.c:1977]   --->   Operation 80 'ret' <Predicate = (exitcond1)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.75>
+ST_3 : Operation 81 [1/1] (0.00ns)   --->   "%j = phi i1 [ false, %1 ], [ true, %7 ]"   --->   Operation 81 'phi' 'j' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 82 [1/1] (0.00ns)   --->   "%j_cast = zext i1 %j to i2" [Group_5/sample.c:1805]   --->   Operation 82 'zext' 'j_cast' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 83 [1/1] (0.00ns)   --->   "%empty_17 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1, i64 1, i64 1)"   --->   Operation 83 'speclooptripcount' 'empty_17' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 84 [1/1] (0.00ns)   --->   "br i1 %j, label %.loopexit.loopexit, label %3" [Group_5/sample.c:1805]   --->   Operation 84 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 85 [2/2] (1.75ns)   --->   "%b1 = load float* %B_addr_1, align 4" [Group_5/sample.c:1817]   --->   Operation 85 'load' 'b1' <Predicate = (!j)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_3 : Operation 86 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 86 'br' <Predicate = (j)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 1.75>
+ST_4 : Operation 87 [1/2] (1.75ns)   --->   "%b1 = load float* %B_addr_1, align 4" [Group_5/sample.c:1817]   --->   Operation 87 'load' 'b1' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_4 : Operation 88 [2/2] (1.75ns)   --->   "%b2 = load float* %B_addr_2, align 4" [Group_5/sample.c:1819]   --->   Operation 88 'load' 'b2' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_4 : Operation 89 [2/2] (1.75ns)   --->   "%b3 = load float* %B_addr_3, align 4" [Group_5/sample.c:1821]   --->   Operation 89 'load' 'b3' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+
+State 5 <SV = 4> <Delay = 1.75>
+ST_5 : Operation 90 [1/2] (1.75ns)   --->   "%b2 = load float* %B_addr_2, align 4" [Group_5/sample.c:1819]   --->   Operation 90 'load' 'b2' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_5 : Operation 91 [1/2] (1.75ns)   --->   "%b3 = load float* %B_addr_3, align 4" [Group_5/sample.c:1821]   --->   Operation 91 'load' 'b3' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_5 : Operation 92 [2/2] (1.75ns)   --->   "%b4 = load float* %B_addr_4, align 4" [Group_5/sample.c:1823]   --->   Operation 92 'load' 'b4' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_5 : Operation 93 [2/2] (1.75ns)   --->   "%b5 = load float* %B_addr_5, align 4" [Group_5/sample.c:1825]   --->   Operation 93 'load' 'b5' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+
+State 6 <SV = 5> <Delay = 1.75>
+ST_6 : Operation 94 [1/2] (1.75ns)   --->   "%b4 = load float* %B_addr_4, align 4" [Group_5/sample.c:1823]   --->   Operation 94 'load' 'b4' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_6 : Operation 95 [1/2] (1.75ns)   --->   "%b5 = load float* %B_addr_5, align 4" [Group_5/sample.c:1825]   --->   Operation 95 'load' 'b5' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_6 : Operation 96 [2/2] (1.75ns)   --->   "%b6 = load float* %B_addr_6, align 4" [Group_5/sample.c:1827]   --->   Operation 96 'load' 'b6' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_6 : Operation 97 [2/2] (1.75ns)   --->   "%b7 = load float* %B_addr_7, align 4" [Group_5/sample.c:1829]   --->   Operation 97 'load' 'b7' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+
+State 7 <SV = 6> <Delay = 1.75>
+ST_7 : Operation 98 [1/2] (1.75ns)   --->   "%b6 = load float* %B_addr_6, align 4" [Group_5/sample.c:1827]   --->   Operation 98 'load' 'b6' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_7 : Operation 99 [1/2] (1.75ns)   --->   "%b7 = load float* %B_addr_7, align 4" [Group_5/sample.c:1829]   --->   Operation 99 'load' 'b7' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_7 : Operation 100 [1/1] (1.35ns)   --->   "br label %4" [Group_5/sample.c:1811]   --->   Operation 100 'br' <Predicate = true> <Delay = 1.35>
+
+State 8 <SV = 7> <Delay = 1.75>
+ST_8 : Operation 101 [1/1] (0.00ns)   --->   "%temp3 = phi float [ 0xBFA3F6A9E0000000, %3 ], [ %temp, %5 ]"   --->   Operation 101 'phi' 'temp3' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 102 [1/1] (0.00ns)   --->   "%k = phi i4 [ 0, %3 ], [ %k_2, %5 ]" [Group_5/sample.c:1811]   --->   Operation 102 'phi' 'k' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 103 [1/1] (1.21ns)   --->   "%tmp_s = icmp eq i4 %k, -8" [Group_5/sample.c:1811]   --->   Operation 103 'icmp' 'tmp_s' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 104 [1/1] (0.00ns)   --->   "%empty_18 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1, i64 1, i64 1)"   --->   Operation 104 'speclooptripcount' 'empty_18' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 105 [1/1] (0.00ns)   --->   "br i1 %tmp_s, label %.preheader.preheader, label %5" [Group_5/sample.c:1811]   --->   Operation 105 'br' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 106 [1/1] (0.00ns)   --->   "%sum3 = call i6 @_ssdm_op_BitConcatenate.i6.i2.i4(i2 %tmp, i4 %k)" [Group_5/sample.c:1800]   --->   Operation 106 'bitconcatenate' 'sum3' <Predicate = (!tmp_s)> <Delay = 0.00>
+ST_8 : Operation 107 [1/1] (0.00ns)   --->   "%sum3_cast = zext i6 %sum3 to i64" [Group_5/sample.c:1800]   --->   Operation 107 'zext' 'sum3_cast' <Predicate = (!tmp_s)> <Delay = 0.00>
+ST_8 : Operation 108 [1/1] (0.00ns)   --->   "%A_addr = getelementptr [16 x float]* %A, i64 0, i64 %sum3_cast" [Group_5/sample.c:1814]   --->   Operation 108 'getelementptr' 'A_addr' <Predicate = (!tmp_s)> <Delay = 0.00>
+ST_8 : Operation 109 [2/2] (1.75ns)   --->   "%a0 = load float* %A_addr, align 4" [Group_5/sample.c:1814]   --->   Operation 109 'load' 'a0' <Predicate = (!tmp_s)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_8 : Operation 110 [1/1] (0.00ns)   --->   "%sum1_cast = zext i4 %k to i64" [Group_5/sample.c:1811]   --->   Operation 110 'zext' 'sum1_cast' <Predicate = (!tmp_s)> <Delay = 0.00>
+ST_8 : Operation 111 [1/1] (0.00ns)   --->   "%B_addr = getelementptr [16 x float]* %B, i64 0, i64 %sum1_cast" [Group_5/sample.c:1815]   --->   Operation 111 'getelementptr' 'B_addr' <Predicate = (!tmp_s)> <Delay = 0.00>
+ST_8 : Operation 112 [2/2] (1.75ns)   --->   "%b0 = load float* %B_addr, align 4" [Group_5/sample.c:1815]   --->   Operation 112 'load' 'b0' <Predicate = (!tmp_s)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_8 : Operation 113 [1/1] (0.00ns)   --->   "%sum5 = or i6 %sum3, 1" [Group_5/sample.c:1800]   --->   Operation 113 'or' 'sum5' <Predicate = (!tmp_s)> <Delay = 0.00>
+ST_8 : Operation 114 [1/1] (0.00ns)   --->   "%sum5_cast = zext i6 %sum5 to i64" [Group_5/sample.c:1800]   --->   Operation 114 'zext' 'sum5_cast' <Predicate = (!tmp_s)> <Delay = 0.00>
+ST_8 : Operation 115 [1/1] (0.00ns)   --->   "%A_addr_1 = getelementptr [16 x float]* %A, i64 0, i64 %sum5_cast" [Group_5/sample.c:1816]   --->   Operation 115 'getelementptr' 'A_addr_1' <Predicate = (!tmp_s)> <Delay = 0.00>
+ST_8 : Operation 116 [2/2] (1.75ns)   --->   "%a1 = load float* %A_addr_1, align 4" [Group_5/sample.c:1816]   --->   Operation 116 'load' 'a1' <Predicate = (!tmp_s)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_8 : Operation 117 [1/1] (0.79ns)   --->   "%k_2 = xor i4 %k, -8" [Group_5/sample.c:1811]   --->   Operation 117 'xor' 'k_2' <Predicate = (!tmp_s)> <Delay = 0.79> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 118 [1/1] (1.35ns)   --->   "br label %.preheader"   --->   Operation 118 'br' <Predicate = (tmp_s)> <Delay = 1.35>
+
+State 9 <SV = 8> <Delay = 1.75>
+ST_9 : Operation 119 [1/2] (1.75ns)   --->   "%a0 = load float* %A_addr, align 4" [Group_5/sample.c:1814]   --->   Operation 119 'load' 'a0' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_9 : Operation 120 [1/2] (1.75ns)   --->   "%b0 = load float* %B_addr, align 4" [Group_5/sample.c:1815]   --->   Operation 120 'load' 'b0' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_9 : Operation 121 [1/2] (1.75ns)   --->   "%a1 = load float* %A_addr_1, align 4" [Group_5/sample.c:1816]   --->   Operation 121 'load' 'a1' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+
+State 10 <SV = 9> <Delay = 8.54>
+ST_10 : Operation 122 [3/3] (8.54ns)   --->   "%tmp_25 = fmul float %a0, %b0" [Group_5/sample.c:1832]   --->   Operation 122 'fmul' 'tmp_25' <Predicate = true> <Delay = 8.54> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 2> <II = 1> <Delay = 8.54> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 123 [3/3] (8.54ns)   --->   "%tmp_26 = fmul float %a1, %b1" [Group_5/sample.c:1832]   --->   Operation 123 'fmul' 'tmp_26' <Predicate = true> <Delay = 8.54> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 2> <II = 1> <Delay = 8.54> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 8.54>
+ST_11 : Operation 124 [2/3] (8.54ns)   --->   "%tmp_25 = fmul float %a0, %b0" [Group_5/sample.c:1832]   --->   Operation 124 'fmul' 'tmp_25' <Predicate = true> <Delay = 8.54> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 2> <II = 1> <Delay = 8.54> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 125 [2/3] (8.54ns)   --->   "%tmp_26 = fmul float %a1, %b1" [Group_5/sample.c:1832]   --->   Operation 125 'fmul' 'tmp_26' <Predicate = true> <Delay = 8.54> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 2> <II = 1> <Delay = 8.54> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 8.54>
+ST_12 : Operation 126 [1/3] (8.54ns)   --->   "%tmp_25 = fmul float %a0, %b0" [Group_5/sample.c:1832]   --->   Operation 126 'fmul' 'tmp_25' <Predicate = true> <Delay = 8.54> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 2> <II = 1> <Delay = 8.54> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 127 [1/3] (8.54ns)   --->   "%tmp_26 = fmul float %a1, %b1" [Group_5/sample.c:1832]   --->   Operation 127 'fmul' 'tmp_26' <Predicate = true> <Delay = 8.54> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 2> <II = 1> <Delay = 8.54> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 6.51>
+ST_13 : Operation 128 [1/1] (0.00ns)   --->   "%sum7 = or i6 %sum3, 2" [Group_5/sample.c:1800]   --->   Operation 128 'or' 'sum7' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 129 [1/1] (0.00ns)   --->   "%sum7_cast = zext i6 %sum7 to i64" [Group_5/sample.c:1800]   --->   Operation 129 'zext' 'sum7_cast' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 130 [1/1] (0.00ns)   --->   "%A_addr_2 = getelementptr [16 x float]* %A, i64 0, i64 %sum7_cast" [Group_5/sample.c:1818]   --->   Operation 130 'getelementptr' 'A_addr_2' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 131 [2/2] (1.75ns)   --->   "%a2 = load float* %A_addr_2, align 4" [Group_5/sample.c:1818]   --->   Operation 131 'load' 'a2' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_13 : Operation 132 [5/5] (6.51ns)   --->   "%tmp_27 = fadd float %tmp_25, %tmp_26" [Group_5/sample.c:1832]   --->   Operation 132 'fadd' 'tmp_27' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 6.51>
+ST_14 : Operation 133 [1/2] (1.75ns)   --->   "%a2 = load float* %A_addr_2, align 4" [Group_5/sample.c:1818]   --->   Operation 133 'load' 'a2' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_14 : Operation 134 [4/5] (6.51ns)   --->   "%tmp_27 = fadd float %tmp_25, %tmp_26" [Group_5/sample.c:1832]   --->   Operation 134 'fadd' 'tmp_27' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 8.54>
+ST_15 : Operation 135 [3/5] (6.51ns)   --->   "%tmp_27 = fadd float %tmp_25, %tmp_26" [Group_5/sample.c:1832]   --->   Operation 135 'fadd' 'tmp_27' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 136 [3/3] (8.54ns)   --->   "%tmp_28 = fmul float %a2, %b2" [Group_5/sample.c:1832]   --->   Operation 136 'fmul' 'tmp_28' <Predicate = true> <Delay = 8.54> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 2> <II = 1> <Delay = 8.54> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 8.54>
+ST_16 : Operation 137 [2/5] (6.51ns)   --->   "%tmp_27 = fadd float %tmp_25, %tmp_26" [Group_5/sample.c:1832]   --->   Operation 137 'fadd' 'tmp_27' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 138 [2/3] (8.54ns)   --->   "%tmp_28 = fmul float %a2, %b2" [Group_5/sample.c:1832]   --->   Operation 138 'fmul' 'tmp_28' <Predicate = true> <Delay = 8.54> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 2> <II = 1> <Delay = 8.54> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 8.54>
+ST_17 : Operation 139 [1/5] (6.51ns)   --->   "%tmp_27 = fadd float %tmp_25, %tmp_26" [Group_5/sample.c:1832]   --->   Operation 139 'fadd' 'tmp_27' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 140 [1/3] (8.54ns)   --->   "%tmp_28 = fmul float %a2, %b2" [Group_5/sample.c:1832]   --->   Operation 140 'fmul' 'tmp_28' <Predicate = true> <Delay = 8.54> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 2> <II = 1> <Delay = 8.54> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 6.51>
+ST_18 : Operation 141 [1/1] (0.00ns)   --->   "%sum9 = or i6 %sum3, 3" [Group_5/sample.c:1800]   --->   Operation 141 'or' 'sum9' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 142 [1/1] (0.00ns)   --->   "%sum9_cast = zext i6 %sum9 to i64" [Group_5/sample.c:1800]   --->   Operation 142 'zext' 'sum9_cast' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 143 [1/1] (0.00ns)   --->   "%A_addr_3 = getelementptr [16 x float]* %A, i64 0, i64 %sum9_cast" [Group_5/sample.c:1820]   --->   Operation 143 'getelementptr' 'A_addr_3' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 144 [2/2] (1.75ns)   --->   "%a3 = load float* %A_addr_3, align 4" [Group_5/sample.c:1820]   --->   Operation 144 'load' 'a3' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_18 : Operation 145 [5/5] (6.51ns)   --->   "%tmp_29 = fadd float %tmp_27, %tmp_28" [Group_5/sample.c:1832]   --->   Operation 145 'fadd' 'tmp_29' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 6.51>
+ST_19 : Operation 146 [1/2] (1.75ns)   --->   "%a3 = load float* %A_addr_3, align 4" [Group_5/sample.c:1820]   --->   Operation 146 'load' 'a3' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_19 : Operation 147 [1/1] (0.00ns)   --->   "%sum8 = or i6 %sum3, 4" [Group_5/sample.c:1800]   --->   Operation 147 'or' 'sum8' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 148 [1/1] (0.00ns)   --->   "%sum8_cast = zext i6 %sum8 to i64" [Group_5/sample.c:1800]   --->   Operation 148 'zext' 'sum8_cast' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 149 [1/1] (0.00ns)   --->   "%A_addr_4 = getelementptr [16 x float]* %A, i64 0, i64 %sum8_cast" [Group_5/sample.c:1822]   --->   Operation 149 'getelementptr' 'A_addr_4' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 150 [2/2] (1.75ns)   --->   "%a4 = load float* %A_addr_4, align 4" [Group_5/sample.c:1822]   --->   Operation 150 'load' 'a4' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_19 : Operation 151 [1/1] (0.00ns)   --->   "%sum1 = or i6 %sum3, 5" [Group_5/sample.c:1800]   --->   Operation 151 'or' 'sum1' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 152 [1/1] (0.00ns)   --->   "%sum11_cast = zext i6 %sum1 to i64" [Group_5/sample.c:1800]   --->   Operation 152 'zext' 'sum11_cast' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 153 [1/1] (0.00ns)   --->   "%A_addr_5 = getelementptr [16 x float]* %A, i64 0, i64 %sum11_cast" [Group_5/sample.c:1824]   --->   Operation 153 'getelementptr' 'A_addr_5' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 154 [2/2] (1.75ns)   --->   "%a5 = load float* %A_addr_5, align 4" [Group_5/sample.c:1824]   --->   Operation 154 'load' 'a5' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_19 : Operation 155 [4/5] (6.51ns)   --->   "%tmp_29 = fadd float %tmp_27, %tmp_28" [Group_5/sample.c:1832]   --->   Operation 155 'fadd' 'tmp_29' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 8.54>
+ST_20 : Operation 156 [1/2] (1.75ns)   --->   "%a4 = load float* %A_addr_4, align 4" [Group_5/sample.c:1822]   --->   Operation 156 'load' 'a4' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_20 : Operation 157 [1/2] (1.75ns)   --->   "%a5 = load float* %A_addr_5, align 4" [Group_5/sample.c:1824]   --->   Operation 157 'load' 'a5' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_20 : Operation 158 [1/1] (0.00ns)   --->   "%sum2 = or i6 %sum3, 6" [Group_5/sample.c:1800]   --->   Operation 158 'or' 'sum2' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 159 [1/1] (0.00ns)   --->   "%sum13_cast = zext i6 %sum2 to i64" [Group_5/sample.c:1800]   --->   Operation 159 'zext' 'sum13_cast' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 160 [1/1] (0.00ns)   --->   "%A_addr_6 = getelementptr [16 x float]* %A, i64 0, i64 %sum13_cast" [Group_5/sample.c:1826]   --->   Operation 160 'getelementptr' 'A_addr_6' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 161 [2/2] (1.75ns)   --->   "%a6 = load float* %A_addr_6, align 4" [Group_5/sample.c:1826]   --->   Operation 161 'load' 'a6' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_20 : Operation 162 [1/1] (0.00ns)   --->   "%sum4 = or i6 %sum3, 7" [Group_5/sample.c:1800]   --->   Operation 162 'or' 'sum4' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 163 [1/1] (0.00ns)   --->   "%sum15_cast = zext i6 %sum4 to i64" [Group_5/sample.c:1800]   --->   Operation 163 'zext' 'sum15_cast' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 164 [1/1] (0.00ns)   --->   "%A_addr_7 = getelementptr [16 x float]* %A, i64 0, i64 %sum15_cast" [Group_5/sample.c:1828]   --->   Operation 164 'getelementptr' 'A_addr_7' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 165 [2/2] (1.75ns)   --->   "%a7 = load float* %A_addr_7, align 4" [Group_5/sample.c:1828]   --->   Operation 165 'load' 'a7' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_20 : Operation 166 [3/5] (6.51ns)   --->   "%tmp_29 = fadd float %tmp_27, %tmp_28" [Group_5/sample.c:1832]   --->   Operation 166 'fadd' 'tmp_29' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 167 [3/3] (8.54ns)   --->   "%tmp_30 = fmul float %a3, %b3" [Group_5/sample.c:1832]   --->   Operation 167 'fmul' 'tmp_30' <Predicate = true> <Delay = 8.54> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 2> <II = 1> <Delay = 8.54> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 8.54>
+ST_21 : Operation 168 [1/2] (1.75ns)   --->   "%a6 = load float* %A_addr_6, align 4" [Group_5/sample.c:1826]   --->   Operation 168 'load' 'a6' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_21 : Operation 169 [1/2] (1.75ns)   --->   "%a7 = load float* %A_addr_7, align 4" [Group_5/sample.c:1828]   --->   Operation 169 'load' 'a7' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_21 : Operation 170 [2/5] (6.51ns)   --->   "%tmp_29 = fadd float %tmp_27, %tmp_28" [Group_5/sample.c:1832]   --->   Operation 170 'fadd' 'tmp_29' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 171 [2/3] (8.54ns)   --->   "%tmp_30 = fmul float %a3, %b3" [Group_5/sample.c:1832]   --->   Operation 171 'fmul' 'tmp_30' <Predicate = true> <Delay = 8.54> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 2> <II = 1> <Delay = 8.54> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 172 [3/3] (8.54ns)   --->   "%tmp_32 = fmul float %a4, %b4" [Group_5/sample.c:1832]   --->   Operation 172 'fmul' 'tmp_32' <Predicate = true> <Delay = 8.54> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 2> <II = 1> <Delay = 8.54> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 173 [3/3] (8.54ns)   --->   "%tmp_34 = fmul float %a5, %b5" [Group_5/sample.c:1832]   --->   Operation 173 'fmul' 'tmp_34' <Predicate = true> <Delay = 8.54> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 2> <II = 1> <Delay = 8.54> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 8.54>
+ST_22 : Operation 174 [1/5] (6.51ns)   --->   "%tmp_29 = fadd float %tmp_27, %tmp_28" [Group_5/sample.c:1832]   --->   Operation 174 'fadd' 'tmp_29' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 175 [1/3] (8.54ns)   --->   "%tmp_30 = fmul float %a3, %b3" [Group_5/sample.c:1832]   --->   Operation 175 'fmul' 'tmp_30' <Predicate = true> <Delay = 8.54> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 2> <II = 1> <Delay = 8.54> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 176 [2/3] (8.54ns)   --->   "%tmp_32 = fmul float %a4, %b4" [Group_5/sample.c:1832]   --->   Operation 176 'fmul' 'tmp_32' <Predicate = true> <Delay = 8.54> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 2> <II = 1> <Delay = 8.54> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 177 [2/3] (8.54ns)   --->   "%tmp_34 = fmul float %a5, %b5" [Group_5/sample.c:1832]   --->   Operation 177 'fmul' 'tmp_34' <Predicate = true> <Delay = 8.54> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 2> <II = 1> <Delay = 8.54> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 178 [3/3] (8.54ns)   --->   "%tmp_36 = fmul float %a6, %b6" [Group_5/sample.c:1832]   --->   Operation 178 'fmul' 'tmp_36' <Predicate = true> <Delay = 8.54> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 2> <II = 1> <Delay = 8.54> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 179 [3/3] (8.54ns)   --->   "%tmp_38 = fmul float %a7, %b7" [Group_5/sample.c:1832]   --->   Operation 179 'fmul' 'tmp_38' <Predicate = true> <Delay = 8.54> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 2> <II = 1> <Delay = 8.54> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 8.54>
+ST_23 : Operation 180 [5/5] (6.51ns)   --->   "%tmp_31 = fadd float %tmp_29, %tmp_30" [Group_5/sample.c:1832]   --->   Operation 180 'fadd' 'tmp_31' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 181 [1/3] (8.54ns)   --->   "%tmp_32 = fmul float %a4, %b4" [Group_5/sample.c:1832]   --->   Operation 181 'fmul' 'tmp_32' <Predicate = true> <Delay = 8.54> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 2> <II = 1> <Delay = 8.54> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 182 [1/3] (8.54ns)   --->   "%tmp_34 = fmul float %a5, %b5" [Group_5/sample.c:1832]   --->   Operation 182 'fmul' 'tmp_34' <Predicate = true> <Delay = 8.54> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 2> <II = 1> <Delay = 8.54> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 183 [2/3] (8.54ns)   --->   "%tmp_36 = fmul float %a6, %b6" [Group_5/sample.c:1832]   --->   Operation 183 'fmul' 'tmp_36' <Predicate = true> <Delay = 8.54> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 2> <II = 1> <Delay = 8.54> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 184 [2/3] (8.54ns)   --->   "%tmp_38 = fmul float %a7, %b7" [Group_5/sample.c:1832]   --->   Operation 184 'fmul' 'tmp_38' <Predicate = true> <Delay = 8.54> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 2> <II = 1> <Delay = 8.54> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 23> <Delay = 8.54>
+ST_24 : Operation 185 [4/5] (6.51ns)   --->   "%tmp_31 = fadd float %tmp_29, %tmp_30" [Group_5/sample.c:1832]   --->   Operation 185 'fadd' 'tmp_31' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 186 [1/3] (8.54ns)   --->   "%tmp_36 = fmul float %a6, %b6" [Group_5/sample.c:1832]   --->   Operation 186 'fmul' 'tmp_36' <Predicate = true> <Delay = 8.54> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 2> <II = 1> <Delay = 8.54> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 187 [1/3] (8.54ns)   --->   "%tmp_38 = fmul float %a7, %b7" [Group_5/sample.c:1832]   --->   Operation 187 'fmul' 'tmp_38' <Predicate = true> <Delay = 8.54> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 2> <II = 1> <Delay = 8.54> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 24> <Delay = 6.51>
+ST_25 : Operation 188 [3/5] (6.51ns)   --->   "%tmp_31 = fadd float %tmp_29, %tmp_30" [Group_5/sample.c:1832]   --->   Operation 188 'fadd' 'tmp_31' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 25> <Delay = 6.51>
+ST_26 : Operation 189 [2/5] (6.51ns)   --->   "%tmp_31 = fadd float %tmp_29, %tmp_30" [Group_5/sample.c:1832]   --->   Operation 189 'fadd' 'tmp_31' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 26> <Delay = 6.51>
+ST_27 : Operation 190 [1/5] (6.51ns)   --->   "%tmp_31 = fadd float %tmp_29, %tmp_30" [Group_5/sample.c:1832]   --->   Operation 190 'fadd' 'tmp_31' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 28 <SV = 27> <Delay = 6.51>
+ST_28 : Operation 191 [5/5] (6.51ns)   --->   "%tmp_33 = fadd float %tmp_31, %tmp_32" [Group_5/sample.c:1832]   --->   Operation 191 'fadd' 'tmp_33' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 29 <SV = 28> <Delay = 6.51>
+ST_29 : Operation 192 [4/5] (6.51ns)   --->   "%tmp_33 = fadd float %tmp_31, %tmp_32" [Group_5/sample.c:1832]   --->   Operation 192 'fadd' 'tmp_33' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 30 <SV = 29> <Delay = 6.51>
+ST_30 : Operation 193 [3/5] (6.51ns)   --->   "%tmp_33 = fadd float %tmp_31, %tmp_32" [Group_5/sample.c:1832]   --->   Operation 193 'fadd' 'tmp_33' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 31 <SV = 30> <Delay = 6.51>
+ST_31 : Operation 194 [2/5] (6.51ns)   --->   "%tmp_33 = fadd float %tmp_31, %tmp_32" [Group_5/sample.c:1832]   --->   Operation 194 'fadd' 'tmp_33' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 32 <SV = 31> <Delay = 6.51>
+ST_32 : Operation 195 [1/5] (6.51ns)   --->   "%tmp_33 = fadd float %tmp_31, %tmp_32" [Group_5/sample.c:1832]   --->   Operation 195 'fadd' 'tmp_33' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 33 <SV = 32> <Delay = 6.51>
+ST_33 : Operation 196 [5/5] (6.51ns)   --->   "%tmp_35 = fadd float %tmp_33, %tmp_34" [Group_5/sample.c:1832]   --->   Operation 196 'fadd' 'tmp_35' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 34 <SV = 33> <Delay = 6.51>
+ST_34 : Operation 197 [4/5] (6.51ns)   --->   "%tmp_35 = fadd float %tmp_33, %tmp_34" [Group_5/sample.c:1832]   --->   Operation 197 'fadd' 'tmp_35' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 35 <SV = 34> <Delay = 6.51>
+ST_35 : Operation 198 [3/5] (6.51ns)   --->   "%tmp_35 = fadd float %tmp_33, %tmp_34" [Group_5/sample.c:1832]   --->   Operation 198 'fadd' 'tmp_35' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 36 <SV = 35> <Delay = 6.51>
+ST_36 : Operation 199 [2/5] (6.51ns)   --->   "%tmp_35 = fadd float %tmp_33, %tmp_34" [Group_5/sample.c:1832]   --->   Operation 199 'fadd' 'tmp_35' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 37 <SV = 36> <Delay = 6.51>
+ST_37 : Operation 200 [1/5] (6.51ns)   --->   "%tmp_35 = fadd float %tmp_33, %tmp_34" [Group_5/sample.c:1832]   --->   Operation 200 'fadd' 'tmp_35' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 38 <SV = 37> <Delay = 6.51>
+ST_38 : Operation 201 [5/5] (6.51ns)   --->   "%tmp_37 = fadd float %tmp_35, %tmp_36" [Group_5/sample.c:1832]   --->   Operation 201 'fadd' 'tmp_37' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 39 <SV = 38> <Delay = 6.51>
+ST_39 : Operation 202 [4/5] (6.51ns)   --->   "%tmp_37 = fadd float %tmp_35, %tmp_36" [Group_5/sample.c:1832]   --->   Operation 202 'fadd' 'tmp_37' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 40 <SV = 39> <Delay = 6.51>
+ST_40 : Operation 203 [3/5] (6.51ns)   --->   "%tmp_37 = fadd float %tmp_35, %tmp_36" [Group_5/sample.c:1832]   --->   Operation 203 'fadd' 'tmp_37' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 41 <SV = 40> <Delay = 6.51>
+ST_41 : Operation 204 [2/5] (6.51ns)   --->   "%tmp_37 = fadd float %tmp_35, %tmp_36" [Group_5/sample.c:1832]   --->   Operation 204 'fadd' 'tmp_37' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 42 <SV = 41> <Delay = 6.51>
+ST_42 : Operation 205 [1/5] (6.51ns)   --->   "%tmp_37 = fadd float %tmp_35, %tmp_36" [Group_5/sample.c:1832]   --->   Operation 205 'fadd' 'tmp_37' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 43 <SV = 42> <Delay = 6.51>
+ST_43 : Operation 206 [5/5] (6.51ns)   --->   "%tmp_39 = fadd float %tmp_37, %tmp_38" [Group_5/sample.c:1832]   --->   Operation 206 'fadd' 'tmp_39' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 44 <SV = 43> <Delay = 6.51>
+ST_44 : Operation 207 [4/5] (6.51ns)   --->   "%tmp_39 = fadd float %tmp_37, %tmp_38" [Group_5/sample.c:1832]   --->   Operation 207 'fadd' 'tmp_39' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 45 <SV = 44> <Delay = 6.51>
+ST_45 : Operation 208 [3/5] (6.51ns)   --->   "%tmp_39 = fadd float %tmp_37, %tmp_38" [Group_5/sample.c:1832]   --->   Operation 208 'fadd' 'tmp_39' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 46 <SV = 45> <Delay = 6.51>
+ST_46 : Operation 209 [2/5] (6.51ns)   --->   "%tmp_39 = fadd float %tmp_37, %tmp_38" [Group_5/sample.c:1832]   --->   Operation 209 'fadd' 'tmp_39' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 47 <SV = 46> <Delay = 6.51>
+ST_47 : Operation 210 [1/5] (6.51ns)   --->   "%tmp_39 = fadd float %tmp_37, %tmp_38" [Group_5/sample.c:1832]   --->   Operation 210 'fadd' 'tmp_39' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 48 <SV = 47> <Delay = 6.51>
+ST_48 : Operation 211 [5/5] (6.51ns)   --->   "%temp = fadd float %temp3, %tmp_39" [Group_5/sample.c:1832]   --->   Operation 211 'fadd' 'temp' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 49 <SV = 48> <Delay = 6.51>
+ST_49 : Operation 212 [4/5] (6.51ns)   --->   "%temp = fadd float %temp3, %tmp_39" [Group_5/sample.c:1832]   --->   Operation 212 'fadd' 'temp' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 50 <SV = 49> <Delay = 6.51>
+ST_50 : Operation 213 [3/5] (6.51ns)   --->   "%temp = fadd float %temp3, %tmp_39" [Group_5/sample.c:1832]   --->   Operation 213 'fadd' 'temp' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 51 <SV = 50> <Delay = 6.51>
+ST_51 : Operation 214 [2/5] (6.51ns)   --->   "%temp = fadd float %temp3, %tmp_39" [Group_5/sample.c:1832]   --->   Operation 214 'fadd' 'temp' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 52 <SV = 51> <Delay = 6.51>
+ST_52 : Operation 215 [1/5] (6.51ns)   --->   "%temp = fadd float %temp3, %tmp_39" [Group_5/sample.c:1832]   --->   Operation 215 'fadd' 'temp' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_52 : Operation 216 [1/1] (0.00ns)   --->   "br label %4" [Group_5/sample.c:1811]   --->   Operation 216 'br' <Predicate = true> <Delay = 0.00>
+
+State 53 <SV = 8> <Delay = 3.36>
+ST_53 : Operation 217 [1/1] (0.00ns)   --->   "%temp_1 = phi float [ %temp_2, %6 ], [ %temp3, %.preheader.preheader ]"   --->   Operation 217 'phi' 'temp_1' <Predicate = true> <Delay = 0.00>
+ST_53 : Operation 218 [1/1] (0.00ns)   --->   "%k_1 = phi i5 [ %k_3, %6 ], [ 8, %.preheader.preheader ]"   --->   Operation 218 'phi' 'k_1' <Predicate = true> <Delay = 0.00>
+ST_53 : Operation 219 [1/1] (0.00ns)   --->   "%k_1_cast = zext i5 %k_1 to i6" [Group_5/sample.c:1837]   --->   Operation 219 'zext' 'k_1_cast' <Predicate = true> <Delay = 0.00>
+ST_53 : Operation 220 [1/1] (0.00ns)   --->   "%empty_19 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)"   --->   Operation 220 'speclooptripcount' 'empty_19' <Predicate = true> <Delay = 0.00>
+ST_53 : Operation 221 [1/1] (1.21ns)   --->   "%exitcond8 = icmp eq i5 %k_1, -16" [Group_5/sample.c:1837]   --->   Operation 221 'icmp' 'exitcond8' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_53 : Operation 222 [1/1] (0.00ns)   --->   "br i1 %exitcond8, label %7, label %6" [Group_5/sample.c:1837]   --->   Operation 222 'br' <Predicate = true> <Delay = 0.00>
+ST_53 : Operation 223 [1/1] (1.60ns)   --->   "%sum6 = add i6 %k_1_cast, %inneridx" [Group_5/sample.c:1837]   --->   Operation 223 'add' 'sum6' <Predicate = (!exitcond8)> <Delay = 1.60> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.20> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_53 : Operation 224 [1/1] (0.00ns)   --->   "%sum17_cast = zext i6 %sum6 to i64" [Group_5/sample.c:1837]   --->   Operation 224 'zext' 'sum17_cast' <Predicate = (!exitcond8)> <Delay = 0.00>
+ST_53 : Operation 225 [1/1] (0.00ns)   --->   "%A_addr_8 = getelementptr [16 x float]* %A, i64 0, i64 %sum17_cast" [Group_5/sample.c:1839]   --->   Operation 225 'getelementptr' 'A_addr_8' <Predicate = (!exitcond8)> <Delay = 0.00>
+ST_53 : Operation 226 [2/2] (1.75ns)   --->   "%A_load = load float* %A_addr_8, align 4" [Group_5/sample.c:1839]   --->   Operation 226 'load' 'A_load' <Predicate = (!exitcond8)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_53 : Operation 227 [1/1] (0.00ns)   --->   "%sum18_cast = zext i5 %k_1 to i64" [Group_5/sample.c:1837]   --->   Operation 227 'zext' 'sum18_cast' <Predicate = (!exitcond8)> <Delay = 0.00>
+ST_53 : Operation 228 [1/1] (0.00ns)   --->   "%B_addr_8 = getelementptr [16 x float]* %B, i64 0, i64 %sum18_cast" [Group_5/sample.c:1839]   --->   Operation 228 'getelementptr' 'B_addr_8' <Predicate = (!exitcond8)> <Delay = 0.00>
+ST_53 : Operation 229 [2/2] (1.75ns)   --->   "%B_load = load float* %B_addr_8, align 4" [Group_5/sample.c:1839]   --->   Operation 229 'load' 'B_load' <Predicate = (!exitcond8)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_53 : Operation 230 [1/1] (1.54ns)   --->   "%k_3 = add i5 %k_1, 1" [Group_5/sample.c:1837]   --->   Operation 230 'add' 'k_3' <Predicate = (!exitcond8)> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.20> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_53 : Operation 231 [1/1] (1.20ns)   --->   "%sum = add i2 %j_cast, %tmp" [Group_5/sample.c:1805]   --->   Operation 231 'add' 'sum' <Predicate = (exitcond8)> <Delay = 1.20> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.20> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_53 : Operation 232 [1/1] (0.00ns)   --->   "%sum_cast = zext i2 %sum to i64" [Group_5/sample.c:1805]   --->   Operation 232 'zext' 'sum_cast' <Predicate = (exitcond8)> <Delay = 0.00>
+ST_53 : Operation 233 [1/1] (0.00ns)   --->   "%C_addr = getelementptr [1 x float]* %C, i64 0, i64 %sum_cast" [Group_5/sample.c:1843]   --->   Operation 233 'getelementptr' 'C_addr' <Predicate = (exitcond8)> <Delay = 0.00>
+ST_53 : Operation 234 [1/1] (1.75ns)   --->   "store float %temp_1, float* %C_addr, align 4" [Group_5/sample.c:1843]   --->   Operation 234 'store' <Predicate = (exitcond8)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_53 : Operation 235 [1/1] (0.00ns)   --->   "br label %2" [Group_5/sample.c:1805]   --->   Operation 235 'br' <Predicate = (exitcond8)> <Delay = 0.00>
+
+State 54 <SV = 9> <Delay = 1.75>
+ST_54 : Operation 236 [1/2] (1.75ns)   --->   "%A_load = load float* %A_addr_8, align 4" [Group_5/sample.c:1839]   --->   Operation 236 'load' 'A_load' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_54 : Operation 237 [1/2] (1.75ns)   --->   "%B_load = load float* %B_addr_8, align 4" [Group_5/sample.c:1839]   --->   Operation 237 'load' 'B_load' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+
+State 55 <SV = 10> <Delay = 8.54>
+ST_55 : Operation 238 [3/3] (8.54ns)   --->   "%tmp_40 = fmul float %A_load, %B_load" [Group_5/sample.c:1839]   --->   Operation 238 'fmul' 'tmp_40' <Predicate = true> <Delay = 8.54> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 2> <II = 1> <Delay = 8.54> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 56 <SV = 11> <Delay = 8.54>
+ST_56 : Operation 239 [2/3] (8.54ns)   --->   "%tmp_40 = fmul float %A_load, %B_load" [Group_5/sample.c:1839]   --->   Operation 239 'fmul' 'tmp_40' <Predicate = true> <Delay = 8.54> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 2> <II = 1> <Delay = 8.54> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 57 <SV = 12> <Delay = 8.54>
+ST_57 : Operation 240 [1/3] (8.54ns)   --->   "%tmp_40 = fmul float %A_load, %B_load" [Group_5/sample.c:1839]   --->   Operation 240 'fmul' 'tmp_40' <Predicate = true> <Delay = 8.54> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 2> <II = 1> <Delay = 8.54> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 58 <SV = 13> <Delay = 6.51>
+ST_58 : Operation 241 [5/5] (6.51ns)   --->   "%temp_2 = fadd float %temp_1, %tmp_40" [Group_5/sample.c:1839]   --->   Operation 241 'fadd' 'temp_2' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 59 <SV = 14> <Delay = 6.51>
+ST_59 : Operation 242 [4/5] (6.51ns)   --->   "%temp_2 = fadd float %temp_1, %tmp_40" [Group_5/sample.c:1839]   --->   Operation 242 'fadd' 'temp_2' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 60 <SV = 15> <Delay = 6.51>
+ST_60 : Operation 243 [3/5] (6.51ns)   --->   "%temp_2 = fadd float %temp_1, %tmp_40" [Group_5/sample.c:1839]   --->   Operation 243 'fadd' 'temp_2' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 61 <SV = 16> <Delay = 6.51>
+ST_61 : Operation 244 [2/5] (6.51ns)   --->   "%temp_2 = fadd float %temp_1, %tmp_40" [Group_5/sample.c:1839]   --->   Operation 244 'fadd' 'temp_2' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 62 <SV = 17> <Delay = 6.51>
+ST_62 : Operation 245 [1/5] (6.51ns)   --->   "%temp_2 = fadd float %temp_1, %tmp_40" [Group_5/sample.c:1839]   --->   Operation 245 'fadd' 'temp_2' <Predicate = true> <Delay = 6.51> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 6.51> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_62 : Operation 246 [1/1] (0.00ns)   --->   "br label %.preheader" [Group_5/sample.c:1837]   --->   Operation 246 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.35ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', Group_5/sample.c:1800) [15]  (1.35 ns)
+
+ <State 2>: 1.55ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', Group_5/sample.c:1800) [15]  (0 ns)
+	'add' operation ('i', Group_5/sample.c:1800) [19]  (1.55 ns)
+
+ <State 3>: 1.75ns
+The critical path consists of the following:
+	'load' operation ('b1', Group_5/sample.c:1817) on array 'B' [30]  (1.75 ns)
+
+ <State 4>: 1.75ns
+The critical path consists of the following:
+	'load' operation ('b1', Group_5/sample.c:1817) on array 'B' [30]  (1.75 ns)
+
+ <State 5>: 1.75ns
+The critical path consists of the following:
+	'load' operation ('b2', Group_5/sample.c:1819) on array 'B' [31]  (1.75 ns)
+
+ <State 6>: 1.75ns
+The critical path consists of the following:
+	'load' operation ('b4', Group_5/sample.c:1823) on array 'B' [33]  (1.75 ns)
+
+ <State 7>: 1.75ns
+The critical path consists of the following:
+	'load' operation ('b6', Group_5/sample.c:1827) on array 'B' [35]  (1.75 ns)
+
+ <State 8>: 1.75ns
+The critical path consists of the following:
+	'phi' operation ('k', Group_5/sample.c:1811) with incoming values : ('k_2', Group_5/sample.c:1811) [40]  (0 ns)
+	'getelementptr' operation ('A_addr', Group_5/sample.c:1814) [47]  (0 ns)
+	'load' operation ('a0', Group_5/sample.c:1814) on array 'A' [48]  (1.75 ns)
+
+ <State 9>: 1.75ns
+The critical path consists of the following:
+	'load' operation ('a0', Group_5/sample.c:1814) on array 'A' [48]  (1.75 ns)
+
+ <State 10>: 8.54ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_25', Group_5/sample.c:1832) [80]  (8.54 ns)
+
+ <State 11>: 8.54ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_25', Group_5/sample.c:1832) [80]  (8.54 ns)
+
+ <State 12>: 8.54ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_25', Group_5/sample.c:1832) [80]  (8.54 ns)
+
+ <State 13>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_27', Group_5/sample.c:1832) [82]  (6.51 ns)
+
+ <State 14>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_27', Group_5/sample.c:1832) [82]  (6.51 ns)
+
+ <State 15>: 8.54ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_28', Group_5/sample.c:1832) [83]  (8.54 ns)
+
+ <State 16>: 8.54ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_28', Group_5/sample.c:1832) [83]  (8.54 ns)
+
+ <State 17>: 8.54ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_28', Group_5/sample.c:1832) [83]  (8.54 ns)
+
+ <State 18>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_29', Group_5/sample.c:1832) [84]  (6.51 ns)
+
+ <State 19>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_29', Group_5/sample.c:1832) [84]  (6.51 ns)
+
+ <State 20>: 8.54ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_30', Group_5/sample.c:1832) [85]  (8.54 ns)
+
+ <State 21>: 8.54ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_30', Group_5/sample.c:1832) [85]  (8.54 ns)
+
+ <State 22>: 8.54ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_30', Group_5/sample.c:1832) [85]  (8.54 ns)
+
+ <State 23>: 8.54ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_32', Group_5/sample.c:1832) [87]  (8.54 ns)
+
+ <State 24>: 8.54ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_36', Group_5/sample.c:1832) [91]  (8.54 ns)
+
+ <State 25>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_31', Group_5/sample.c:1832) [86]  (6.51 ns)
+
+ <State 26>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_31', Group_5/sample.c:1832) [86]  (6.51 ns)
+
+ <State 27>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_31', Group_5/sample.c:1832) [86]  (6.51 ns)
+
+ <State 28>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_33', Group_5/sample.c:1832) [88]  (6.51 ns)
+
+ <State 29>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_33', Group_5/sample.c:1832) [88]  (6.51 ns)
+
+ <State 30>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_33', Group_5/sample.c:1832) [88]  (6.51 ns)
+
+ <State 31>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_33', Group_5/sample.c:1832) [88]  (6.51 ns)
+
+ <State 32>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_33', Group_5/sample.c:1832) [88]  (6.51 ns)
+
+ <State 33>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_35', Group_5/sample.c:1832) [90]  (6.51 ns)
+
+ <State 34>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_35', Group_5/sample.c:1832) [90]  (6.51 ns)
+
+ <State 35>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_35', Group_5/sample.c:1832) [90]  (6.51 ns)
+
+ <State 36>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_35', Group_5/sample.c:1832) [90]  (6.51 ns)
+
+ <State 37>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_35', Group_5/sample.c:1832) [90]  (6.51 ns)
+
+ <State 38>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_37', Group_5/sample.c:1832) [92]  (6.51 ns)
+
+ <State 39>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_37', Group_5/sample.c:1832) [92]  (6.51 ns)
+
+ <State 40>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_37', Group_5/sample.c:1832) [92]  (6.51 ns)
+
+ <State 41>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_37', Group_5/sample.c:1832) [92]  (6.51 ns)
+
+ <State 42>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_37', Group_5/sample.c:1832) [92]  (6.51 ns)
+
+ <State 43>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_39', Group_5/sample.c:1832) [94]  (6.51 ns)
+
+ <State 44>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_39', Group_5/sample.c:1832) [94]  (6.51 ns)
+
+ <State 45>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_39', Group_5/sample.c:1832) [94]  (6.51 ns)
+
+ <State 46>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_39', Group_5/sample.c:1832) [94]  (6.51 ns)
+
+ <State 47>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_39', Group_5/sample.c:1832) [94]  (6.51 ns)
+
+ <State 48>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('temp', Group_5/sample.c:1832) [95]  (6.51 ns)
+
+ <State 49>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('temp', Group_5/sample.c:1832) [95]  (6.51 ns)
+
+ <State 50>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('temp', Group_5/sample.c:1832) [95]  (6.51 ns)
+
+ <State 51>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('temp', Group_5/sample.c:1832) [95]  (6.51 ns)
+
+ <State 52>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('temp', Group_5/sample.c:1832) [95]  (6.51 ns)
+
+ <State 53>: 3.36ns
+The critical path consists of the following:
+	'phi' operation ('k') with incoming values : ('k', Group_5/sample.c:1837) [102]  (0 ns)
+	'add' operation ('sum6', Group_5/sample.c:1837) [108]  (1.6 ns)
+	'getelementptr' operation ('A_addr_8', Group_5/sample.c:1839) [110]  (0 ns)
+	'load' operation ('A_load', Group_5/sample.c:1839) on array 'A' [111]  (1.75 ns)
+
+ <State 54>: 1.75ns
+The critical path consists of the following:
+	'load' operation ('A_load', Group_5/sample.c:1839) on array 'A' [111]  (1.75 ns)
+
+ <State 55>: 8.54ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_40', Group_5/sample.c:1839) [115]  (8.54 ns)
+
+ <State 56>: 8.54ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_40', Group_5/sample.c:1839) [115]  (8.54 ns)
+
+ <State 57>: 8.54ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_40', Group_5/sample.c:1839) [115]  (8.54 ns)
+
+ <State 58>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('temp', Group_5/sample.c:1839) [116]  (6.51 ns)
+
+ <State 59>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('temp', Group_5/sample.c:1839) [116]  (6.51 ns)
+
+ <State 60>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('temp', Group_5/sample.c:1839) [116]  (6.51 ns)
+
+ <State 61>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('temp', Group_5/sample.c:1839) [116]  (6.51 ns)
+
+ <State 62>: 6.51ns
+The critical path consists of the following:
+	'fadd' operation ('temp', Group_5/sample.c:1839) [116]  (6.51 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,198 @@
+#-----------------------------------------------------------
+# xsim v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Apr 23 22:42:39 2024
+# Process ID: 11056
+# Current directory: C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_3/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/sample/xsim_script.tcl}
+# Log file: C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_3/sim/verilog/xsim.log
+# Journal file: C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_3/sim/verilog\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/sample/xsim_script.tcl
+# xsim {sample} -autoloadwcfg -tclbatch {sample.tcl}
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source sample.tcl
+## log_wave -r /
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set cinoutgroup [add_wave_group "C InOuts" -into $designtopgroup]
+## set dense_16_output_arrray_group [add_wave_group dense_16_output_arrray(memory) -into $cinoutgroup]
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_16_output_arrray_q0 -into $dense_16_output_arrray_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_16_output_arrray_d0 -into $dense_16_output_arrray_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_16_output_arrray_we0 -into $dense_16_output_arrray_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_16_output_arrray_ce0 -into $dense_16_output_arrray_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_16_output_arrray_address0 -into $dense_16_output_arrray_group -radix hex
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set dense_16_output_numel_group [add_wave_group dense_16_output_numel(wire) -into $cinputgroup]
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_16_output_numel -into $dense_16_output_numel_group -radix hex
+## set dense_16_output_dim_group [add_wave_group dense_16_output_dim(wire) -into $cinputgroup]
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_16_output_dim -into $dense_16_output_dim_group -radix hex
+## set dense_13_input_input_shape_group [add_wave_group dense_13_input_input_shape(memory) -into $cinputgroup]
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_shape_q0 -into $dense_13_input_input_shape_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_shape_ce0 -into $dense_13_input_input_shape_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_shape_address0 -into $dense_13_input_input_shape_group -radix hex
+## set dense_13_input_input_numel_group [add_wave_group dense_13_input_input_numel(wire) -into $cinputgroup]
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_numel -into $dense_13_input_input_numel_group -radix hex
+## set dense_13_input_input_dim_group [add_wave_group dense_13_input_input_dim(wire) -into $cinputgroup]
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_dim -into $dense_13_input_input_dim_group -radix hex
+## set dense_13_input_input_array_group [add_wave_group dense_13_input_input_array(memory) -into $cinputgroup]
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_7_q0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_7_ce0 -into $dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_7_address0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_6_q0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_6_ce0 -into $dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_6_address0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_5_q0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_5_ce0 -into $dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_5_address0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_4_q0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_4_ce0 -into $dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_4_address0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_3_q0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_3_ce0 -into $dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_3_address0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_2_q0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_2_ce0 -into $dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_2_address0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_1_q0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_1_ce0 -into $dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_1_address0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_0_q0 -into $dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_0_ce0 -into $dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/AESL_inst_sample/dense_13_input_input_array_0_address0 -into $dense_13_input_input_array_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
+## add_wave /apatb_sample_top/AESL_inst_sample/ap_start -into $blocksiggroup
+## add_wave /apatb_sample_top/AESL_inst_sample/ap_done -into $blocksiggroup
+## add_wave /apatb_sample_top/AESL_inst_sample/ap_idle -into $blocksiggroup
+## add_wave /apatb_sample_top/AESL_inst_sample/ap_ready -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_sample_top/AESL_inst_sample/ap_rst -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_sample_top/AESL_inst_sample/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_sample_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_sample_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_sample_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_sample_top/LENGTH_dense_13_input_input_array_0 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_sample_top/LENGTH_dense_13_input_input_array_1 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_sample_top/LENGTH_dense_13_input_input_array_2 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_sample_top/LENGTH_dense_13_input_input_array_3 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_sample_top/LENGTH_dense_13_input_input_array_4 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_sample_top/LENGTH_dense_13_input_input_array_5 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_sample_top/LENGTH_dense_13_input_input_array_6 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_sample_top/LENGTH_dense_13_input_input_array_7 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_sample_top/LENGTH_dense_13_input_input_dim -into $tb_portdepth_group -radix hex
+## add_wave /apatb_sample_top/LENGTH_dense_13_input_input_numel -into $tb_portdepth_group -radix hex
+## add_wave /apatb_sample_top/LENGTH_dense_13_input_input_shape -into $tb_portdepth_group -radix hex
+## add_wave /apatb_sample_top/LENGTH_dense_16_output_arrray -into $tb_portdepth_group -radix hex
+## add_wave /apatb_sample_top/LENGTH_dense_16_output_numel -into $tb_portdepth_group -radix hex
+## set tbcinoutgroup [add_wave_group "C InOuts" -into $testbenchgroup]
+## set tb_dense_16_output_arrray_group [add_wave_group dense_16_output_arrray(memory) -into $tbcinoutgroup]
+## add_wave /apatb_sample_top/dense_16_output_arrray_q0 -into $tb_dense_16_output_arrray_group -radix hex
+## add_wave /apatb_sample_top/dense_16_output_arrray_d0 -into $tb_dense_16_output_arrray_group -radix hex
+## add_wave /apatb_sample_top/dense_16_output_arrray_we0 -into $tb_dense_16_output_arrray_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/dense_16_output_arrray_ce0 -into $tb_dense_16_output_arrray_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/dense_16_output_arrray_address0 -into $tb_dense_16_output_arrray_group -radix hex
+## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
+## set tb_dense_16_output_numel_group [add_wave_group dense_16_output_numel(wire) -into $tbcinputgroup]
+## add_wave /apatb_sample_top/dense_16_output_numel -into $tb_dense_16_output_numel_group -radix hex
+## set tb_dense_16_output_dim_group [add_wave_group dense_16_output_dim(wire) -into $tbcinputgroup]
+## add_wave /apatb_sample_top/dense_16_output_dim -into $tb_dense_16_output_dim_group -radix hex
+## set tb_dense_13_input_input_shape_group [add_wave_group dense_13_input_input_shape(memory) -into $tbcinputgroup]
+## add_wave /apatb_sample_top/dense_13_input_input_shape_q0 -into $tb_dense_13_input_input_shape_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_shape_ce0 -into $tb_dense_13_input_input_shape_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_shape_address0 -into $tb_dense_13_input_input_shape_group -radix hex
+## set tb_dense_13_input_input_numel_group [add_wave_group dense_13_input_input_numel(wire) -into $tbcinputgroup]
+## add_wave /apatb_sample_top/dense_13_input_input_numel -into $tb_dense_13_input_input_numel_group -radix hex
+## set tb_dense_13_input_input_dim_group [add_wave_group dense_13_input_input_dim(wire) -into $tbcinputgroup]
+## add_wave /apatb_sample_top/dense_13_input_input_dim -into $tb_dense_13_input_input_dim_group -radix hex
+## set tb_dense_13_input_input_array_group [add_wave_group dense_13_input_input_array(memory) -into $tbcinputgroup]
+## add_wave /apatb_sample_top/dense_13_input_input_array_7_q0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_7_ce0 -into $tb_dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_7_address0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_6_q0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_6_ce0 -into $tb_dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_6_address0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_5_q0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_5_ce0 -into $tb_dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_5_address0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_4_q0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_4_ce0 -into $tb_dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_4_address0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_3_q0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_3_ce0 -into $tb_dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_3_address0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_2_q0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_2_ce0 -into $tb_dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_2_address0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_1_q0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_1_ce0 -into $tb_dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_1_address0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_0_q0 -into $tb_dense_13_input_input_array_group -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_0_ce0 -into $tb_dense_13_input_input_array_group -color #ffff00 -radix hex
+## add_wave /apatb_sample_top/dense_13_input_input_array_0_address0 -into $tb_dense_13_input_input_array_group -radix hex
+## save_wave_config sample.wcfg
+## run all
+Note: 
+******************************************************
+  renorm_and_round_logic.vhd :
+    FULL_MANT_RND1_DEL is using fast_input
+    which will be faster, but create more FFs.
+******************************************************
+Time: 0 ps  Iteration: 0
+Note: 
+******************************************************
+  renorm_and_round_logic.vhd :
+    FULL_MANT_RND1_DEL is using fast_input
+    which will be faster, but create more FFs.
+******************************************************
+Time: 0 ps  Iteration: 0
+Warning: OPMODE Input Warning : The OPMODE 011XX11 with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_fu_477/sample_fexp_32ns_bAo_U385/sample_ap_fexp_16_full_dsp_32_u/U0/i_synth/exp_op/i_sp_or_dp/OP/i_renorm_and_round/dsp48_e1/dsp48e1_add/DSP48E1_ADD/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_fu_477/sample_fadd_32ns_ocq_U383/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_fu_477/grp_k2c_affine_matmul_3_fu_214/sample_fadd_32ns_ocq_U367/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_fu_477/grp_k2c_dot_3_fu_178/sample_fadd_32ns_ocq_U345/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_1_fu_409/grp_k2c_bias_add_2_fu_489/sample_fadd_32ns_ocq_U284/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_1_fu_409/grp_k2c_affine_matmul_2_fu_434/sample_fadd_32ns_ocq_U297/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_1_fu_409/grp_k2c_dot_2_fu_368/sample_fadd_32ns_ocq_U238/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_2_fu_341/grp_k2c_bias_add_1_fu_489/sample_fadd_32ns_ocq_U177/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_2_fu_341/grp_k2c_affine_matmul_1_fu_434/sample_fadd_32ns_ocq_U190/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_2_fu_341/grp_k2c_dot_1_fu_368/sample_fadd_32ns_ocq_U131/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_3_fu_272/grp_k2c_bias_add_fu_485/sample_fadd_32ns_ocq_U68/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_3_fu_272/grp_k2c_affine_matmul_fu_430/sample_fadd_32ns_ocq_U81/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_3_fu_272/grp_k2c_dot_fu_364/sample_fadd_32ns_ocq_U17/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [n/a] @ "113000"
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 14607500 ps  Iteration: 4  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_3_fu_272/grp_k2c_affine_matmul_fu_430/sample_fadd_32ns_ocq_U81/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 011XX11 with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 63022500 ps  Iteration: 8  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_fu_477/sample_fexp_32ns_bAo_U385/sample_ap_fexp_16_full_dsp_32_u/U0/i_synth/exp_op/i_sp_or_dp/OP/i_renorm_and_round/dsp48_e1/dsp48e1_add/DSP48E1_ADD/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 63057500 ps  Iteration: 4  Process: /apatb_sample_top/AESL_inst_sample/grp_k2c_dense_fu_477/sample_fadd_32ns_ocq_U383/sample_ap_fadd_7_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: C:\Xilinx\Vivado\2018.2\data/vhdl/src/unisims/primitive/DSP48E1.vhd
+// RTL Simulation : 1 / 1 [n/a] @ "63243000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 63262500 ps : File "C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Latency_3/sim/verilog/sample.autotb.v" Line 903
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:33 . Memory (MB): peak = 212.160 ; gain = 0.000
+## quit
+INFO: [Common 17-206] Exiting xsim at Tue Apr 23 22:43:19 2024...

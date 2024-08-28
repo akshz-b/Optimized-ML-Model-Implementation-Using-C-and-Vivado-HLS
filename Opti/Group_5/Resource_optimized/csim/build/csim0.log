@@ -1,0 +1,7 @@
+   Compiling(apcc) ../../../sample_test_suite.c in debug mode
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Ritik' on host 'ritik' (Windows NT_amd64 version 6.2) on Tue Apr 23 21:45:10 +0530 2024
+INFO: [HLS 200-10] In directory 'C:/Users/Ritik/OneDrive/Desktop/Group_5_final/Opti/Group_5/Resource_optimized/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../sample.c in debug mode

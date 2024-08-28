@@ -1,0 +1,298 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'k2c_dense_1'" level="0">
+<item name = "Date">Tue Apr 23 22:38:20 2024
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">Group_5</item>
+<item name = "Solution">Latency_3</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a200tfbg676-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00, 4.442, 0.62</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_k2c_dot_2_fu_368">k2c_dot_2, ?, ?, ?, ?, none</column>
+<column name="grp_k2c_affine_matmul_2_fu_434">k2c_affine_matmul_2, ?, ?, ?, ?, none</column>
+<column name="grp_k2c_bias_add_2_fu_489">k2c_bias_add_2, ?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">96, 3072, 6, -, -, 16 ~ 512, no</column>
+<column name="- Loop 2">?, ?, 5, -, -, ?, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 342</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">22, 78, 20417, 20685</column>
+<column name="Memory">0, -, 64, 8</column>
+<column name="Multiplexer">-, -, -, 1358</column>
+<column name="Register">-, -, 329, -</column>
+<specialColumn name="Available">730, 740, 269200, 129000</specialColumn>
+<specialColumn name="Utilization (%)">3, 10, 7, 17</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="grp_k2c_affine_matmul_2_fu_434">k2c_affine_matmul_2, 8, 5, 7762, 10537</column>
+<column name="grp_k2c_bias_add_2_fu_489">k2c_bias_add_2, 0, 2, 672, 712</column>
+<column name="grp_k2c_dot_2_fu_368">k2c_dot_2, 14, 71, 11917, 9287</column>
+<column name="sample_fcmp_32ns_Ffa_U321">sample_fcmp_32ns_Ffa, 0, 0, 66, 67</column>
+<column name="sample_mux_864_32rcU_U322">sample_mux_864_32rcU, 0, 0, 0, 41</column>
+<column name="sample_mux_864_32rcU_U323">sample_mux_864_32rcU, 0, 0, 0, 41</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="dense_15_bias_array_U">k2c_dense_1_densebvn, 0, 64, 8, 16, 32, 1, 512</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="i_30_fu_571_p2">+, 0, 0, 71, 64, 1</column>
+<column name="i_31_fu_682_p2">+, 0, 0, 17, 10, 1</column>
+<column name="tmp_16_fu_524_p2">+, 0, 0, 71, 64, 2</column>
+<column name="tmp_45_fu_772_p2">and, 0, 0, 2, 1, 1</column>
+<column name="tmp_50_fu_661_p2">and, 0, 0, 2, 1, 1</column>
+<column name="exitcond1_fu_677_p2">icmp, 0, 0, 13, 11, 11</column>
+<column name="exitcond4_fu_566_p2">icmp, 0, 0, 29, 64, 64</column>
+<column name="icmp_fu_546_p2">icmp, 0, 0, 29, 63, 1</column>
+<column name="notlhs6_fu_756_p2">icmp, 0, 0, 11, 8, 2</column>
+<column name="notlhs_fu_645_p2">icmp, 0, 0, 11, 8, 2</column>
+<column name="notrhs7_fu_762_p2">icmp, 0, 0, 18, 23, 1</column>
+<column name="notrhs_fu_651_p2">icmp, 0, 0, 18, 23, 1</column>
+<column name="tmp_fu_518_p2">icmp, 0, 0, 29, 64, 2</column>
+<column name="tmp_43_fu_768_p2">or, 0, 0, 2, 1, 1</column>
+<column name="tmp_48_fu_657_p2">or, 0, 0, 2, 1, 1</column>
+<column name="p_s_fu_552_p3">select, 0, 0, 7, 1, 7</column>
+<column name="tmp_19_cast_cast_fu_666_p3">select, 0, 0, 10, 1, 10</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">85, 17, 1, 17</column>
+<column name="dense_14_output_arra_1_address0">15, 3, 2, 6</column>
+<column name="dense_14_output_arra_1_ce0">15, 3, 1, 3</column>
+<column name="dense_14_output_arra_2_address0">15, 3, 2, 6</column>
+<column name="dense_14_output_arra_2_ce0">15, 3, 1, 3</column>
+<column name="dense_14_output_arra_3_address0">15, 3, 2, 6</column>
+<column name="dense_14_output_arra_3_ce0">15, 3, 1, 3</column>
+<column name="dense_14_output_arra_4_address0">15, 3, 2, 6</column>
+<column name="dense_14_output_arra_4_ce0">15, 3, 1, 3</column>
+<column name="dense_14_output_arra_5_address0">15, 3, 2, 6</column>
+<column name="dense_14_output_arra_5_ce0">15, 3, 1, 3</column>
+<column name="dense_14_output_arra_6_address0">15, 3, 2, 6</column>
+<column name="dense_14_output_arra_6_ce0">15, 3, 1, 3</column>
+<column name="dense_14_output_arra_7_address0">15, 3, 2, 6</column>
+<column name="dense_14_output_arra_7_ce0">15, 3, 1, 3</column>
+<column name="dense_14_output_arra_address0">15, 3, 2, 6</column>
+<column name="dense_14_output_arra_ce0">15, 3, 1, 3</column>
+<column name="dense_15_bias_array_address0">15, 3, 4, 12</column>
+<column name="dense_15_bias_array_ce0">9, 2, 1, 2</column>
+<column name="dense_15_output_arra_1_address0">41, 8, 1, 8</column>
+<column name="dense_15_output_arra_1_ce0">27, 5, 1, 5</column>
+<column name="dense_15_output_arra_1_d0">27, 5, 32, 160</column>
+<column name="dense_15_output_arra_1_we0">27, 5, 1, 5</column>
+<column name="dense_15_output_arra_2_address0">41, 8, 1, 8</column>
+<column name="dense_15_output_arra_2_ce0">27, 5, 1, 5</column>
+<column name="dense_15_output_arra_2_d0">27, 5, 32, 160</column>
+<column name="dense_15_output_arra_2_we0">27, 5, 1, 5</column>
+<column name="dense_15_output_arra_3_address0">41, 8, 1, 8</column>
+<column name="dense_15_output_arra_3_ce0">27, 5, 1, 5</column>
+<column name="dense_15_output_arra_3_d0">27, 5, 32, 160</column>
+<column name="dense_15_output_arra_3_we0">27, 5, 1, 5</column>
+<column name="dense_15_output_arra_4_address0">41, 8, 1, 8</column>
+<column name="dense_15_output_arra_4_ce0">27, 5, 1, 5</column>
+<column name="dense_15_output_arra_4_d0">27, 5, 32, 160</column>
+<column name="dense_15_output_arra_4_we0">27, 5, 1, 5</column>
+<column name="dense_15_output_arra_5_address0">41, 8, 1, 8</column>
+<column name="dense_15_output_arra_5_ce0">27, 5, 1, 5</column>
+<column name="dense_15_output_arra_5_d0">27, 5, 32, 160</column>
+<column name="dense_15_output_arra_5_we0">27, 5, 1, 5</column>
+<column name="dense_15_output_arra_6_address0">41, 8, 1, 8</column>
+<column name="dense_15_output_arra_6_ce0">27, 5, 1, 5</column>
+<column name="dense_15_output_arra_6_d0">27, 5, 32, 160</column>
+<column name="dense_15_output_arra_6_we0">27, 5, 1, 5</column>
+<column name="dense_15_output_arra_7_address0">41, 8, 1, 8</column>
+<column name="dense_15_output_arra_7_ce0">27, 5, 1, 5</column>
+<column name="dense_15_output_arra_7_d0">27, 5, 32, 160</column>
+<column name="dense_15_output_arra_7_we0">27, 5, 1, 5</column>
+<column name="dense_15_output_arra_address0">41, 8, 1, 8</column>
+<column name="dense_15_output_arra_ce0">27, 5, 1, 5</column>
+<column name="dense_15_output_arra_d0">27, 5, 32, 160</column>
+<column name="dense_15_output_arra_we0">27, 5, 1, 5</column>
+<column name="grp_fu_513_p0">15, 3, 32, 96</column>
+<column name="i_2_reg_346">9, 2, 64, 128</column>
+<column name="i_reg_357">9, 2, 10, 20</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">16, 0, 16, 0</column>
+<column name="dense_15_bias_numel">0, 0, 64, 64</column>
+<column name="dense_15_kernel_nume">0, 0, 64, 64</column>
+<column name="dense_15_output_arra_10_reg_932">1, 0, 1, 0</column>
+<column name="dense_15_output_arra_11_reg_937">1, 0, 1, 0</column>
+<column name="dense_15_output_arra_12_reg_942">1, 0, 1, 0</column>
+<column name="dense_15_output_arra_13_reg_947">1, 0, 1, 0</column>
+<column name="dense_15_output_arra_14_reg_952">1, 0, 1, 0</column>
+<column name="dense_15_output_arra_15_reg_957">1, 0, 1, 0</column>
+<column name="dense_15_output_arra_24_reg_840">1, 0, 1, 0</column>
+<column name="dense_15_output_arra_25_reg_845">1, 0, 1, 0</column>
+<column name="dense_15_output_arra_26_reg_850">1, 0, 1, 0</column>
+<column name="dense_15_output_arra_27_reg_855">1, 0, 1, 0</column>
+<column name="dense_15_output_arra_28_reg_860">1, 0, 1, 0</column>
+<column name="dense_15_output_arra_29_reg_865">1, 0, 1, 0</column>
+<column name="dense_15_output_arra_30_reg_870">1, 0, 1, 0</column>
+<column name="dense_15_output_arra_31_reg_875">1, 0, 1, 0</column>
+<column name="dense_15_output_arra_8_reg_922">1, 0, 1, 0</column>
+<column name="dense_15_output_arra_9_reg_927">1, 0, 1, 0</column>
+<column name="grp_k2c_affine_matmul_2_fu_434_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_k2c_bias_add_2_fu_489_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_k2c_dot_2_fu_368_ap_start_reg">1, 0, 1, 0</column>
+<column name="i_2_reg_346">64, 0, 64, 0</column>
+<column name="i_30_reg_830">64, 0, 64, 0</column>
+<column name="i_31_reg_912">10, 0, 10, 0</column>
+<column name="i_reg_357">10, 0, 10, 0</column>
+<column name="icmp_reg_812">1, 0, 1, 0</column>
+<column name="notlhs6_reg_968">1, 0, 1, 0</column>
+<column name="notlhs_reg_886">1, 0, 1, 0</column>
+<column name="notrhs7_reg_973">1, 0, 1, 0</column>
+<column name="notrhs_reg_891">1, 0, 1, 0</column>
+<column name="p_s_reg_817">2, 0, 6, 4</column>
+<column name="tmp_16_reg_802">64, 0, 64, 0</column>
+<column name="tmp_19_cast_cast_reg_904">2, 0, 11, 9</column>
+<column name="tmp_44_reg_978">1, 0, 1, 0</column>
+<column name="tmp_46_reg_880">32, 0, 32, 0</column>
+<column name="tmp_49_reg_896">1, 0, 1, 0</column>
+<column name="tmp_79_reg_917">3, 0, 3, 0</column>
+<column name="tmp_81_reg_835">3, 0, 3, 0</column>
+<column name="tmp_reg_798">1, 0, 1, 0</column>
+<column name="tmp_s_reg_962">32, 0, 32, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, k2c_dense.1, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, k2c_dense.1, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, k2c_dense.1, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, k2c_dense.1, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, k2c_dense.1, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, k2c_dense.1, return value</column>
+<column name="output_numel_read">in, 64, ap_none, output_numel_read, scalar</column>
+<column name="input_dim">in, 64, ap_none, input_dim, scalar</column>
+<column name="input_numel_read">in, 64, ap_none, input_numel_read, scalar</column>
+<column name="kernel_dim">in, 64, ap_none, kernel_dim, scalar</column>
+<column name="dense_15_output_arra_7_address0">out, 1, ap_memory, dense_15_output_arra_7, array</column>
+<column name="dense_15_output_arra_7_ce0">out, 1, ap_memory, dense_15_output_arra_7, array</column>
+<column name="dense_15_output_arra_7_we0">out, 1, ap_memory, dense_15_output_arra_7, array</column>
+<column name="dense_15_output_arra_7_d0">out, 32, ap_memory, dense_15_output_arra_7, array</column>
+<column name="dense_15_output_arra_7_q0">in, 32, ap_memory, dense_15_output_arra_7, array</column>
+<column name="dense_15_output_arra_6_address0">out, 1, ap_memory, dense_15_output_arra_6, array</column>
+<column name="dense_15_output_arra_6_ce0">out, 1, ap_memory, dense_15_output_arra_6, array</column>
+<column name="dense_15_output_arra_6_we0">out, 1, ap_memory, dense_15_output_arra_6, array</column>
+<column name="dense_15_output_arra_6_d0">out, 32, ap_memory, dense_15_output_arra_6, array</column>
+<column name="dense_15_output_arra_6_q0">in, 32, ap_memory, dense_15_output_arra_6, array</column>
+<column name="dense_15_output_arra_5_address0">out, 1, ap_memory, dense_15_output_arra_5, array</column>
+<column name="dense_15_output_arra_5_ce0">out, 1, ap_memory, dense_15_output_arra_5, array</column>
+<column name="dense_15_output_arra_5_we0">out, 1, ap_memory, dense_15_output_arra_5, array</column>
+<column name="dense_15_output_arra_5_d0">out, 32, ap_memory, dense_15_output_arra_5, array</column>
+<column name="dense_15_output_arra_5_q0">in, 32, ap_memory, dense_15_output_arra_5, array</column>
+<column name="dense_15_output_arra_4_address0">out, 1, ap_memory, dense_15_output_arra_4, array</column>
+<column name="dense_15_output_arra_4_ce0">out, 1, ap_memory, dense_15_output_arra_4, array</column>
+<column name="dense_15_output_arra_4_we0">out, 1, ap_memory, dense_15_output_arra_4, array</column>
+<column name="dense_15_output_arra_4_d0">out, 32, ap_memory, dense_15_output_arra_4, array</column>
+<column name="dense_15_output_arra_4_q0">in, 32, ap_memory, dense_15_output_arra_4, array</column>
+<column name="dense_15_output_arra_3_address0">out, 1, ap_memory, dense_15_output_arra_3, array</column>
+<column name="dense_15_output_arra_3_ce0">out, 1, ap_memory, dense_15_output_arra_3, array</column>
+<column name="dense_15_output_arra_3_we0">out, 1, ap_memory, dense_15_output_arra_3, array</column>
+<column name="dense_15_output_arra_3_d0">out, 32, ap_memory, dense_15_output_arra_3, array</column>
+<column name="dense_15_output_arra_3_q0">in, 32, ap_memory, dense_15_output_arra_3, array</column>
+<column name="dense_15_output_arra_2_address0">out, 1, ap_memory, dense_15_output_arra_2, array</column>
+<column name="dense_15_output_arra_2_ce0">out, 1, ap_memory, dense_15_output_arra_2, array</column>
+<column name="dense_15_output_arra_2_we0">out, 1, ap_memory, dense_15_output_arra_2, array</column>
+<column name="dense_15_output_arra_2_d0">out, 32, ap_memory, dense_15_output_arra_2, array</column>
+<column name="dense_15_output_arra_2_q0">in, 32, ap_memory, dense_15_output_arra_2, array</column>
+<column name="dense_15_output_arra_1_address0">out, 1, ap_memory, dense_15_output_arra_1, array</column>
+<column name="dense_15_output_arra_1_ce0">out, 1, ap_memory, dense_15_output_arra_1, array</column>
+<column name="dense_15_output_arra_1_we0">out, 1, ap_memory, dense_15_output_arra_1, array</column>
+<column name="dense_15_output_arra_1_d0">out, 32, ap_memory, dense_15_output_arra_1, array</column>
+<column name="dense_15_output_arra_1_q0">in, 32, ap_memory, dense_15_output_arra_1, array</column>
+<column name="dense_15_output_arra_address0">out, 1, ap_memory, dense_15_output_arra, array</column>
+<column name="dense_15_output_arra_ce0">out, 1, ap_memory, dense_15_output_arra, array</column>
+<column name="dense_15_output_arra_we0">out, 1, ap_memory, dense_15_output_arra, array</column>
+<column name="dense_15_output_arra_d0">out, 32, ap_memory, dense_15_output_arra, array</column>
+<column name="dense_15_output_arra_q0">in, 32, ap_memory, dense_15_output_arra, array</column>
+<column name="dense_14_output_arra_7_address0">out, 2, ap_memory, dense_14_output_arra_7, array</column>
+<column name="dense_14_output_arra_7_ce0">out, 1, ap_memory, dense_14_output_arra_7, array</column>
+<column name="dense_14_output_arra_7_q0">in, 32, ap_memory, dense_14_output_arra_7, array</column>
+<column name="dense_14_output_arra_6_address0">out, 2, ap_memory, dense_14_output_arra_6, array</column>
+<column name="dense_14_output_arra_6_ce0">out, 1, ap_memory, dense_14_output_arra_6, array</column>
+<column name="dense_14_output_arra_6_q0">in, 32, ap_memory, dense_14_output_arra_6, array</column>
+<column name="dense_14_output_arra_5_address0">out, 2, ap_memory, dense_14_output_arra_5, array</column>
+<column name="dense_14_output_arra_5_ce0">out, 1, ap_memory, dense_14_output_arra_5, array</column>
+<column name="dense_14_output_arra_5_q0">in, 32, ap_memory, dense_14_output_arra_5, array</column>
+<column name="dense_14_output_arra_4_address0">out, 2, ap_memory, dense_14_output_arra_4, array</column>
+<column name="dense_14_output_arra_4_ce0">out, 1, ap_memory, dense_14_output_arra_4, array</column>
+<column name="dense_14_output_arra_4_q0">in, 32, ap_memory, dense_14_output_arra_4, array</column>
+<column name="dense_14_output_arra_3_address0">out, 2, ap_memory, dense_14_output_arra_3, array</column>
+<column name="dense_14_output_arra_3_ce0">out, 1, ap_memory, dense_14_output_arra_3, array</column>
+<column name="dense_14_output_arra_3_q0">in, 32, ap_memory, dense_14_output_arra_3, array</column>
+<column name="dense_14_output_arra_2_address0">out, 2, ap_memory, dense_14_output_arra_2, array</column>
+<column name="dense_14_output_arra_2_ce0">out, 1, ap_memory, dense_14_output_arra_2, array</column>
+<column name="dense_14_output_arra_2_q0">in, 32, ap_memory, dense_14_output_arra_2, array</column>
+<column name="dense_14_output_arra_1_address0">out, 2, ap_memory, dense_14_output_arra_1, array</column>
+<column name="dense_14_output_arra_1_ce0">out, 1, ap_memory, dense_14_output_arra_1, array</column>
+<column name="dense_14_output_arra_1_q0">in, 32, ap_memory, dense_14_output_arra_1, array</column>
+<column name="dense_14_output_arra_address0">out, 2, ap_memory, dense_14_output_arra, array</column>
+<column name="dense_14_output_arra_ce0">out, 1, ap_memory, dense_14_output_arra, array</column>
+<column name="dense_14_output_arra_q0">in, 32, ap_memory, dense_14_output_arra, array</column>
+</table>
+</item>
+</section>
+</profile>

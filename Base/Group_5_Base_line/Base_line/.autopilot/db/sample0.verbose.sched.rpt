@@ -1,0 +1,864 @@
+
+
+================================================================
+== Vivado HLS Report for 'sample0'
+================================================================
+* Date:           Tue Apr 23 19:22:55 2024
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        Group_5_Base_line
+* Solution:       Base_line
+* Product family: artix7
+* Target device:  xc7a200tfbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     4.348|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------------+-------+-------+----------+-----------+-----------+------+----------+
+        |                         |    Latency    | Iteration|  Initiation Interval  | Trip |          |
+        |        Loop Name        |  min  |  max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------------+-------+-------+----------+-----------+-----------+------+----------+
+        |- Loop 1                 |    128|    128|         1|          -|          -|   128|    no    |
+        |- Loop 2                 |   7680|   7680|         3|          -|          -|  2560|    no    |
+        |- Loop 3                 |    384|    384|         3|          -|          -|   128|    no    |
+        |- memset_dense_13_fwork  |   2579|   2579|         1|          -|          -|  2580|    no    |
+        |- Loop 5                 |     32|     32|         1|          -|          -|    32|    no    |
+        |- Loop 6                 |  12288|  12288|         3|          -|          -|  4096|    no    |
+        |- Loop 7                 |     96|     96|         3|          -|          -|    32|    no    |
+        |- memset_dense_14_fwork  |   4223|   4223|         1|          -|          -|  4224|    no    |
+        |- Loop 9                 |     16|     16|         1|          -|          -|    16|    no    |
+        |- Loop 10                |   1536|   1536|         3|          -|          -|   512|    no    |
+        |- Loop 11                |     48|     48|         3|          -|          -|    16|    no    |
+        |- memset_dense_15_fwork  |    543|    543|         1|          -|          -|   544|    no    |
+        |- Loop 13                |     48|     48|         3|          -|          -|    16|    no    |
+        |- memset_dense_16_fwork  |     31|     31|         1|          -|          -|    32|    no    |
+        +-------------------------+-------+-------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 50
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (exitcond1)
+	2  / (!exitcond1)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / (!exitcond2)
+	8  / (exitcond2)
+6 --> 
+	7  / true
+7 --> 
+	5  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / (!exitcond3)
+	13  / (exitcond3)
+11 --> 
+	12  / true
+12 --> 
+	10  / true
+13 --> 
+	13  / (!tmp_4)
+	14  / (tmp_4)
+14 --> 
+	15  / (exitcond4)
+	14  / (!exitcond4)
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / (!exitcond5)
+	20  / (exitcond5)
+18 --> 
+	19  / true
+19 --> 
+	17  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / (!exitcond6)
+	25  / (exitcond6)
+23 --> 
+	24  / true
+24 --> 
+	22  / true
+25 --> 
+	25  / (!tmp_9)
+	26  / (tmp_9)
+26 --> 
+	27  / (exitcond7)
+	26  / (!exitcond7)
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / (!exitcond8)
+	32  / (exitcond8)
+30 --> 
+	31  / true
+31 --> 
+	29  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / (!exitcond9)
+	37  / (exitcond9)
+35 --> 
+	36  / true
+36 --> 
+	34  / true
+37 --> 
+	37  / (!tmp_13)
+	38  / (tmp_13)
+38 --> 
+	39  / (!exitcond)
+	41  / (exitcond)
+39 --> 
+	40  / true
+40 --> 
+	38  / true
+41 --> 
+	42  / true
+42 --> 
+	43  / true
+43 --> 
+	43  / (!tmp_16)
+	44  / (tmp_16)
+44 --> 
+	45  / true
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+	50  / true
+50 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.35>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([10000 x float]* %dense_13_input_input_array), !map !380"   --->   Operation 51 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64* %dense_13_input_input_ndim), !map !384"   --->   Operation 52 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64* %dense_13_input_input_numel), !map !388"   --->   Operation 53 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([5 x i64]* %dense_13_input_input_shape), !map !392"   --->   Operation 54 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([10000 x float]* %dense_16_output_array), !map !396"   --->   Operation 55 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64* %dense_16_output_ndim), !map !400"   --->   Operation 56 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64* %dense_16_output_numel), !map !404"   --->   Operation 57 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([5 x i64]* %dense_16_output_shape), !map !408"   --->   Operation 58 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([8 x i8]* @sample0_str) nounwind"   --->   Operation 59 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%dense_13_fwork = alloca [2580 x float], align 16" [Group_5_Base_line/sample0.c:610]   --->   Operation 60 'alloca' 'dense_13_fwork' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%dense_14_fwork = alloca [4224 x float], align 16" [Group_5_Base_line/sample0.c:1485]   --->   Operation 61 'alloca' 'dense_14_fwork' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%dense_15_fwork = alloca [544 x float], align 16" [Group_5_Base_line/sample0.c:1641]   --->   Operation 62 'alloca' 'dense_15_fwork' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%dense_16_fwork = alloca [32 x float], align 16" [Group_5_Base_line/sample0.c:1679]   --->   Operation 63 'alloca' 'dense_16_fwork' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_1 : Operation 64 [1/1] (1.35ns)   --->   "br label %0" [Group_5_Base_line/sample0.c:28]   --->   Operation 64 'br' <Predicate = true> <Delay = 1.35>
+
+State 2 <SV = 1> <Delay = 2.77>
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%storemerge = phi i8 [ %tmp, %1 ], [ 0, %.preheader159 ]" [Group_5_Base_line/sample0.c:28]   --->   Operation 65 'phi' 'storemerge' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%storemerge_cast = zext i8 %storemerge to i64" [Group_5_Base_line/sample0.c:28]   --->   Operation 66 'zext' 'storemerge_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 67 [1/1] (1.24ns)   --->   "%exitcond1 = icmp eq i8 %storemerge, -128" [Group_5_Base_line/sample0.c:28]   --->   Operation 67 'icmp' 'exitcond1' <Predicate = true> <Delay = 1.24> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 128, i64 128, i64 128)"   --->   Operation 68 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 69 [1/1] (1.71ns)   --->   "%tmp = add i8 %storemerge, 1" [Group_5_Base_line/sample0.c:28]   --->   Operation 69 'add' 'tmp' <Predicate = true> <Delay = 1.71> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "br i1 %exitcond1, label %.preheader158, label %1" [Group_5_Base_line/sample0.c:28]   --->   Operation 70 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%dense_13_output_arra_1 = getelementptr [10000 x float]* @dense_13_output_arra, i64 0, i64 %storemerge_cast" [Group_5_Base_line/sample0.c:30]   --->   Operation 71 'getelementptr' 'dense_13_output_arra_1' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 72 [1/1] (2.77ns)   --->   "store float 0.000000e+00, float* %dense_13_output_arra_1, align 4" [Group_5_Base_line/sample0.c:30]   --->   Operation 72 'store' <Predicate = (!exitcond1)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_2 : Operation 73 [1/1] (0.00ns)   --->   "br label %0" [Group_5_Base_line/sample0.c:28]   --->   Operation 73 'br' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 74 [1/1] (0.00ns)   --->   "store i64 1, i64* @dense_13_output_ndim, align 8" [Group_5_Base_line/sample0.c:32]   --->   Operation 74 'store' <Predicate = (exitcond1)> <Delay = 0.00>
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "store i64 128, i64* @dense_13_output_nume, align 8" [Group_5_Base_line/sample0.c:33]   --->   Operation 75 'store' <Predicate = (exitcond1)> <Delay = 0.00>
+ST_2 : Operation 76 [1/1] (1.75ns)   --->   "store i64 128, i64* getelementptr inbounds ([5 x i64]* @dense_13_output_shap, i64 0, i64 0), align 8" [Group_5_Base_line/sample0.c:34]   --->   Operation 76 'store' <Predicate = (exitcond1)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+
+State 3 <SV = 2> <Delay = 1.75>
+ST_3 : Operation 77 [1/1] (1.75ns)   --->   "store i64 1, i64* getelementptr inbounds ([5 x i64]* @dense_13_output_shap, i64 0, i64 1), align 8" [Group_5_Base_line/sample0.c:35]   --->   Operation 77 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 78 [1/1] (1.75ns)   --->   "store i64 1, i64* getelementptr inbounds ([5 x i64]* @dense_13_output_shap, i64 0, i64 2), align 8" [Group_5_Base_line/sample0.c:36]   --->   Operation 78 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+
+State 4 <SV = 3> <Delay = 1.75>
+ST_4 : Operation 79 [1/1] (1.75ns)   --->   "store i64 1, i64* getelementptr inbounds ([5 x i64]* @dense_13_output_shap, i64 0, i64 3), align 8" [Group_5_Base_line/sample0.c:37]   --->   Operation 79 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_4 : Operation 80 [1/1] (1.75ns)   --->   "store i64 1, i64* getelementptr inbounds ([5 x i64]* @dense_13_output_shap, i64 0, i64 4), align 8" [Group_5_Base_line/sample0.c:38]   --->   Operation 80 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_4 : Operation 81 [1/1] (1.35ns)   --->   "br label %2" [Group_5_Base_line/sample0.c:557]   --->   Operation 81 'br' <Predicate = true> <Delay = 1.35>
+
+State 5 <SV = 4> <Delay = 2.77>
+ST_5 : Operation 82 [1/1] (0.00ns)   --->   "%storemerge1 = phi i12 [ %tmp_1, %3 ], [ 0, %.preheader158 ]" [Group_5_Base_line/sample0.c:557]   --->   Operation 82 'phi' 'storemerge1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 83 [1/1] (0.00ns)   --->   "%storemerge1_cast = zext i12 %storemerge1 to i64" [Group_5_Base_line/sample0.c:557]   --->   Operation 83 'zext' 'storemerge1_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 84 [1/1] (1.61ns)   --->   "%exitcond2 = icmp eq i12 %storemerge1, -1536" [Group_5_Base_line/sample0.c:557]   --->   Operation 84 'icmp' 'exitcond2' <Predicate = true> <Delay = 1.61> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 85 [1/1] (0.00ns)   --->   "%empty_13 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 2560, i64 2560, i64 2560)"   --->   Operation 85 'speclooptripcount' 'empty_13' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 86 [1/1] (1.77ns)   --->   "%tmp_1 = add i12 %storemerge1, 1" [Group_5_Base_line/sample0.c:557]   --->   Operation 86 'add' 'tmp_1' <Predicate = true> <Delay = 1.77> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 87 [1/1] (0.00ns)   --->   "br i1 %exitcond2, label %.preheader157, label %3" [Group_5_Base_line/sample0.c:557]   --->   Operation 87 'br' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 88 [1/1] (0.00ns)   --->   "%dense_13_kernel_arra_1 = getelementptr inbounds [2560 x float]* @dense_13_kernel_arra, i64 0, i64 %storemerge1_cast" [Group_5_Base_line/sample0.c:559]   --->   Operation 88 'getelementptr' 'dense_13_kernel_arra_1' <Predicate = (!exitcond2)> <Delay = 0.00>
+ST_5 : Operation 89 [2/2] (2.77ns)   --->   "%dense_13_kernel_arra_2 = load float* %dense_13_kernel_arra_1, align 4" [Group_5_Base_line/sample0.c:559]   --->   Operation 89 'load' 'dense_13_kernel_arra_2' <Predicate = (!exitcond2)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 16> <ROM>
+ST_5 : Operation 90 [1/1] (1.75ns)   --->   "store i64 20, i64* getelementptr inbounds ([5 x i64]* @dense_13_kernel_shap, i64 0, i64 0), align 8" [Group_5_Base_line/sample0.c:563]   --->   Operation 90 'store' <Predicate = (exitcond2)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+
+State 6 <SV = 5> <Delay = 2.77>
+ST_6 : Operation 91 [1/2] (2.77ns)   --->   "%dense_13_kernel_arra_2 = load float* %dense_13_kernel_arra_1, align 4" [Group_5_Base_line/sample0.c:559]   --->   Operation 91 'load' 'dense_13_kernel_arra_2' <Predicate = true> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 16> <ROM>
+
+State 7 <SV = 6> <Delay = 2.77>
+ST_7 : Operation 92 [1/1] (0.00ns)   --->   "%dense_13_kernel_arra_1_14 = getelementptr [10000 x float]* @dense_13_kernel_arra_4, i64 0, i64 %storemerge1_cast" [Group_5_Base_line/sample0.c:559]   --->   Operation 92 'getelementptr' 'dense_13_kernel_arra_1_14' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 93 [1/1] (2.77ns)   --->   "store float %dense_13_kernel_arra_2, float* %dense_13_kernel_arra_1_14, align 4" [Group_5_Base_line/sample0.c:559]   --->   Operation 93 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_7 : Operation 94 [1/1] (0.00ns)   --->   "br label %2" [Group_5_Base_line/sample0.c:557]   --->   Operation 94 'br' <Predicate = true> <Delay = 0.00>
+
+State 8 <SV = 5> <Delay = 1.75>
+ST_8 : Operation 95 [1/1] (1.75ns)   --->   "store i64 128, i64* getelementptr inbounds ([5 x i64]* @dense_13_kernel_shap, i64 0, i64 1), align 8" [Group_5_Base_line/sample0.c:564]   --->   Operation 95 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_8 : Operation 96 [1/1] (1.75ns)   --->   "store i64 1, i64* getelementptr inbounds ([5 x i64]* @dense_13_kernel_shap, i64 0, i64 2), align 8" [Group_5_Base_line/sample0.c:565]   --->   Operation 96 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+
+State 9 <SV = 6> <Delay = 1.75>
+ST_9 : Operation 97 [1/1] (1.75ns)   --->   "store i64 1, i64* getelementptr inbounds ([5 x i64]* @dense_13_kernel_shap, i64 0, i64 3), align 8" [Group_5_Base_line/sample0.c:566]   --->   Operation 97 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_9 : Operation 98 [1/1] (1.75ns)   --->   "store i64 1, i64* getelementptr inbounds ([5 x i64]* @dense_13_kernel_shap, i64 0, i64 4), align 8" [Group_5_Base_line/sample0.c:567]   --->   Operation 98 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_9 : Operation 99 [1/1] (1.35ns)   --->   "br label %4" [Group_5_Base_line/sample0.c:598]   --->   Operation 99 'br' <Predicate = true> <Delay = 1.35>
+
+State 10 <SV = 7> <Delay = 2.77>
+ST_10 : Operation 100 [1/1] (0.00ns)   --->   "%storemerge2 = phi i8 [ %tmp_2, %5 ], [ 0, %.preheader157 ]" [Group_5_Base_line/sample0.c:598]   --->   Operation 100 'phi' 'storemerge2' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 101 [1/1] (0.00ns)   --->   "%storemerge2_cast = zext i8 %storemerge2 to i64" [Group_5_Base_line/sample0.c:598]   --->   Operation 101 'zext' 'storemerge2_cast' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 102 [1/1] (1.24ns)   --->   "%exitcond3 = icmp eq i8 %storemerge2, -128" [Group_5_Base_line/sample0.c:598]   --->   Operation 102 'icmp' 'exitcond3' <Predicate = true> <Delay = 1.24> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 103 [1/1] (0.00ns)   --->   "%empty_15 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 128, i64 128, i64 128)"   --->   Operation 103 'speclooptripcount' 'empty_15' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 104 [1/1] (1.71ns)   --->   "%tmp_2 = add i8 %storemerge2, 1" [Group_5_Base_line/sample0.c:598]   --->   Operation 104 'add' 'tmp_2' <Predicate = true> <Delay = 1.71> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 105 [1/1] (0.00ns)   --->   "br i1 %exitcond3, label %meminst27.preheader, label %5" [Group_5_Base_line/sample0.c:598]   --->   Operation 105 'br' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 106 [1/1] (0.00ns)   --->   "%dense_13_bias_array_s = getelementptr inbounds [128 x float]* @dense_13_bias_array, i64 0, i64 %storemerge2_cast" [Group_5_Base_line/sample0.c:600]   --->   Operation 106 'getelementptr' 'dense_13_bias_array_s' <Predicate = (!exitcond3)> <Delay = 0.00>
+ST_10 : Operation 107 [2/2] (2.77ns)   --->   "%dense_13_bias_array_1 = load float* %dense_13_bias_array_s, align 4" [Group_5_Base_line/sample0.c:600]   --->   Operation 107 'load' 'dense_13_bias_array_1' <Predicate = (!exitcond3)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 16> <ROM>
+ST_10 : Operation 108 [1/1] (1.35ns)   --->   "br label %meminst27" [Group_5_Base_line/sample0.c:610]   --->   Operation 108 'br' <Predicate = (exitcond3)> <Delay = 1.35>
+
+State 11 <SV = 8> <Delay = 2.77>
+ST_11 : Operation 109 [1/2] (2.77ns)   --->   "%dense_13_bias_array_1 = load float* %dense_13_bias_array_s, align 4" [Group_5_Base_line/sample0.c:600]   --->   Operation 109 'load' 'dense_13_bias_array_1' <Predicate = true> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 16> <ROM>
+
+State 12 <SV = 9> <Delay = 2.77>
+ST_12 : Operation 110 [1/1] (0.00ns)   --->   "%dense_13_bias_array_s_16 = getelementptr [10000 x float]* @dense_13_bias_array_5, i64 0, i64 %storemerge2_cast" [Group_5_Base_line/sample0.c:600]   --->   Operation 110 'getelementptr' 'dense_13_bias_array_s_16' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 111 [1/1] (2.77ns)   --->   "store float %dense_13_bias_array_1, float* %dense_13_bias_array_s_16, align 4" [Group_5_Base_line/sample0.c:600]   --->   Operation 111 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_12 : Operation 112 [1/1] (0.00ns)   --->   "br label %4" [Group_5_Base_line/sample0.c:598]   --->   Operation 112 'br' <Predicate = true> <Delay = 0.00>
+
+State 13 <SV = 8> <Delay = 2.77>
+ST_13 : Operation 113 [1/1] (0.00ns)   --->   "%invdar = phi i12 [ %indvarinc, %meminst27 ], [ 0, %meminst27.preheader ]" [Group_5_Base_line/sample0.c:610]   --->   Operation 113 'phi' 'invdar' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 114 [1/1] (1.77ns)   --->   "%indvarinc = add i12 %invdar, 1" [Group_5_Base_line/sample0.c:610]   --->   Operation 114 'add' 'indvarinc' <Predicate = true> <Delay = 1.77> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 115 [1/1] (0.00ns)   --->   "%tmp_3 = zext i12 %invdar to i64" [Group_5_Base_line/sample0.c:610]   --->   Operation 115 'zext' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 116 [1/1] (0.00ns)   --->   "%dense_13_fwork_addr = getelementptr [2580 x float]* %dense_13_fwork, i64 0, i64 %tmp_3" [Group_5_Base_line/sample0.c:610]   --->   Operation 116 'getelementptr' 'dense_13_fwork_addr' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 117 [1/1] (2.77ns)   --->   "store float 0.000000e+00, float* %dense_13_fwork_addr, align 4" [Group_5_Base_line/sample0.c:610]   --->   Operation 117 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_13 : Operation 118 [1/1] (1.61ns)   --->   "%tmp_4 = icmp eq i12 %invdar, -1517" [Group_5_Base_line/sample0.c:610]   --->   Operation 118 'icmp' 'tmp_4' <Predicate = true> <Delay = 1.61> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 119 [1/1] (0.00ns)   --->   "%empty_17 = call i32 (...)* @_ssdm_op_SpecLoopName([22 x i8]* @memset_dense_13_fwor) nounwind"   --->   Operation 119 'specloopname' 'empty_17' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 120 [1/1] (0.00ns)   --->   "%empty_18 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 2580, i64 2580, i64 2580)"   --->   Operation 120 'speclooptripcount' 'empty_18' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 121 [1/1] (0.00ns)   --->   "br i1 %tmp_4, label %.preheader156.preheader, label %meminst27" [Group_5_Base_line/sample0.c:610]   --->   Operation 121 'br' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 122 [1/1] (1.35ns)   --->   "br label %.preheader156" [Group_5_Base_line/sample0.c:616]   --->   Operation 122 'br' <Predicate = (tmp_4)> <Delay = 1.35>
+
+State 14 <SV = 9> <Delay = 2.77>
+ST_14 : Operation 123 [1/1] (0.00ns)   --->   "%storemerge3 = phi i6 [ %tmp_5, %6 ], [ 0, %.preheader156.preheader ]" [Group_5_Base_line/sample0.c:616]   --->   Operation 123 'phi' 'storemerge3' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 124 [1/1] (0.00ns)   --->   "%storemerge3_cast = zext i6 %storemerge3 to i64" [Group_5_Base_line/sample0.c:616]   --->   Operation 124 'zext' 'storemerge3_cast' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 125 [1/1] (1.22ns)   --->   "%exitcond4 = icmp eq i6 %storemerge3, -32" [Group_5_Base_line/sample0.c:616]   --->   Operation 125 'icmp' 'exitcond4' <Predicate = true> <Delay = 1.22> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 126 [1/1] (0.00ns)   --->   "%empty_19 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 32, i64 32, i64 32)"   --->   Operation 126 'speclooptripcount' 'empty_19' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 127 [1/1] (1.60ns)   --->   "%tmp_5 = add i6 %storemerge3, 1" [Group_5_Base_line/sample0.c:616]   --->   Operation 127 'add' 'tmp_5' <Predicate = true> <Delay = 1.60> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 128 [1/1] (0.00ns)   --->   "br i1 %exitcond4, label %.preheader155, label %6" [Group_5_Base_line/sample0.c:616]   --->   Operation 128 'br' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 129 [1/1] (0.00ns)   --->   "%dense_14_output_arra_1 = getelementptr [10000 x float]* @dense_14_output_arra, i64 0, i64 %storemerge3_cast" [Group_5_Base_line/sample0.c:618]   --->   Operation 129 'getelementptr' 'dense_14_output_arra_1' <Predicate = (!exitcond4)> <Delay = 0.00>
+ST_14 : Operation 130 [1/1] (2.77ns)   --->   "store float 0.000000e+00, float* %dense_14_output_arra_1, align 4" [Group_5_Base_line/sample0.c:618]   --->   Operation 130 'store' <Predicate = (!exitcond4)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_14 : Operation 131 [1/1] (0.00ns)   --->   "br label %.preheader156" [Group_5_Base_line/sample0.c:616]   --->   Operation 131 'br' <Predicate = (!exitcond4)> <Delay = 0.00>
+ST_14 : Operation 132 [1/1] (0.00ns)   --->   "store i64 1, i64* @dense_14_output_ndim, align 8" [Group_5_Base_line/sample0.c:620]   --->   Operation 132 'store' <Predicate = (exitcond4)> <Delay = 0.00>
+ST_14 : Operation 133 [1/1] (0.00ns)   --->   "store i64 32, i64* @dense_14_output_nume, align 8" [Group_5_Base_line/sample0.c:621]   --->   Operation 133 'store' <Predicate = (exitcond4)> <Delay = 0.00>
+ST_14 : Operation 134 [1/1] (1.75ns)   --->   "store i64 32, i64* getelementptr inbounds ([5 x i64]* @dense_14_output_shap, i64 0, i64 0), align 8" [Group_5_Base_line/sample0.c:622]   --->   Operation 134 'store' <Predicate = (exitcond4)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+
+State 15 <SV = 10> <Delay = 1.75>
+ST_15 : Operation 135 [1/1] (1.75ns)   --->   "store i64 1, i64* getelementptr inbounds ([5 x i64]* @dense_14_output_shap, i64 0, i64 1), align 8" [Group_5_Base_line/sample0.c:623]   --->   Operation 135 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_15 : Operation 136 [1/1] (1.75ns)   --->   "store i64 1, i64* getelementptr inbounds ([5 x i64]* @dense_14_output_shap, i64 0, i64 2), align 8" [Group_5_Base_line/sample0.c:624]   --->   Operation 136 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+
+State 16 <SV = 11> <Delay = 1.75>
+ST_16 : Operation 137 [1/1] (1.75ns)   --->   "store i64 1, i64* getelementptr inbounds ([5 x i64]* @dense_14_output_shap, i64 0, i64 3), align 8" [Group_5_Base_line/sample0.c:625]   --->   Operation 137 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_16 : Operation 138 [1/1] (1.75ns)   --->   "store i64 1, i64* getelementptr inbounds ([5 x i64]* @dense_14_output_shap, i64 0, i64 4), align 8" [Group_5_Base_line/sample0.c:626]   --->   Operation 138 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_16 : Operation 139 [1/1] (1.35ns)   --->   "br label %7" [Group_5_Base_line/sample0.c:1451]   --->   Operation 139 'br' <Predicate = true> <Delay = 1.35>
+
+State 17 <SV = 12> <Delay = 2.77>
+ST_17 : Operation 140 [1/1] (0.00ns)   --->   "%storemerge4 = phi i13 [ %tmp_6, %8 ], [ 0, %.preheader155 ]" [Group_5_Base_line/sample0.c:1451]   --->   Operation 140 'phi' 'storemerge4' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 141 [1/1] (0.00ns)   --->   "%storemerge4_cast9 = zext i13 %storemerge4 to i64" [Group_5_Base_line/sample0.c:1451]   --->   Operation 141 'zext' 'storemerge4_cast9' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 142 [1/1] (1.70ns)   --->   "%exitcond5 = icmp eq i13 %storemerge4, -4096" [Group_5_Base_line/sample0.c:1451]   --->   Operation 142 'icmp' 'exitcond5' <Predicate = true> <Delay = 1.70> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 143 [1/1] (0.00ns)   --->   "%empty_20 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4096, i64 4096, i64 4096)"   --->   Operation 143 'speclooptripcount' 'empty_20' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 144 [1/1] (1.79ns)   --->   "%tmp_6 = add i13 %storemerge4, 1" [Group_5_Base_line/sample0.c:1451]   --->   Operation 144 'add' 'tmp_6' <Predicate = true> <Delay = 1.79> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 145 [1/1] (0.00ns)   --->   "br i1 %exitcond5, label %.preheader154, label %8" [Group_5_Base_line/sample0.c:1451]   --->   Operation 145 'br' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 146 [1/1] (0.00ns)   --->   "%dense_14_kernel_arra_1 = getelementptr inbounds [4096 x float]* @dense_14_kernel_arra, i64 0, i64 %storemerge4_cast9" [Group_5_Base_line/sample0.c:1453]   --->   Operation 146 'getelementptr' 'dense_14_kernel_arra_1' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_17 : Operation 147 [2/2] (2.77ns)   --->   "%dense_14_kernel_arra_2 = load float* %dense_14_kernel_arra_1, align 4" [Group_5_Base_line/sample0.c:1453]   --->   Operation 147 'load' 'dense_14_kernel_arra_2' <Predicate = (!exitcond5)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 16> <ROM>
+ST_17 : Operation 148 [1/1] (0.00ns)   --->   "store i64 2, i64* @dense_14_kernel_ndim, align 8" [Group_5_Base_line/sample0.c:1455]   --->   Operation 148 'store' <Predicate = (exitcond5)> <Delay = 0.00>
+ST_17 : Operation 149 [1/1] (0.00ns)   --->   "store i64 4096, i64* @dense_14_kernel_nume, align 8" [Group_5_Base_line/sample0.c:1456]   --->   Operation 149 'store' <Predicate = (exitcond5)> <Delay = 0.00>
+ST_17 : Operation 150 [1/1] (1.75ns)   --->   "store i64 128, i64* getelementptr inbounds ([5 x i64]* @dense_14_kernel_shap, i64 0, i64 0), align 8" [Group_5_Base_line/sample0.c:1457]   --->   Operation 150 'store' <Predicate = (exitcond5)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+
+State 18 <SV = 13> <Delay = 2.77>
+ST_18 : Operation 151 [1/2] (2.77ns)   --->   "%dense_14_kernel_arra_2 = load float* %dense_14_kernel_arra_1, align 4" [Group_5_Base_line/sample0.c:1453]   --->   Operation 151 'load' 'dense_14_kernel_arra_2' <Predicate = true> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 16> <ROM>
+
+State 19 <SV = 14> <Delay = 2.77>
+ST_19 : Operation 152 [1/1] (0.00ns)   --->   "%dense_14_kernel_arra_1_21 = getelementptr [10000 x float]* @dense_14_kernel_arra_2, i64 0, i64 %storemerge4_cast9" [Group_5_Base_line/sample0.c:1453]   --->   Operation 152 'getelementptr' 'dense_14_kernel_arra_1_21' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 153 [1/1] (2.77ns)   --->   "store float %dense_14_kernel_arra_2, float* %dense_14_kernel_arra_1_21, align 4" [Group_5_Base_line/sample0.c:1453]   --->   Operation 153 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_19 : Operation 154 [1/1] (0.00ns)   --->   "br label %7" [Group_5_Base_line/sample0.c:1451]   --->   Operation 154 'br' <Predicate = true> <Delay = 0.00>
+
+State 20 <SV = 13> <Delay = 1.75>
+ST_20 : Operation 155 [1/1] (1.75ns)   --->   "store i64 32, i64* getelementptr inbounds ([5 x i64]* @dense_14_kernel_shap, i64 0, i64 1), align 8" [Group_5_Base_line/sample0.c:1458]   --->   Operation 155 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_20 : Operation 156 [1/1] (1.75ns)   --->   "store i64 1, i64* getelementptr inbounds ([5 x i64]* @dense_14_kernel_shap, i64 0, i64 2), align 8" [Group_5_Base_line/sample0.c:1459]   --->   Operation 156 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+
+State 21 <SV = 14> <Delay = 1.75>
+ST_21 : Operation 157 [1/1] (1.75ns)   --->   "store i64 1, i64* getelementptr inbounds ([5 x i64]* @dense_14_kernel_shap, i64 0, i64 3), align 8" [Group_5_Base_line/sample0.c:1460]   --->   Operation 157 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_21 : Operation 158 [1/1] (1.75ns)   --->   "store i64 1, i64* getelementptr inbounds ([5 x i64]* @dense_14_kernel_shap, i64 0, i64 4), align 8" [Group_5_Base_line/sample0.c:1461]   --->   Operation 158 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_21 : Operation 159 [1/1] (1.35ns)   --->   "br label %9" [Group_5_Base_line/sample0.c:1473]   --->   Operation 159 'br' <Predicate = true> <Delay = 1.35>
+
+State 22 <SV = 15> <Delay = 2.77>
+ST_22 : Operation 160 [1/1] (0.00ns)   --->   "%storemerge5 = phi i6 [ %tmp_7, %10 ], [ 0, %.preheader154 ]" [Group_5_Base_line/sample0.c:1473]   --->   Operation 160 'phi' 'storemerge5' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 161 [1/1] (0.00ns)   --->   "%storemerge5_cast8 = zext i6 %storemerge5 to i64" [Group_5_Base_line/sample0.c:1473]   --->   Operation 161 'zext' 'storemerge5_cast8' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 162 [1/1] (1.22ns)   --->   "%exitcond6 = icmp eq i6 %storemerge5, -32" [Group_5_Base_line/sample0.c:1473]   --->   Operation 162 'icmp' 'exitcond6' <Predicate = true> <Delay = 1.22> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 163 [1/1] (0.00ns)   --->   "%empty_22 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 32, i64 32, i64 32)"   --->   Operation 163 'speclooptripcount' 'empty_22' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 164 [1/1] (1.60ns)   --->   "%tmp_7 = add i6 %storemerge5, 1" [Group_5_Base_line/sample0.c:1473]   --->   Operation 164 'add' 'tmp_7' <Predicate = true> <Delay = 1.60> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 165 [1/1] (0.00ns)   --->   "br i1 %exitcond6, label %11, label %10" [Group_5_Base_line/sample0.c:1473]   --->   Operation 165 'br' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 166 [1/1] (0.00ns)   --->   "%dense_14_bias_array_s = getelementptr inbounds [32 x float]* @dense_14_bias_array, i64 0, i64 %storemerge5_cast8" [Group_5_Base_line/sample0.c:1475]   --->   Operation 166 'getelementptr' 'dense_14_bias_array_s' <Predicate = (!exitcond6)> <Delay = 0.00>
+ST_22 : Operation 167 [2/2] (2.77ns)   --->   "%dense_14_bias_array_1 = load float* %dense_14_bias_array_s, align 4" [Group_5_Base_line/sample0.c:1475]   --->   Operation 167 'load' 'dense_14_bias_array_1' <Predicate = (!exitcond6)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 16> <ROM>
+ST_22 : Operation 168 [1/1] (0.00ns)   --->   "store i64 32, i64* @dense_14_bias_numel, align 8" [Group_5_Base_line/sample0.c:1478]   --->   Operation 168 'store' <Predicate = (exitcond6)> <Delay = 0.00>
+ST_22 : Operation 169 [1/1] (1.35ns)   --->   "br label %meminst41"   --->   Operation 169 'br' <Predicate = (exitcond6)> <Delay = 1.35>
+
+State 23 <SV = 16> <Delay = 2.77>
+ST_23 : Operation 170 [1/2] (2.77ns)   --->   "%dense_14_bias_array_1 = load float* %dense_14_bias_array_s, align 4" [Group_5_Base_line/sample0.c:1475]   --->   Operation 170 'load' 'dense_14_bias_array_1' <Predicate = true> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 16> <ROM>
+
+State 24 <SV = 17> <Delay = 2.77>
+ST_24 : Operation 171 [1/1] (0.00ns)   --->   "%dense_14_bias_array_s_23 = getelementptr [10000 x float]* @dense_14_bias_array_3, i64 0, i64 %storemerge5_cast8" [Group_5_Base_line/sample0.c:1475]   --->   Operation 171 'getelementptr' 'dense_14_bias_array_s_23' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 172 [1/1] (2.77ns)   --->   "store float %dense_14_bias_array_1, float* %dense_14_bias_array_s_23, align 4" [Group_5_Base_line/sample0.c:1475]   --->   Operation 172 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_24 : Operation 173 [1/1] (0.00ns)   --->   "br label %9" [Group_5_Base_line/sample0.c:1473]   --->   Operation 173 'br' <Predicate = true> <Delay = 0.00>
+
+State 25 <SV = 16> <Delay = 2.77>
+ST_25 : Operation 174 [1/1] (0.00ns)   --->   "%invdar1 = phi i13 [ 0, %11 ], [ %indvarinc1, %meminst41 ]" [Group_5_Base_line/sample0.c:1485]   --->   Operation 174 'phi' 'invdar1' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 175 [1/1] (1.79ns)   --->   "%indvarinc1 = add i13 %invdar1, 1" [Group_5_Base_line/sample0.c:1485]   --->   Operation 175 'add' 'indvarinc1' <Predicate = true> <Delay = 1.79> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 176 [1/1] (0.00ns)   --->   "%tmp_8 = zext i13 %invdar1 to i64" [Group_5_Base_line/sample0.c:1485]   --->   Operation 176 'zext' 'tmp_8' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 177 [1/1] (0.00ns)   --->   "%dense_14_fwork_addr = getelementptr [4224 x float]* %dense_14_fwork, i64 0, i64 %tmp_8" [Group_5_Base_line/sample0.c:1485]   --->   Operation 177 'getelementptr' 'dense_14_fwork_addr' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 178 [1/1] (2.77ns)   --->   "store float 0.000000e+00, float* %dense_14_fwork_addr, align 4" [Group_5_Base_line/sample0.c:1485]   --->   Operation 178 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_25 : Operation 179 [1/1] (1.70ns)   --->   "%tmp_9 = icmp eq i13 %invdar1, -3969" [Group_5_Base_line/sample0.c:1485]   --->   Operation 179 'icmp' 'tmp_9' <Predicate = true> <Delay = 1.70> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 180 [1/1] (0.00ns)   --->   "%empty_24 = call i32 (...)* @_ssdm_op_SpecLoopName([22 x i8]* @memset_dense_14_fwor) nounwind"   --->   Operation 180 'specloopname' 'empty_24' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 181 [1/1] (0.00ns)   --->   "%empty_25 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4224, i64 4224, i64 4224)"   --->   Operation 181 'speclooptripcount' 'empty_25' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 182 [1/1] (0.00ns)   --->   "br i1 %tmp_9, label %.preheader153.preheader, label %meminst41" [Group_5_Base_line/sample0.c:1485]   --->   Operation 182 'br' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 183 [1/1] (1.35ns)   --->   "br label %.preheader153" [Group_5_Base_line/sample0.c:1491]   --->   Operation 183 'br' <Predicate = (tmp_9)> <Delay = 1.35>
+
+State 26 <SV = 17> <Delay = 2.77>
+ST_26 : Operation 184 [1/1] (0.00ns)   --->   "%storemerge6 = phi i5 [ %tmp_s, %12 ], [ 0, %.preheader153.preheader ]" [Group_5_Base_line/sample0.c:1491]   --->   Operation 184 'phi' 'storemerge6' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 185 [1/1] (0.00ns)   --->   "%storemerge6_cast6 = zext i5 %storemerge6 to i64" [Group_5_Base_line/sample0.c:1491]   --->   Operation 185 'zext' 'storemerge6_cast6' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 186 [1/1] (1.21ns)   --->   "%exitcond7 = icmp eq i5 %storemerge6, -16" [Group_5_Base_line/sample0.c:1491]   --->   Operation 186 'icmp' 'exitcond7' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 187 [1/1] (0.00ns)   --->   "%empty_26 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16)"   --->   Operation 187 'speclooptripcount' 'empty_26' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 188 [1/1] (1.54ns)   --->   "%tmp_s = add i5 %storemerge6, 1" [Group_5_Base_line/sample0.c:1491]   --->   Operation 188 'add' 'tmp_s' <Predicate = true> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 189 [1/1] (0.00ns)   --->   "br i1 %exitcond7, label %.preheader152, label %12" [Group_5_Base_line/sample0.c:1491]   --->   Operation 189 'br' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 190 [1/1] (0.00ns)   --->   "%dense_15_output_arra_1 = getelementptr [10000 x float]* @dense_15_output_arra, i64 0, i64 %storemerge6_cast6" [Group_5_Base_line/sample0.c:1493]   --->   Operation 190 'getelementptr' 'dense_15_output_arra_1' <Predicate = (!exitcond7)> <Delay = 0.00>
+ST_26 : Operation 191 [1/1] (2.77ns)   --->   "store float 0.000000e+00, float* %dense_15_output_arra_1, align 4" [Group_5_Base_line/sample0.c:1493]   --->   Operation 191 'store' <Predicate = (!exitcond7)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_26 : Operation 192 [1/1] (0.00ns)   --->   "br label %.preheader153" [Group_5_Base_line/sample0.c:1491]   --->   Operation 192 'br' <Predicate = (!exitcond7)> <Delay = 0.00>
+ST_26 : Operation 193 [1/1] (0.00ns)   --->   "store i64 1, i64* @dense_15_output_ndim, align 8" [Group_5_Base_line/sample0.c:1495]   --->   Operation 193 'store' <Predicate = (exitcond7)> <Delay = 0.00>
+ST_26 : Operation 194 [1/1] (0.00ns)   --->   "store i64 16, i64* @dense_15_output_nume, align 8" [Group_5_Base_line/sample0.c:1496]   --->   Operation 194 'store' <Predicate = (exitcond7)> <Delay = 0.00>
+ST_26 : Operation 195 [1/1] (1.75ns)   --->   "store i64 16, i64* getelementptr inbounds ([5 x i64]* @dense_15_output_shap, i64 0, i64 0), align 8" [Group_5_Base_line/sample0.c:1497]   --->   Operation 195 'store' <Predicate = (exitcond7)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+
+State 27 <SV = 18> <Delay = 1.75>
+ST_27 : Operation 196 [1/1] (1.75ns)   --->   "store i64 1, i64* getelementptr inbounds ([5 x i64]* @dense_15_output_shap, i64 0, i64 1), align 8" [Group_5_Base_line/sample0.c:1498]   --->   Operation 196 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_27 : Operation 197 [1/1] (1.75ns)   --->   "store i64 1, i64* getelementptr inbounds ([5 x i64]* @dense_15_output_shap, i64 0, i64 2), align 8" [Group_5_Base_line/sample0.c:1499]   --->   Operation 197 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+
+State 28 <SV = 19> <Delay = 1.75>
+ST_28 : Operation 198 [1/1] (1.75ns)   --->   "store i64 1, i64* getelementptr inbounds ([5 x i64]* @dense_15_output_shap, i64 0, i64 3), align 8" [Group_5_Base_line/sample0.c:1500]   --->   Operation 198 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_28 : Operation 199 [1/1] (1.75ns)   --->   "store i64 1, i64* getelementptr inbounds ([5 x i64]* @dense_15_output_shap, i64 0, i64 4), align 8" [Group_5_Base_line/sample0.c:1501]   --->   Operation 199 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_28 : Operation 200 [1/1] (1.35ns)   --->   "br label %13" [Group_5_Base_line/sample0.c:1609]   --->   Operation 200 'br' <Predicate = true> <Delay = 1.35>
+
+State 29 <SV = 20> <Delay = 2.77>
+ST_29 : Operation 201 [1/1] (0.00ns)   --->   "%storemerge7 = phi i10 [ %tmp_10, %14 ], [ 0, %.preheader152 ]" [Group_5_Base_line/sample0.c:1609]   --->   Operation 201 'phi' 'storemerge7' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 202 [1/1] (0.00ns)   --->   "%storemerge7_cast5 = zext i10 %storemerge7 to i64" [Group_5_Base_line/sample0.c:1609]   --->   Operation 202 'zext' 'storemerge7_cast5' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 203 [1/1] (1.43ns)   --->   "%exitcond8 = icmp eq i10 %storemerge7, -512" [Group_5_Base_line/sample0.c:1609]   --->   Operation 203 'icmp' 'exitcond8' <Predicate = true> <Delay = 1.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 204 [1/1] (0.00ns)   --->   "%empty_27 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 512, i64 512, i64 512)"   --->   Operation 204 'speclooptripcount' 'empty_27' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 205 [1/1] (1.74ns)   --->   "%tmp_10 = add i10 %storemerge7, 1" [Group_5_Base_line/sample0.c:1609]   --->   Operation 205 'add' 'tmp_10' <Predicate = true> <Delay = 1.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 206 [1/1] (0.00ns)   --->   "br i1 %exitcond8, label %15, label %14" [Group_5_Base_line/sample0.c:1609]   --->   Operation 206 'br' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 207 [1/1] (0.00ns)   --->   "%dense_15_kernel_arra_1 = getelementptr inbounds [512 x float]* @dense_15_kernel_arra, i64 0, i64 %storemerge7_cast5" [Group_5_Base_line/sample0.c:1611]   --->   Operation 207 'getelementptr' 'dense_15_kernel_arra_1' <Predicate = (!exitcond8)> <Delay = 0.00>
+ST_29 : Operation 208 [2/2] (2.77ns)   --->   "%dense_15_kernel_arra_2 = load float* %dense_15_kernel_arra_1, align 4" [Group_5_Base_line/sample0.c:1611]   --->   Operation 208 'load' 'dense_15_kernel_arra_2' <Predicate = (!exitcond8)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 16> <ROM>
+ST_29 : Operation 209 [1/1] (0.00ns)   --->   "store i64 2, i64* @dense_15_kernel_ndim, align 8" [Group_5_Base_line/sample0.c:1613]   --->   Operation 209 'store' <Predicate = (exitcond8)> <Delay = 0.00>
+ST_29 : Operation 210 [1/1] (0.00ns)   --->   "store i64 512, i64* @dense_15_kernel_nume, align 8" [Group_5_Base_line/sample0.c:1614]   --->   Operation 210 'store' <Predicate = (exitcond8)> <Delay = 0.00>
+ST_29 : Operation 211 [1/1] (1.75ns)   --->   "store i64 32, i64* getelementptr inbounds ([5 x i64]* @dense_15_kernel_shap, i64 0, i64 0), align 8" [Group_5_Base_line/sample0.c:1615]   --->   Operation 211 'store' <Predicate = (exitcond8)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+
+State 30 <SV = 21> <Delay = 2.77>
+ST_30 : Operation 212 [1/2] (2.77ns)   --->   "%dense_15_kernel_arra_2 = load float* %dense_15_kernel_arra_1, align 4" [Group_5_Base_line/sample0.c:1611]   --->   Operation 212 'load' 'dense_15_kernel_arra_2' <Predicate = true> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 16> <ROM>
+
+State 31 <SV = 22> <Delay = 2.77>
+ST_31 : Operation 213 [1/1] (0.00ns)   --->   "%dense_15_kernel_arra_1_28 = getelementptr [10000 x float]* @dense_15_kernel_arra_1, i64 0, i64 %storemerge7_cast5" [Group_5_Base_line/sample0.c:1611]   --->   Operation 213 'getelementptr' 'dense_15_kernel_arra_1_28' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 214 [1/1] (2.77ns)   --->   "store float %dense_15_kernel_arra_2, float* %dense_15_kernel_arra_1_28, align 4" [Group_5_Base_line/sample0.c:1611]   --->   Operation 214 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_31 : Operation 215 [1/1] (0.00ns)   --->   "br label %13" [Group_5_Base_line/sample0.c:1609]   --->   Operation 215 'br' <Predicate = true> <Delay = 0.00>
+
+State 32 <SV = 21> <Delay = 1.75>
+ST_32 : Operation 216 [1/1] (1.75ns)   --->   "store i64 16, i64* getelementptr inbounds ([5 x i64]* @dense_15_kernel_shap, i64 0, i64 1), align 8" [Group_5_Base_line/sample0.c:1616]   --->   Operation 216 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_32 : Operation 217 [1/1] (1.75ns)   --->   "store i64 1, i64* getelementptr inbounds ([5 x i64]* @dense_15_kernel_shap, i64 0, i64 2), align 8" [Group_5_Base_line/sample0.c:1617]   --->   Operation 217 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+
+State 33 <SV = 22> <Delay = 1.75>
+ST_33 : Operation 218 [1/1] (1.75ns)   --->   "store i64 1, i64* getelementptr inbounds ([5 x i64]* @dense_15_kernel_shap, i64 0, i64 3), align 8" [Group_5_Base_line/sample0.c:1618]   --->   Operation 218 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_33 : Operation 219 [1/1] (1.75ns)   --->   "store i64 1, i64* getelementptr inbounds ([5 x i64]* @dense_15_kernel_shap, i64 0, i64 4), align 8" [Group_5_Base_line/sample0.c:1619]   --->   Operation 219 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_33 : Operation 220 [1/1] (1.35ns)   --->   "br label %16" [Group_5_Base_line/sample0.c:1629]   --->   Operation 220 'br' <Predicate = true> <Delay = 1.35>
+
+State 34 <SV = 23> <Delay = 2.77>
+ST_34 : Operation 221 [1/1] (0.00ns)   --->   "%storemerge8 = phi i5 [ 0, %15 ], [ %tmp_11, %17 ]" [Group_5_Base_line/sample0.c:1629]   --->   Operation 221 'phi' 'storemerge8' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 222 [1/1] (0.00ns)   --->   "%storemerge8_cast4 = zext i5 %storemerge8 to i64" [Group_5_Base_line/sample0.c:1629]   --->   Operation 222 'zext' 'storemerge8_cast4' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 223 [1/1] (1.21ns)   --->   "%exitcond9 = icmp eq i5 %storemerge8, -16" [Group_5_Base_line/sample0.c:1629]   --->   Operation 223 'icmp' 'exitcond9' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_34 : Operation 224 [1/1] (0.00ns)   --->   "%empty_29 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16)"   --->   Operation 224 'speclooptripcount' 'empty_29' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 225 [1/1] (1.54ns)   --->   "%tmp_11 = add i5 %storemerge8, 1" [Group_5_Base_line/sample0.c:1629]   --->   Operation 225 'add' 'tmp_11' <Predicate = true> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_34 : Operation 226 [1/1] (0.00ns)   --->   "br i1 %exitcond9, label %18, label %17" [Group_5_Base_line/sample0.c:1629]   --->   Operation 226 'br' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 227 [1/1] (0.00ns)   --->   "%dense_15_bias_array1_1 = getelementptr inbounds [16 x float]* @dense_15_bias_array1, i64 0, i64 %storemerge8_cast4" [Group_5_Base_line/sample0.c:1631]   --->   Operation 227 'getelementptr' 'dense_15_bias_array1_1' <Predicate = (!exitcond9)> <Delay = 0.00>
+ST_34 : Operation 228 [2/2] (2.77ns)   --->   "%dense_15_bias_array1_2 = load float* %dense_15_bias_array1_1, align 4" [Group_5_Base_line/sample0.c:1631]   --->   Operation 228 'load' 'dense_15_bias_array1_2' <Predicate = (!exitcond9)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 16> <ROM>
+ST_34 : Operation 229 [1/1] (0.00ns)   --->   "store i64 16, i64* @dense_15_bias_numel, align 8" [Group_5_Base_line/sample0.c:1634]   --->   Operation 229 'store' <Predicate = (exitcond9)> <Delay = 0.00>
+ST_34 : Operation 230 [1/1] (1.35ns)   --->   "br label %meminst97"   --->   Operation 230 'br' <Predicate = (exitcond9)> <Delay = 1.35>
+
+State 35 <SV = 24> <Delay = 2.77>
+ST_35 : Operation 231 [1/2] (2.77ns)   --->   "%dense_15_bias_array1_2 = load float* %dense_15_bias_array1_1, align 4" [Group_5_Base_line/sample0.c:1631]   --->   Operation 231 'load' 'dense_15_bias_array1_2' <Predicate = true> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 16> <ROM>
+
+State 36 <SV = 25> <Delay = 2.77>
+ST_36 : Operation 232 [1/1] (0.00ns)   --->   "%dense_15_bias_array_s = getelementptr [10000 x float]* @dense_15_bias_array, i64 0, i64 %storemerge8_cast4" [Group_5_Base_line/sample0.c:1631]   --->   Operation 232 'getelementptr' 'dense_15_bias_array_s' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 233 [1/1] (2.77ns)   --->   "store float %dense_15_bias_array1_2, float* %dense_15_bias_array_s, align 4" [Group_5_Base_line/sample0.c:1631]   --->   Operation 233 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_36 : Operation 234 [1/1] (0.00ns)   --->   "br label %16" [Group_5_Base_line/sample0.c:1629]   --->   Operation 234 'br' <Predicate = true> <Delay = 0.00>
+
+State 37 <SV = 24> <Delay = 2.77>
+ST_37 : Operation 235 [1/1] (0.00ns)   --->   "%invdar2 = phi i10 [ 0, %18 ], [ %indvarinc2, %meminst97 ]" [Group_5_Base_line/sample0.c:1641]   --->   Operation 235 'phi' 'invdar2' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 236 [1/1] (1.74ns)   --->   "%indvarinc2 = add i10 %invdar2, 1" [Group_5_Base_line/sample0.c:1641]   --->   Operation 236 'add' 'indvarinc2' <Predicate = true> <Delay = 1.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 237 [1/1] (0.00ns)   --->   "%tmp_12 = zext i10 %invdar2 to i64" [Group_5_Base_line/sample0.c:1641]   --->   Operation 237 'zext' 'tmp_12' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 238 [1/1] (0.00ns)   --->   "%dense_15_fwork_addr = getelementptr [544 x float]* %dense_15_fwork, i64 0, i64 %tmp_12" [Group_5_Base_line/sample0.c:1641]   --->   Operation 238 'getelementptr' 'dense_15_fwork_addr' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 239 [1/1] (2.77ns)   --->   "store float 0.000000e+00, float* %dense_15_fwork_addr, align 4" [Group_5_Base_line/sample0.c:1641]   --->   Operation 239 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_37 : Operation 240 [1/1] (1.43ns)   --->   "%tmp_13 = icmp eq i10 %invdar2, -481" [Group_5_Base_line/sample0.c:1641]   --->   Operation 240 'icmp' 'tmp_13' <Predicate = true> <Delay = 1.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 241 [1/1] (0.00ns)   --->   "%empty_30 = call i32 (...)* @_ssdm_op_SpecLoopName([22 x i8]* @memset_dense_15_fwor) nounwind"   --->   Operation 241 'specloopname' 'empty_30' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 242 [1/1] (0.00ns)   --->   "%empty_31 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 544, i64 544, i64 544)"   --->   Operation 242 'speclooptripcount' 'empty_31' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 243 [1/1] (0.00ns)   --->   "br i1 %tmp_13, label %.preheader.preheader, label %meminst97" [Group_5_Base_line/sample0.c:1641]   --->   Operation 243 'br' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 244 [1/1] (1.35ns)   --->   "br label %.preheader" [Group_5_Base_line/sample0.c:1651]   --->   Operation 244 'br' <Predicate = (tmp_13)> <Delay = 1.35>
+
+State 38 <SV = 25> <Delay = 2.77>
+ST_38 : Operation 245 [1/1] (0.00ns)   --->   "%storemerge9 = phi i5 [ %tmp_14, %19 ], [ 0, %.preheader.preheader ]" [Group_5_Base_line/sample0.c:1651]   --->   Operation 245 'phi' 'storemerge9' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 246 [1/1] (0.00ns)   --->   "%storemerge9_cast2 = zext i5 %storemerge9 to i64" [Group_5_Base_line/sample0.c:1651]   --->   Operation 246 'zext' 'storemerge9_cast2' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 247 [1/1] (1.21ns)   --->   "%exitcond = icmp eq i5 %storemerge9, -16" [Group_5_Base_line/sample0.c:1651]   --->   Operation 247 'icmp' 'exitcond' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 248 [1/1] (0.00ns)   --->   "%empty_32 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16)"   --->   Operation 248 'speclooptripcount' 'empty_32' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 249 [1/1] (1.54ns)   --->   "%tmp_14 = add i5 %storemerge9, 1" [Group_5_Base_line/sample0.c:1651]   --->   Operation 249 'add' 'tmp_14' <Predicate = true> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 250 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %.critedge, label %19" [Group_5_Base_line/sample0.c:1651]   --->   Operation 250 'br' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 251 [1/1] (0.00ns)   --->   "%dense_16_kernel_arra_1 = getelementptr inbounds [16 x float]* @dense_16_kernel_arra, i64 0, i64 %storemerge9_cast2" [Group_5_Base_line/sample0.c:1653]   --->   Operation 251 'getelementptr' 'dense_16_kernel_arra_1' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_38 : Operation 252 [2/2] (2.77ns)   --->   "%dense_16_kernel_arra_2 = load float* %dense_16_kernel_arra_1, align 4" [Group_5_Base_line/sample0.c:1653]   --->   Operation 252 'load' 'dense_16_kernel_arra_2' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 16> <ROM>
+ST_38 : Operation 253 [1/1] (0.00ns)   --->   "store i64 2, i64* @dense_16_kernel_ndim, align 8" [Group_5_Base_line/sample0.c:1655]   --->   Operation 253 'store' <Predicate = (exitcond)> <Delay = 0.00>
+ST_38 : Operation 254 [1/1] (0.00ns)   --->   "store i64 16, i64* @dense_16_kernel_nume, align 8" [Group_5_Base_line/sample0.c:1656]   --->   Operation 254 'store' <Predicate = (exitcond)> <Delay = 0.00>
+ST_38 : Operation 255 [1/1] (1.75ns)   --->   "store i64 16, i64* getelementptr inbounds ([5 x i64]* @dense_16_kernel_shap, i64 0, i64 0), align 8" [Group_5_Base_line/sample0.c:1657]   --->   Operation 255 'store' <Predicate = (exitcond)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_38 : Operation 256 [1/1] (0.00ns)   --->   "store i64 1, i64* @dense_16_bias_numel, align 8" [Group_5_Base_line/sample0.c:1672]   --->   Operation 256 'store' <Predicate = (exitcond)> <Delay = 0.00>
+
+State 39 <SV = 26> <Delay = 2.77>
+ST_39 : Operation 257 [1/2] (2.77ns)   --->   "%dense_16_kernel_arra_2 = load float* %dense_16_kernel_arra_1, align 4" [Group_5_Base_line/sample0.c:1653]   --->   Operation 257 'load' 'dense_16_kernel_arra_2' <Predicate = true> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 16> <ROM>
+
+State 40 <SV = 27> <Delay = 2.77>
+ST_40 : Operation 258 [1/1] (0.00ns)   --->   "%dense_16_kernel_arra_1_33 = getelementptr [10000 x float]* @dense_16_kernel_arra_0, i64 0, i64 %storemerge9_cast2" [Group_5_Base_line/sample0.c:1653]   --->   Operation 258 'getelementptr' 'dense_16_kernel_arra_1_33' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 259 [1/1] (2.77ns)   --->   "store float %dense_16_kernel_arra_2, float* %dense_16_kernel_arra_1_33, align 4" [Group_5_Base_line/sample0.c:1653]   --->   Operation 259 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_40 : Operation 260 [1/1] (0.00ns)   --->   "br label %.preheader" [Group_5_Base_line/sample0.c:1651]   --->   Operation 260 'br' <Predicate = true> <Delay = 0.00>
+
+State 41 <SV = 26> <Delay = 1.75>
+ST_41 : Operation 261 [1/1] (1.75ns)   --->   "store i64 1, i64* getelementptr inbounds ([5 x i64]* @dense_16_kernel_shap, i64 0, i64 1), align 8" [Group_5_Base_line/sample0.c:1658]   --->   Operation 261 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_41 : Operation 262 [1/1] (1.75ns)   --->   "store i64 1, i64* getelementptr inbounds ([5 x i64]* @dense_16_kernel_shap, i64 0, i64 2), align 8" [Group_5_Base_line/sample0.c:1659]   --->   Operation 262 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+
+State 42 <SV = 27> <Delay = 2.77>
+ST_42 : Operation 263 [1/1] (1.75ns)   --->   "store i64 1, i64* getelementptr inbounds ([5 x i64]* @dense_16_kernel_shap, i64 0, i64 3), align 8" [Group_5_Base_line/sample0.c:1660]   --->   Operation 263 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_42 : Operation 264 [1/1] (1.75ns)   --->   "store i64 1, i64* getelementptr inbounds ([5 x i64]* @dense_16_kernel_shap, i64 0, i64 4), align 8" [Group_5_Base_line/sample0.c:1661]   --->   Operation 264 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_42 : Operation 265 [1/1] (2.77ns)   --->   "store float 0xBFA3F6A9E0000000, float* getelementptr inbounds ([10000 x float]* @dense_16_bias_array, i64 0, i64 0), align 8" [Group_5_Base_line/sample0.c:1669]   --->   Operation 265 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_42 : Operation 266 [1/1] (1.35ns)   --->   "br label %meminst149"   --->   Operation 266 'br' <Predicate = true> <Delay = 1.35>
+
+State 43 <SV = 28> <Delay = 2.99>
+ST_43 : Operation 267 [1/1] (0.00ns)   --->   "%invdar3 = phi i5 [ 0, %.critedge ], [ %indvarinc3, %meminst149 ]" [Group_5_Base_line/sample0.c:1679]   --->   Operation 267 'phi' 'invdar3' <Predicate = true> <Delay = 0.00>
+ST_43 : Operation 268 [1/1] (1.54ns)   --->   "%indvarinc3 = add i5 %invdar3, 1" [Group_5_Base_line/sample0.c:1679]   --->   Operation 268 'add' 'indvarinc3' <Predicate = true> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_43 : Operation 269 [1/1] (0.00ns)   --->   "%tmp_15 = zext i5 %invdar3 to i64" [Group_5_Base_line/sample0.c:1679]   --->   Operation 269 'zext' 'tmp_15' <Predicate = true> <Delay = 0.00>
+ST_43 : Operation 270 [1/1] (0.00ns)   --->   "%dense_16_fwork_addr = getelementptr [32 x float]* %dense_16_fwork, i64 0, i64 %tmp_15" [Group_5_Base_line/sample0.c:1679]   --->   Operation 270 'getelementptr' 'dense_16_fwork_addr' <Predicate = true> <Delay = 0.00>
+ST_43 : Operation 271 [1/1] (2.77ns)   --->   "store float 0.000000e+00, float* %dense_16_fwork_addr, align 4" [Group_5_Base_line/sample0.c:1679]   --->   Operation 271 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_43 : Operation 272 [1/1] (1.21ns)   --->   "%tmp_16 = icmp eq i5 %invdar3, -1" [Group_5_Base_line/sample0.c:1679]   --->   Operation 272 'icmp' 'tmp_16' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_43 : Operation 273 [1/1] (0.00ns)   --->   "%empty_34 = call i32 (...)* @_ssdm_op_SpecLoopName([22 x i8]* @memset_dense_16_fwor) nounwind"   --->   Operation 273 'specloopname' 'empty_34' <Predicate = true> <Delay = 0.00>
+ST_43 : Operation 274 [1/1] (0.00ns)   --->   "%empty_35 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 32, i64 32, i64 32)"   --->   Operation 274 'speclooptripcount' 'empty_35' <Predicate = true> <Delay = 0.00>
+ST_43 : Operation 275 [1/1] (0.00ns)   --->   "br i1 %tmp_16, label %.critedge146148, label %meminst149" [Group_5_Base_line/sample0.c:1679]   --->   Operation 275 'br' <Predicate = true> <Delay = 0.00>
+ST_43 : Operation 276 [1/1] (0.00ns)   --->   "%dense_13_input_input = call i64 @_ssdm_op_Read.ap_auto.i64P(i64* %dense_13_input_input_ndim)" [Group_5_Base_line/sample0.c:1682]   --->   Operation 276 'read' 'dense_13_input_input' <Predicate = (tmp_16)> <Delay = 0.00>
+ST_43 : Operation 277 [1/1] (0.00ns)   --->   "%dense_13_input_input_1 = call i64 @_ssdm_op_Read.ap_auto.i64P(i64* %dense_13_input_input_numel)" [Group_5_Base_line/sample0.c:1682]   --->   Operation 277 'read' 'dense_13_input_input_1' <Predicate = (tmp_16)> <Delay = 0.00>
+ST_43 : Operation 278 [2/2] (2.99ns)   --->   "call fastcc void @k2c_dense.3([10000 x float]* @dense_13_output_arra, [10000 x float]* %dense_13_input_input_array, i64 %dense_13_input_input, i64 %dense_13_input_input_1, [5 x i64]* %dense_13_input_input_shape, [10000 x float]* @dense_13_kernel_arra_4, [5 x i64]* @dense_13_kernel_shap, [10000 x float]* @dense_13_bias_array_5, [2580 x float]* %dense_13_fwork)" [Group_5_Base_line/sample0.c:1682]   --->   Operation 278 'call' <Predicate = (tmp_16)> <Delay = 2.99> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 44 <SV = 29> <Delay = 0.00>
+ST_44 : Operation 279 [1/2] (0.00ns)   --->   "call fastcc void @k2c_dense.3([10000 x float]* @dense_13_output_arra, [10000 x float]* %dense_13_input_input_array, i64 %dense_13_input_input, i64 %dense_13_input_input_1, [5 x i64]* %dense_13_input_input_shape, [10000 x float]* @dense_13_kernel_arra_4, [5 x i64]* @dense_13_kernel_shap, [10000 x float]* @dense_13_bias_array_5, [2580 x float]* %dense_13_fwork)" [Group_5_Base_line/sample0.c:1682]   --->   Operation 279 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 45 <SV = 30> <Delay = 2.99>
+ST_45 : Operation 280 [1/1] (0.00ns)   --->   "%dense_14_output_nume_1 = load i64* @dense_14_output_nume, align 8" [Group_5_Base_line/sample0.c:1684]   --->   Operation 280 'load' 'dense_14_output_nume_1' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 281 [1/1] (0.00ns)   --->   "%dense_14_bias_numel_s = load i64* @dense_14_bias_numel, align 8" [Group_5_Base_line/sample0.c:1684]   --->   Operation 281 'load' 'dense_14_bias_numel_s' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 282 [1/1] (0.00ns)   --->   "%dense_13_output_ndim_1 = load i64* @dense_13_output_ndim, align 8" [Group_5_Base_line/sample0.c:1684]   --->   Operation 282 'load' 'dense_13_output_ndim_1' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 283 [1/1] (0.00ns)   --->   "%dense_13_output_nume_1 = load i64* @dense_13_output_nume, align 8" [Group_5_Base_line/sample0.c:1684]   --->   Operation 283 'load' 'dense_13_output_nume_1' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 284 [1/1] (0.00ns)   --->   "%dense_14_kernel_ndim_1 = load i64* @dense_14_kernel_ndim, align 8" [Group_5_Base_line/sample0.c:1684]   --->   Operation 284 'load' 'dense_14_kernel_ndim_1' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 285 [1/1] (0.00ns)   --->   "%dense_14_kernel_nume_1 = load i64* @dense_14_kernel_nume, align 8" [Group_5_Base_line/sample0.c:1684]   --->   Operation 285 'load' 'dense_14_kernel_nume_1' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 286 [2/2] (2.99ns)   --->   "call fastcc void @k2c_dense.2([10000 x float]* @dense_14_output_arra, i64 %dense_14_output_nume_1, [10000 x float]* @dense_13_output_arra, i64 %dense_13_output_ndim_1, i64 %dense_13_output_nume_1, [5 x i64]* @dense_13_output_shap, [10000 x float]* @dense_14_kernel_arra_2, i64 %dense_14_kernel_ndim_1, i64 %dense_14_kernel_nume_1, [5 x i64]* @dense_14_kernel_shap, [10000 x float]* @dense_14_bias_array_3, i64 %dense_14_bias_numel_s, [4224 x float]* %dense_14_fwork)" [Group_5_Base_line/sample0.c:1684]   --->   Operation 286 'call' <Predicate = true> <Delay = 2.99> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 46 <SV = 31> <Delay = 0.00>
+ST_46 : Operation 287 [1/2] (0.00ns)   --->   "call fastcc void @k2c_dense.2([10000 x float]* @dense_14_output_arra, i64 %dense_14_output_nume_1, [10000 x float]* @dense_13_output_arra, i64 %dense_13_output_ndim_1, i64 %dense_13_output_nume_1, [5 x i64]* @dense_13_output_shap, [10000 x float]* @dense_14_kernel_arra_2, i64 %dense_14_kernel_ndim_1, i64 %dense_14_kernel_nume_1, [5 x i64]* @dense_14_kernel_shap, [10000 x float]* @dense_14_bias_array_3, i64 %dense_14_bias_numel_s, [4224 x float]* %dense_14_fwork)" [Group_5_Base_line/sample0.c:1684]   --->   Operation 287 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 47 <SV = 32> <Delay = 2.99>
+ST_47 : Operation 288 [1/1] (0.00ns)   --->   "%dense_15_output_nume_1 = load i64* @dense_15_output_nume, align 8" [Group_5_Base_line/sample0.c:1686]   --->   Operation 288 'load' 'dense_15_output_nume_1' <Predicate = true> <Delay = 0.00>
+ST_47 : Operation 289 [1/1] (0.00ns)   --->   "%dense_15_bias_numel_s = load i64* @dense_15_bias_numel, align 8" [Group_5_Base_line/sample0.c:1686]   --->   Operation 289 'load' 'dense_15_bias_numel_s' <Predicate = true> <Delay = 0.00>
+ST_47 : Operation 290 [1/1] (0.00ns)   --->   "%dense_14_output_ndim_1 = load i64* @dense_14_output_ndim, align 8" [Group_5_Base_line/sample0.c:1686]   --->   Operation 290 'load' 'dense_14_output_ndim_1' <Predicate = true> <Delay = 0.00>
+ST_47 : Operation 291 [1/1] (0.00ns)   --->   "%dense_14_output_nume_2 = load i64* @dense_14_output_nume, align 8" [Group_5_Base_line/sample0.c:1686]   --->   Operation 291 'load' 'dense_14_output_nume_2' <Predicate = true> <Delay = 0.00>
+ST_47 : Operation 292 [1/1] (0.00ns)   --->   "%dense_15_kernel_ndim_1 = load i64* @dense_15_kernel_ndim, align 8" [Group_5_Base_line/sample0.c:1686]   --->   Operation 292 'load' 'dense_15_kernel_ndim_1' <Predicate = true> <Delay = 0.00>
+ST_47 : Operation 293 [1/1] (0.00ns)   --->   "%dense_15_kernel_nume_1 = load i64* @dense_15_kernel_nume, align 8" [Group_5_Base_line/sample0.c:1686]   --->   Operation 293 'load' 'dense_15_kernel_nume_1' <Predicate = true> <Delay = 0.00>
+ST_47 : Operation 294 [2/2] (2.99ns)   --->   "call fastcc void @k2c_dense.1([10000 x float]* @dense_15_output_arra, i64 %dense_15_output_nume_1, [10000 x float]* @dense_14_output_arra, i64 %dense_14_output_ndim_1, i64 %dense_14_output_nume_2, [5 x i64]* @dense_14_output_shap, [10000 x float]* @dense_15_kernel_arra_1, i64 %dense_15_kernel_ndim_1, i64 %dense_15_kernel_nume_1, [5 x i64]* @dense_15_kernel_shap, [10000 x float]* @dense_15_bias_array, i64 %dense_15_bias_numel_s, [544 x float]* %dense_15_fwork)" [Group_5_Base_line/sample0.c:1686]   --->   Operation 294 'call' <Predicate = true> <Delay = 2.99> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 48 <SV = 33> <Delay = 0.00>
+ST_48 : Operation 295 [1/2] (0.00ns)   --->   "call fastcc void @k2c_dense.1([10000 x float]* @dense_15_output_arra, i64 %dense_15_output_nume_1, [10000 x float]* @dense_14_output_arra, i64 %dense_14_output_ndim_1, i64 %dense_14_output_nume_2, [5 x i64]* @dense_14_output_shap, [10000 x float]* @dense_15_kernel_arra_1, i64 %dense_15_kernel_ndim_1, i64 %dense_15_kernel_nume_1, [5 x i64]* @dense_15_kernel_shap, [10000 x float]* @dense_15_bias_array, i64 %dense_15_bias_numel_s, [544 x float]* %dense_15_fwork)" [Group_5_Base_line/sample0.c:1686]   --->   Operation 295 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 49 <SV = 34> <Delay = 2.99>
+ST_49 : Operation 296 [1/1] (0.00ns)   --->   "%dense_16_output_nume = call i64 @_ssdm_op_Read.ap_auto.i64P(i64* %dense_16_output_numel)" [Group_5_Base_line/sample0.c:1688]   --->   Operation 296 'read' 'dense_16_output_nume' <Predicate = true> <Delay = 0.00>
+ST_49 : Operation 297 [1/1] (0.00ns)   --->   "%dense_16_bias_numel_s = load i64* @dense_16_bias_numel, align 8" [Group_5_Base_line/sample0.c:1688]   --->   Operation 297 'load' 'dense_16_bias_numel_s' <Predicate = true> <Delay = 0.00>
+ST_49 : Operation 298 [1/1] (0.00ns)   --->   "%dense_15_output_ndim_1 = load i64* @dense_15_output_ndim, align 8" [Group_5_Base_line/sample0.c:1688]   --->   Operation 298 'load' 'dense_15_output_ndim_1' <Predicate = true> <Delay = 0.00>
+ST_49 : Operation 299 [1/1] (0.00ns)   --->   "%dense_15_output_nume_2 = load i64* @dense_15_output_nume, align 8" [Group_5_Base_line/sample0.c:1688]   --->   Operation 299 'load' 'dense_15_output_nume_2' <Predicate = true> <Delay = 0.00>
+ST_49 : Operation 300 [1/1] (0.00ns)   --->   "%dense_16_kernel_ndim_1 = load i64* @dense_16_kernel_ndim, align 8" [Group_5_Base_line/sample0.c:1688]   --->   Operation 300 'load' 'dense_16_kernel_ndim_1' <Predicate = true> <Delay = 0.00>
+ST_49 : Operation 301 [1/1] (0.00ns)   --->   "%dense_16_kernel_nume_1 = load i64* @dense_16_kernel_nume, align 8" [Group_5_Base_line/sample0.c:1688]   --->   Operation 301 'load' 'dense_16_kernel_nume_1' <Predicate = true> <Delay = 0.00>
+ST_49 : Operation 302 [2/2] (2.99ns)   --->   "call fastcc void @k2c_dense([10000 x float]* %dense_16_output_array, i64 %dense_16_output_nume, [10000 x float]* @dense_15_output_arra, i64 %dense_15_output_ndim_1, i64 %dense_15_output_nume_2, [5 x i64]* @dense_15_output_shap, [10000 x float]* @dense_16_kernel_arra_0, i64 %dense_16_kernel_ndim_1, i64 %dense_16_kernel_nume_1, [5 x i64]* @dense_16_kernel_shap, [10000 x float]* @dense_16_bias_array, i64 %dense_16_bias_numel_s, [32 x float]* %dense_16_fwork)" [Group_5_Base_line/sample0.c:1688]   --->   Operation 302 'call' <Predicate = true> <Delay = 2.99> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 50 <SV = 35> <Delay = 0.00>
+ST_50 : Operation 303 [1/2] (0.00ns)   --->   "call fastcc void @k2c_dense([10000 x float]* %dense_16_output_array, i64 %dense_16_output_nume, [10000 x float]* @dense_15_output_arra, i64 %dense_15_output_ndim_1, i64 %dense_15_output_nume_2, [5 x i64]* @dense_15_output_shap, [10000 x float]* @dense_16_kernel_arra_0, i64 %dense_16_kernel_ndim_1, i64 %dense_16_kernel_nume_1, [5 x i64]* @dense_16_kernel_shap, [10000 x float]* @dense_16_bias_array, i64 %dense_16_bias_numel_s, [32 x float]* %dense_16_fwork)" [Group_5_Base_line/sample0.c:1688]   --->   Operation 303 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_50 : Operation 304 [1/1] (0.00ns)   --->   "ret void" [Group_5_Base_line/sample0.c:1691]   --->   Operation 304 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 1.35ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('storemerge', Group_5_Base_line/sample0.c:28) with incoming values : ('tmp', Group_5_Base_line/sample0.c:28) [64]  (1.35 ns)
+
+ <State 2>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('storemerge', Group_5_Base_line/sample0.c:28) with incoming values : ('tmp', Group_5_Base_line/sample0.c:28) [64]  (0 ns)
+	'getelementptr' operation ('dense_13_output_arra_1', Group_5_Base_line/sample0.c:30) [71]  (0 ns)
+	'store' operation (Group_5_Base_line/sample0.c:30) of constant 0 on array 'dense_13_output_arra' [72]  (2.77 ns)
+
+ <State 3>: 1.75ns
+The critical path consists of the following:
+	'store' operation (Group_5_Base_line/sample0.c:35) of constant 1 on array 'dense_13_output_shap' [78]  (1.75 ns)
+
+ <State 4>: 1.75ns
+The critical path consists of the following:
+	'store' operation (Group_5_Base_line/sample0.c:37) of constant 1 on array 'dense_13_output_shap' [80]  (1.75 ns)
+
+ <State 5>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('storemerge1', Group_5_Base_line/sample0.c:557) with incoming values : ('tmp_1', Group_5_Base_line/sample0.c:557) [84]  (0 ns)
+	'getelementptr' operation ('dense_13_kernel_arra_1', Group_5_Base_line/sample0.c:559) [91]  (0 ns)
+	'load' operation ('dense_13_kernel_arra_2', Group_5_Base_line/sample0.c:559) on array 'dense_13_kernel_arra' [92]  (2.77 ns)
+
+ <State 6>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('dense_13_kernel_arra_2', Group_5_Base_line/sample0.c:559) on array 'dense_13_kernel_arra' [92]  (2.77 ns)
+
+ <State 7>: 2.77ns
+The critical path consists of the following:
+	'getelementptr' operation ('dense_13_kernel_arra_1_14', Group_5_Base_line/sample0.c:559) [93]  (0 ns)
+	'store' operation (Group_5_Base_line/sample0.c:559) of variable 'dense_13_kernel_arra_2', Group_5_Base_line/sample0.c:559 on array 'dense_13_kernel_arra_4' [94]  (2.77 ns)
+
+ <State 8>: 1.75ns
+The critical path consists of the following:
+	'store' operation (Group_5_Base_line/sample0.c:564) of constant 128 on array 'dense_13_kernel_shap' [98]  (1.75 ns)
+
+ <State 9>: 1.75ns
+The critical path consists of the following:
+	'store' operation (Group_5_Base_line/sample0.c:566) of constant 1 on array 'dense_13_kernel_shap' [100]  (1.75 ns)
+
+ <State 10>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('storemerge2', Group_5_Base_line/sample0.c:598) with incoming values : ('tmp_2', Group_5_Base_line/sample0.c:598) [104]  (0 ns)
+	'getelementptr' operation ('dense_13_bias_array_s', Group_5_Base_line/sample0.c:600) [111]  (0 ns)
+	'load' operation ('dense_13_bias_array_1', Group_5_Base_line/sample0.c:600) on array 'dense_13_bias_array' [112]  (2.77 ns)
+
+ <State 11>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('dense_13_bias_array_1', Group_5_Base_line/sample0.c:600) on array 'dense_13_bias_array' [112]  (2.77 ns)
+
+ <State 12>: 2.77ns
+The critical path consists of the following:
+	'getelementptr' operation ('dense_13_bias_array_s_16', Group_5_Base_line/sample0.c:600) [113]  (0 ns)
+	'store' operation (Group_5_Base_line/sample0.c:600) of variable 'dense_13_bias_array_1', Group_5_Base_line/sample0.c:600 on array 'dense_13_bias_array_5' [114]  (2.77 ns)
+
+ <State 13>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('invdar', Group_5_Base_line/sample0.c:610) with incoming values : ('indvarinc', Group_5_Base_line/sample0.c:610) [119]  (0 ns)
+	'getelementptr' operation ('dense_13_fwork_addr', Group_5_Base_line/sample0.c:610) [122]  (0 ns)
+	'store' operation (Group_5_Base_line/sample0.c:610) of constant 0 on array 'dense_13_fwork', Group_5_Base_line/sample0.c:610 [123]  (2.77 ns)
+
+ <State 14>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('storemerge3', Group_5_Base_line/sample0.c:616) with incoming values : ('tmp_5', Group_5_Base_line/sample0.c:616) [131]  (0 ns)
+	'getelementptr' operation ('dense_14_output_arra_1', Group_5_Base_line/sample0.c:618) [138]  (0 ns)
+	'store' operation (Group_5_Base_line/sample0.c:618) of constant 0 on array 'dense_14_output_arra' [139]  (2.77 ns)
+
+ <State 15>: 1.75ns
+The critical path consists of the following:
+	'store' operation (Group_5_Base_line/sample0.c:623) of constant 1 on array 'dense_14_output_shap' [145]  (1.75 ns)
+
+ <State 16>: 1.75ns
+The critical path consists of the following:
+	'store' operation (Group_5_Base_line/sample0.c:625) of constant 1 on array 'dense_14_output_shap' [147]  (1.75 ns)
+
+ <State 17>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('storemerge4', Group_5_Base_line/sample0.c:1451) with incoming values : ('tmp_6', Group_5_Base_line/sample0.c:1451) [151]  (0 ns)
+	'getelementptr' operation ('dense_14_kernel_arra_1', Group_5_Base_line/sample0.c:1453) [158]  (0 ns)
+	'load' operation ('dense_14_kernel_arra_2', Group_5_Base_line/sample0.c:1453) on array 'dense_14_kernel_arra' [159]  (2.77 ns)
+
+ <State 18>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('dense_14_kernel_arra_2', Group_5_Base_line/sample0.c:1453) on array 'dense_14_kernel_arra' [159]  (2.77 ns)
+
+ <State 19>: 2.77ns
+The critical path consists of the following:
+	'getelementptr' operation ('dense_14_kernel_arra_1_21', Group_5_Base_line/sample0.c:1453) [160]  (0 ns)
+	'store' operation (Group_5_Base_line/sample0.c:1453) of variable 'dense_14_kernel_arra_2', Group_5_Base_line/sample0.c:1453 on array 'dense_14_kernel_arra_2' [161]  (2.77 ns)
+
+ <State 20>: 1.75ns
+The critical path consists of the following:
+	'store' operation (Group_5_Base_line/sample0.c:1458) of constant 32 on array 'dense_14_kernel_shap' [167]  (1.75 ns)
+
+ <State 21>: 1.75ns
+The critical path consists of the following:
+	'store' operation (Group_5_Base_line/sample0.c:1460) of constant 1 on array 'dense_14_kernel_shap' [169]  (1.75 ns)
+
+ <State 22>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('storemerge5', Group_5_Base_line/sample0.c:1473) with incoming values : ('tmp_7', Group_5_Base_line/sample0.c:1473) [173]  (0 ns)
+	'getelementptr' operation ('dense_14_bias_array_s', Group_5_Base_line/sample0.c:1475) [180]  (0 ns)
+	'load' operation ('dense_14_bias_array_1', Group_5_Base_line/sample0.c:1475) on array 'dense_14_bias_array' [181]  (2.77 ns)
+
+ <State 23>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('dense_14_bias_array_1', Group_5_Base_line/sample0.c:1475) on array 'dense_14_bias_array' [181]  (2.77 ns)
+
+ <State 24>: 2.77ns
+The critical path consists of the following:
+	'getelementptr' operation ('dense_14_bias_array_s_23', Group_5_Base_line/sample0.c:1475) [182]  (0 ns)
+	'store' operation (Group_5_Base_line/sample0.c:1475) of variable 'dense_14_bias_array_1', Group_5_Base_line/sample0.c:1475 on array 'dense_14_bias_array_3' [183]  (2.77 ns)
+
+ <State 25>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('invdar1', Group_5_Base_line/sample0.c:1485) with incoming values : ('indvarinc1', Group_5_Base_line/sample0.c:1485) [189]  (0 ns)
+	'getelementptr' operation ('dense_14_fwork_addr', Group_5_Base_line/sample0.c:1485) [192]  (0 ns)
+	'store' operation (Group_5_Base_line/sample0.c:1485) of constant 0 on array 'dense_14_fwork', Group_5_Base_line/sample0.c:1485 [193]  (2.77 ns)
+
+ <State 26>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('storemerge6', Group_5_Base_line/sample0.c:1491) with incoming values : ('tmp_s', Group_5_Base_line/sample0.c:1491) [201]  (0 ns)
+	'getelementptr' operation ('dense_15_output_arra_1', Group_5_Base_line/sample0.c:1493) [208]  (0 ns)
+	'store' operation (Group_5_Base_line/sample0.c:1493) of constant 0 on array 'dense_15_output_arra' [209]  (2.77 ns)
+
+ <State 27>: 1.75ns
+The critical path consists of the following:
+	'store' operation (Group_5_Base_line/sample0.c:1498) of constant 1 on array 'dense_15_output_shap' [215]  (1.75 ns)
+
+ <State 28>: 1.75ns
+The critical path consists of the following:
+	'store' operation (Group_5_Base_line/sample0.c:1500) of constant 1 on array 'dense_15_output_shap' [217]  (1.75 ns)
+
+ <State 29>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('storemerge7', Group_5_Base_line/sample0.c:1609) with incoming values : ('tmp_10', Group_5_Base_line/sample0.c:1609) [221]  (0 ns)
+	'getelementptr' operation ('dense_15_kernel_arra_1', Group_5_Base_line/sample0.c:1611) [228]  (0 ns)
+	'load' operation ('dense_15_kernel_arra_2', Group_5_Base_line/sample0.c:1611) on array 'dense_15_kernel_arra' [229]  (2.77 ns)
+
+ <State 30>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('dense_15_kernel_arra_2', Group_5_Base_line/sample0.c:1611) on array 'dense_15_kernel_arra' [229]  (2.77 ns)
+
+ <State 31>: 2.77ns
+The critical path consists of the following:
+	'getelementptr' operation ('dense_15_kernel_arra_1_28', Group_5_Base_line/sample0.c:1611) [230]  (0 ns)
+	'store' operation (Group_5_Base_line/sample0.c:1611) of variable 'dense_15_kernel_arra_2', Group_5_Base_line/sample0.c:1611 on array 'dense_15_kernel_arra_1' [231]  (2.77 ns)
+
+ <State 32>: 1.75ns
+The critical path consists of the following:
+	'store' operation (Group_5_Base_line/sample0.c:1616) of constant 16 on array 'dense_15_kernel_shap' [237]  (1.75 ns)
+
+ <State 33>: 1.75ns
+The critical path consists of the following:
+	'store' operation (Group_5_Base_line/sample0.c:1618) of constant 1 on array 'dense_15_kernel_shap' [239]  (1.75 ns)
+
+ <State 34>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('storemerge8', Group_5_Base_line/sample0.c:1629) with incoming values : ('tmp_11', Group_5_Base_line/sample0.c:1629) [243]  (0 ns)
+	'getelementptr' operation ('dense_15_bias_array1_1', Group_5_Base_line/sample0.c:1631) [250]  (0 ns)
+	'load' operation ('dense_15_bias_array1_2', Group_5_Base_line/sample0.c:1631) on array 'dense_15_bias_array1' [251]  (2.77 ns)
+
+ <State 35>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('dense_15_bias_array1_2', Group_5_Base_line/sample0.c:1631) on array 'dense_15_bias_array1' [251]  (2.77 ns)
+
+ <State 36>: 2.77ns
+The critical path consists of the following:
+	'getelementptr' operation ('dense_15_bias_array_s', Group_5_Base_line/sample0.c:1631) [252]  (0 ns)
+	'store' operation (Group_5_Base_line/sample0.c:1631) of variable 'dense_15_bias_array1_2', Group_5_Base_line/sample0.c:1631 on array 'dense_15_bias_array' [253]  (2.77 ns)
+
+ <State 37>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('invdar2', Group_5_Base_line/sample0.c:1641) with incoming values : ('indvarinc2', Group_5_Base_line/sample0.c:1641) [259]  (0 ns)
+	'getelementptr' operation ('dense_15_fwork_addr', Group_5_Base_line/sample0.c:1641) [262]  (0 ns)
+	'store' operation (Group_5_Base_line/sample0.c:1641) of constant 0 on array 'dense_15_fwork', Group_5_Base_line/sample0.c:1641 [263]  (2.77 ns)
+
+ <State 38>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('storemerge9', Group_5_Base_line/sample0.c:1651) with incoming values : ('tmp_14', Group_5_Base_line/sample0.c:1651) [271]  (0 ns)
+	'getelementptr' operation ('dense_16_kernel_arra_1', Group_5_Base_line/sample0.c:1653) [278]  (0 ns)
+	'load' operation ('dense_16_kernel_arra_2', Group_5_Base_line/sample0.c:1653) on array 'dense_16_kernel_arra' [279]  (2.77 ns)
+
+ <State 39>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('dense_16_kernel_arra_2', Group_5_Base_line/sample0.c:1653) on array 'dense_16_kernel_arra' [279]  (2.77 ns)
+
+ <State 40>: 2.77ns
+The critical path consists of the following:
+	'getelementptr' operation ('dense_16_kernel_arra_1_33', Group_5_Base_line/sample0.c:1653) [280]  (0 ns)
+	'store' operation (Group_5_Base_line/sample0.c:1653) of variable 'dense_16_kernel_arra_2', Group_5_Base_line/sample0.c:1653 on array 'dense_16_kernel_arra_0' [281]  (2.77 ns)
+
+ <State 41>: 1.75ns
+The critical path consists of the following:
+	'store' operation (Group_5_Base_line/sample0.c:1658) of constant 1 on array 'dense_16_kernel_shap' [287]  (1.75 ns)
+
+ <State 42>: 2.77ns
+The critical path consists of the following:
+	'store' operation (Group_5_Base_line/sample0.c:1669) of constant -0.0389913 on array 'dense_16_bias_array' [291]  (2.77 ns)
+
+ <State 43>: 3ns
+The critical path consists of the following:
+	wire read on port 'dense_13_input_input_ndim' (Group_5_Base_line/sample0.c:1682) [305]  (0 ns)
+	'call' operation (Group_5_Base_line/sample0.c:1682) to 'k2c_dense.3' [307]  (3 ns)
+
+ <State 44>: 0ns
+The critical path consists of the following:
+
+ <State 45>: 3ns
+The critical path consists of the following:
+	'load' operation ('dense_14_output_nume_1', Group_5_Base_line/sample0.c:1684) on global variable 'dense_14_output_nume' [308]  (0 ns)
+	'call' operation (Group_5_Base_line/sample0.c:1684) to 'k2c_dense.2' [314]  (3 ns)
+
+ <State 46>: 0ns
+The critical path consists of the following:
+
+ <State 47>: 3ns
+The critical path consists of the following:
+	'load' operation ('dense_15_output_nume_1', Group_5_Base_line/sample0.c:1686) on global variable 'dense_15_output_nume' [315]  (0 ns)
+	'call' operation (Group_5_Base_line/sample0.c:1686) to 'k2c_dense.1' [321]  (3 ns)
+
+ <State 48>: 0ns
+The critical path consists of the following:
+
+ <State 49>: 3ns
+The critical path consists of the following:
+	wire read on port 'dense_16_output_numel' (Group_5_Base_line/sample0.c:1688) [322]  (0 ns)
+	'call' operation (Group_5_Base_line/sample0.c:1688) to 'k2c_dense' [328]  (3 ns)
+
+ <State 50>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
